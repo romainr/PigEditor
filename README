@@ -12,18 +12,17 @@ more similar to what Eclipse is doing with Java:
    * outline 
    * ...
  
-So I did a first version that works with Helios SR2
-http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/heliossr2
+So I did a first version that works with Eclipse 3.6+
+http://www.eclipse.org/downloads/
 
 There is still a lot to improve and there are some false positive errors highlighted
 (trying to be in sync with Pig 0.9 for now), but feel free to send me your 
 feedback/scripts/pull requests.
 
 For building:
-Eclipse Helios 3.6
-xtext 1.0.2
+Eclipse Helios 3.7 
+Xtext 2.0 http://www.eclipse.org/Xtext/
 
-xtext documentation:
-http://www.eclipse.org/Xtext/documentation/1_0_1/xtext.html#getting-started
+Most important file is the Xtext grammar in org.apache.pigeditor/src: org.apache.pigeditor.Pig.xtext
 
-Most important file is the xtext grammar in src: org.xtext.example.mydsl.PigEditor.xtext
+

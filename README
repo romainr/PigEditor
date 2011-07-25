@@ -1,0 +1,29 @@
+
+PigEditor
+
+
+Have been using the nice lightweight Pig Eclipse plugin on http://wiki.apache.org/pig/PigTools 
+(and not so much the "heavy weight" PigPen) but was wondering if it was possible to do something 
+more similar to what Eclipse is doing with Java:
+
+   * automatic error highlighting 
+   * check alias name existence 
+   * auto complete 
+   * outline 
+   * ...
+ 
+So I did a first version that works with Helios SR2
+http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/heliossr2
+
+There is still a lot to improve and there are some false positive errors highlighted
+(trying to be in sync with Pig 0.9 for now), but feel free to send me your 
+feedback/scripts/pull requests.
+
+For building:
+Eclipse Helios 3.6
+xtext 1.0.2
+
+xtext documentation:
+http://www.eclipse.org/Xtext/documentation/1_0_1/xtext.html#getting-started
+
+Most important file is the xtext grammar in src: org.xtext.example.mydsl.PigEditor.xtext

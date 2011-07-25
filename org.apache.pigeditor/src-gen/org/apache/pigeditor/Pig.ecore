@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="pig"
+    nsURI="http://www.apache.org/pigeditor/Pig" nsPrefix="pig">
+  <eClassifiers xsi:type="ecore:EClass" name="Query">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
+        eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//Statement"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Statement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DefineStatement" eSuperTypes="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LoadStatement" eSuperTypes="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ForeachStatement" eSuperTypes="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//AliasType"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="items" upperBound="-1"
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FilterStatement" eSuperTypes="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//AliasType"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cond" eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//Condition"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GroupByStatement" eSuperTypes="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//AliasType"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="items" eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//group_item_list"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CoGroupByStatement" eSuperTypes="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="aliases" eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//join_sub_clause"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OrderStatement" eSuperTypes="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//AliasType"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CrossStatement" eSuperTypes="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="aliases" eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//rel_list"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UnionStatement" eSuperTypes="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="aliases" eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//rel_list"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JoinStatement" eSuperTypes="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="aliases" eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//join_sub_clause"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LimitStatement" eSuperTypes="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//AliasType"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SampleStatement" eSuperTypes="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//AliasType"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DistinctStatement" eSuperTypes="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//AliasType"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StreamStatement" eSuperTypes="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//AliasType"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MrStatement" eSuperTypes="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SplitStatement" eSuperTypes="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//AliasType"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="branches" upperBound="-1"
+        eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//split_branch"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StoreStatement" eSuperTypes="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//Statement platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//MrStatement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="load" eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//LoadStatement"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//AliasType"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DescribeStatement" eSuperTypes="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//AliasType"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExplainStatement" eSuperTypes="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//AliasType"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DumpStatement" eSuperTypes="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//AliasType"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Condition" eSuperTypes="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//real_arg platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//bin_expr platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//FlattenGeneratedItem platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//split_branch">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="leftExp" eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//Condition"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rightExp" eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//Condition"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="func_eval" eSuperTypes="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//projectable_expr">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="arg_list" eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//real_arg_list"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="real_arg_list">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="args" upperBound="-1" eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//real_arg"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="real_arg"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Expression" eSuperTypes="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//Condition platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//join_group_by_expr platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//nested_op">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mul_exp" eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//Expression"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mul_cast" eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//Expression"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="var_expr" eSuperTypes="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//Expression platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//nested_sort platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//nested_distinct platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//nested_limit"/>
+  <eClassifiers xsi:type="ecore:EClass" name="projectable_expr" eSuperTypes="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//var_expr"/>
+  <eClassifiers xsi:type="ecore:EClass" name="bin_expr"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AliasType">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="referenced" eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//Statement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FlattenGeneratedItem"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DefaultClause" eSuperTypes="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//DefineStatement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DeclareClause" eSuperTypes="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//DefineStatement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DefineClause" eSuperTypes="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//DefineStatement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="group_item_list"/>
+  <eClassifiers xsi:type="ecore:EClass" name="rel_list">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//AliasType"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="join_sub_clause"/>
+  <eClassifiers xsi:type="ecore:EClass" name="join_item" eSuperTypes="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//join_sub_clause">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="others" eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//join_item"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//AliasType"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expressions" eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//join_group_by_clause"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="group_item" eSuperTypes="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//group_item_list">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="items" eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//group_item"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="join_group_by_clause"/>
+  <eClassifiers xsi:type="ecore:EClass" name="join_group_by_expr_list" eSuperTypes="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//group_item platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//join_group_by_clause">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="left" eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//join_group_by_expr"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expressions" eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//join_group_by_expr"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="join_group_by_expr" eSuperTypes="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//join_group_by_expr_list"/>
+  <eClassifiers xsi:type="ecore:EClass" name="nested_blk"/>
+  <eClassifiers xsi:type="ecore:EClass" name="generate_clause">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="items" upperBound="-1"
+        eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//FlattenGeneratedItem"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="nested_command_list" eSuperTypes="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//nested_blk">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="clauses" eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//generate_clause"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cmds" upperBound="-1" eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//nested_command"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="nested_command"/>
+  <eClassifiers xsi:type="ecore:EClass" name="nested_op" eSuperTypes="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//nested_command"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NestedFilter" eSuperTypes="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//nested_op">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exp" eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//var_expr"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cond" eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//Condition"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="nested_sort" eSuperTypes="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//nested_op"/>
+  <eClassifiers xsi:type="ecore:EClass" name="nested_distinct" eSuperTypes="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//nested_op"/>
+  <eClassifiers xsi:type="ecore:EClass" name="nested_limit" eSuperTypes="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//nested_op"/>
+  <eClassifiers xsi:type="ecore:EClass" name="split_branch"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OrCondition" eSuperTypes="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//Condition">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="left" eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//Condition"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="right" eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//Condition"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AndCondition" eSuperTypes="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//Condition">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="left" eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//Condition"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="right" eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//Condition"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UnaryCondition" eSuperTypes="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//Condition">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="left" eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//Condition"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="right" eType="ecore:EClass platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//Condition"
+        containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>

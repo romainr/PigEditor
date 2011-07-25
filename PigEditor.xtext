@@ -1,0 +1,1282 @@
+grammar org.xtext.example.mydsl.PigEditor with org.eclipse.xtext.common.Terminals
+
+generate pigEditor "http://www.xtext.org/example/mydsl/PigEditor"
+
+
+Query :
+    (elements+=Statement)*;
+
+Statement : 
+    (DefineStatement |
+     LoadStatement |
+	 (ForeachStatement |
+	  FilterStatement |
+	  GroupByStatement |
+	  OrderStatement |
+	  LimitStatement |
+	  DistinctStatement |
+	  CrossStatement |
+	  JoinStatement |
+	  CoGroupByStatement |
+	  StreamStatement ) ParallelClause? |
+     MrStatement |
+     SplitStatement |
+     UnionStatement |
+     SampleStatement |
+     StoreStatement |
+     DumpStatement |
+     DescribeStatement |
+     ExplainStatement) ';' |
+     CommentStatement
+;
+
+
+DefineStatement :
+    RegisterClause | 
+    DefineClause |
+    DefaultClause |
+    DeclareClause
+;
+
+LoadStatement :
+    name=Alias '=' 'LOAD' STRING LoadUsing? AsClause?
+;
+
+ForeachStatement :
+    name=Alias '=' 'FOREACH' type=AliasType 
+                    (items+=nested_blk ';'? | items+=generate_clause)
+                    //(items+=generate_clause)
+                    //'GENERATE' items=FlattenGeneratedItem ( ',' otheritems=FlattenGeneratedItem )*) 
+;
+
+FilterStatement :
+    name=Alias '=' 'FILTER' type=AliasType 
+                   'BY' cond=Condition 
+;
+
+GroupByStatement :
+    name=Alias '=' 'GROUP' type=AliasType 
+                   items=group_item_list ( 'USING' group_type )? partition_clause? 
+;
+
+CoGroupByStatement :
+    name=Alias '=' 'COGROUP' aliases=join_sub_clause ( 'USING' COGROUP_TYPE )? partition_clause? 
+;
+
+terminal COGROUP_TYPE :
+    "'" ( ('merge') ) "'"
+;
+
+OrderStatement : 
+    name=Alias '=' 'ORDER' type=AliasType  'BY' order_by_clause ( 'USING' FuncClause )?
+;
+
+CrossStatement : 
+    name=Alias '=' 'CROSS' aliases=rel_list partition_clause?
+;
+
+UnionStatement : 
+    name=Alias '=' 'UNION' 'ON' aliases=rel_list
+;
+
+JoinStatement : 
+     name=Alias '=' 'JOIN' aliases=join_sub_clause ( 'USING' join_type )? partition_clause?
+;
+
+LimitStatement : 
+    name=Alias '=' 'LIMIT' type=AliasType scalarInt
+;
+
+SampleStatement : 
+    name=Alias '=' 'SAMPLE' type=AliasType DOUBLENUMBER
+;
+
+DistinctStatement : 
+    name=Alias '=' 'DISTINCT' type=AliasType partition_clause?
+;
+
+StreamStatement : 
+    name=Alias '=' 'STREAM' type=AliasType 'THROUGH' ( EXECCOMMAND | IDENTIFIER ) AsClause?
+;
+
+MrStatement : 
+    name=Alias '=' 'MAPREDUCE' STRING StoreStatement load=LoadStatement EXECCOMMAND?
+;
+
+SplitStatement : 
+    name=Alias '=' 'SPLIT' type=AliasType  'INTO' branches+=split_branch ( ',' branches+=split_branch )+
+;
+
+StoreStatement :
+    'STORE' type=AliasType 'INTO' STRING ( 'USING' FuncClause )?
+;
+
+DescribeStatement : 
+    'DESCRIBE' type=AliasType
+;
+
+ExplainStatement : 
+    'EXPLAIN' type=AliasType
+;
+
+DumpStatement : 
+    'DUMP' type=AliasType
+;
+
+
+
+Condition returns Condition: 
+    //'NOT' ? OrCondition
+    ( '(' Type ')' )? OrCondition
+;
+
+OrCondition returns Condition: 
+    AndCondition ({OrCondition.left=current} 'OR' right=AndCondition )*
+;
+
+AndCondition returns Condition: 
+    UnaryCondition ({AndCondition.left=current} 'AND' right=UnaryCondition )*
+;
+
+UnaryCondition returns Condition: 
+    //func_eval |
+    //'(' Condition ')' |                                          // - / % + 0.0
+    '(' Condition ('?' leftExp=Condition ':' rightExp=Condition)? ')' ({UnaryCondition.left=current} '+' right=Condition)? |
+    
+    //null_check_cond | // to LL refactor
+    TE ({UnaryCondition.left=current} rel_op right=TE)? 
+;
+
+TE returns Condition:
+    Expression ('IS' 'NOT'? 'NULL')?
+;
+
+func_eval: 
+    FuncName {func_eval} '(' arg_list=real_arg_list? ')'
+;
+
+real_arg_list : 
+    args+=real_arg ( ',' args+=real_arg )* 
+;
+
+real_arg : 
+    //Expression | STAR
+    Condition | STAR
+;
+
+Expression returns Expression: 
+    'NOT'? AddExpression
+;
+
+AddExpression returns Expression: 
+    multi_expr ( ( PLUS | MINUS ) mul_exp=multi_expr )*
+;
+
+multi_expr returns Expression: 
+    cast_expr ( ( STAR | DIV | PERCENT ) mul_cast=cast_expr )*
+;
+
+cast_expr returns Expression:
+    //( '(' Type ')' )? unary_expr
+    unary_expr    
+;
+
+unary_expr returns Expression:  
+     expr_eval 
+         //  | LEFT_PAREN Expression RIGHT_PAREN
+       //   -> ^( EXPR_IN_PAREN expr )
+         | neg_expr
+;
+
+expr_eval returns Expression: 
+    const_expr | var_expr //| bin_expr
+;
+
+var_expr : 
+    projectable_expr ( dot_proj | pound_proj )*
+;
+
+projectable_expr : 
+   func_eval | 
+    col_ref
+ 
+;
+
+//func_eval : func_name LEFT_PAREN real_arg_list? RIGHT_PAREN
+//         // -> ^( FUNC_EVAL func_name real_arg_list? )
+//;
+
+dot_proj : ('.' | '::') (  col_alias_or_index 
+              //    | ( LEFT_PAREN col_alias_or_index ( COMMA col_alias_or_index )* RIGHT_PAREN ) 
+              )
+      //  -> ^( '.' col_alias_or_index+ )
+;
+
+col_alias_or_index : col_alias | col_index
+;
+
+col_alias : 
+    IDENTIFIER
+;
+
+col_index : DOLLAR (DIGIT | INT)
+;
+
+pound_proj : POUND ( STRING | 'NULL' )
+;
+
+bin_expr: 
+    '(' Condition '?' leftExp=Expression ':' rightExp=Expression ')'
+;
+
+neg_expr returns Expression : 
+    '-' cast_expr
+;
+
+rel_op :   
+rel_op_eq
+       | rel_op_ne
+       | rel_op_gt
+       | rel_op_gte
+       | rel_op_lt
+       | rel_op_lte
+       | 'MATCHES'
+;
+
+rel_op_eq : STR_OP_EQ | NUM_OP_EQ
+;
+
+rel_op_ne : STR_OP_NE | NUM_OP_NE
+;
+
+rel_op_gt : STR_OP_GT | NUM_OP_GT
+;
+
+rel_op_gte : STR_OP_GTE | NUM_OP_GTE
+;
+
+rel_op_lt : STR_OP_LT | NUM_OP_LT
+;
+
+rel_op_lte : STR_OP_LTE | NUM_OP_LTE
+;
+
+//// str op only later?
+//rel_str_op : STR_OP_EQ
+//           | STR_OP_NE
+//           | STR_OP_GT
+//           | STR_OP_LT
+//           | STR_OP_GTE
+//           | STR_OP_LTE
+//           | STR_OP_MATCHES
+//;
+
+
+
+
+AliasType :
+    referenced=[Statement]
+;
+
+FlattenGeneratedItem : 
+   //Expression ( 'AS' FieldDef )? |
+   (Condition | '*') ( 'AS' ( FieldDef | FieldFefList ) )?
+;
+//
+//flatten_generated_item : flatten_clause ( AS/*!*/ ( field_def | field_def_list ) )?
+//                       | expr ( AS/*!*/ field_def )?
+//                       | STAR ( AS/*!*/ ( field_def | field_def_list ) )?
+//;
+//
+//flatten_clause : FLATTEN/*^*/ LEFT_PAREN/*!*/ expr RIGHT_PAREN/*!*/
+//;
+//
+CommentStatement :
+    SL_COMMENT
+;
+
+Alias : 
+    ID
+;
+
+ParallelClause : 
+     'PARALLEL' scalarInt;
+
+
+RegisterClause : 
+    'REGISTER' PathClause
+;
+
+DefaultClause : 
+    '%DEFAULT' name=Alias STRING
+;
+
+DeclareClause : 
+    '%DECLARE' name=Alias STRING
+;
+
+DefineClause : 
+    'DEFINE' name=Alias FuncClause
+;
+
+LoadUsing : 
+    'USING' FuncClause
+;
+
+FuncClause : 
+    FuncName '(' STRING? (',' STRING)* ')'
+;
+
+FuncName :
+    (ID | '.' | '$')+ 
+;
+
+PathClause :
+    ('ALL' | scalar | ID | '.' | '$' | '/' | '\\' | '-')+
+;
+
+//terminal PathClause :
+//   ('0'..'9' | 'a'..'z' | 'A'..'Z' | '_' | '.' | '$' | '/' | '\\' | '-')+
+//;
+
+AsClause:
+    'AS' (AliasDef | AliasDefList)
+;
+
+AliasDef:
+    Alias (':' Type)?
+;
+
+AliasDefList:
+    '(' AliasDef ( ',' AliasDef )* ')'
+;     
+
+IDENTIFIER: 
+    ID //LETTER ( DIGIT | LETTER | SPECIALCHAR )*
+;
+
+FieldDef :
+    IDENTIFIER ( ':' Type )?
+;
+
+FieldFefList : 
+    '(' FieldDef ( ',' FieldDef )* ')'
+;    
+
+Type : 
+    SimpleType | TupleType | MapType | bag_type 
+;
+
+SimpleType : 
+    'INT' |
+    'LONG' | 
+    'FLOAT' | 
+    'DOUBLE' | 
+    'CHARARRAY' | 
+    'BYTEARRAY'
+;
+
+TupleType : 
+    'TUPLE'? AliasDefList
+;
+
+bag_type : 
+    'BAG'? '{' ( ( IDENTIFIER ':' )? TupleType )? '}'
+;
+
+MapType : 
+    'MAP[]'
+;
+
+Cmd : EXECCOMMAND //( ship_clause | cache_caluse | input_clause | output_clause | error_clause )*
+;
+
+
+terminal SL_COMMENT  : '--' ! ('\n' | '\r')* ('\r'? '\n')?;
+  
+
+//terminal USING : 'USING';
+
+//terminal FILTER : 'FILTER'
+//;
+//
+//terminal FOREACH : 'FOREACH'
+//;
+//
+//terminal ORDER   :  'ORDER'
+//;
+//
+//terminal DISTINCT : 'DISTINCT'
+//;
+//
+//terminal COGROUP : 'COGROUP'
+//;
+//
+//terminal JOIN : 'JOIN'
+//;
+//
+//terminal CROSS : 'CROSS'
+//;
+//
+//terminal UNION : 'UNION'
+//;
+//
+//terminal SPLIT : 'SPLIT'
+//;
+//
+//terminal INTO : 'INTO'
+//;
+//
+//terminal IF : 'IF'
+//;
+//
+//terminal ALL : 'ALL'
+//;
+
+//terminal AS : 'AS';
+
+//terminal BY : 'BY'
+//;
+//
+//terminal USING : 'USING'
+//;
+//
+//terminal INNER : 'INNER'
+//;
+//
+//terminal OUTER : 'OUTER'
+//;
+//
+//terminal ONSCHEMA : 'ONSCHEMA'
+//;
+
+//terminal PARALLEL : 'PARALLEL';
+//
+//terminal PARTITION : 'PARTITION'
+//;
+//
+//terminal GROUP : 'GROUP'
+//;
+
+//terminal AND : 'AND'
+//;
+//
+//terminal OR : 'OR'
+//;
+//
+//terminal NOT : 'NOT'
+//;
+//
+//terminal GENERATE : 'GENERATE'
+//;
+//
+//terminal FLATTEN : 'FLATTEN'
+//;
+
+//terminal ASC : 'ASC'
+//;
+//
+//terminal DESC : 'DESC'
+//;
+
+//terminal INTEG : 'INT' // ! was INT
+//;
+//
+//terminal LONG : 'LONG'
+//;
+//
+//terminal FLOAT : 'FLOAT'
+//;
+//
+//terminal DOUBLE : 'DOUBLE'
+//;
+//
+//terminal CHARARRAY : 'CHARARRAY'
+//;
+//
+//terminal BYTEARRAY : 'BYTEARRAY'
+//;
+//
+//terminal BAG : 'BAG' // todo rename
+//;
+//
+//terminal TUPLE : 'TUPLE'
+//;
+//
+//terminal MAP : 'MAP'
+//;
+//
+//terminal IS : 'IS'
+//;
+
+//terminal NULL : 'NULL'
+//;
+
+//terminal STREAM : 'STREAM'
+//;
+//
+//terminal THROUGH : 'THROUGH'
+//;
+//
+//terminal STORE : 'STORE'
+//;
+//
+//terminal MAPREDUCE : 'MAPREDUCE'
+//;
+//
+//terminal SHIP : 'SHIP'
+//;
+//
+//terminal CACHE : 'CACHE'
+//;
+//
+//INPUT : 'INPUT'
+//;
+//
+//OUTPUT : 'OUTPUT'
+//;
+//
+//STDERROR : 'STDERR'
+//;
+//
+//STDIN : 'STDIN'
+//;
+//
+//STDOUT : 'STDOUT'
+//;
+//
+//LIMIT : 'LIMIT'
+//;
+//
+//SAMPLE : 'SAMPLE'
+//;
+//
+//LEFT : 'LEFT'
+//;
+//
+//RIGHT : 'RIGHT'
+//;
+//
+//FULL : 'FULL'
+//;
+
+STR_OP_EQ : 'EQ'
+;
+
+STR_OP_GT : 'GT'
+;
+
+STR_OP_LT : 'LT'
+;
+
+STR_OP_GTE : 'GTE'
+;
+
+STR_OP_LTE : 'LTE'
+;
+
+STR_OP_NE : 'NEQ'
+;
+
+STR_OP_MATCHES : 'MATCHES'
+;
+    
+NUM_OP_EQ : '=='
+;
+
+NUM_OP_LT : '<'
+;
+
+NUM_OP_LTE : '<='
+;
+
+NUM_OP_GT : '>'
+;
+
+NUM_OP_GTE : '>=' 
+;
+
+NUM_OP_NE : '!='
+;
+
+
+SEMI_COLON : ';'
+;
+    
+LEFT_PAREN : '('
+;
+    
+RIGHT_PAREN : ')'
+;
+
+LEFT_CURLY : '{'
+;
+
+RIGHT_CURLY : '}'
+;
+
+LEFT_BRACKET : '['
+;
+    
+RIGHT_BRACKET : ']'
+;
+
+POUND : '#'
+;
+
+EQUAL : '=';
+
+COMMA : ','
+;
+
+PERIOD : '.'
+;
+
+DIV : '/'
+;
+
+PERCENT : '%'
+;
+
+PLUS : '+'
+;
+
+MINUS : '-'
+;
+
+//QMARK : '?'
+//;  
+    
+terminal DIGIT : '0'..'9'
+;
+
+terminal  LETTER : 'A'..'Z'
+;
+    
+terminal  SPECIALCHAR : '_'
+;
+//
+//IDENTIFIER: LETTER ( DIGIT | LETTER | SPECIALCHAR )+//*
+//;
+
+terminal FLOATINGPOINT : 
+    //INT ( '.' INT )? | '.' INT 
+    //INT '.' INT | '.' INT
+    DIGIT+ '.' DIGIT+
+;
+    
+//INTEGER: ( DIGIT )+
+//;
+
+terminal LONGINTEGER: 
+    INT ( 'L' )//? INT with > N digits
+;
+    
+terminal DOUBLENUMBER : 
+    FLOATINGPOINT ( 'E' ( '-' | '+' )? INT )?
+;
+    
+//FLOATNUMBER : DOUBLENUMBER ( 'F' )//?
+//;
+//
+//HINT_REPL : '\'REPL\'' |  '\'REPLICATED\''
+//;
+//
+//HINT_SKEWED : '\'SKEWED\''
+//;
+//
+//HINT_MERGE : '\'MERGE\''
+//;
+//
+//HINT_DEFAULT : '\'HASH\'' | '\'DEFAULT\''
+//;
+//
+//HINT_COLLECTED : '\'COLLECTED\''
+//;
+//
+//HINT_REGULAR : '\'REGULAR\''
+//;
+//
+////terminal MYQUOTEDSTRING :  '\'' (   ( /* ~ */ ( '\'' | '\\' | '\n' | '\r' ) )
+////                       | ( '\\' ( ( 'N' | 'T' | 'B' | 'R' | 'F' | '\\' | '\'' ) ) )
+////                       | ( '\\u' ( '0'..'9' | 'A'..'F' )
+////                                 ( '0'..'9' | 'A'..'F' )
+////                                 ( '0'..'9' | 'A'..'F' )
+////                                 ( '0'..'9' | 'A'..'F' )  )
+////                     )*
+////                '\''
+////;
+////
+////terminal MULTILINE_QUOTEDSTRING :  '\'' (   ( /* ~ */ ( '\'' | '\\' ) )
+////                                 | ( '\\' ( ( 'N' | 'T' | 'B' | 'R' | 'F' | '\\' | '\'' | 'n' | 'r' ) ) )
+////                                 | ( '\\u' ( '0'..'9' | 'A'..'F' )
+////                                           ( '0'..'9' | 'A'..'F' )
+////                                           ( '0'..'9' | 'A'..'F' )
+////                                           ( '0'..'9' | 'A'..'F' )  )
+////                               )*
+////                '\''
+////;
+
+terminal EXECCOMMAND : '`' ( !( '`' ) )* '`';
+    
+STAR : '*'
+;
+
+COLON : ':'
+;
+
+DOLLAR : '$'
+;
+//            
+////terminal WS  :  ( ' ' | '\r' | '\t' /* | '\u000C' */ | '\n' )
+////;
+////
+////    
+////terminal SL_COMMENT : '--' ( /* ~ */( '\r' | '\n' ) )*
+////    ;
+//
+////terminal ML_COMMENT : '/*' -> '*/' // todo, hidden, non greedy
+////;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//statement : general_statement
+//          | foreach_statement
+//          | split_statement          
+//;
+
+//split_statement : split_clause SEMI_COLON//!
+//;
+//
+//general_statement : ( alias EQUAL )? op_clause parallel_clause? SEMI_COLON 
+//                 //-> ^( STATEMENT alias? op_clause parallel_clause? )
+//;
+//
+//parallel_clause : PARALLEL/*^*/ INTEGER
+//;
+//
+//// We need to handle foreach specifically because of the ending ';', which is not required 
+//// if there is a nested block. This is ugly, but it gets the job done.
+//foreach_statement : ( alias EQUAL )? foreach_clause
+//                 //-> ^( STATEMENT alias? foreach_clause )
+//;
+//
+//alias : IDENTIFIER
+//;
+//
+//op_clause : define_clause 
+//          | load_clause
+////          | group_clause
+//          | store_clause
+////          | filter_clause
+//          | distinct_clause
+//          | limit_clause
+//          | sample_clause
+//          | order_clause
+//          | cross_clause
+////          | join_clause
+//          | union_clause
+//          | stream_clause
+//          | mr_clause
+//;
+//
+// : DEFINE/*^*/ alias ( cmd | func_clause )
+//;
+//
+//cmd : EXECCOMMAND/*^*/ ( ship_clause | cache_caluse | input_clause | output_clause | error_clause )*
+//;
+//
+//ship_clause : SHIP/*^*/ LEFT_PAREN/*!*/ path_list? RIGHT_PAREN//!
+//;
+//
+//path_list : MYQUOTEDSTRING ( COMMA MYQUOTEDSTRING )* 
+//         //-> MYQUOTEDSTRING+
+//;
+//
+//cache_caluse : CACHE/*^*/ LEFT_PAREN/*!*/ path_list RIGHT_PAREN/*!*/
+//;
+//
+//input_clause : INPUT/*^*/ LEFT_PAREN/*!*/ stream_cmd_list RIGHT_PAREN/*!*/
+//;
+//
+//stream_cmd_list : stream_cmd ( COMMA stream_cmd )*
+//               //-> stream_cmd+
+//;
+//
+//stream_cmd : ( STDIN | STDOUT | MYQUOTEDSTRING )/*^*/ ( 'USING'/*!*/ ( func_clause ) )?
+//;
+//
+//output_clause : OUTPUT/*^*/ LEFT_PAREN/*!*/ stream_cmd_list RIGHT_PAREN/*!*/
+//;
+//
+//error_clause : STDERROR/*^*/ LEFT_PAREN/*!*/ MYQUOTEDSTRING ( LIMIT/*!*/ INTEGER )? RIGHT_PAREN/*!*/
+//;
+//
+//load_clause : LOAD/*^*/ filename ( 'USING'/*!*/ func_clause )? as_clause?
+//;
+//
+//filename : MYQUOTEDSTRING
+//;
+//
+//as_clause: AS/*^*/ ( field_def | field_def_list )
+//;
+//
+//field_def : IDENTIFIER ( COLON type )?
+//     //-> ^( FIELD_DEF IDENTIFIER type? )
+//;
+//
+//field_def_list : LEFT_PAREN field_def ( COMMA field_def )* RIGHT_PAREN
+//     //-> field_def+
+//;
+//
+//type : simple_type | tuple_type | bag_type | map_type
+//;
+//
+//simple_type : INT | LONG | FLOAT | DOUBLE | CHARARRAY | BYTEARRAY
+//;
+//
+//tuple_type : 'TUPLE'? field_def_list
+//          //-> ^( TUPLE_TYPE field_def_list )
+//;
+//
+//bag_type : 'BAG'? LEFT_CURLY ( ( IDENTIFIER COLON )? tuple_type )? RIGHT_CURLY
+//        //-> ^( BAG_TYPE tuple_type? )
+//;
+//
+//map_type : 'MAP' LEFT_BRACKET RIGHT_BRACKET
+//        //-> MAP_TYPE
+//;
+//
+//func_clause : func_name LEFT_PAREN func_args? RIGHT_PAREN
+//          // -> ^( FUNC func_name func_args? )
+//          // | func_alias
+//          //-> ^( FUNC_REF func_alias )
+//;
+//
+//func_name : eid ( ( '.' | DOLLAR ) eid )*
+//;
+//
+//func_alias : IDENTIFIER
+//;
+//
+//func_args_string : MYQUOTEDSTRING | MULTILINE_QUOTEDSTRING
+//;
+//
+//func_args : func_args_string ( COMMA func_args_string )* 
+//         //-> func_args_string+
+//;
+//
+
+group_type :
+    STRING 
+    //'"' ('COLLECTED' | 'MERGE' | 'REGULAR') '"'
+;
+
+group_item_list : 
+    group_item ( COMMA items=group_item )*
+
+;
+
+
+
+//rel : alias | LEFT_PAREN/*!*/ op_clause RIGHT_PAREN/*!*/
+//;
+//
+//flatten_generated_item : flatten_clause ( AS/*!*/ ( field_def | field_def_list ) )?
+//                       | expr ( AS/*!*/ field_def )?
+//                       | STAR ( AS/*!*/ ( field_def | field_def_list ) )?
+//;
+//
+//flatten_clause : FLATTEN/*^*/ LEFT_PAREN/*!*/ expr RIGHT_PAREN/*!*/
+//;
+//
+
+
+////filter_clause : FILTER/*^*/ rel BY/*!*/ cond
+////;
+//
+////cond : or_cond
+////;
+////
+////or_cond : and_cond  ({or_cond.left=current} OR/*^*/ right=and_cond )*
+////;
+////
+////and_cond : unary_cond ({and_cond.left=current} AND/*^*/ right=unary_cond )*
+////;
+////
+////unary_cond : LEFT_PAREN/*!*/ cond RIGHT_PAREN/*!*/
+////           | expr rel_op/*^*/ expr
+////           | func_eval
+////           | null_check_cond
+////           | not_cond
+////;
+////
+////not_cond : NOT/*^*/ unary_cond
+////;
+//
+//func_eval : func_name LEFT_PAREN real_arg_list? RIGHT_PAREN
+//         // -> ^( FUNC_EVAL func_name real_arg_list? )
+//;
+//
+//real_arg_list : real_arg ( COMMA right=real_arg )*
+//           //  -> real_arg+
+//;
+//
+//real_arg : expr | STAR
+//;
+//
+//null_check_cond : expr IS/*!*/ NOT? NULL/*^*/
+//;
+//
+//expr : 'aa' //add_expr
+//;
+//
+//add_expr : multi_expr //( ( PLUS | MINUS )/*^*/ multi_expr )*
+//;
+//
+//multi_expr : cast_expr //( ( STAR | DIV | PERCENT )/*^*/ cast_expr )*
+//;
+//
+//cast_expr : ( LEFT_PAREN type RIGHT_PAREN ) unary_expr
+//        // -> ^( CAST_EXPR type unary_expr )
+//        // | unary_expr
+//;
+//
+//unary_expr : expr_eval 
+//           | LEFT_PAREN expr RIGHT_PAREN
+//       //   -> ^( EXPR_IN_PAREN expr )
+//       //  | neg_expr
+//;
+//
+//expr_eval : const_expr | var_expr
+//;
+//
+//var_expr : projectable_expr ( dot_proj | pound_proj )*
+//;
+//
+//projectable_expr: func_eval | col_ref //| bin_expr
+//;
+//
+//dot_proj : '.' ( col_alias_or_index 
+//                  | ( LEFT_PAREN col_alias_or_index ( COMMA col_alias_or_index )* RIGHT_PAREN ) )
+//      //  -> ^( '.' col_alias_or_index+ )
+//;
+//
+//col_alias_or_index : col_alias | col_index
+//;
+//
+//col_alias : GROUP | IDENTIFIER
+//;
+//
+//col_index : DOLLAR/*^*/ INTEGER
+//;
+//
+//pound_proj : POUND/*^*/ ( MYQUOTEDSTRING | NULL )
+//;
+//
+////bin_expr : LEFT_PAREN cond QMARK exp1 = expr COLON exp2 = expr RIGHT_PAREN
+////       // -> ^( BIN_EXPR cond $exp1 $exp2 )
+////;
+//
+//neg_expr : MINUS cast_expr
+//      //  -> ^( NEG cast_expr )
+//;
+//
+
+
+order_by_clause : STAR ( 'ASC' | 'DESC' )?
+                | order_col_list
+;
+
+order_col_list : order_col ( ',' order_col )*
+            //  -> order_col+
+;
+
+order_col : 
+     col_ref ( 'ASC' | 'DESC' )? | 
+     '(' col_ref ( 'ASC' | 'DESC' )? ')'
+;
+
+partition_clause : 
+    'PARTITION' 'BY' FuncName
+;
+
+
+
+rel_list : 
+    type=AliasType ( ',' type=AliasType )*
+;
+
+
+
+join_type :
+    STRING 
+    //HINT_REPL | HINT_MERGE | HINT_SKEWED | HINT_DEFAULT
+;
+
+join_sub_clause : join_item ( 'LEFT' | 'RIGHT' | 'FULL' )? 'OUTER'? ( ',' others=join_item )+
+                //| join_item_list
+;
+
+//join_item_list : join_item ( ',' others=join_item )+
+//;
+
+join_item : type=AliasType expressions=join_group_by_clause
+       // -> ^( JOIN_ITEM  rel join_group_by_clause )
+;
+
+
+group_item : 
+    ('BY' join_group_by_expr_list | 'ALL' | 'ANY' ) ( 'INNER' | 'OUTER' )?
+;
+
+join_group_by_clause : 'BY' join_group_by_expr_list
+;
+
+join_group_by_expr_list : 
+       join_group_by_expr |
+      '(' left=join_group_by_expr ( ',' expressions=join_group_by_expr )* ')'
+                    //   -> join_group_by_expr+
+                    //    | join_group_by_expr
+;
+
+join_group_by_expr : Expression | STAR
+;
+
+//foreach_clause : FOREACH/*^*/ rel foreach_plan
+//;
+//
+//foreach_plan : nested_blk SEMI_COLON?
+//         //  -> ^( FOREACH_PLAN nested_blk )
+//         //   | ( generate_clause parallel_clause? SEMI_COLON )
+//         //  -> ^( FOREACH_PLAN_SIMPLE generate_clause parallel_clause? )
+//;
+//
+nested_blk : '{' nested_command_list clauses=generate_clause ';' '}'
+;
+
+generate_clause : 'GENERATE' items+=FlattenGeneratedItem ( ',' items+=FlattenGeneratedItem )* 
+                //  -> ^( 'GENERATE' flatten_generated_item+ )
+;
+
+nested_command_list : {nested_command_list} (cmds+=nested_command SEMI_COLON)* 
+                //   -> nested_command*
+               //     |
+;
+
+nested_command : 
+    Alias '=' nested_op //( nested_op | Expression)
+          //    -> ^( NESTED_CMD IDENTIFIER nested_op )
+               //| IDENTIFIER EQUAL Expression
+         //    -> ^( NESTED_CMD_ASSI IDENTIFIER expr )
+;
+
+nested_op : //nested_proj //todo warning comes from here          
+          NestedFilter
+          | nested_sort
+          | nested_distinct
+          | nested_limit
+          //| cast_expr
+          | ( '(' Type ')' )? AddExpression
+          //| ( '(' Type ')' )? unary_expr
+;
+
+//nested_proj : col_ref '.' cols=col_ref_list
+//         //  -> ^( NESTED_PROJ col_ref col_ref_list )
+//;
+
+//col_ref_list : ( col_ref | ( LEFT_PAREN col_ref ( COMMA col_ref )* RIGHT_PAREN ) )
+//         //   -> col_ref+
+//;
+
+NestedFilter : 
+    'FILTER' exp=var_expr 'BY' cond=Condition
+;
+
+nested_sort : 'ORDER' var_expr 'BY' order_by_clause ( 'USING' FuncClause )?
+;
+
+nested_distinct : 'DISTINCT' var_expr
+;
+
+nested_limit : 'LIMIT' var_expr (INT | LONGINTEGER)
+;
+
+//nested_op_input : col_ref | nested_proj
+//;
+
+split_branch : IDENTIFIER 'IF' Condition
+            //-> ^( SPLIT_BRANCH IDENTIFIER cond )
+;
+
+col_ref : alias_col_ref | dollar_col_ref
+;
+
+alias_col_ref : 'GROUP' | IDENTIFIER
+;
+
+dollar_col_ref : DOLLAR INT
+;
+
+const_expr : literal
+;
+
+literal : scalar | STRING | '\\u' | 'NULL' //| map | bag | tuple // const type?
+;
+
+scalar : 
+    //DOUBLENUMBER | 
+    FLOATINGPOINT | scalarInt //INTEGER | LONGINTEGER | FLOATNUMBER | DOUBLENUMBER | MYQUOTEDSTRING | NULL
+;
+
+scalarInt : 
+    DIGIT | INT | LONGINTEGER | ('$' ID) // todo warning
+;
+
+//
+//map : LEFT_BRACKET ( keyvalue ( COMMA keyvalue )* )? RIGHT_BRACKET
+//  // -> ^( MAP_VAL keyvalue+ )
+// //   | LEFT_BRACKET RIGHT_BRACKET
+// //  -> ^( MAP_VAL )
+//;
+//
+//keyvalue : map_key POUND const_expr
+//      //  -> ^( KEY_VAL_PAIR map_key const_expr )
+//;
+//
+//map_key : MYQUOTEDSTRING | NULL
+//;
+//
+//bag : LEFT_CURLY ( tuple ( COMMA tuple )* )? RIGHT_CURLY
+// //  -> ^( BAG_VAL tuple+ )
+//  //  | LEFT_CURLY RIGHT_CURLY
+//  // -> ^( BAG_VAL )
+//;
+//
+//tuple : LEFT_PAREN ( literal ( COMMA const_expr )* )? RIGHT_PAREN
+//   //  -> ^( TUPLE_VAL literal+ )
+//   //   | LEFT_PAREN RIGHT_PAREN
+//   //  -> ^( TUPLE_VAL )
+//;
+//
+//// extended identifier, handling the keyword and identifier conflicts. Ugly but there is no other choice.
+//eid : rel_str_op
+//    | DEFINE
+//    | LOAD
+//    | FILTER
+//    | FOREACH
+//    | 'MATCHES'
+//    | ORDER
+//    | DISTINCT
+//    | COGROUP
+//    | JOIN
+//    | CROSS
+//    | UNION
+//    | 'SPLIT'
+//    | INTO
+//    | IF
+//    | ALL
+//    | AS
+//    | BY
+//    | 'USING'
+//    | INNER
+//    | OUTER
+//    | PARALLEL
+//    | PARTITION
+//    | GROUP
+//    | AND
+//    | OR
+//    | NOT
+//    | 'GENERATE'
+//    | FLATTEN
+//    | 'EVAL'
+//    | ASC
+//    | DESC
+//    | INT
+//    | LONG
+//    | FLOAT
+//    | DOUBLE
+//    | CHARARRAY
+//    | BYTEARRAY
+//    | 'BAG'
+//    | 'TUPLE'
+//    | 'MAP'
+//    | IS
+//    | NULL
+//    | STREAM
+//    | THROUGH
+//    | STORE
+//    | MAPREDUCE
+//    | SHIP
+//    | CACHE
+//    | INPUT
+//    | OUTPUT
+//    | STDERROR
+//    | STDIN
+//    | STDOUT
+//    | LIMIT
+//    | SAMPLE
+//    | LEFT
+//    | RIGHT
+//    | FULL
+//    | IDENTIFIER
+//;
+//
+//// relational operator
+//rel_op : rel_op_eq
+//       | rel_op_ne
+//       | rel_op_gt
+//       | rel_op_gte
+//       | rel_op_lt
+//       | rel_op_lte
+//       | STR_OP_MATCHES
+//;
+//
+//rel_op_eq : STR_OP_EQ | NUM_OP_EQ
+//;
+//
+//rel_op_ne : STR_OP_NE | NUM_OP_NE
+//;
+//
+//rel_op_gt : STR_OP_GT | NUM_OP_GT
+//;
+//
+//rel_op_gte : STR_OP_GTE | NUM_OP_GTE
+//;
+//
+//rel_op_lt : STR_OP_LT | NUM_OP_LT
+//;
+//
+//rel_op_lte : STR_OP_LTE | NUM_OP_LTE
+//;
+//
+//rel_str_op : STR_OP_EQ
+//           | STR_OP_NE
+//           | STR_OP_GT
+//           | STR_OP_LT
+//           | STR_OP_GTE
+//           | STR_OP_LTE
+//           | STR_OP_MATCHES
+//;
+
+

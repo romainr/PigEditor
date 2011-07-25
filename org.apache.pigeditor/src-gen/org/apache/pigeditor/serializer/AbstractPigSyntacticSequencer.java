@@ -18,7 +18,6 @@ public class AbstractPigSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected PigGrammarAccess grammarAccess;
 	protected AbstractElementAlias match_CoGroupByStatement_Statement___USINGKeyword_4_0_COGROUP_TYPETerminalRuleCall_4_1__q_Partition_clauseParserRuleCall_5_q_ParallelClauseParserRuleCall_0_0_2_1_q;
-	protected AbstractElementAlias match_CoGroupByStatement___USINGKeyword_4_0_COGROUP_TYPETerminalRuleCall_4_1__q;
 	protected AbstractElementAlias match_Condition_UnaryCondition_LeftParenthesisKeyword_0_0_p_LeftParenthesisKeyword_0_0;
 	protected AbstractElementAlias match_Condition_UnaryCondition_LeftParenthesisKeyword_0_0_p_____LeftParenthesisKeyword_0_0_TypeParserRuleCall_0_1_RightParenthesisKeyword_0_2___LeftParenthesisKeyword_0_0_p__a;
 	protected AbstractElementAlias match_Condition_UnaryCondition___LeftParenthesisKeyword_0_0_p_LeftParenthesisKeyword_0_0_TypeParserRuleCall_0_1_RightParenthesisKeyword_0_2__p;
@@ -30,11 +29,13 @@ public class AbstractPigSyntacticSequencer extends AbstractSyntacticSequencer {
 	protected AbstractElementAlias match_GroupByStatement_Statement___USINGKeyword_5_0_Group_typeParserRuleCall_5_1__q_Partition_clauseParserRuleCall_6_q_ParallelClauseParserRuleCall_0_0_2_1_q;
 	protected AbstractElementAlias match_GroupByStatement___USINGKeyword_5_0_Group_typeParserRuleCall_5_1__q;
 	protected AbstractElementAlias match_JoinStatement_Statement___USINGKeyword_4_0_Join_typeParserRuleCall_4_1__q_Partition_clauseParserRuleCall_5_q_ParallelClauseParserRuleCall_0_0_2_1_q;
+	protected AbstractElementAlias match_JoinStatement___USINGKeyword_4_0_Join_typeParserRuleCall_4_1__q;
 	protected AbstractElementAlias match_LoadStatement_LoadUsingParserRuleCall_4_q_AsClauseParserRuleCall_5_q;
 	protected AbstractElementAlias match_MrStatement_EXECCOMMANDTerminalRuleCall_6_q;
 	protected AbstractElementAlias match_OrderStatement_Statement___USINGKeyword_6_0_FuncClauseParserRuleCall_6_1__q_ParallelClauseParserRuleCall_0_0_2_1_q;
 	protected AbstractElementAlias match_Statement_ParallelClauseParserRuleCall_0_0_2_1_q;
 	protected AbstractElementAlias match_StoreStatement___USINGKeyword_4_0_FuncClauseParserRuleCall_4_1__q;
+	protected AbstractElementAlias match_StreamStatement_EXECCOMMANDTerminalRuleCall_5_0_or_IDENTIFIERParserRuleCall_5_1;
 	protected AbstractElementAlias match_TE_NOTKeyword_1_1_q;
 	protected AbstractElementAlias match_TE_UnaryCondition___ISKeyword_1_0_NOTKeyword_1_1_q_NULLKeyword_1_2__q_RightParenthesisKeyword_0_3_a;
 	protected AbstractElementAlias match_TE_UnaryCondition___ISKeyword_1_0_NOTKeyword_1_1_q_NULLKeyword_1_2__q_RightParenthesisKeyword_0_3_p;
@@ -49,7 +50,6 @@ public class AbstractPigSyntacticSequencer extends AbstractSyntacticSequencer {
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (PigGrammarAccess) access;
 		match_CoGroupByStatement_Statement___USINGKeyword_4_0_COGROUP_TYPETerminalRuleCall_4_1__q_Partition_clauseParserRuleCall_5_q_ParallelClauseParserRuleCall_0_0_2_1_q = new GroupAlias(false, false, new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getCoGroupByStatementAccess().getUSINGKeyword_4_0()), new TokenAlias(false, false, grammarAccess.getCoGroupByStatementAccess().getCOGROUP_TYPETerminalRuleCall_4_1())), new TokenAlias(true, false, grammarAccess.getCoGroupByStatementAccess().getPartition_clauseParserRuleCall_5()), new TokenAlias(true, false, grammarAccess.getStatementAccess().getParallelClauseParserRuleCall_0_0_2_1()));
-		match_CoGroupByStatement___USINGKeyword_4_0_COGROUP_TYPETerminalRuleCall_4_1__q = new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getCoGroupByStatementAccess().getUSINGKeyword_4_0()), new TokenAlias(false, false, grammarAccess.getCoGroupByStatementAccess().getCOGROUP_TYPETerminalRuleCall_4_1()));
 		match_Condition_UnaryCondition_LeftParenthesisKeyword_0_0_p_LeftParenthesisKeyword_0_0 = new GroupAlias(false, false, new TokenAlias(false, true, grammarAccess.getUnaryConditionAccess().getLeftParenthesisKeyword_0_0()), new TokenAlias(false, false, grammarAccess.getConditionAccess().getLeftParenthesisKeyword_0_0()));
 		match_Condition_UnaryCondition_LeftParenthesisKeyword_0_0_p_____LeftParenthesisKeyword_0_0_TypeParserRuleCall_0_1_RightParenthesisKeyword_0_2___LeftParenthesisKeyword_0_0_p__a = new GroupAlias(false, false, new TokenAlias(false, true, grammarAccess.getUnaryConditionAccess().getLeftParenthesisKeyword_0_0()), new GroupAlias(true, true, new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getConditionAccess().getLeftParenthesisKeyword_0_0()), new TokenAlias(false, false, grammarAccess.getConditionAccess().getTypeParserRuleCall_0_1()), new TokenAlias(false, false, grammarAccess.getConditionAccess().getRightParenthesisKeyword_0_2())), new TokenAlias(false, true, grammarAccess.getUnaryConditionAccess().getLeftParenthesisKeyword_0_0())));
 		match_Condition_UnaryCondition___LeftParenthesisKeyword_0_0_p_LeftParenthesisKeyword_0_0_TypeParserRuleCall_0_1_RightParenthesisKeyword_0_2__p = new GroupAlias(false, true, new TokenAlias(false, true, grammarAccess.getUnaryConditionAccess().getLeftParenthesisKeyword_0_0()), new TokenAlias(false, false, grammarAccess.getConditionAccess().getLeftParenthesisKeyword_0_0()), new TokenAlias(false, false, grammarAccess.getConditionAccess().getTypeParserRuleCall_0_1()), new TokenAlias(false, false, grammarAccess.getConditionAccess().getRightParenthesisKeyword_0_2()));
@@ -61,11 +61,13 @@ public class AbstractPigSyntacticSequencer extends AbstractSyntacticSequencer {
 		match_GroupByStatement_Statement___USINGKeyword_5_0_Group_typeParserRuleCall_5_1__q_Partition_clauseParserRuleCall_6_q_ParallelClauseParserRuleCall_0_0_2_1_q = new GroupAlias(false, false, new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getGroupByStatementAccess().getUSINGKeyword_5_0()), new TokenAlias(false, false, grammarAccess.getGroupByStatementAccess().getGroup_typeParserRuleCall_5_1())), new TokenAlias(true, false, grammarAccess.getGroupByStatementAccess().getPartition_clauseParserRuleCall_6()), new TokenAlias(true, false, grammarAccess.getStatementAccess().getParallelClauseParserRuleCall_0_0_2_1()));
 		match_GroupByStatement___USINGKeyword_5_0_Group_typeParserRuleCall_5_1__q = new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getGroupByStatementAccess().getUSINGKeyword_5_0()), new TokenAlias(false, false, grammarAccess.getGroupByStatementAccess().getGroup_typeParserRuleCall_5_1()));
 		match_JoinStatement_Statement___USINGKeyword_4_0_Join_typeParserRuleCall_4_1__q_Partition_clauseParserRuleCall_5_q_ParallelClauseParserRuleCall_0_0_2_1_q = new GroupAlias(false, false, new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getJoinStatementAccess().getUSINGKeyword_4_0()), new TokenAlias(false, false, grammarAccess.getJoinStatementAccess().getJoin_typeParserRuleCall_4_1())), new TokenAlias(true, false, grammarAccess.getJoinStatementAccess().getPartition_clauseParserRuleCall_5()), new TokenAlias(true, false, grammarAccess.getStatementAccess().getParallelClauseParserRuleCall_0_0_2_1()));
+		match_JoinStatement___USINGKeyword_4_0_Join_typeParserRuleCall_4_1__q = new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getJoinStatementAccess().getUSINGKeyword_4_0()), new TokenAlias(false, false, grammarAccess.getJoinStatementAccess().getJoin_typeParserRuleCall_4_1()));
 		match_LoadStatement_LoadUsingParserRuleCall_4_q_AsClauseParserRuleCall_5_q = new GroupAlias(false, false, new TokenAlias(true, false, grammarAccess.getLoadStatementAccess().getLoadUsingParserRuleCall_4()), new TokenAlias(true, false, grammarAccess.getLoadStatementAccess().getAsClauseParserRuleCall_5()));
 		match_MrStatement_EXECCOMMANDTerminalRuleCall_6_q = new TokenAlias(true, false, grammarAccess.getMrStatementAccess().getEXECCOMMANDTerminalRuleCall_6());
 		match_OrderStatement_Statement___USINGKeyword_6_0_FuncClauseParserRuleCall_6_1__q_ParallelClauseParserRuleCall_0_0_2_1_q = new GroupAlias(false, false, new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getOrderStatementAccess().getUSINGKeyword_6_0()), new TokenAlias(false, false, grammarAccess.getOrderStatementAccess().getFuncClauseParserRuleCall_6_1())), new TokenAlias(true, false, grammarAccess.getStatementAccess().getParallelClauseParserRuleCall_0_0_2_1()));
 		match_Statement_ParallelClauseParserRuleCall_0_0_2_1_q = new TokenAlias(true, false, grammarAccess.getStatementAccess().getParallelClauseParserRuleCall_0_0_2_1());
 		match_StoreStatement___USINGKeyword_4_0_FuncClauseParserRuleCall_4_1__q = new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getStoreStatementAccess().getUSINGKeyword_4_0()), new TokenAlias(false, false, grammarAccess.getStoreStatementAccess().getFuncClauseParserRuleCall_4_1()));
+		match_StreamStatement_EXECCOMMANDTerminalRuleCall_5_0_or_IDENTIFIERParserRuleCall_5_1 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getStreamStatementAccess().getEXECCOMMANDTerminalRuleCall_5_0()), new TokenAlias(false, false, grammarAccess.getStreamStatementAccess().getIDENTIFIERParserRuleCall_5_1()));
 		match_TE_NOTKeyword_1_1_q = new TokenAlias(true, false, grammarAccess.getTEAccess().getNOTKeyword_1_1());
 		match_TE_UnaryCondition___ISKeyword_1_0_NOTKeyword_1_1_q_NULLKeyword_1_2__q_RightParenthesisKeyword_0_3_a = new GroupAlias(false, false, new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getTEAccess().getISKeyword_1_0()), new TokenAlias(true, false, grammarAccess.getTEAccess().getNOTKeyword_1_1()), new TokenAlias(false, false, grammarAccess.getTEAccess().getNULLKeyword_1_2())), new TokenAlias(true, true, grammarAccess.getUnaryConditionAccess().getRightParenthesisKeyword_0_3()));
 		match_TE_UnaryCondition___ISKeyword_1_0_NOTKeyword_1_1_q_NULLKeyword_1_2__q_RightParenthesisKeyword_0_3_p = new GroupAlias(false, false, new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getTEAccess().getISKeyword_1_0()), new TokenAlias(true, false, grammarAccess.getTEAccess().getNOTKeyword_1_1()), new TokenAlias(false, false, grammarAccess.getTEAccess().getNULLKeyword_1_2())), new TokenAlias(false, true, grammarAccess.getUnaryConditionAccess().getRightParenthesisKeyword_0_3()));
@@ -334,8 +336,6 @@ public class AbstractPigSyntacticSequencer extends AbstractSyntacticSequencer {
 			return;
 		if(match_CoGroupByStatement_Statement___USINGKeyword_4_0_COGROUP_TYPETerminalRuleCall_4_1__q_Partition_clauseParserRuleCall_5_q_ParallelClauseParserRuleCall_0_0_2_1_q.equals(transition.getAmbiguousSyntax()))
 			emit_CoGroupByStatement_Statement___USINGKeyword_4_0_COGROUP_TYPETerminalRuleCall_4_1__q_Partition_clauseParserRuleCall_5_q_ParallelClauseParserRuleCall_0_0_2_1_q(semanticObject, transition, fromNode, toNode);
-		else if(match_CoGroupByStatement___USINGKeyword_4_0_COGROUP_TYPETerminalRuleCall_4_1__q.equals(transition.getAmbiguousSyntax()))
-			emit_CoGroupByStatement___USINGKeyword_4_0_COGROUP_TYPETerminalRuleCall_4_1__q(semanticObject, transition, fromNode, toNode);
 		else if(match_Condition_UnaryCondition_LeftParenthesisKeyword_0_0_p_LeftParenthesisKeyword_0_0.equals(transition.getAmbiguousSyntax()))
 			emit_Condition_UnaryCondition_LeftParenthesisKeyword_0_0_p_LeftParenthesisKeyword_0_0(semanticObject, transition, fromNode, toNode);
 		else if(match_Condition_UnaryCondition_LeftParenthesisKeyword_0_0_p_____LeftParenthesisKeyword_0_0_TypeParserRuleCall_0_1_RightParenthesisKeyword_0_2___LeftParenthesisKeyword_0_0_p__a.equals(transition.getAmbiguousSyntax()))
@@ -358,6 +358,8 @@ public class AbstractPigSyntacticSequencer extends AbstractSyntacticSequencer {
 			emit_GroupByStatement___USINGKeyword_5_0_Group_typeParserRuleCall_5_1__q(semanticObject, transition, fromNode, toNode);
 		else if(match_JoinStatement_Statement___USINGKeyword_4_0_Join_typeParserRuleCall_4_1__q_Partition_clauseParserRuleCall_5_q_ParallelClauseParserRuleCall_0_0_2_1_q.equals(transition.getAmbiguousSyntax()))
 			emit_JoinStatement_Statement___USINGKeyword_4_0_Join_typeParserRuleCall_4_1__q_Partition_clauseParserRuleCall_5_q_ParallelClauseParserRuleCall_0_0_2_1_q(semanticObject, transition, fromNode, toNode);
+		else if(match_JoinStatement___USINGKeyword_4_0_Join_typeParserRuleCall_4_1__q.equals(transition.getAmbiguousSyntax()))
+			emit_JoinStatement___USINGKeyword_4_0_Join_typeParserRuleCall_4_1__q(semanticObject, transition, fromNode, toNode);
 		else if(match_LoadStatement_LoadUsingParserRuleCall_4_q_AsClauseParserRuleCall_5_q.equals(transition.getAmbiguousSyntax()))
 			emit_LoadStatement_LoadUsingParserRuleCall_4_q_AsClauseParserRuleCall_5_q(semanticObject, transition, fromNode, toNode);
 		else if(match_MrStatement_EXECCOMMANDTerminalRuleCall_6_q.equals(transition.getAmbiguousSyntax()))
@@ -368,6 +370,8 @@ public class AbstractPigSyntacticSequencer extends AbstractSyntacticSequencer {
 			emit_Statement_ParallelClauseParserRuleCall_0_0_2_1_q(semanticObject, transition, fromNode, toNode);
 		else if(match_StoreStatement___USINGKeyword_4_0_FuncClauseParserRuleCall_4_1__q.equals(transition.getAmbiguousSyntax()))
 			emit_StoreStatement___USINGKeyword_4_0_FuncClauseParserRuleCall_4_1__q(semanticObject, transition, fromNode, toNode);
+		else if(match_StreamStatement_EXECCOMMANDTerminalRuleCall_5_0_or_IDENTIFIERParserRuleCall_5_1.equals(transition.getAmbiguousSyntax()))
+			emit_StreamStatement_EXECCOMMANDTerminalRuleCall_5_0_or_IDENTIFIERParserRuleCall_5_1(semanticObject, transition, fromNode, toNode);
 		else if(match_TE_NOTKeyword_1_1_q.equals(transition.getAmbiguousSyntax()))
 			emit_TE_NOTKeyword_1_1_q(semanticObject, transition, fromNode, toNode);
 		else if(match_TE_UnaryCondition___ISKeyword_1_0_NOTKeyword_1_1_q_NULLKeyword_1_2__q_RightParenthesisKeyword_0_3_a.equals(transition.getAmbiguousSyntax()))
@@ -394,14 +398,6 @@ public class AbstractPigSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ('USING' COGROUP_TYPE)? partition_clause? ParallelClause?
 	 */
 	protected void emit_CoGroupByStatement_Statement___USINGKeyword_4_0_COGROUP_TYPETerminalRuleCall_4_1__q_Partition_clauseParserRuleCall_5_q_ParallelClauseParserRuleCall_0_0_2_1_q(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
-		acceptNodes(transition, fromNode, toNode);
-	}
-	
-	/**
-	 * Syntax:
-	 *     ('USING' COGROUP_TYPE)?
-	 */
-	protected void emit_CoGroupByStatement___USINGKeyword_4_0_COGROUP_TYPETerminalRuleCall_4_1__q(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
 		acceptNodes(transition, fromNode, toNode);
 	}
 	
@@ -495,6 +491,14 @@ public class AbstractPigSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Syntax:
+	 *     ('USING' join_type)?
+	 */
+	protected void emit_JoinStatement___USINGKeyword_4_0_Join_typeParserRuleCall_4_1__q(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
+		acceptNodes(transition, fromNode, toNode);
+	}
+	
+	/**
+	 * Syntax:
 	 *     LoadUsing? AsClause?
 	 */
 	protected void emit_LoadStatement_LoadUsingParserRuleCall_4_q_AsClauseParserRuleCall_5_q(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
@@ -530,6 +534,14 @@ public class AbstractPigSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ('USING' FuncClause)?
 	 */
 	protected void emit_StoreStatement___USINGKeyword_4_0_FuncClauseParserRuleCall_4_1__q(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
+		acceptNodes(transition, fromNode, toNode);
+	}
+	
+	/**
+	 * Syntax:
+	 *     IDENTIFIER | EXECCOMMAND
+	 */
+	protected void emit_StreamStatement_EXECCOMMANDTerminalRuleCall_5_0_or_IDENTIFIERParserRuleCall_5_1(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
 		acceptNodes(transition, fromNode, toNode);
 	}
 	

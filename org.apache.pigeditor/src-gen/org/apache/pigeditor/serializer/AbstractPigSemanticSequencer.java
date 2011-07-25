@@ -231,7 +231,11 @@ public class AbstractPigSemanticSequencer extends AbstractSemanticSequencer {
 				}
 				else break;
 			case PigPackage.OR_CONDITION:
-				if(context == grammarAccess.getAndConditionRule() ||
+				if(context == grammarAccess.getBin_exprRule()) {
+					sequence_bin_expr_OrCondition(context, (OrCondition) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getAndConditionRule() ||
 				   context == grammarAccess.getAndConditionAccess().getAndConditionLeftAction_1_0() ||
 				   context == grammarAccess.getUnaryConditionRule() ||
 				   context == grammarAccess.getUnaryConditionAccess().getUnaryConditionLeftAction_0_4_0()) {
@@ -245,10 +249,6 @@ public class AbstractPigSemanticSequencer extends AbstractSemanticSequencer {
 				   context == grammarAccess.getFlattenGeneratedItemRule() ||
 				   context == grammarAccess.getSplit_branchRule()) {
 					sequence_OrCondition_OrCondition(context, (OrCondition) semanticObject); 
-					return; 
-				}
-				else if(context == grammarAccess.getBin_exprRule()) {
-					sequence_bin_expr_OrCondition(context, (OrCondition) semanticObject); 
 					return; 
 				}
 				else break;
@@ -280,13 +280,13 @@ public class AbstractPigSemanticSequencer extends AbstractSemanticSequencer {
 				}
 				else break;
 			case PigPackage.STORE_STATEMENT:
-				if(context == grammarAccess.getStatementRule() ||
-				   context == grammarAccess.getMrStatementRule()) {
-					sequence_MrStatement_StoreStatement(context, (StoreStatement) semanticObject); 
+				if(context == grammarAccess.getStoreStatementRule()) {
+					sequence_StoreStatement_StoreStatement(context, (StoreStatement) semanticObject); 
 					return; 
 				}
-				else if(context == grammarAccess.getStoreStatementRule()) {
-					sequence_StoreStatement_StoreStatement(context, (StoreStatement) semanticObject); 
+				else if(context == grammarAccess.getStatementRule() ||
+				   context == grammarAccess.getMrStatementRule()) {
+					sequence_MrStatement_StoreStatement(context, (StoreStatement) semanticObject); 
 					return; 
 				}
 				else break;
@@ -327,8 +327,27 @@ public class AbstractPigSemanticSequencer extends AbstractSemanticSequencer {
 				}
 				else break;
 			case PigPackage.FUNC_EVAL:
-				if(context == grammarAccess.getBin_exprRule()) {
-					sequence_bin_expr_func_eval(context, (func_eval) semanticObject); 
+				if(context == grammarAccess.getFunc_evalRule() ||
+				   context == grammarAccess.getCast_exprRule() ||
+				   context == grammarAccess.getUnary_exprRule() ||
+				   context == grammarAccess.getExpr_evalRule() ||
+				   context == grammarAccess.getVar_exprRule() ||
+				   context == grammarAccess.getProjectable_exprRule() ||
+				   context == grammarAccess.getNeg_exprRule() ||
+				   context == grammarAccess.getNested_commandRule() ||
+				   context == grammarAccess.getNested_opRule() ||
+				   context == grammarAccess.getNested_sortRule() ||
+				   context == grammarAccess.getNested_distinctRule() ||
+				   context == grammarAccess.getNested_limitRule()) {
+					sequence_func_eval_func_eval(context, (func_eval) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getMulti_exprRule()) {
+					sequence_multi_expr_func_eval(context, (func_eval) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getGroup_item_listRule()) {
+					sequence_group_item_list_func_eval(context, (func_eval) semanticObject); 
 					return; 
 				}
 				else if(context == grammarAccess.getUnaryConditionAccess().getUnaryConditionLeftAction_0_4_0()) {
@@ -355,27 +374,8 @@ public class AbstractPigSemanticSequencer extends AbstractSemanticSequencer {
 					sequence_AddExpression_func_eval(context, (func_eval) semanticObject); 
 					return; 
 				}
-				else if(context == grammarAccess.getGroup_item_listRule()) {
-					sequence_group_item_list_func_eval(context, (func_eval) semanticObject); 
-					return; 
-				}
-				else if(context == grammarAccess.getFunc_evalRule() ||
-				   context == grammarAccess.getCast_exprRule() ||
-				   context == grammarAccess.getUnary_exprRule() ||
-				   context == grammarAccess.getExpr_evalRule() ||
-				   context == grammarAccess.getVar_exprRule() ||
-				   context == grammarAccess.getProjectable_exprRule() ||
-				   context == grammarAccess.getNeg_exprRule() ||
-				   context == grammarAccess.getNested_commandRule() ||
-				   context == grammarAccess.getNested_opRule() ||
-				   context == grammarAccess.getNested_sortRule() ||
-				   context == grammarAccess.getNested_distinctRule() ||
-				   context == grammarAccess.getNested_limitRule()) {
-					sequence_func_eval_func_eval(context, (func_eval) semanticObject); 
-					return; 
-				}
-				else if(context == grammarAccess.getMulti_exprRule()) {
-					sequence_multi_expr_func_eval(context, (func_eval) semanticObject); 
+				else if(context == grammarAccess.getBin_exprRule()) {
+					sequence_bin_expr_func_eval(context, (func_eval) semanticObject); 
 					return; 
 				}
 				else break;
@@ -398,22 +398,22 @@ public class AbstractPigSemanticSequencer extends AbstractSemanticSequencer {
 				}
 				else break;
 			case PigPackage.JOIN_ITEM:
-				if(context == grammarAccess.getJoin_sub_clauseRule()) {
-					sequence_join_sub_clause_join_item(context, (join_item) semanticObject); 
+				if(context == grammarAccess.getJoin_itemRule()) {
+					sequence_join_item_join_item(context, (join_item) semanticObject); 
 					return; 
 				}
-				else if(context == grammarAccess.getJoin_itemRule()) {
-					sequence_join_item_join_item(context, (join_item) semanticObject); 
+				else if(context == grammarAccess.getJoin_sub_clauseRule()) {
+					sequence_join_sub_clause_join_item(context, (join_item) semanticObject); 
 					return; 
 				}
 				else break;
 			case PigPackage.NESTED_COMMAND_LIST:
-				if(context == grammarAccess.getNested_command_listRule()) {
-					sequence_nested_command_list_nested_command_list(context, (nested_command_list) semanticObject); 
+				if(context == grammarAccess.getNested_blkRule()) {
+					sequence_nested_blk_nested_command_list(context, (nested_command_list) semanticObject); 
 					return; 
 				}
-				else if(context == grammarAccess.getNested_blkRule()) {
-					sequence_nested_blk_nested_command_list(context, (nested_command_list) semanticObject); 
+				else if(context == grammarAccess.getNested_command_listRule()) {
+					sequence_nested_command_list_nested_command_list(context, (nested_command_list) semanticObject); 
 					return; 
 				}
 				else break;

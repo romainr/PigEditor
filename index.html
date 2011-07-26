@@ -8,13 +8,13 @@
   <style type="text/css">
     body {
       margin-top: 1.0em;
-      background-color: #f5fefe;
+      background-color: #ffffff;
       font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #000000;
+      color: black;
     }
     #container {
-      margin: 0 auto;
-      width: 700px;
+      margin: 50px;
+
     }
     h1 { font-size: 3.8em; color: #0a0101; margin-bottom: 3px; }
     h1 .small { font-size: 0.4em; }
@@ -27,47 +27,48 @@
     pre { background: #000; color: #fff; padding: 15px;}
     hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
     .footer { text-align:center; padding-top:30px; font-style: italic; }
+    #example-img { width: 70%; }
   </style>
 </head>
 
 <body>
-  <a href="http://github.com/romainr/PigEditor"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+  <a href="http://github.com/romainr/PigEditor">
+    <img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" />
+  </a>
 
   <div id="container">
-
-    <div class="download">
-      <a href="http://github.com/romainr/PigEditor/zipball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
-      <a href="http://github.com/romainr/PigEditor/tarball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
-    </div>
-
     <h1><a href="http://github.com/romainr/PigEditor">PigEditor</a>
-      <span class="small">by <a href="http://github.com/romainr">romainr</a></span></h1>
+      <span class="small">by <a href="http://github.com/romainr">Romain</a></span></h1>
 
     <div class="description">
       Eclipse plugin for Apache Pig
     </div>
+    
+    <p>After having given a try to the nice <a href="https://cwiki.apache.org/confluence/display/PIG/PigTools" target="_blank">Pig Eclipse plugins</a> 
+    I was wondering if it was possible to do something more similar to what Eclipse can do with Java:</p>
 
-    <h2>Authors</h2>
-<p>Romain Rigaux (romain@rigaux.info)<br/><br/>      </p>
-<h2>Contact</h2>
-<p>Romain Rigaux (romain.rigaux@gmail.com)<br/>      </p>
+    <ul>
+      <li>automatic error highlighting</li>
+      <li>check alias name existence</li>
+      <li>auto complete</li>
+      <li>outline</li>
+   </ul>
 
+   <p>
+    There is still a lot to improve and there are some false positive errors highlighted
+    (trying to be in sync with Pig 0.9 for now), but feel free to send me your
+       <a href="http://github.com/romainr/PigEditor">feedback/scripts/pull requests</a>.
+    </p>
+    
+    <img id="example-img" src="./img/pigeditor-example-01.png" alt="UI example"/>
 
-    <h2>Download</h2>
+    <h2>Eclipse Update Website</h2>
     <p>
-      You can download this project in either
-      <a href="http://github.com/romainr/PigEditor/zipball/master">zip</a> or
-      <a href="http://github.com/romainr/PigEditor/tarball/master">tar</a> formats.
+      Works with Eclipse 3.6+
+      <a href="http://romainr.github.com/PigEditor/updates/">http://romainr.github.com/PigEditor/updates/</a>
     </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/romainr/PigEditor</pre>
-    </p>
-
-    <div class="footer">
-      get the source code on GitHub : <a href="http://github.com/romainr/PigEditor">romainr/PigEditor</a>
+    
+    <div class="footer">      
     </div>
 
   </div>

@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/PigEditor_1.0.0.201107261155.jar" id="PigEditor" version="1.0.0.201107261155"/>
+   <feature url="features/PigEditor_1.1.0.201107261225.jar" id="PigEditor" version="1.1.0.201107261225"/>
 </site>

@@ -32,7 +32,7 @@ Statement :
        DumpStatement |
        DescribeStatement |
        ExplainStatement) ';' |
-     DeclareClause |
+     DeclareClause ';'? |
      CommentStatement 
 ;
 
@@ -344,7 +344,7 @@ TupleType :
 ;
 
 bag_type : 
-    'BAG'? '{' ( ( IDENTIFIER ':' )? TupleType )? '}'
+    'BAG'? '{' ( ( IDENTIFIER ':' )? TupleType | MapType )? '}'
 ;
 
 MapType : 

@@ -10,6 +10,6 @@ public class PigAntlrTokenFileProvider implements IAntlrTokenFileProvider {
 	
 	public InputStream getAntlrTokenFile() {
 		ClassLoader classLoader = getClass().getClassLoader();
-    	return classLoader.getResourceAsStream("org/apache/pigeditor/parser/antlr/internal/InternalPig.tokens");
+    	return classLoader.getResourceAsStream("org/apache/pigeditor/parser/antlr/internal/InternalPigParser.tokens");
 	}
 }

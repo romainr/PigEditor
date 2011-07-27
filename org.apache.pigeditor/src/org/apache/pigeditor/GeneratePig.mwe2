@@ -56,10 +56,11 @@ Workflow {
             }
 
             // The antlr parser generator fragment.
-            fragment = parser.antlr.XtextAntlrGeneratorFragment {
-            //  options = {
+            fragment = parser.antlr.ex.rt.AntlrGeneratorFragment {
+              options = {
             //      backtrack = true
-            //  }
+            		ignoreCase = true            		
+              }
             }
 
             // java-based API for validation

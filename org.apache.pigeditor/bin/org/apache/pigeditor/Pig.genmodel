@@ -113,7 +113,9 @@
     </genClasses>
     <genClasses ecoreClass="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//FlattenGeneratedItem"/>
     <genClasses ecoreClass="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//DefaultClause"/>
-    <genClasses ecoreClass="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//DeclareClause"/>
+    <genClasses ecoreClass="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//DeclareClause">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//DeclareClause/name"/>
+    </genClasses>
     <genClasses ecoreClass="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//DefineClause"/>
     <genClasses ecoreClass="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//group_item_list"/>
     <genClasses ecoreClass="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//rel_list">

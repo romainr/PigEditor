@@ -139,7 +139,9 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FlattenGeneratedItem"/>
   <eClassifiers xsi:type="ecore:EClass" name="DefaultClause" eSuperTypes="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//DefineStatement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="DeclareClause" eSuperTypes="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//DefineStatement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DeclareClause" eSuperTypes="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DefineClause" eSuperTypes="platform:/resource/org.apache.pigeditor/src-gen/org/apache/pigeditor/Pig.ecore#//DefineStatement"/>
   <eClassifiers xsi:type="ecore:EClass" name="group_item_list"/>
   <eClassifiers xsi:type="ecore:EClass" name="rel_list">

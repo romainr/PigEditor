@@ -64,6 +64,7 @@ public class PigParser extends AbstractContentAssistParser {
 					put(grammarAccess.getRel_op_lteAccess().getAlternatives(), "rule__Rel_op_lte__Alternatives");
 					put(grammarAccess.getFlattenGeneratedItemAccess().getAlternatives_0(), "rule__FlattenGeneratedItem__Alternatives_0");
 					put(grammarAccess.getFlattenGeneratedItemAccess().getAlternatives_1_1(), "rule__FlattenGeneratedItem__Alternatives_1_1");
+					put(grammarAccess.getDeclareClauseAccess().getAlternatives_2(), "rule__DeclareClause__Alternatives_2");
 					put(grammarAccess.getFuncNameAccess().getAlternatives(), "rule__FuncName__Alternatives");
 					put(grammarAccess.getPathClauseAccess().getAlternatives(), "rule__PathClause__Alternatives");
 					put(grammarAccess.getAsClauseAccess().getAlternatives_1(), "rule__AsClause__Alternatives_1");

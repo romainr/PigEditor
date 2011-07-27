@@ -657,4 +657,7 @@ public class AbstractPigProposalProvider extends TerminalsProposalProvider {
 	public void complete_scalarInt(EObject model, RuleCall ruleCall, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
 		// subclasses may override
 	}
+	public void complete_BACKQUOTE_STRING(EObject model, RuleCall ruleCall, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
+		// subclasses may override
+	}
 }

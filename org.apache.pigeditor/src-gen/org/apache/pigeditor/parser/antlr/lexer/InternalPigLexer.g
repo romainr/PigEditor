@@ -218,6 +218,8 @@ RULE_DOUBLENUMBER : RULE_FLOATINGPOINT ('E' ('-'|'+')? RULE_INT)?;
 
 RULE_EXECCOMMAND : '`' ~('`')* '`';
 
+RULE_BACKQUOTE_STRING : '`' ('\\' ('b'|'t'|'n'|'f'|'r'|'u'|'`'|'`'|'\\')|~(('\\'|'`')))* '`';
+
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 
 RULE_INT : ('0'..'9')+;

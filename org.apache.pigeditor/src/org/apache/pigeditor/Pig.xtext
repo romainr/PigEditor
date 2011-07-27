@@ -2,40 +2,45 @@ grammar org.apache.pigeditor.Pig with org.eclipse.xtext.common.Terminals
 
 generate pig "http://www.apache.org/pigeditor/Pig"
 
-
+/*
+ * Grammar heavily borrowed from Pig and adapted to Xtext. 
+ * 
+ * There are a few conflicts to solve.
+ */
+ 
 Query :
     (elements+=Statement)*;
 
 Statement : 
     (DefineStatement |
-     LoadStatement |
-	 (ForeachStatement |
-	  FilterStatement |
-	  GroupByStatement |
-	  OrderStatement |
-	  LimitStatement |
-	  DistinctStatement |
-	  CrossStatement |
-	  JoinStatement |
-	  CoGroupByStatement |
-	  StreamStatement ) ParallelClause? |
-     MrStatement |
-     SplitStatement |
-     UnionStatement |
-     SampleStatement |
-     StoreStatement |
-     DumpStatement |
-     DescribeStatement |
-     ExplainStatement) ';' |
-     CommentStatement
+      LoadStatement |
+	  (ForeachStatement |
+	    FilterStatement |
+	    GroupByStatement |
+	    OrderStatement |
+	    LimitStatement |
+	    DistinctStatement |
+	    CrossStatement |
+	    JoinStatement |
+	    CoGroupByStatement |
+	    StreamStatement ) ParallelClause? |
+       MrStatement |
+       SplitStatement |
+       UnionStatement |
+       SampleStatement |
+       StoreStatement |
+       DumpStatement |
+       DescribeStatement |
+       ExplainStatement) ';' |
+     DeclareClause |
+     CommentStatement 
 ;
 
 
 DefineStatement :
     RegisterClause | 
     DefineClause |
-    DefaultClause |
-    DeclareClause
+    DefaultClause
 ;
 
 LoadStatement :
@@ -274,7 +279,7 @@ DefaultClause :
 ;
 
 DeclareClause : 
-    '%DECLARE' name=Alias STRING
+    '%DECLARE' name=Alias (STRING | EXECCOMMAND)
 ;
 
 DefineClause : 
@@ -602,4 +607,3 @@ scalar :
 scalarInt : 
     DIGIT | INT | LONGINTEGER | ('$' ID) // TODO warning
 ;
-

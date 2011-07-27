@@ -1369,7 +1369,7 @@ public interface PigPackage extends EPackage
    * @generated
    * @ordered
    */
-  int DECLARE_CLAUSE__NAME = DEFINE_STATEMENT__NAME;
+  int DECLARE_CLAUSE__NAME = STATEMENT_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Declare Clause</em>' class.
@@ -1378,7 +1378,7 @@ public interface PigPackage extends EPackage
    * @generated
    * @ordered
    */
-  int DECLARE_CLAUSE_FEATURE_COUNT = DEFINE_STATEMENT_FEATURE_COUNT + 0;
+  int DECLARE_CLAUSE_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.apache.pigeditor.pig.impl.DefineClauseImpl <em>Define Clause</em>}' class.
@@ -2907,6 +2907,17 @@ public interface PigPackage extends EPackage
   EClass getDeclareClause();
 
   /**
+   * Returns the meta object for the attribute '{@link org.apache.pigeditor.pig.DeclareClause#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.apache.pigeditor.pig.DeclareClause#getName()
+   * @see #getDeclareClause()
+   * @generated
+   */
+  EAttribute getDeclareClause_Name();
+
+  /**
    * Returns the meta object for class '{@link org.apache.pigeditor.pig.DefineClause <em>Define Clause</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -4054,6 +4065,14 @@ public interface PigPackage extends EPackage
      * @generated
      */
     EClass DECLARE_CLAUSE = eINSTANCE.getDeclareClause();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute DECLARE_CLAUSE__NAME = eINSTANCE.getDeclareClause_Name();
 
     /**
      * The meta object literal for the '{@link org.apache.pigeditor.pig.impl.DefineClauseImpl <em>Define Clause</em>}' class.

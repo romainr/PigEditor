@@ -87,11 +87,7 @@ public class AbstractPigSemanticSequencer extends AbstractSemanticSequencer {
 				}
 				else break;
 			case PigPackage.AND_CONDITION:
-				if(context == grammarAccess.getBin_exprRule()) {
-					sequence_bin_expr_AndCondition(context, (AndCondition) semanticObject); 
-					return; 
-				}
-				else if(context == grammarAccess.getUnaryConditionRule() ||
+				if(context == grammarAccess.getUnaryConditionRule() ||
 				   context == grammarAccess.getUnaryConditionAccess().getUnaryConditionLeftAction_0_4_0()) {
 					sequence_AndCondition_AndCondition(context, (AndCondition) semanticObject); 
 					return; 
@@ -105,6 +101,10 @@ public class AbstractPigSemanticSequencer extends AbstractSemanticSequencer {
 				   context == grammarAccess.getFlattenGeneratedItemRule() ||
 				   context == grammarAccess.getSplit_branchRule()) {
 					sequence_AndCondition_AndCondition(context, (AndCondition) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getBin_exprRule()) {
+					sequence_bin_expr_AndCondition(context, (AndCondition) semanticObject); 
 					return; 
 				}
 				else break;
@@ -124,7 +124,6 @@ public class AbstractPigSemanticSequencer extends AbstractSemanticSequencer {
 				else break;
 			case PigPackage.DECLARE_CLAUSE:
 				if(context == grammarAccess.getStatementRule() ||
-				   context == grammarAccess.getDefineStatementRule() ||
 				   context == grammarAccess.getDeclareClauseRule()) {
 					sequence_DeclareClause_DeclareClause(context, (DeclareClause) semanticObject); 
 					return; 
@@ -231,7 +230,11 @@ public class AbstractPigSemanticSequencer extends AbstractSemanticSequencer {
 				}
 				else break;
 			case PigPackage.OR_CONDITION:
-				if(context == grammarAccess.getAndConditionRule() ||
+				if(context == grammarAccess.getBin_exprRule()) {
+					sequence_bin_expr_OrCondition(context, (OrCondition) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getAndConditionRule() ||
 				   context == grammarAccess.getAndConditionAccess().getAndConditionLeftAction_1_0() ||
 				   context == grammarAccess.getUnaryConditionRule() ||
 				   context == grammarAccess.getUnaryConditionAccess().getUnaryConditionLeftAction_0_4_0()) {
@@ -245,10 +248,6 @@ public class AbstractPigSemanticSequencer extends AbstractSemanticSequencer {
 				   context == grammarAccess.getFlattenGeneratedItemRule() ||
 				   context == grammarAccess.getSplit_branchRule()) {
 					sequence_OrCondition_OrCondition(context, (OrCondition) semanticObject); 
-					return; 
-				}
-				else if(context == grammarAccess.getBin_exprRule()) {
-					sequence_bin_expr_OrCondition(context, (OrCondition) semanticObject); 
 					return; 
 				}
 				else break;
@@ -327,11 +326,7 @@ public class AbstractPigSemanticSequencer extends AbstractSemanticSequencer {
 				}
 				else break;
 			case PigPackage.FUNC_EVAL:
-				if(context == grammarAccess.getBin_exprRule()) {
-					sequence_bin_expr_func_eval(context, (func_eval) semanticObject); 
-					return; 
-				}
-				else if(context == grammarAccess.getUnaryConditionAccess().getUnaryConditionLeftAction_0_4_0()) {
+				if(context == grammarAccess.getUnaryConditionAccess().getUnaryConditionLeftAction_0_4_0()) {
 					sequence_AddExpression_func_eval(context, (func_eval) semanticObject); 
 					return; 
 				}
@@ -357,6 +352,10 @@ public class AbstractPigSemanticSequencer extends AbstractSemanticSequencer {
 				}
 				else if(context == grammarAccess.getMulti_exprRule()) {
 					sequence_multi_expr_func_eval(context, (func_eval) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getBin_exprRule()) {
+					sequence_bin_expr_func_eval(context, (func_eval) semanticObject); 
 					return; 
 				}
 				else if(context == grammarAccess.getGroup_item_listRule()) {
@@ -408,12 +407,12 @@ public class AbstractPigSemanticSequencer extends AbstractSemanticSequencer {
 				}
 				else break;
 			case PigPackage.NESTED_COMMAND_LIST:
-				if(context == grammarAccess.getNested_command_listRule()) {
-					sequence_nested_command_list_nested_command_list(context, (nested_command_list) semanticObject); 
+				if(context == grammarAccess.getNested_blkRule()) {
+					sequence_nested_blk_nested_command_list(context, (nested_command_list) semanticObject); 
 					return; 
 				}
-				else if(context == grammarAccess.getNested_blkRule()) {
-					sequence_nested_blk_nested_command_list(context, (nested_command_list) semanticObject); 
+				else if(context == grammarAccess.getNested_command_listRule()) {
+					sequence_nested_command_list_nested_command_list(context, (nested_command_list) semanticObject); 
 					return; 
 				}
 				else break;
@@ -540,8 +539,8 @@ public class AbstractPigSemanticSequencer extends AbstractSemanticSequencer {
 	 */
 	protected void sequence_DeclareClause_DeclareClause(EObject context, DeclareClause semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, PigPackage.Literals.DEFINE_STATEMENT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PigPackage.Literals.DEFINE_STATEMENT__NAME));
+			if(transientValues.isValueTransient(semanticObject, PigPackage.Literals.DECLARE_CLAUSE__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PigPackage.Literals.DECLARE_CLAUSE__NAME));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);

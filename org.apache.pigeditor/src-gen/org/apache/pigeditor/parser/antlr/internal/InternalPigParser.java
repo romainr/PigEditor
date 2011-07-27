@@ -21,10 +21,10 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalPigParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "KEYWORD_88", "KEYWORD_89", "KEYWORD_90", "KEYWORD_91", "KEYWORD_81", "KEYWORD_82", "KEYWORD_83", "KEYWORD_84", "KEYWORD_85", "KEYWORD_86", "KEYWORD_87", "KEYWORD_76", "KEYWORD_77", "KEYWORD_78", "KEYWORD_79", "KEYWORD_80", "KEYWORD_71", "KEYWORD_72", "KEYWORD_73", "KEYWORD_74", "KEYWORD_75", "KEYWORD_57", "KEYWORD_58", "KEYWORD_59", "KEYWORD_60", "KEYWORD_61", "KEYWORD_62", "KEYWORD_63", "KEYWORD_64", "KEYWORD_65", "KEYWORD_66", "KEYWORD_67", "KEYWORD_68", "KEYWORD_69", "KEYWORD_70", "KEYWORD_48", "KEYWORD_49", "KEYWORD_50", "KEYWORD_51", "KEYWORD_52", "KEYWORD_53", "KEYWORD_54", "KEYWORD_55", "KEYWORD_56", "KEYWORD_38", "KEYWORD_39", "KEYWORD_40", "KEYWORD_41", "KEYWORD_42", "KEYWORD_43", "KEYWORD_44", "KEYWORD_45", "KEYWORD_46", "KEYWORD_47", "KEYWORD_23", "KEYWORD_24", "KEYWORD_25", "KEYWORD_26", "KEYWORD_27", "KEYWORD_28", "KEYWORD_29", "KEYWORD_30", "KEYWORD_31", "KEYWORD_32", "KEYWORD_33", "KEYWORD_34", "KEYWORD_35", "KEYWORD_36", "KEYWORD_37", "KEYWORD_1", "KEYWORD_2", "KEYWORD_3", "KEYWORD_4", "KEYWORD_5", "KEYWORD_6", "KEYWORD_7", "KEYWORD_8", "KEYWORD_9", "KEYWORD_10", "KEYWORD_11", "KEYWORD_12", "KEYWORD_13", "KEYWORD_14", "KEYWORD_15", "KEYWORD_16", "KEYWORD_17", "KEYWORD_18", "KEYWORD_19", "KEYWORD_20", "KEYWORD_21", "KEYWORD_22", "RULE_COGROUP_TYPE", "RULE_SL_COMMENT", "RULE_DIGIT", "RULE_LETTER", "RULE_SPECIALCHAR", "RULE_FLOATINGPOINT", "RULE_INT", "RULE_LONGINTEGER", "RULE_DOUBLENUMBER", "RULE_EXECCOMMAND", "RULE_ID", "RULE_STRING", "RULE_ML_COMMENT", "RULE_WS", "RULE_ANY_OTHER"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "KEYWORD_88", "KEYWORD_89", "KEYWORD_90", "KEYWORD_91", "KEYWORD_81", "KEYWORD_82", "KEYWORD_83", "KEYWORD_84", "KEYWORD_85", "KEYWORD_86", "KEYWORD_87", "KEYWORD_76", "KEYWORD_77", "KEYWORD_78", "KEYWORD_79", "KEYWORD_80", "KEYWORD_71", "KEYWORD_72", "KEYWORD_73", "KEYWORD_74", "KEYWORD_75", "KEYWORD_57", "KEYWORD_58", "KEYWORD_59", "KEYWORD_60", "KEYWORD_61", "KEYWORD_62", "KEYWORD_63", "KEYWORD_64", "KEYWORD_65", "KEYWORD_66", "KEYWORD_67", "KEYWORD_68", "KEYWORD_69", "KEYWORD_70", "KEYWORD_48", "KEYWORD_49", "KEYWORD_50", "KEYWORD_51", "KEYWORD_52", "KEYWORD_53", "KEYWORD_54", "KEYWORD_55", "KEYWORD_56", "KEYWORD_38", "KEYWORD_39", "KEYWORD_40", "KEYWORD_41", "KEYWORD_42", "KEYWORD_43", "KEYWORD_44", "KEYWORD_45", "KEYWORD_46", "KEYWORD_47", "KEYWORD_23", "KEYWORD_24", "KEYWORD_25", "KEYWORD_26", "KEYWORD_27", "KEYWORD_28", "KEYWORD_29", "KEYWORD_30", "KEYWORD_31", "KEYWORD_32", "KEYWORD_33", "KEYWORD_34", "KEYWORD_35", "KEYWORD_36", "KEYWORD_37", "KEYWORD_1", "KEYWORD_2", "KEYWORD_3", "KEYWORD_4", "KEYWORD_5", "KEYWORD_6", "KEYWORD_7", "KEYWORD_8", "KEYWORD_9", "KEYWORD_10", "KEYWORD_11", "KEYWORD_12", "KEYWORD_13", "KEYWORD_14", "KEYWORD_15", "KEYWORD_16", "KEYWORD_17", "KEYWORD_18", "KEYWORD_19", "KEYWORD_20", "KEYWORD_21", "KEYWORD_22", "RULE_COGROUP_TYPE", "RULE_SL_COMMENT", "RULE_DIGIT", "RULE_LETTER", "RULE_SPECIALCHAR", "RULE_FLOATINGPOINT", "RULE_INT", "RULE_LONGINTEGER", "RULE_DOUBLENUMBER", "RULE_EXECCOMMAND", "RULE_BACKQUOTE_STRING", "RULE_ID", "RULE_STRING", "RULE_ML_COMMENT", "RULE_WS", "RULE_ANY_OTHER"
     };
-    public static final int RULE_ID=105;
-    public static final int RULE_ANY_OTHER=109;
+    public static final int RULE_ID=106;
+    public static final int RULE_ANY_OTHER=110;
     public static final int KEYWORD_56=47;
     public static final int KEYWORD_55=46;
     public static final int KEYWORD_54=45;
@@ -57,9 +57,9 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
     public static final int KEYWORD_35=70;
     public static final int RULE_LETTER=98;
     public static final int RULE_COGROUP_TYPE=95;
-    public static final int RULE_ML_COMMENT=107;
+    public static final int RULE_ML_COMMENT=108;
     public static final int KEYWORD_39=49;
-    public static final int RULE_STRING=106;
+    public static final int RULE_STRING=107;
     public static final int KEYWORD_41=51;
     public static final int KEYWORD_40=50;
     public static final int KEYWORD_43=53;
@@ -72,6 +72,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
     public static final int KEYWORD_49=40;
     public static final int KEYWORD_48=39;
     public static final int RULE_LONGINTEGER=102;
+    public static final int RULE_BACKQUOTE_STRING=105;
     public static final int KEYWORD_90=6;
     public static final int KEYWORD_19=91;
     public static final int KEYWORD_17=89;
@@ -129,7 +130,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
     public static final int KEYWORD_81=8;
     public static final int KEYWORD_80=19;
     public static final int RULE_SPECIALCHAR=99;
-    public static final int RULE_WS=108;
+    public static final int RULE_WS=109;
 
     // delegates
     // delegators
@@ -323,7 +324,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleStatement"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:109:1: ruleStatement returns [EObject current=null] : ( ( (this_DefineStatement_0= ruleDefineStatement | this_LoadStatement_1= ruleLoadStatement | ( (this_ForeachStatement_2= ruleForeachStatement | this_FilterStatement_3= ruleFilterStatement | this_GroupByStatement_4= ruleGroupByStatement | this_OrderStatement_5= ruleOrderStatement | this_LimitStatement_6= ruleLimitStatement | this_DistinctStatement_7= ruleDistinctStatement | this_CrossStatement_8= ruleCrossStatement | this_JoinStatement_9= ruleJoinStatement | this_CoGroupByStatement_10= ruleCoGroupByStatement | this_StreamStatement_11= ruleStreamStatement ) ( ruleParallelClause )? ) | this_MrStatement_13= ruleMrStatement | this_SplitStatement_14= ruleSplitStatement | this_UnionStatement_15= ruleUnionStatement | this_SampleStatement_16= ruleSampleStatement | this_StoreStatement_17= ruleStoreStatement | this_DumpStatement_18= ruleDumpStatement | this_DescribeStatement_19= ruleDescribeStatement | this_ExplainStatement_20= ruleExplainStatement ) otherlv_21= KEYWORD_13 ) | ruleCommentStatement ) ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:109:1: ruleStatement returns [EObject current=null] : ( ( (this_DefineStatement_0= ruleDefineStatement | this_LoadStatement_1= ruleLoadStatement | ( (this_ForeachStatement_2= ruleForeachStatement | this_FilterStatement_3= ruleFilterStatement | this_GroupByStatement_4= ruleGroupByStatement | this_OrderStatement_5= ruleOrderStatement | this_LimitStatement_6= ruleLimitStatement | this_DistinctStatement_7= ruleDistinctStatement | this_CrossStatement_8= ruleCrossStatement | this_JoinStatement_9= ruleJoinStatement | this_CoGroupByStatement_10= ruleCoGroupByStatement | this_StreamStatement_11= ruleStreamStatement ) ( ruleParallelClause )? ) | this_MrStatement_13= ruleMrStatement | this_SplitStatement_14= ruleSplitStatement | this_UnionStatement_15= ruleUnionStatement | this_SampleStatement_16= ruleSampleStatement | this_StoreStatement_17= ruleStoreStatement | this_DumpStatement_18= ruleDumpStatement | this_DescribeStatement_19= ruleDescribeStatement | this_ExplainStatement_20= ruleExplainStatement ) otherlv_21= KEYWORD_13 ) | this_DeclareClause_22= ruleDeclareClause | ruleCommentStatement ) ;
     public final EObject ruleStatement() throws RecognitionException {
         EObject current = null;
 
@@ -368,29 +369,47 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
         EObject this_ExplainStatement_20 = null;
 
+        EObject this_DeclareClause_22 = null;
+
 
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:112:28: ( ( ( (this_DefineStatement_0= ruleDefineStatement | this_LoadStatement_1= ruleLoadStatement | ( (this_ForeachStatement_2= ruleForeachStatement | this_FilterStatement_3= ruleFilterStatement | this_GroupByStatement_4= ruleGroupByStatement | this_OrderStatement_5= ruleOrderStatement | this_LimitStatement_6= ruleLimitStatement | this_DistinctStatement_7= ruleDistinctStatement | this_CrossStatement_8= ruleCrossStatement | this_JoinStatement_9= ruleJoinStatement | this_CoGroupByStatement_10= ruleCoGroupByStatement | this_StreamStatement_11= ruleStreamStatement ) ( ruleParallelClause )? ) | this_MrStatement_13= ruleMrStatement | this_SplitStatement_14= ruleSplitStatement | this_UnionStatement_15= ruleUnionStatement | this_SampleStatement_16= ruleSampleStatement | this_StoreStatement_17= ruleStoreStatement | this_DumpStatement_18= ruleDumpStatement | this_DescribeStatement_19= ruleDescribeStatement | this_ExplainStatement_20= ruleExplainStatement ) otherlv_21= KEYWORD_13 ) | ruleCommentStatement ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:113:1: ( ( (this_DefineStatement_0= ruleDefineStatement | this_LoadStatement_1= ruleLoadStatement | ( (this_ForeachStatement_2= ruleForeachStatement | this_FilterStatement_3= ruleFilterStatement | this_GroupByStatement_4= ruleGroupByStatement | this_OrderStatement_5= ruleOrderStatement | this_LimitStatement_6= ruleLimitStatement | this_DistinctStatement_7= ruleDistinctStatement | this_CrossStatement_8= ruleCrossStatement | this_JoinStatement_9= ruleJoinStatement | this_CoGroupByStatement_10= ruleCoGroupByStatement | this_StreamStatement_11= ruleStreamStatement ) ( ruleParallelClause )? ) | this_MrStatement_13= ruleMrStatement | this_SplitStatement_14= ruleSplitStatement | this_UnionStatement_15= ruleUnionStatement | this_SampleStatement_16= ruleSampleStatement | this_StoreStatement_17= ruleStoreStatement | this_DumpStatement_18= ruleDumpStatement | this_DescribeStatement_19= ruleDescribeStatement | this_ExplainStatement_20= ruleExplainStatement ) otherlv_21= KEYWORD_13 ) | ruleCommentStatement )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:112:28: ( ( ( (this_DefineStatement_0= ruleDefineStatement | this_LoadStatement_1= ruleLoadStatement | ( (this_ForeachStatement_2= ruleForeachStatement | this_FilterStatement_3= ruleFilterStatement | this_GroupByStatement_4= ruleGroupByStatement | this_OrderStatement_5= ruleOrderStatement | this_LimitStatement_6= ruleLimitStatement | this_DistinctStatement_7= ruleDistinctStatement | this_CrossStatement_8= ruleCrossStatement | this_JoinStatement_9= ruleJoinStatement | this_CoGroupByStatement_10= ruleCoGroupByStatement | this_StreamStatement_11= ruleStreamStatement ) ( ruleParallelClause )? ) | this_MrStatement_13= ruleMrStatement | this_SplitStatement_14= ruleSplitStatement | this_UnionStatement_15= ruleUnionStatement | this_SampleStatement_16= ruleSampleStatement | this_StoreStatement_17= ruleStoreStatement | this_DumpStatement_18= ruleDumpStatement | this_DescribeStatement_19= ruleDescribeStatement | this_ExplainStatement_20= ruleExplainStatement ) otherlv_21= KEYWORD_13 ) | this_DeclareClause_22= ruleDeclareClause | ruleCommentStatement ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:113:1: ( ( (this_DefineStatement_0= ruleDefineStatement | this_LoadStatement_1= ruleLoadStatement | ( (this_ForeachStatement_2= ruleForeachStatement | this_FilterStatement_3= ruleFilterStatement | this_GroupByStatement_4= ruleGroupByStatement | this_OrderStatement_5= ruleOrderStatement | this_LimitStatement_6= ruleLimitStatement | this_DistinctStatement_7= ruleDistinctStatement | this_CrossStatement_8= ruleCrossStatement | this_JoinStatement_9= ruleJoinStatement | this_CoGroupByStatement_10= ruleCoGroupByStatement | this_StreamStatement_11= ruleStreamStatement ) ( ruleParallelClause )? ) | this_MrStatement_13= ruleMrStatement | this_SplitStatement_14= ruleSplitStatement | this_UnionStatement_15= ruleUnionStatement | this_SampleStatement_16= ruleSampleStatement | this_StoreStatement_17= ruleStoreStatement | this_DumpStatement_18= ruleDumpStatement | this_DescribeStatement_19= ruleDescribeStatement | this_ExplainStatement_20= ruleExplainStatement ) otherlv_21= KEYWORD_13 ) | this_DeclareClause_22= ruleDeclareClause | ruleCommentStatement )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:113:1: ( ( (this_DefineStatement_0= ruleDefineStatement | this_LoadStatement_1= ruleLoadStatement | ( (this_ForeachStatement_2= ruleForeachStatement | this_FilterStatement_3= ruleFilterStatement | this_GroupByStatement_4= ruleGroupByStatement | this_OrderStatement_5= ruleOrderStatement | this_LimitStatement_6= ruleLimitStatement | this_DistinctStatement_7= ruleDistinctStatement | this_CrossStatement_8= ruleCrossStatement | this_JoinStatement_9= ruleJoinStatement | this_CoGroupByStatement_10= ruleCoGroupByStatement | this_StreamStatement_11= ruleStreamStatement ) ( ruleParallelClause )? ) | this_MrStatement_13= ruleMrStatement | this_SplitStatement_14= ruleSplitStatement | this_UnionStatement_15= ruleUnionStatement | this_SampleStatement_16= ruleSampleStatement | this_StoreStatement_17= ruleStoreStatement | this_DumpStatement_18= ruleDumpStatement | this_DescribeStatement_19= ruleDescribeStatement | this_ExplainStatement_20= ruleExplainStatement ) otherlv_21= KEYWORD_13 ) | ruleCommentStatement )
-            int alt5=2;
-            int LA5_0 = input.LA(1);
-
-            if ( ((LA5_0>=KEYWORD_81 && LA5_0<=KEYWORD_83)||LA5_0==KEYWORD_87||LA5_0==KEYWORD_77||LA5_0==KEYWORD_71||LA5_0==KEYWORD_67||LA5_0==KEYWORD_49||LA5_0==RULE_ID) ) {
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:113:1: ( ( (this_DefineStatement_0= ruleDefineStatement | this_LoadStatement_1= ruleLoadStatement | ( (this_ForeachStatement_2= ruleForeachStatement | this_FilterStatement_3= ruleFilterStatement | this_GroupByStatement_4= ruleGroupByStatement | this_OrderStatement_5= ruleOrderStatement | this_LimitStatement_6= ruleLimitStatement | this_DistinctStatement_7= ruleDistinctStatement | this_CrossStatement_8= ruleCrossStatement | this_JoinStatement_9= ruleJoinStatement | this_CoGroupByStatement_10= ruleCoGroupByStatement | this_StreamStatement_11= ruleStreamStatement ) ( ruleParallelClause )? ) | this_MrStatement_13= ruleMrStatement | this_SplitStatement_14= ruleSplitStatement | this_UnionStatement_15= ruleUnionStatement | this_SampleStatement_16= ruleSampleStatement | this_StoreStatement_17= ruleStoreStatement | this_DumpStatement_18= ruleDumpStatement | this_DescribeStatement_19= ruleDescribeStatement | this_ExplainStatement_20= ruleExplainStatement ) otherlv_21= KEYWORD_13 ) | this_DeclareClause_22= ruleDeclareClause | ruleCommentStatement )
+            int alt5=3;
+            switch ( input.LA(1) ) {
+            case KEYWORD_82:
+            case KEYWORD_83:
+            case KEYWORD_87:
+            case KEYWORD_77:
+            case KEYWORD_71:
+            case KEYWORD_67:
+            case KEYWORD_49:
+            case RULE_ID:
+                {
                 alt5=1;
-            }
-            else if ( (LA5_0==RULE_SL_COMMENT) ) {
+                }
+                break;
+            case KEYWORD_81:
+                {
                 alt5=2;
-            }
-            else {
+                }
+                break;
+            case RULE_SL_COMMENT:
+                {
+                alt5=3;
+                }
+                break;
+            default:
                 NoViableAltException nvae =
                     new NoViableAltException("", 5, 0, input);
 
                 throw nvae;
             }
+
             switch (alt5) {
                 case 1 :
                     // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:113:2: ( (this_DefineStatement_0= ruleDefineStatement | this_LoadStatement_1= ruleLoadStatement | ( (this_ForeachStatement_2= ruleForeachStatement | this_FilterStatement_3= ruleFilterStatement | this_GroupByStatement_4= ruleGroupByStatement | this_OrderStatement_5= ruleOrderStatement | this_LimitStatement_6= ruleLimitStatement | this_DistinctStatement_7= ruleDistinctStatement | this_CrossStatement_8= ruleCrossStatement | this_JoinStatement_9= ruleJoinStatement | this_CoGroupByStatement_10= ruleCoGroupByStatement | this_StreamStatement_11= ruleStreamStatement ) ( ruleParallelClause )? ) | this_MrStatement_13= ruleMrStatement | this_SplitStatement_14= ruleSplitStatement | this_UnionStatement_15= ruleUnionStatement | this_SampleStatement_16= ruleSampleStatement | this_StoreStatement_17= ruleStoreStatement | this_DumpStatement_18= ruleDumpStatement | this_DescribeStatement_19= ruleDescribeStatement | this_ExplainStatement_20= ruleExplainStatement ) otherlv_21= KEYWORD_13 )
@@ -823,12 +842,30 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:327:5: ruleCommentStatement
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:327:5: this_DeclareClause_22= ruleDeclareClause
                     {
                      
-                            newCompositeNode(grammarAccess.getStatementAccess().getCommentStatementParserRuleCall_1()); 
+                            newCompositeNode(grammarAccess.getStatementAccess().getDeclareClauseParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleCommentStatement_in_ruleStatement786);
+                    pushFollow(FOLLOW_ruleDeclareClause_in_ruleStatement792);
+                    this_DeclareClause_22=ruleDeclareClause();
+
+                    state._fsp--;
+
+
+                            current = this_DeclareClause_22;
+                            afterParserOrEnumRuleCall();
+                        
+
+                    }
+                    break;
+                case 3 :
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:337:5: ruleCommentStatement
+                    {
+                     
+                            newCompositeNode(grammarAccess.getStatementAccess().getCommentStatementParserRuleCall_2()); 
+                        
+                    pushFollow(FOLLOW_ruleCommentStatement_in_ruleStatement813);
                     ruleCommentStatement();
 
                     state._fsp--;
@@ -860,7 +897,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDefineStatement"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:342:1: entryRuleDefineStatement returns [EObject current=null] : iv_ruleDefineStatement= ruleDefineStatement EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:352:1: entryRuleDefineStatement returns [EObject current=null] : iv_ruleDefineStatement= ruleDefineStatement EOF ;
     public final EObject entryRuleDefineStatement() throws RecognitionException {
         EObject current = null;
 
@@ -868,17 +905,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:343:2: (iv_ruleDefineStatement= ruleDefineStatement EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:344:2: iv_ruleDefineStatement= ruleDefineStatement EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:353:2: (iv_ruleDefineStatement= ruleDefineStatement EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:354:2: iv_ruleDefineStatement= ruleDefineStatement EOF
             {
              newCompositeNode(grammarAccess.getDefineStatementRule()); 
-            pushFollow(FOLLOW_ruleDefineStatement_in_entryRuleDefineStatement820);
+            pushFollow(FOLLOW_ruleDefineStatement_in_entryRuleDefineStatement847);
             iv_ruleDefineStatement=ruleDefineStatement();
 
             state._fsp--;
 
              current =iv_ruleDefineStatement; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDefineStatement830); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDefineStatement857); 
 
             }
 
@@ -896,7 +933,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDefineStatement"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:351:1: ruleDefineStatement returns [EObject current=null] : ( ruleRegisterClause | this_DefineClause_1= ruleDefineClause | this_DefaultClause_2= ruleDefaultClause | this_DeclareClause_3= ruleDeclareClause ) ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:361:1: ruleDefineStatement returns [EObject current=null] : ( ruleRegisterClause | this_DefineClause_1= ruleDefineClause | this_DefaultClause_2= ruleDefaultClause ) ;
     public final EObject ruleDefineStatement() throws RecognitionException {
         EObject current = null;
 
@@ -904,17 +941,15 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
         EObject this_DefaultClause_2 = null;
 
-        EObject this_DeclareClause_3 = null;
-
 
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:354:28: ( ( ruleRegisterClause | this_DefineClause_1= ruleDefineClause | this_DefaultClause_2= ruleDefaultClause | this_DeclareClause_3= ruleDeclareClause ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:355:1: ( ruleRegisterClause | this_DefineClause_1= ruleDefineClause | this_DefaultClause_2= ruleDefaultClause | this_DeclareClause_3= ruleDeclareClause )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:364:28: ( ( ruleRegisterClause | this_DefineClause_1= ruleDefineClause | this_DefaultClause_2= ruleDefaultClause ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:365:1: ( ruleRegisterClause | this_DefineClause_1= ruleDefineClause | this_DefaultClause_2= ruleDefaultClause )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:355:1: ( ruleRegisterClause | this_DefineClause_1= ruleDefineClause | this_DefaultClause_2= ruleDefaultClause | this_DeclareClause_3= ruleDeclareClause )
-            int alt6=4;
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:365:1: ( ruleRegisterClause | this_DefineClause_1= ruleDefineClause | this_DefaultClause_2= ruleDefaultClause )
+            int alt6=3;
             switch ( input.LA(1) ) {
             case KEYWORD_87:
                 {
@@ -931,11 +966,6 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                 alt6=3;
                 }
                 break;
-            case KEYWORD_81:
-                {
-                alt6=4;
-                }
-                break;
             default:
                 NoViableAltException nvae =
                     new NoViableAltException("", 6, 0, input);
@@ -945,12 +975,12 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
             switch (alt6) {
                 case 1 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:356:5: ruleRegisterClause
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:366:5: ruleRegisterClause
                     {
                      
                             newCompositeNode(grammarAccess.getDefineStatementAccess().getRegisterClauseParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleRegisterClause_in_ruleDefineStatement871);
+                    pushFollow(FOLLOW_ruleRegisterClause_in_ruleDefineStatement898);
                     ruleRegisterClause();
 
                     state._fsp--;
@@ -962,12 +992,12 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:365:5: this_DefineClause_1= ruleDefineClause
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:375:5: this_DefineClause_1= ruleDefineClause
                     {
                      
                             newCompositeNode(grammarAccess.getDefineStatementAccess().getDefineClauseParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleDefineClause_in_ruleDefineStatement898);
+                    pushFollow(FOLLOW_ruleDefineClause_in_ruleDefineStatement925);
                     this_DefineClause_1=ruleDefineClause();
 
                     state._fsp--;
@@ -980,36 +1010,18 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:375:5: this_DefaultClause_2= ruleDefaultClause
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:385:5: this_DefaultClause_2= ruleDefaultClause
                     {
                      
                             newCompositeNode(grammarAccess.getDefineStatementAccess().getDefaultClauseParserRuleCall_2()); 
                         
-                    pushFollow(FOLLOW_ruleDefaultClause_in_ruleDefineStatement925);
+                    pushFollow(FOLLOW_ruleDefaultClause_in_ruleDefineStatement952);
                     this_DefaultClause_2=ruleDefaultClause();
 
                     state._fsp--;
 
 
                             current = this_DefaultClause_2;
-                            afterParserOrEnumRuleCall();
-                        
-
-                    }
-                    break;
-                case 4 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:385:5: this_DeclareClause_3= ruleDeclareClause
-                    {
-                     
-                            newCompositeNode(grammarAccess.getDefineStatementAccess().getDeclareClauseParserRuleCall_3()); 
-                        
-                    pushFollow(FOLLOW_ruleDeclareClause_in_ruleDefineStatement952);
-                    this_DeclareClause_3=ruleDeclareClause();
-
-                    state._fsp--;
-
-
-                            current = this_DeclareClause_3;
                             afterParserOrEnumRuleCall();
                         
 
@@ -4556,10 +4568,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                     if ( (LA25_4==RULE_ID) ) {
                         int LA25_5 = input.LA(4);
 
-                        if ( (LA25_5==KEYWORD_8||LA25_5==KEYWORD_12) ) {
-                            alt25=1;
-                        }
-                        else if ( (LA25_5==KEYWORD_5) ) {
+                        if ( (LA25_5==KEYWORD_5) ) {
                             int LA25_6 = input.LA(5);
 
                             if ( (LA25_6==KEYWORD_5) ) {
@@ -4569,6 +4578,9 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                                     alt25=1;
                                 }
                             }
+                        }
+                        else if ( (LA25_5==KEYWORD_8||LA25_5==KEYWORD_12) ) {
+                            alt25=1;
                         }
                     }
                 }
@@ -6694,17 +6706,14 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                 {
                 int LA43_2 = input.LA(2);
 
-                if ( (LA43_2==KEYWORD_2||LA43_2==KEYWORD_4||LA43_2==KEYWORD_10||LA43_2==RULE_INT) ) {
-                    alt43=2;
-                }
-                else if ( (LA43_2==RULE_ID) ) {
+                if ( (LA43_2==RULE_ID) ) {
                     int LA43_4 = input.LA(3);
 
-                    if ( (LA43_4==EOF||LA43_4==KEYWORD_91||LA43_4==KEYWORD_86||LA43_4==KEYWORD_79||LA43_4==KEYWORD_60||(LA43_4>=KEYWORD_64 && LA43_4<=KEYWORD_65)||LA43_4==KEYWORD_70||LA43_4==KEYWORD_50||LA43_4==KEYWORD_53||LA43_4==KEYWORD_39||LA43_4==KEYWORD_43||(LA43_4>=KEYWORD_45 && LA43_4<=KEYWORD_46)||LA43_4==KEYWORD_23||(LA43_4>=KEYWORD_25 && LA43_4<=KEYWORD_28)||(LA43_4>=KEYWORD_30 && LA43_4<=KEYWORD_31)||(LA43_4>=KEYWORD_33 && LA43_4<=KEYWORD_34)||LA43_4==KEYWORD_36||LA43_4==KEYWORD_3||(LA43_4>=KEYWORD_5 && LA43_4<=KEYWORD_9)||(LA43_4>=KEYWORD_11 && LA43_4<=KEYWORD_14)||(LA43_4>=KEYWORD_16 && LA43_4<=KEYWORD_17)) ) {
-                        alt43=1;
-                    }
-                    else if ( (LA43_4==KEYWORD_2||LA43_4==KEYWORD_4||LA43_4==KEYWORD_10||LA43_4==RULE_ID) ) {
+                    if ( (LA43_4==KEYWORD_2||LA43_4==KEYWORD_4||LA43_4==KEYWORD_10||LA43_4==RULE_ID) ) {
                         alt43=2;
+                    }
+                    else if ( (LA43_4==EOF||LA43_4==KEYWORD_91||LA43_4==KEYWORD_86||LA43_4==KEYWORD_79||LA43_4==KEYWORD_60||(LA43_4>=KEYWORD_64 && LA43_4<=KEYWORD_65)||LA43_4==KEYWORD_70||LA43_4==KEYWORD_50||LA43_4==KEYWORD_53||LA43_4==KEYWORD_39||LA43_4==KEYWORD_43||(LA43_4>=KEYWORD_45 && LA43_4<=KEYWORD_46)||LA43_4==KEYWORD_23||(LA43_4>=KEYWORD_25 && LA43_4<=KEYWORD_28)||(LA43_4>=KEYWORD_30 && LA43_4<=KEYWORD_31)||(LA43_4>=KEYWORD_33 && LA43_4<=KEYWORD_34)||LA43_4==KEYWORD_36||LA43_4==KEYWORD_3||(LA43_4>=KEYWORD_5 && LA43_4<=KEYWORD_9)||(LA43_4>=KEYWORD_11 && LA43_4<=KEYWORD_14)||(LA43_4>=KEYWORD_16 && LA43_4<=KEYWORD_17)) ) {
+                        alt43=1;
                     }
                     else {
                         NoViableAltException nvae =
@@ -6712,6 +6721,9 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
                         throw nvae;
                     }
+                }
+                else if ( (LA43_2==KEYWORD_2||LA43_2==KEYWORD_4||LA43_2==KEYWORD_10||LA43_2==RULE_INT) ) {
+                    alt43=2;
                 }
                 else {
                     NoViableAltException nvae =
@@ -9560,23 +9572,24 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDeclareClause"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3708:1: ruleDeclareClause returns [EObject current=null] : (otherlv_0= KEYWORD_81 ( (lv_name_1_0= ruleAlias ) ) this_STRING_2= RULE_STRING ) ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3708:1: ruleDeclareClause returns [EObject current=null] : (otherlv_0= KEYWORD_81 ( (lv_name_1_0= ruleAlias ) ) (this_STRING_2= RULE_STRING | this_EXECCOMMAND_3= RULE_EXECCOMMAND ) ) ;
     public final EObject ruleDeclareClause() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
         Token this_STRING_2=null;
+        Token this_EXECCOMMAND_3=null;
         AntlrDatatypeRuleToken lv_name_1_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3711:28: ( (otherlv_0= KEYWORD_81 ( (lv_name_1_0= ruleAlias ) ) this_STRING_2= RULE_STRING ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3712:1: (otherlv_0= KEYWORD_81 ( (lv_name_1_0= ruleAlias ) ) this_STRING_2= RULE_STRING )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3711:28: ( (otherlv_0= KEYWORD_81 ( (lv_name_1_0= ruleAlias ) ) (this_STRING_2= RULE_STRING | this_EXECCOMMAND_3= RULE_EXECCOMMAND ) ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3712:1: (otherlv_0= KEYWORD_81 ( (lv_name_1_0= ruleAlias ) ) (this_STRING_2= RULE_STRING | this_EXECCOMMAND_3= RULE_EXECCOMMAND ) )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3712:1: (otherlv_0= KEYWORD_81 ( (lv_name_1_0= ruleAlias ) ) this_STRING_2= RULE_STRING )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3713:2: otherlv_0= KEYWORD_81 ( (lv_name_1_0= ruleAlias ) ) this_STRING_2= RULE_STRING
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3712:1: (otherlv_0= KEYWORD_81 ( (lv_name_1_0= ruleAlias ) ) (this_STRING_2= RULE_STRING | this_EXECCOMMAND_3= RULE_EXECCOMMAND ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3713:2: otherlv_0= KEYWORD_81 ( (lv_name_1_0= ruleAlias ) ) (this_STRING_2= RULE_STRING | this_EXECCOMMAND_3= RULE_EXECCOMMAND )
             {
             otherlv_0=(Token)match(input,KEYWORD_81,FOLLOW_KEYWORD_81_in_ruleDeclareClause9010); 
 
@@ -9613,10 +9626,46 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
             }
 
-            this_STRING_2=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleDeclareClause9041); 
-             
-                newLeafNode(this_STRING_2, grammarAccess.getDeclareClauseAccess().getSTRINGTerminalRuleCall_2()); 
-                
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3735:2: (this_STRING_2= RULE_STRING | this_EXECCOMMAND_3= RULE_EXECCOMMAND )
+            int alt60=2;
+            int LA60_0 = input.LA(1);
+
+            if ( (LA60_0==RULE_STRING) ) {
+                alt60=1;
+            }
+            else if ( (LA60_0==RULE_EXECCOMMAND) ) {
+                alt60=2;
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 60, 0, input);
+
+                throw nvae;
+            }
+            switch (alt60) {
+                case 1 :
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3735:3: this_STRING_2= RULE_STRING
+                    {
+                    this_STRING_2=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleDeclareClause9042); 
+                     
+                        newLeafNode(this_STRING_2, grammarAccess.getDeclareClauseAccess().getSTRINGTerminalRuleCall_2_0()); 
+                        
+
+                    }
+                    break;
+                case 2 :
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3740:6: this_EXECCOMMAND_3= RULE_EXECCOMMAND
+                    {
+                    this_EXECCOMMAND_3=(Token)match(input,RULE_EXECCOMMAND,FOLLOW_RULE_EXECCOMMAND_in_ruleDeclareClause9058); 
+                     
+                        newLeafNode(this_EXECCOMMAND_3, grammarAccess.getDeclareClauseAccess().getEXECCOMMANDTerminalRuleCall_2_1()); 
+                        
+
+                    }
+                    break;
+
+            }
+
 
             }
 
@@ -9638,7 +9687,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDefineClause"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3747:1: entryRuleDefineClause returns [EObject current=null] : iv_ruleDefineClause= ruleDefineClause EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3752:1: entryRuleDefineClause returns [EObject current=null] : iv_ruleDefineClause= ruleDefineClause EOF ;
     public final EObject entryRuleDefineClause() throws RecognitionException {
         EObject current = null;
 
@@ -9646,17 +9695,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3748:2: (iv_ruleDefineClause= ruleDefineClause EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3749:2: iv_ruleDefineClause= ruleDefineClause EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3753:2: (iv_ruleDefineClause= ruleDefineClause EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3754:2: iv_ruleDefineClause= ruleDefineClause EOF
             {
              newCompositeNode(grammarAccess.getDefineClauseRule()); 
-            pushFollow(FOLLOW_ruleDefineClause_in_entryRuleDefineClause9075);
+            pushFollow(FOLLOW_ruleDefineClause_in_entryRuleDefineClause9093);
             iv_ruleDefineClause=ruleDefineClause();
 
             state._fsp--;
 
              current =iv_ruleDefineClause; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDefineClause9085); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDefineClause9103); 
 
             }
 
@@ -9674,7 +9723,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDefineClause"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3756:1: ruleDefineClause returns [EObject current=null] : (otherlv_0= KEYWORD_71 ( (lv_name_1_0= ruleAlias ) ) ruleFuncClause ) ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3761:1: ruleDefineClause returns [EObject current=null] : (otherlv_0= KEYWORD_71 ( (lv_name_1_0= ruleAlias ) ) ruleFuncClause ) ;
     public final EObject ruleDefineClause() throws RecognitionException {
         EObject current = null;
 
@@ -9685,26 +9734,26 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3759:28: ( (otherlv_0= KEYWORD_71 ( (lv_name_1_0= ruleAlias ) ) ruleFuncClause ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3760:1: (otherlv_0= KEYWORD_71 ( (lv_name_1_0= ruleAlias ) ) ruleFuncClause )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3764:28: ( (otherlv_0= KEYWORD_71 ( (lv_name_1_0= ruleAlias ) ) ruleFuncClause ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3765:1: (otherlv_0= KEYWORD_71 ( (lv_name_1_0= ruleAlias ) ) ruleFuncClause )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3760:1: (otherlv_0= KEYWORD_71 ( (lv_name_1_0= ruleAlias ) ) ruleFuncClause )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3761:2: otherlv_0= KEYWORD_71 ( (lv_name_1_0= ruleAlias ) ) ruleFuncClause
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3765:1: (otherlv_0= KEYWORD_71 ( (lv_name_1_0= ruleAlias ) ) ruleFuncClause )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3766:2: otherlv_0= KEYWORD_71 ( (lv_name_1_0= ruleAlias ) ) ruleFuncClause
             {
-            otherlv_0=(Token)match(input,KEYWORD_71,FOLLOW_KEYWORD_71_in_ruleDefineClause9123); 
+            otherlv_0=(Token)match(input,KEYWORD_71,FOLLOW_KEYWORD_71_in_ruleDefineClause9141); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getDefineClauseAccess().getDEFINEKeyword_0());
                 
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3765:1: ( (lv_name_1_0= ruleAlias ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3766:1: (lv_name_1_0= ruleAlias )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3770:1: ( (lv_name_1_0= ruleAlias ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3771:1: (lv_name_1_0= ruleAlias )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3766:1: (lv_name_1_0= ruleAlias )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3767:3: lv_name_1_0= ruleAlias
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3771:1: (lv_name_1_0= ruleAlias )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3772:3: lv_name_1_0= ruleAlias
             {
              
             	        newCompositeNode(grammarAccess.getDefineClauseAccess().getNameAliasParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleAlias_in_ruleDefineClause9143);
+            pushFollow(FOLLOW_ruleAlias_in_ruleDefineClause9161);
             lv_name_1_0=ruleAlias();
 
             state._fsp--;
@@ -9729,7 +9778,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
              
                     newCompositeNode(grammarAccess.getDefineClauseAccess().getFuncClauseParserRuleCall_2()); 
                 
-            pushFollow(FOLLOW_ruleFuncClause_in_ruleDefineClause9159);
+            pushFollow(FOLLOW_ruleFuncClause_in_ruleDefineClause9177);
             ruleFuncClause();
 
             state._fsp--;
@@ -9758,7 +9807,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLoadUsing"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3799:1: entryRuleLoadUsing returns [String current=null] : iv_ruleLoadUsing= ruleLoadUsing EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3804:1: entryRuleLoadUsing returns [String current=null] : iv_ruleLoadUsing= ruleLoadUsing EOF ;
     public final String entryRuleLoadUsing() throws RecognitionException {
         String current = null;
 
@@ -9766,17 +9815,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3800:1: (iv_ruleLoadUsing= ruleLoadUsing EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3801:2: iv_ruleLoadUsing= ruleLoadUsing EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3805:1: (iv_ruleLoadUsing= ruleLoadUsing EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3806:2: iv_ruleLoadUsing= ruleLoadUsing EOF
             {
              newCompositeNode(grammarAccess.getLoadUsingRule()); 
-            pushFollow(FOLLOW_ruleLoadUsing_in_entryRuleLoadUsing9194);
+            pushFollow(FOLLOW_ruleLoadUsing_in_entryRuleLoadUsing9212);
             iv_ruleLoadUsing=ruleLoadUsing();
 
             state._fsp--;
 
              current =iv_ruleLoadUsing.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLoadUsing9205); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleLoadUsing9223); 
 
             }
 
@@ -9794,7 +9843,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLoadUsing"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3808:1: ruleLoadUsing returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= KEYWORD_70 this_FuncClause_1= ruleFuncClause ) ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3813:1: ruleLoadUsing returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= KEYWORD_70 this_FuncClause_1= ruleFuncClause ) ;
     public final AntlrDatatypeRuleToken ruleLoadUsing() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -9805,13 +9854,13 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3812:6: ( (kw= KEYWORD_70 this_FuncClause_1= ruleFuncClause ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3813:1: (kw= KEYWORD_70 this_FuncClause_1= ruleFuncClause )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3817:6: ( (kw= KEYWORD_70 this_FuncClause_1= ruleFuncClause ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3818:1: (kw= KEYWORD_70 this_FuncClause_1= ruleFuncClause )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3813:1: (kw= KEYWORD_70 this_FuncClause_1= ruleFuncClause )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3814:2: kw= KEYWORD_70 this_FuncClause_1= ruleFuncClause
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3818:1: (kw= KEYWORD_70 this_FuncClause_1= ruleFuncClause )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3819:2: kw= KEYWORD_70 this_FuncClause_1= ruleFuncClause
             {
-            kw=(Token)match(input,KEYWORD_70,FOLLOW_KEYWORD_70_in_ruleLoadUsing9243); 
+            kw=(Token)match(input,KEYWORD_70,FOLLOW_KEYWORD_70_in_ruleLoadUsing9261); 
 
                     current.merge(kw);
                     newLeafNode(kw, grammarAccess.getLoadUsingAccess().getUSINGKeyword_0()); 
@@ -9819,7 +9868,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
              
                     newCompositeNode(grammarAccess.getLoadUsingAccess().getFuncClauseParserRuleCall_1()); 
                 
-            pushFollow(FOLLOW_ruleFuncClause_in_ruleLoadUsing9265);
+            pushFollow(FOLLOW_ruleFuncClause_in_ruleLoadUsing9283);
             this_FuncClause_1=ruleFuncClause();
 
             state._fsp--;
@@ -9852,7 +9901,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFuncClause"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3838:1: entryRuleFuncClause returns [String current=null] : iv_ruleFuncClause= ruleFuncClause EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3843:1: entryRuleFuncClause returns [String current=null] : iv_ruleFuncClause= ruleFuncClause EOF ;
     public final String entryRuleFuncClause() throws RecognitionException {
         String current = null;
 
@@ -9860,17 +9909,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3839:1: (iv_ruleFuncClause= ruleFuncClause EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3840:2: iv_ruleFuncClause= ruleFuncClause EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3844:1: (iv_ruleFuncClause= ruleFuncClause EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3845:2: iv_ruleFuncClause= ruleFuncClause EOF
             {
              newCompositeNode(grammarAccess.getFuncClauseRule()); 
-            pushFollow(FOLLOW_ruleFuncClause_in_entryRuleFuncClause9310);
+            pushFollow(FOLLOW_ruleFuncClause_in_entryRuleFuncClause9328);
             iv_ruleFuncClause=ruleFuncClause();
 
             state._fsp--;
 
              current =iv_ruleFuncClause.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFuncClause9321); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFuncClause9339); 
 
             }
 
@@ -9888,7 +9937,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFuncClause"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3847:1: ruleFuncClause returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_FuncName_0= ruleFuncName kw= KEYWORD_4 (this_STRING_2= RULE_STRING )? (kw= KEYWORD_8 this_STRING_4= RULE_STRING )* kw= KEYWORD_5 ) ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3852:1: ruleFuncClause returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_FuncName_0= ruleFuncName kw= KEYWORD_4 (this_STRING_2= RULE_STRING )? (kw= KEYWORD_8 this_STRING_4= RULE_STRING )* kw= KEYWORD_5 ) ;
     public final AntlrDatatypeRuleToken ruleFuncClause() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -9901,16 +9950,16 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3851:6: ( (this_FuncName_0= ruleFuncName kw= KEYWORD_4 (this_STRING_2= RULE_STRING )? (kw= KEYWORD_8 this_STRING_4= RULE_STRING )* kw= KEYWORD_5 ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3852:1: (this_FuncName_0= ruleFuncName kw= KEYWORD_4 (this_STRING_2= RULE_STRING )? (kw= KEYWORD_8 this_STRING_4= RULE_STRING )* kw= KEYWORD_5 )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3856:6: ( (this_FuncName_0= ruleFuncName kw= KEYWORD_4 (this_STRING_2= RULE_STRING )? (kw= KEYWORD_8 this_STRING_4= RULE_STRING )* kw= KEYWORD_5 ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3857:1: (this_FuncName_0= ruleFuncName kw= KEYWORD_4 (this_STRING_2= RULE_STRING )? (kw= KEYWORD_8 this_STRING_4= RULE_STRING )* kw= KEYWORD_5 )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3852:1: (this_FuncName_0= ruleFuncName kw= KEYWORD_4 (this_STRING_2= RULE_STRING )? (kw= KEYWORD_8 this_STRING_4= RULE_STRING )* kw= KEYWORD_5 )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3853:5: this_FuncName_0= ruleFuncName kw= KEYWORD_4 (this_STRING_2= RULE_STRING )? (kw= KEYWORD_8 this_STRING_4= RULE_STRING )* kw= KEYWORD_5
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3857:1: (this_FuncName_0= ruleFuncName kw= KEYWORD_4 (this_STRING_2= RULE_STRING )? (kw= KEYWORD_8 this_STRING_4= RULE_STRING )* kw= KEYWORD_5 )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3858:5: this_FuncName_0= ruleFuncName kw= KEYWORD_4 (this_STRING_2= RULE_STRING )? (kw= KEYWORD_8 this_STRING_4= RULE_STRING )* kw= KEYWORD_5
             {
              
                     newCompositeNode(grammarAccess.getFuncClauseAccess().getFuncNameParserRuleCall_0()); 
                 
-            pushFollow(FOLLOW_ruleFuncName_in_ruleFuncClause9368);
+            pushFollow(FOLLOW_ruleFuncName_in_ruleFuncClause9386);
             this_FuncName_0=ruleFuncName();
 
             state._fsp--;
@@ -9921,23 +9970,23 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
              
                     afterParserOrEnumRuleCall();
                 
-            kw=(Token)match(input,KEYWORD_4,FOLLOW_KEYWORD_4_in_ruleFuncClause9386); 
+            kw=(Token)match(input,KEYWORD_4,FOLLOW_KEYWORD_4_in_ruleFuncClause9404); 
 
                     current.merge(kw);
                     newLeafNode(kw, grammarAccess.getFuncClauseAccess().getLeftParenthesisKeyword_1()); 
                 
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3869:1: (this_STRING_2= RULE_STRING )?
-            int alt60=2;
-            int LA60_0 = input.LA(1);
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3874:1: (this_STRING_2= RULE_STRING )?
+            int alt61=2;
+            int LA61_0 = input.LA(1);
 
-            if ( (LA60_0==RULE_STRING) ) {
-                alt60=1;
+            if ( (LA61_0==RULE_STRING) ) {
+                alt61=1;
             }
-            switch (alt60) {
+            switch (alt61) {
                 case 1 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3869:6: this_STRING_2= RULE_STRING
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3874:6: this_STRING_2= RULE_STRING
                     {
-                    this_STRING_2=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleFuncClause9402); 
+                    this_STRING_2=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleFuncClause9420); 
 
                     		current.merge(this_STRING_2);
                         
@@ -9950,27 +9999,27 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3876:3: (kw= KEYWORD_8 this_STRING_4= RULE_STRING )*
-            loop61:
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3881:3: (kw= KEYWORD_8 this_STRING_4= RULE_STRING )*
+            loop62:
             do {
-                int alt61=2;
-                int LA61_0 = input.LA(1);
+                int alt62=2;
+                int LA62_0 = input.LA(1);
 
-                if ( (LA61_0==KEYWORD_8) ) {
-                    alt61=1;
+                if ( (LA62_0==KEYWORD_8) ) {
+                    alt62=1;
                 }
 
 
-                switch (alt61) {
+                switch (alt62) {
             	case 1 :
-            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3877:2: kw= KEYWORD_8 this_STRING_4= RULE_STRING
+            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3882:2: kw= KEYWORD_8 this_STRING_4= RULE_STRING
             	    {
-            	    kw=(Token)match(input,KEYWORD_8,FOLLOW_KEYWORD_8_in_ruleFuncClause9423); 
+            	    kw=(Token)match(input,KEYWORD_8,FOLLOW_KEYWORD_8_in_ruleFuncClause9441); 
 
             	            current.merge(kw);
             	            newLeafNode(kw, grammarAccess.getFuncClauseAccess().getCommaKeyword_3_0()); 
             	        
-            	    this_STRING_4=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleFuncClause9438); 
+            	    this_STRING_4=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleFuncClause9456); 
 
             	    		current.merge(this_STRING_4);
             	        
@@ -9982,11 +10031,11 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop61;
+            	    break loop62;
                 }
             } while (true);
 
-            kw=(Token)match(input,KEYWORD_5,FOLLOW_KEYWORD_5_in_ruleFuncClause9458); 
+            kw=(Token)match(input,KEYWORD_5,FOLLOW_KEYWORD_5_in_ruleFuncClause9476); 
 
                     current.merge(kw);
                     newLeafNode(kw, grammarAccess.getFuncClauseAccess().getRightParenthesisKeyword_4()); 
@@ -10013,7 +10062,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFuncName"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3903:1: entryRuleFuncName returns [String current=null] : iv_ruleFuncName= ruleFuncName EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3908:1: entryRuleFuncName returns [String current=null] : iv_ruleFuncName= ruleFuncName EOF ;
     public final String entryRuleFuncName() throws RecognitionException {
         String current = null;
 
@@ -10021,17 +10070,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3904:1: (iv_ruleFuncName= ruleFuncName EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3905:2: iv_ruleFuncName= ruleFuncName EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3909:1: (iv_ruleFuncName= ruleFuncName EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3910:2: iv_ruleFuncName= ruleFuncName EOF
             {
              newCompositeNode(grammarAccess.getFuncNameRule()); 
-            pushFollow(FOLLOW_ruleFuncName_in_entryRuleFuncName9498);
+            pushFollow(FOLLOW_ruleFuncName_in_entryRuleFuncName9516);
             iv_ruleFuncName=ruleFuncName();
 
             state._fsp--;
 
              current =iv_ruleFuncName.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFuncName9509); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFuncName9527); 
 
             }
 
@@ -10049,7 +10098,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFuncName"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3912:1: ruleFuncName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID | kw= KEYWORD_10 | kw= KEYWORD_2 )+ ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3917:1: ruleFuncName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID | kw= KEYWORD_10 | kw= KEYWORD_2 )+ ;
     public final AntlrDatatypeRuleToken ruleFuncName() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -10059,38 +10108,38 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3916:6: ( (this_ID_0= RULE_ID | kw= KEYWORD_10 | kw= KEYWORD_2 )+ )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3917:1: (this_ID_0= RULE_ID | kw= KEYWORD_10 | kw= KEYWORD_2 )+
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3921:6: ( (this_ID_0= RULE_ID | kw= KEYWORD_10 | kw= KEYWORD_2 )+ )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3922:1: (this_ID_0= RULE_ID | kw= KEYWORD_10 | kw= KEYWORD_2 )+
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3917:1: (this_ID_0= RULE_ID | kw= KEYWORD_10 | kw= KEYWORD_2 )+
-            int cnt62=0;
-            loop62:
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3922:1: (this_ID_0= RULE_ID | kw= KEYWORD_10 | kw= KEYWORD_2 )+
+            int cnt63=0;
+            loop63:
             do {
-                int alt62=4;
+                int alt63=4;
                 switch ( input.LA(1) ) {
                 case RULE_ID:
                     {
-                    alt62=1;
+                    alt63=1;
                     }
                     break;
                 case KEYWORD_10:
                     {
-                    alt62=2;
+                    alt63=2;
                     }
                     break;
                 case KEYWORD_2:
                     {
-                    alt62=3;
+                    alt63=3;
                     }
                     break;
 
                 }
 
-                switch (alt62) {
+                switch (alt63) {
             	case 1 :
-            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3917:6: this_ID_0= RULE_ID
+            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3922:6: this_ID_0= RULE_ID
             	    {
-            	    this_ID_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleFuncName9549); 
+            	    this_ID_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleFuncName9567); 
 
             	    		current.merge(this_ID_0);
             	        
@@ -10101,9 +10150,9 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 2 :
-            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3926:2: kw= KEYWORD_10
+            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3931:2: kw= KEYWORD_10
             	    {
-            	    kw=(Token)match(input,KEYWORD_10,FOLLOW_KEYWORD_10_in_ruleFuncName9573); 
+            	    kw=(Token)match(input,KEYWORD_10,FOLLOW_KEYWORD_10_in_ruleFuncName9591); 
 
             	            current.merge(kw);
             	            newLeafNode(kw, grammarAccess.getFuncNameAccess().getFullStopKeyword_1()); 
@@ -10112,198 +10161,12 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 3 :
-            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3933:2: kw= KEYWORD_2
+            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3938:2: kw= KEYWORD_2
             	    {
-            	    kw=(Token)match(input,KEYWORD_2,FOLLOW_KEYWORD_2_in_ruleFuncName9592); 
+            	    kw=(Token)match(input,KEYWORD_2,FOLLOW_KEYWORD_2_in_ruleFuncName9610); 
 
             	            current.merge(kw);
             	            newLeafNode(kw, grammarAccess.getFuncNameAccess().getDollarSignKeyword_2()); 
-            	        
-
-            	    }
-            	    break;
-
-            	default :
-            	    if ( cnt62 >= 1 ) break loop62;
-                        EarlyExitException eee =
-                            new EarlyExitException(62, input);
-                        throw eee;
-                }
-                cnt62++;
-            } while (true);
-
-
-            }
-
-             leaveRule();
-                
-        }
-         
-        	catch (RecognitionException re) { 
-        	    recover(input,re); 
-        	    appendSkippedTokens();
-        	}
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "ruleFuncName"
-
-
-    // $ANTLR start "entryRulePathClause"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3946:1: entryRulePathClause returns [String current=null] : iv_rulePathClause= rulePathClause EOF ;
-    public final String entryRulePathClause() throws RecognitionException {
-        String current = null;
-
-        AntlrDatatypeRuleToken iv_rulePathClause = null;
-
-
-        try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3947:1: (iv_rulePathClause= rulePathClause EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3948:2: iv_rulePathClause= rulePathClause EOF
-            {
-             newCompositeNode(grammarAccess.getPathClauseRule()); 
-            pushFollow(FOLLOW_rulePathClause_in_entryRulePathClause9633);
-            iv_rulePathClause=rulePathClause();
-
-            state._fsp--;
-
-             current =iv_rulePathClause.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRulePathClause9644); 
-
-            }
-
-        }
-         
-        	catch (RecognitionException re) { 
-        	    recover(input,re); 
-        	    appendSkippedTokens();
-        	}
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "entryRulePathClause"
-
-
-    // $ANTLR start "rulePathClause"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3955:1: rulePathClause returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= KEYWORD_38 | this_scalar_1= rulescalar | this_ID_2= RULE_ID | kw= KEYWORD_10 | kw= KEYWORD_2 | kw= KEYWORD_11 | kw= KEYWORD_19 | kw= KEYWORD_9 )+ ;
-    public final AntlrDatatypeRuleToken rulePathClause() throws RecognitionException {
-        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
-
-        Token kw=null;
-        Token this_ID_2=null;
-        AntlrDatatypeRuleToken this_scalar_1 = null;
-
-
-         enterRule(); 
-            
-        try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3959:6: ( (kw= KEYWORD_38 | this_scalar_1= rulescalar | this_ID_2= RULE_ID | kw= KEYWORD_10 | kw= KEYWORD_2 | kw= KEYWORD_11 | kw= KEYWORD_19 | kw= KEYWORD_9 )+ )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3960:1: (kw= KEYWORD_38 | this_scalar_1= rulescalar | this_ID_2= RULE_ID | kw= KEYWORD_10 | kw= KEYWORD_2 | kw= KEYWORD_11 | kw= KEYWORD_19 | kw= KEYWORD_9 )+
-            {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3960:1: (kw= KEYWORD_38 | this_scalar_1= rulescalar | this_ID_2= RULE_ID | kw= KEYWORD_10 | kw= KEYWORD_2 | kw= KEYWORD_11 | kw= KEYWORD_19 | kw= KEYWORD_9 )+
-            int cnt63=0;
-            loop63:
-            do {
-                int alt63=9;
-                alt63 = dfa63.predict(input);
-                switch (alt63) {
-            	case 1 :
-            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3961:2: kw= KEYWORD_38
-            	    {
-            	    kw=(Token)match(input,KEYWORD_38,FOLLOW_KEYWORD_38_in_rulePathClause9682); 
-
-            	            current.merge(kw);
-            	            newLeafNode(kw, grammarAccess.getPathClauseAccess().getALLKeyword_0()); 
-            	        
-
-            	    }
-            	    break;
-            	case 2 :
-            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3968:5: this_scalar_1= rulescalar
-            	    {
-            	     
-            	            newCompositeNode(grammarAccess.getPathClauseAccess().getScalarParserRuleCall_1()); 
-            	        
-            	    pushFollow(FOLLOW_rulescalar_in_rulePathClause9710);
-            	    this_scalar_1=rulescalar();
-
-            	    state._fsp--;
-
-
-            	    		current.merge(this_scalar_1);
-            	        
-            	     
-            	            afterParserOrEnumRuleCall();
-            	        
-
-            	    }
-            	    break;
-            	case 3 :
-            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3979:10: this_ID_2= RULE_ID
-            	    {
-            	    this_ID_2=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePathClause9736); 
-
-            	    		current.merge(this_ID_2);
-            	        
-            	     
-            	        newLeafNode(this_ID_2, grammarAccess.getPathClauseAccess().getIDTerminalRuleCall_2()); 
-            	        
-
-            	    }
-            	    break;
-            	case 4 :
-            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3988:2: kw= KEYWORD_10
-            	    {
-            	    kw=(Token)match(input,KEYWORD_10,FOLLOW_KEYWORD_10_in_rulePathClause9760); 
-
-            	            current.merge(kw);
-            	            newLeafNode(kw, grammarAccess.getPathClauseAccess().getFullStopKeyword_3()); 
-            	        
-
-            	    }
-            	    break;
-            	case 5 :
-            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3995:2: kw= KEYWORD_2
-            	    {
-            	    kw=(Token)match(input,KEYWORD_2,FOLLOW_KEYWORD_2_in_rulePathClause9779); 
-
-            	            current.merge(kw);
-            	            newLeafNode(kw, grammarAccess.getPathClauseAccess().getDollarSignKeyword_4()); 
-            	        
-
-            	    }
-            	    break;
-            	case 6 :
-            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4002:2: kw= KEYWORD_11
-            	    {
-            	    kw=(Token)match(input,KEYWORD_11,FOLLOW_KEYWORD_11_in_rulePathClause9798); 
-
-            	            current.merge(kw);
-            	            newLeafNode(kw, grammarAccess.getPathClauseAccess().getSolidusKeyword_5()); 
-            	        
-
-            	    }
-            	    break;
-            	case 7 :
-            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4009:2: kw= KEYWORD_19
-            	    {
-            	    kw=(Token)match(input,KEYWORD_19,FOLLOW_KEYWORD_19_in_rulePathClause9817); 
-
-            	            current.merge(kw);
-            	            newLeafNode(kw, grammarAccess.getPathClauseAccess().getReverseSolidusKeyword_6()); 
-            	        
-
-            	    }
-            	    break;
-            	case 8 :
-            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4016:2: kw= KEYWORD_9
-            	    {
-            	    kw=(Token)match(input,KEYWORD_9,FOLLOW_KEYWORD_9_in_rulePathClause9836); 
-
-            	            current.merge(kw);
-            	            newLeafNode(kw, grammarAccess.getPathClauseAccess().getHyphenMinusKeyword_7()); 
             	        
 
             	    }
@@ -10333,11 +10196,197 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
+    // $ANTLR end "ruleFuncName"
+
+
+    // $ANTLR start "entryRulePathClause"
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3951:1: entryRulePathClause returns [String current=null] : iv_rulePathClause= rulePathClause EOF ;
+    public final String entryRulePathClause() throws RecognitionException {
+        String current = null;
+
+        AntlrDatatypeRuleToken iv_rulePathClause = null;
+
+
+        try {
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3952:1: (iv_rulePathClause= rulePathClause EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3953:2: iv_rulePathClause= rulePathClause EOF
+            {
+             newCompositeNode(grammarAccess.getPathClauseRule()); 
+            pushFollow(FOLLOW_rulePathClause_in_entryRulePathClause9651);
+            iv_rulePathClause=rulePathClause();
+
+            state._fsp--;
+
+             current =iv_rulePathClause.getText(); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulePathClause9662); 
+
+            }
+
+        }
+         
+        	catch (RecognitionException re) { 
+        	    recover(input,re); 
+        	    appendSkippedTokens();
+        	}
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRulePathClause"
+
+
+    // $ANTLR start "rulePathClause"
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3960:1: rulePathClause returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= KEYWORD_38 | this_scalar_1= rulescalar | this_ID_2= RULE_ID | kw= KEYWORD_10 | kw= KEYWORD_2 | kw= KEYWORD_11 | kw= KEYWORD_19 | kw= KEYWORD_9 )+ ;
+    public final AntlrDatatypeRuleToken rulePathClause() throws RecognitionException {
+        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
+
+        Token kw=null;
+        Token this_ID_2=null;
+        AntlrDatatypeRuleToken this_scalar_1 = null;
+
+
+         enterRule(); 
+            
+        try {
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3964:6: ( (kw= KEYWORD_38 | this_scalar_1= rulescalar | this_ID_2= RULE_ID | kw= KEYWORD_10 | kw= KEYWORD_2 | kw= KEYWORD_11 | kw= KEYWORD_19 | kw= KEYWORD_9 )+ )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3965:1: (kw= KEYWORD_38 | this_scalar_1= rulescalar | this_ID_2= RULE_ID | kw= KEYWORD_10 | kw= KEYWORD_2 | kw= KEYWORD_11 | kw= KEYWORD_19 | kw= KEYWORD_9 )+
+            {
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3965:1: (kw= KEYWORD_38 | this_scalar_1= rulescalar | this_ID_2= RULE_ID | kw= KEYWORD_10 | kw= KEYWORD_2 | kw= KEYWORD_11 | kw= KEYWORD_19 | kw= KEYWORD_9 )+
+            int cnt64=0;
+            loop64:
+            do {
+                int alt64=9;
+                alt64 = dfa64.predict(input);
+                switch (alt64) {
+            	case 1 :
+            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3966:2: kw= KEYWORD_38
+            	    {
+            	    kw=(Token)match(input,KEYWORD_38,FOLLOW_KEYWORD_38_in_rulePathClause9700); 
+
+            	            current.merge(kw);
+            	            newLeafNode(kw, grammarAccess.getPathClauseAccess().getALLKeyword_0()); 
+            	        
+
+            	    }
+            	    break;
+            	case 2 :
+            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3973:5: this_scalar_1= rulescalar
+            	    {
+            	     
+            	            newCompositeNode(grammarAccess.getPathClauseAccess().getScalarParserRuleCall_1()); 
+            	        
+            	    pushFollow(FOLLOW_rulescalar_in_rulePathClause9728);
+            	    this_scalar_1=rulescalar();
+
+            	    state._fsp--;
+
+
+            	    		current.merge(this_scalar_1);
+            	        
+            	     
+            	            afterParserOrEnumRuleCall();
+            	        
+
+            	    }
+            	    break;
+            	case 3 :
+            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3984:10: this_ID_2= RULE_ID
+            	    {
+            	    this_ID_2=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePathClause9754); 
+
+            	    		current.merge(this_ID_2);
+            	        
+            	     
+            	        newLeafNode(this_ID_2, grammarAccess.getPathClauseAccess().getIDTerminalRuleCall_2()); 
+            	        
+
+            	    }
+            	    break;
+            	case 4 :
+            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:3993:2: kw= KEYWORD_10
+            	    {
+            	    kw=(Token)match(input,KEYWORD_10,FOLLOW_KEYWORD_10_in_rulePathClause9778); 
+
+            	            current.merge(kw);
+            	            newLeafNode(kw, grammarAccess.getPathClauseAccess().getFullStopKeyword_3()); 
+            	        
+
+            	    }
+            	    break;
+            	case 5 :
+            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4000:2: kw= KEYWORD_2
+            	    {
+            	    kw=(Token)match(input,KEYWORD_2,FOLLOW_KEYWORD_2_in_rulePathClause9797); 
+
+            	            current.merge(kw);
+            	            newLeafNode(kw, grammarAccess.getPathClauseAccess().getDollarSignKeyword_4()); 
+            	        
+
+            	    }
+            	    break;
+            	case 6 :
+            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4007:2: kw= KEYWORD_11
+            	    {
+            	    kw=(Token)match(input,KEYWORD_11,FOLLOW_KEYWORD_11_in_rulePathClause9816); 
+
+            	            current.merge(kw);
+            	            newLeafNode(kw, grammarAccess.getPathClauseAccess().getSolidusKeyword_5()); 
+            	        
+
+            	    }
+            	    break;
+            	case 7 :
+            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4014:2: kw= KEYWORD_19
+            	    {
+            	    kw=(Token)match(input,KEYWORD_19,FOLLOW_KEYWORD_19_in_rulePathClause9835); 
+
+            	            current.merge(kw);
+            	            newLeafNode(kw, grammarAccess.getPathClauseAccess().getReverseSolidusKeyword_6()); 
+            	        
+
+            	    }
+            	    break;
+            	case 8 :
+            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4021:2: kw= KEYWORD_9
+            	    {
+            	    kw=(Token)match(input,KEYWORD_9,FOLLOW_KEYWORD_9_in_rulePathClause9854); 
+
+            	            current.merge(kw);
+            	            newLeafNode(kw, grammarAccess.getPathClauseAccess().getHyphenMinusKeyword_7()); 
+            	        
+
+            	    }
+            	    break;
+
+            	default :
+            	    if ( cnt64 >= 1 ) break loop64;
+                        EarlyExitException eee =
+                            new EarlyExitException(64, input);
+                        throw eee;
+                }
+                cnt64++;
+            } while (true);
+
+
+            }
+
+             leaveRule();
+                
+        }
+         
+        	catch (RecognitionException re) { 
+        	    recover(input,re); 
+        	    appendSkippedTokens();
+        	}
+        finally {
+        }
+        return current;
+    }
     // $ANTLR end "rulePathClause"
 
 
     // $ANTLR start "entryRuleAsClause"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4029:1: entryRuleAsClause returns [String current=null] : iv_ruleAsClause= ruleAsClause EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4034:1: entryRuleAsClause returns [String current=null] : iv_ruleAsClause= ruleAsClause EOF ;
     public final String entryRuleAsClause() throws RecognitionException {
         String current = null;
 
@@ -10345,17 +10394,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4030:1: (iv_ruleAsClause= ruleAsClause EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4031:2: iv_ruleAsClause= ruleAsClause EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4035:1: (iv_ruleAsClause= ruleAsClause EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4036:2: iv_ruleAsClause= ruleAsClause EOF
             {
              newCompositeNode(grammarAccess.getAsClauseRule()); 
-            pushFollow(FOLLOW_ruleAsClause_in_entryRuleAsClause9877);
+            pushFollow(FOLLOW_ruleAsClause_in_entryRuleAsClause9895);
             iv_ruleAsClause=ruleAsClause();
 
             state._fsp--;
 
              current =iv_ruleAsClause.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAsClause9888); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAsClause9906); 
 
             }
 
@@ -10373,7 +10422,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAsClause"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4038:1: ruleAsClause returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= KEYWORD_28 (this_AliasDef_1= ruleAliasDef | this_AliasDefList_2= ruleAliasDefList ) ) ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4043:1: ruleAsClause returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= KEYWORD_28 (this_AliasDef_1= ruleAliasDef | this_AliasDefList_2= ruleAliasDefList ) ) ;
     public final AntlrDatatypeRuleToken ruleAsClause() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -10386,41 +10435,41 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4042:6: ( (kw= KEYWORD_28 (this_AliasDef_1= ruleAliasDef | this_AliasDefList_2= ruleAliasDefList ) ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4043:1: (kw= KEYWORD_28 (this_AliasDef_1= ruleAliasDef | this_AliasDefList_2= ruleAliasDefList ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4047:6: ( (kw= KEYWORD_28 (this_AliasDef_1= ruleAliasDef | this_AliasDefList_2= ruleAliasDefList ) ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4048:1: (kw= KEYWORD_28 (this_AliasDef_1= ruleAliasDef | this_AliasDefList_2= ruleAliasDefList ) )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4043:1: (kw= KEYWORD_28 (this_AliasDef_1= ruleAliasDef | this_AliasDefList_2= ruleAliasDefList ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4044:2: kw= KEYWORD_28 (this_AliasDef_1= ruleAliasDef | this_AliasDefList_2= ruleAliasDefList )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4048:1: (kw= KEYWORD_28 (this_AliasDef_1= ruleAliasDef | this_AliasDefList_2= ruleAliasDefList ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4049:2: kw= KEYWORD_28 (this_AliasDef_1= ruleAliasDef | this_AliasDefList_2= ruleAliasDefList )
             {
-            kw=(Token)match(input,KEYWORD_28,FOLLOW_KEYWORD_28_in_ruleAsClause9926); 
+            kw=(Token)match(input,KEYWORD_28,FOLLOW_KEYWORD_28_in_ruleAsClause9944); 
 
                     current.merge(kw);
                     newLeafNode(kw, grammarAccess.getAsClauseAccess().getASKeyword_0()); 
                 
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4049:1: (this_AliasDef_1= ruleAliasDef | this_AliasDefList_2= ruleAliasDefList )
-            int alt64=2;
-            int LA64_0 = input.LA(1);
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4054:1: (this_AliasDef_1= ruleAliasDef | this_AliasDefList_2= ruleAliasDefList )
+            int alt65=2;
+            int LA65_0 = input.LA(1);
 
-            if ( (LA64_0==RULE_ID) ) {
-                alt64=1;
+            if ( (LA65_0==RULE_ID) ) {
+                alt65=1;
             }
-            else if ( (LA64_0==KEYWORD_4) ) {
-                alt64=2;
+            else if ( (LA65_0==KEYWORD_4) ) {
+                alt65=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 64, 0, input);
+                    new NoViableAltException("", 65, 0, input);
 
                 throw nvae;
             }
-            switch (alt64) {
+            switch (alt65) {
                 case 1 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4050:5: this_AliasDef_1= ruleAliasDef
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4055:5: this_AliasDef_1= ruleAliasDef
                     {
                      
                             newCompositeNode(grammarAccess.getAsClauseAccess().getAliasDefParserRuleCall_1_0()); 
                         
-                    pushFollow(FOLLOW_ruleAliasDef_in_ruleAsClause9949);
+                    pushFollow(FOLLOW_ruleAliasDef_in_ruleAsClause9967);
                     this_AliasDef_1=ruleAliasDef();
 
                     state._fsp--;
@@ -10435,12 +10484,12 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4062:5: this_AliasDefList_2= ruleAliasDefList
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4067:5: this_AliasDefList_2= ruleAliasDefList
                     {
                      
                             newCompositeNode(grammarAccess.getAsClauseAccess().getAliasDefListParserRuleCall_1_1()); 
                         
-                    pushFollow(FOLLOW_ruleAliasDefList_in_ruleAsClause9982);
+                    pushFollow(FOLLOW_ruleAliasDefList_in_ruleAsClause10000);
                     this_AliasDefList_2=ruleAliasDefList();
 
                     state._fsp--;
@@ -10479,7 +10528,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAliasDef"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4080:1: entryRuleAliasDef returns [String current=null] : iv_ruleAliasDef= ruleAliasDef EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4085:1: entryRuleAliasDef returns [String current=null] : iv_ruleAliasDef= ruleAliasDef EOF ;
     public final String entryRuleAliasDef() throws RecognitionException {
         String current = null;
 
@@ -10487,17 +10536,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4081:1: (iv_ruleAliasDef= ruleAliasDef EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4082:2: iv_ruleAliasDef= ruleAliasDef EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4086:1: (iv_ruleAliasDef= ruleAliasDef EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4087:2: iv_ruleAliasDef= ruleAliasDef EOF
             {
              newCompositeNode(grammarAccess.getAliasDefRule()); 
-            pushFollow(FOLLOW_ruleAliasDef_in_entryRuleAliasDef10028);
+            pushFollow(FOLLOW_ruleAliasDef_in_entryRuleAliasDef10046);
             iv_ruleAliasDef=ruleAliasDef();
 
             state._fsp--;
 
              current =iv_ruleAliasDef.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAliasDef10039); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAliasDef10057); 
 
             }
 
@@ -10515,7 +10564,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAliasDef"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4089:1: ruleAliasDef returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_Alias_0= ruleAlias (kw= KEYWORD_12 this_Type_2= ruleType )? ) ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4094:1: ruleAliasDef returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_Alias_0= ruleAlias (kw= KEYWORD_12 this_Type_2= ruleType )? ) ;
     public final AntlrDatatypeRuleToken ruleAliasDef() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -10528,16 +10577,16 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4093:6: ( (this_Alias_0= ruleAlias (kw= KEYWORD_12 this_Type_2= ruleType )? ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4094:1: (this_Alias_0= ruleAlias (kw= KEYWORD_12 this_Type_2= ruleType )? )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4098:6: ( (this_Alias_0= ruleAlias (kw= KEYWORD_12 this_Type_2= ruleType )? ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4099:1: (this_Alias_0= ruleAlias (kw= KEYWORD_12 this_Type_2= ruleType )? )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4094:1: (this_Alias_0= ruleAlias (kw= KEYWORD_12 this_Type_2= ruleType )? )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4095:5: this_Alias_0= ruleAlias (kw= KEYWORD_12 this_Type_2= ruleType )?
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4099:1: (this_Alias_0= ruleAlias (kw= KEYWORD_12 this_Type_2= ruleType )? )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4100:5: this_Alias_0= ruleAlias (kw= KEYWORD_12 this_Type_2= ruleType )?
             {
              
                     newCompositeNode(grammarAccess.getAliasDefAccess().getAliasParserRuleCall_0()); 
                 
-            pushFollow(FOLLOW_ruleAlias_in_ruleAliasDef10086);
+            pushFollow(FOLLOW_ruleAlias_in_ruleAliasDef10104);
             this_Alias_0=ruleAlias();
 
             state._fsp--;
@@ -10548,18 +10597,18 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
              
                     afterParserOrEnumRuleCall();
                 
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4105:1: (kw= KEYWORD_12 this_Type_2= ruleType )?
-            int alt65=2;
-            int LA65_0 = input.LA(1);
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4110:1: (kw= KEYWORD_12 this_Type_2= ruleType )?
+            int alt66=2;
+            int LA66_0 = input.LA(1);
 
-            if ( (LA65_0==KEYWORD_12) ) {
-                alt65=1;
+            if ( (LA66_0==KEYWORD_12) ) {
+                alt66=1;
             }
-            switch (alt65) {
+            switch (alt66) {
                 case 1 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4106:2: kw= KEYWORD_12 this_Type_2= ruleType
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4111:2: kw= KEYWORD_12 this_Type_2= ruleType
                     {
-                    kw=(Token)match(input,KEYWORD_12,FOLLOW_KEYWORD_12_in_ruleAliasDef10105); 
+                    kw=(Token)match(input,KEYWORD_12,FOLLOW_KEYWORD_12_in_ruleAliasDef10123); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getAliasDefAccess().getColonKeyword_1_0()); 
@@ -10567,7 +10616,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                      
                             newCompositeNode(grammarAccess.getAliasDefAccess().getTypeParserRuleCall_1_1()); 
                         
-                    pushFollow(FOLLOW_ruleType_in_ruleAliasDef10127);
+                    pushFollow(FOLLOW_ruleType_in_ruleAliasDef10145);
                     this_Type_2=ruleType();
 
                     state._fsp--;
@@ -10606,7 +10655,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAliasDefList"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4130:1: entryRuleAliasDefList returns [String current=null] : iv_ruleAliasDefList= ruleAliasDefList EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4135:1: entryRuleAliasDefList returns [String current=null] : iv_ruleAliasDefList= ruleAliasDefList EOF ;
     public final String entryRuleAliasDefList() throws RecognitionException {
         String current = null;
 
@@ -10614,17 +10663,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4131:1: (iv_ruleAliasDefList= ruleAliasDefList EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4132:2: iv_ruleAliasDefList= ruleAliasDefList EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4136:1: (iv_ruleAliasDefList= ruleAliasDefList EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4137:2: iv_ruleAliasDefList= ruleAliasDefList EOF
             {
              newCompositeNode(grammarAccess.getAliasDefListRule()); 
-            pushFollow(FOLLOW_ruleAliasDefList_in_entryRuleAliasDefList10174);
+            pushFollow(FOLLOW_ruleAliasDefList_in_entryRuleAliasDefList10192);
             iv_ruleAliasDefList=ruleAliasDefList();
 
             state._fsp--;
 
              current =iv_ruleAliasDefList.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAliasDefList10185); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAliasDefList10203); 
 
             }
 
@@ -10642,7 +10691,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAliasDefList"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4139:1: ruleAliasDefList returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= KEYWORD_4 this_AliasDef_1= ruleAliasDef (kw= KEYWORD_8 this_AliasDef_3= ruleAliasDef )* kw= KEYWORD_5 ) ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4144:1: ruleAliasDefList returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= KEYWORD_4 this_AliasDef_1= ruleAliasDef (kw= KEYWORD_8 this_AliasDef_3= ruleAliasDef )* kw= KEYWORD_5 ) ;
     public final AntlrDatatypeRuleToken ruleAliasDefList() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -10655,13 +10704,13 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4143:6: ( (kw= KEYWORD_4 this_AliasDef_1= ruleAliasDef (kw= KEYWORD_8 this_AliasDef_3= ruleAliasDef )* kw= KEYWORD_5 ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4144:1: (kw= KEYWORD_4 this_AliasDef_1= ruleAliasDef (kw= KEYWORD_8 this_AliasDef_3= ruleAliasDef )* kw= KEYWORD_5 )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4148:6: ( (kw= KEYWORD_4 this_AliasDef_1= ruleAliasDef (kw= KEYWORD_8 this_AliasDef_3= ruleAliasDef )* kw= KEYWORD_5 ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4149:1: (kw= KEYWORD_4 this_AliasDef_1= ruleAliasDef (kw= KEYWORD_8 this_AliasDef_3= ruleAliasDef )* kw= KEYWORD_5 )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4144:1: (kw= KEYWORD_4 this_AliasDef_1= ruleAliasDef (kw= KEYWORD_8 this_AliasDef_3= ruleAliasDef )* kw= KEYWORD_5 )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4145:2: kw= KEYWORD_4 this_AliasDef_1= ruleAliasDef (kw= KEYWORD_8 this_AliasDef_3= ruleAliasDef )* kw= KEYWORD_5
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4149:1: (kw= KEYWORD_4 this_AliasDef_1= ruleAliasDef (kw= KEYWORD_8 this_AliasDef_3= ruleAliasDef )* kw= KEYWORD_5 )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4150:2: kw= KEYWORD_4 this_AliasDef_1= ruleAliasDef (kw= KEYWORD_8 this_AliasDef_3= ruleAliasDef )* kw= KEYWORD_5
             {
-            kw=(Token)match(input,KEYWORD_4,FOLLOW_KEYWORD_4_in_ruleAliasDefList10223); 
+            kw=(Token)match(input,KEYWORD_4,FOLLOW_KEYWORD_4_in_ruleAliasDefList10241); 
 
                     current.merge(kw);
                     newLeafNode(kw, grammarAccess.getAliasDefListAccess().getLeftParenthesisKeyword_0()); 
@@ -10669,7 +10718,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
              
                     newCompositeNode(grammarAccess.getAliasDefListAccess().getAliasDefParserRuleCall_1()); 
                 
-            pushFollow(FOLLOW_ruleAliasDef_in_ruleAliasDefList10245);
+            pushFollow(FOLLOW_ruleAliasDef_in_ruleAliasDefList10263);
             this_AliasDef_1=ruleAliasDef();
 
             state._fsp--;
@@ -10680,22 +10729,22 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
              
                     afterParserOrEnumRuleCall();
                 
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4161:1: (kw= KEYWORD_8 this_AliasDef_3= ruleAliasDef )*
-            loop66:
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4166:1: (kw= KEYWORD_8 this_AliasDef_3= ruleAliasDef )*
+            loop67:
             do {
-                int alt66=2;
-                int LA66_0 = input.LA(1);
+                int alt67=2;
+                int LA67_0 = input.LA(1);
 
-                if ( (LA66_0==KEYWORD_8) ) {
-                    alt66=1;
+                if ( (LA67_0==KEYWORD_8) ) {
+                    alt67=1;
                 }
 
 
-                switch (alt66) {
+                switch (alt67) {
             	case 1 :
-            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4162:2: kw= KEYWORD_8 this_AliasDef_3= ruleAliasDef
+            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4167:2: kw= KEYWORD_8 this_AliasDef_3= ruleAliasDef
             	    {
-            	    kw=(Token)match(input,KEYWORD_8,FOLLOW_KEYWORD_8_in_ruleAliasDefList10264); 
+            	    kw=(Token)match(input,KEYWORD_8,FOLLOW_KEYWORD_8_in_ruleAliasDefList10282); 
 
             	            current.merge(kw);
             	            newLeafNode(kw, grammarAccess.getAliasDefListAccess().getCommaKeyword_2_0()); 
@@ -10703,7 +10752,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
             	     
             	            newCompositeNode(grammarAccess.getAliasDefListAccess().getAliasDefParserRuleCall_2_1()); 
             	        
-            	    pushFollow(FOLLOW_ruleAliasDef_in_ruleAliasDefList10286);
+            	    pushFollow(FOLLOW_ruleAliasDef_in_ruleAliasDefList10304);
             	    this_AliasDef_3=ruleAliasDef();
 
             	    state._fsp--;
@@ -10719,11 +10768,11 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop66;
+            	    break loop67;
                 }
             } while (true);
 
-            kw=(Token)match(input,KEYWORD_5,FOLLOW_KEYWORD_5_in_ruleAliasDefList10306); 
+            kw=(Token)match(input,KEYWORD_5,FOLLOW_KEYWORD_5_in_ruleAliasDefList10324); 
 
                     current.merge(kw);
                     newLeafNode(kw, grammarAccess.getAliasDefListAccess().getRightParenthesisKeyword_3()); 
@@ -10750,7 +10799,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleIDENTIFIER"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4192:1: entryRuleIDENTIFIER returns [String current=null] : iv_ruleIDENTIFIER= ruleIDENTIFIER EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4197:1: entryRuleIDENTIFIER returns [String current=null] : iv_ruleIDENTIFIER= ruleIDENTIFIER EOF ;
     public final String entryRuleIDENTIFIER() throws RecognitionException {
         String current = null;
 
@@ -10758,17 +10807,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4193:1: (iv_ruleIDENTIFIER= ruleIDENTIFIER EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4194:2: iv_ruleIDENTIFIER= ruleIDENTIFIER EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4198:1: (iv_ruleIDENTIFIER= ruleIDENTIFIER EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4199:2: iv_ruleIDENTIFIER= ruleIDENTIFIER EOF
             {
              newCompositeNode(grammarAccess.getIDENTIFIERRule()); 
-            pushFollow(FOLLOW_ruleIDENTIFIER_in_entryRuleIDENTIFIER10346);
+            pushFollow(FOLLOW_ruleIDENTIFIER_in_entryRuleIDENTIFIER10364);
             iv_ruleIDENTIFIER=ruleIDENTIFIER();
 
             state._fsp--;
 
              current =iv_ruleIDENTIFIER.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleIDENTIFIER10357); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleIDENTIFIER10375); 
 
             }
 
@@ -10786,7 +10835,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleIDENTIFIER"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4201:1: ruleIDENTIFIER returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_ID_0= RULE_ID ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4206:1: ruleIDENTIFIER returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_ID_0= RULE_ID ;
     public final AntlrDatatypeRuleToken ruleIDENTIFIER() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -10795,10 +10844,10 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4205:6: (this_ID_0= RULE_ID )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4206:5: this_ID_0= RULE_ID
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4210:6: (this_ID_0= RULE_ID )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4211:5: this_ID_0= RULE_ID
             {
-            this_ID_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleIDENTIFIER10396); 
+            this_ID_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleIDENTIFIER10414); 
 
             		current.merge(this_ID_0);
                 
@@ -10824,7 +10873,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFieldDef"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4221:1: entryRuleFieldDef returns [String current=null] : iv_ruleFieldDef= ruleFieldDef EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4226:1: entryRuleFieldDef returns [String current=null] : iv_ruleFieldDef= ruleFieldDef EOF ;
     public final String entryRuleFieldDef() throws RecognitionException {
         String current = null;
 
@@ -10832,17 +10881,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4222:1: (iv_ruleFieldDef= ruleFieldDef EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4223:2: iv_ruleFieldDef= ruleFieldDef EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4227:1: (iv_ruleFieldDef= ruleFieldDef EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4228:2: iv_ruleFieldDef= ruleFieldDef EOF
             {
              newCompositeNode(grammarAccess.getFieldDefRule()); 
-            pushFollow(FOLLOW_ruleFieldDef_in_entryRuleFieldDef10440);
+            pushFollow(FOLLOW_ruleFieldDef_in_entryRuleFieldDef10458);
             iv_ruleFieldDef=ruleFieldDef();
 
             state._fsp--;
 
              current =iv_ruleFieldDef.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFieldDef10451); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFieldDef10469); 
 
             }
 
@@ -10860,7 +10909,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFieldDef"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4230:1: ruleFieldDef returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_IDENTIFIER_0= ruleIDENTIFIER (kw= KEYWORD_12 this_Type_2= ruleType )? ) ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4235:1: ruleFieldDef returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_IDENTIFIER_0= ruleIDENTIFIER (kw= KEYWORD_12 this_Type_2= ruleType )? ) ;
     public final AntlrDatatypeRuleToken ruleFieldDef() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -10873,16 +10922,16 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4234:6: ( (this_IDENTIFIER_0= ruleIDENTIFIER (kw= KEYWORD_12 this_Type_2= ruleType )? ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4235:1: (this_IDENTIFIER_0= ruleIDENTIFIER (kw= KEYWORD_12 this_Type_2= ruleType )? )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4239:6: ( (this_IDENTIFIER_0= ruleIDENTIFIER (kw= KEYWORD_12 this_Type_2= ruleType )? ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4240:1: (this_IDENTIFIER_0= ruleIDENTIFIER (kw= KEYWORD_12 this_Type_2= ruleType )? )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4235:1: (this_IDENTIFIER_0= ruleIDENTIFIER (kw= KEYWORD_12 this_Type_2= ruleType )? )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4236:5: this_IDENTIFIER_0= ruleIDENTIFIER (kw= KEYWORD_12 this_Type_2= ruleType )?
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4240:1: (this_IDENTIFIER_0= ruleIDENTIFIER (kw= KEYWORD_12 this_Type_2= ruleType )? )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4241:5: this_IDENTIFIER_0= ruleIDENTIFIER (kw= KEYWORD_12 this_Type_2= ruleType )?
             {
              
                     newCompositeNode(grammarAccess.getFieldDefAccess().getIDENTIFIERParserRuleCall_0()); 
                 
-            pushFollow(FOLLOW_ruleIDENTIFIER_in_ruleFieldDef10498);
+            pushFollow(FOLLOW_ruleIDENTIFIER_in_ruleFieldDef10516);
             this_IDENTIFIER_0=ruleIDENTIFIER();
 
             state._fsp--;
@@ -10893,18 +10942,18 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
              
                     afterParserOrEnumRuleCall();
                 
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4246:1: (kw= KEYWORD_12 this_Type_2= ruleType )?
-            int alt67=2;
-            int LA67_0 = input.LA(1);
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4251:1: (kw= KEYWORD_12 this_Type_2= ruleType )?
+            int alt68=2;
+            int LA68_0 = input.LA(1);
 
-            if ( (LA67_0==KEYWORD_12) ) {
-                alt67=1;
+            if ( (LA68_0==KEYWORD_12) ) {
+                alt68=1;
             }
-            switch (alt67) {
+            switch (alt68) {
                 case 1 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4247:2: kw= KEYWORD_12 this_Type_2= ruleType
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4252:2: kw= KEYWORD_12 this_Type_2= ruleType
                     {
-                    kw=(Token)match(input,KEYWORD_12,FOLLOW_KEYWORD_12_in_ruleFieldDef10517); 
+                    kw=(Token)match(input,KEYWORD_12,FOLLOW_KEYWORD_12_in_ruleFieldDef10535); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getFieldDefAccess().getColonKeyword_1_0()); 
@@ -10912,7 +10961,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                      
                             newCompositeNode(grammarAccess.getFieldDefAccess().getTypeParserRuleCall_1_1()); 
                         
-                    pushFollow(FOLLOW_ruleType_in_ruleFieldDef10539);
+                    pushFollow(FOLLOW_ruleType_in_ruleFieldDef10557);
                     this_Type_2=ruleType();
 
                     state._fsp--;
@@ -10951,7 +11000,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFieldFefList"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4271:1: entryRuleFieldFefList returns [String current=null] : iv_ruleFieldFefList= ruleFieldFefList EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4276:1: entryRuleFieldFefList returns [String current=null] : iv_ruleFieldFefList= ruleFieldFefList EOF ;
     public final String entryRuleFieldFefList() throws RecognitionException {
         String current = null;
 
@@ -10959,17 +11008,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4272:1: (iv_ruleFieldFefList= ruleFieldFefList EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4273:2: iv_ruleFieldFefList= ruleFieldFefList EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4277:1: (iv_ruleFieldFefList= ruleFieldFefList EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4278:2: iv_ruleFieldFefList= ruleFieldFefList EOF
             {
              newCompositeNode(grammarAccess.getFieldFefListRule()); 
-            pushFollow(FOLLOW_ruleFieldFefList_in_entryRuleFieldFefList10586);
+            pushFollow(FOLLOW_ruleFieldFefList_in_entryRuleFieldFefList10604);
             iv_ruleFieldFefList=ruleFieldFefList();
 
             state._fsp--;
 
              current =iv_ruleFieldFefList.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFieldFefList10597); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFieldFefList10615); 
 
             }
 
@@ -10987,7 +11036,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFieldFefList"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4280:1: ruleFieldFefList returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= KEYWORD_4 this_FieldDef_1= ruleFieldDef (kw= KEYWORD_8 this_FieldDef_3= ruleFieldDef )* kw= KEYWORD_5 ) ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4285:1: ruleFieldFefList returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= KEYWORD_4 this_FieldDef_1= ruleFieldDef (kw= KEYWORD_8 this_FieldDef_3= ruleFieldDef )* kw= KEYWORD_5 ) ;
     public final AntlrDatatypeRuleToken ruleFieldFefList() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -11000,13 +11049,13 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4284:6: ( (kw= KEYWORD_4 this_FieldDef_1= ruleFieldDef (kw= KEYWORD_8 this_FieldDef_3= ruleFieldDef )* kw= KEYWORD_5 ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4285:1: (kw= KEYWORD_4 this_FieldDef_1= ruleFieldDef (kw= KEYWORD_8 this_FieldDef_3= ruleFieldDef )* kw= KEYWORD_5 )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4289:6: ( (kw= KEYWORD_4 this_FieldDef_1= ruleFieldDef (kw= KEYWORD_8 this_FieldDef_3= ruleFieldDef )* kw= KEYWORD_5 ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4290:1: (kw= KEYWORD_4 this_FieldDef_1= ruleFieldDef (kw= KEYWORD_8 this_FieldDef_3= ruleFieldDef )* kw= KEYWORD_5 )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4285:1: (kw= KEYWORD_4 this_FieldDef_1= ruleFieldDef (kw= KEYWORD_8 this_FieldDef_3= ruleFieldDef )* kw= KEYWORD_5 )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4286:2: kw= KEYWORD_4 this_FieldDef_1= ruleFieldDef (kw= KEYWORD_8 this_FieldDef_3= ruleFieldDef )* kw= KEYWORD_5
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4290:1: (kw= KEYWORD_4 this_FieldDef_1= ruleFieldDef (kw= KEYWORD_8 this_FieldDef_3= ruleFieldDef )* kw= KEYWORD_5 )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4291:2: kw= KEYWORD_4 this_FieldDef_1= ruleFieldDef (kw= KEYWORD_8 this_FieldDef_3= ruleFieldDef )* kw= KEYWORD_5
             {
-            kw=(Token)match(input,KEYWORD_4,FOLLOW_KEYWORD_4_in_ruleFieldFefList10635); 
+            kw=(Token)match(input,KEYWORD_4,FOLLOW_KEYWORD_4_in_ruleFieldFefList10653); 
 
                     current.merge(kw);
                     newLeafNode(kw, grammarAccess.getFieldFefListAccess().getLeftParenthesisKeyword_0()); 
@@ -11014,7 +11063,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
              
                     newCompositeNode(grammarAccess.getFieldFefListAccess().getFieldDefParserRuleCall_1()); 
                 
-            pushFollow(FOLLOW_ruleFieldDef_in_ruleFieldFefList10657);
+            pushFollow(FOLLOW_ruleFieldDef_in_ruleFieldFefList10675);
             this_FieldDef_1=ruleFieldDef();
 
             state._fsp--;
@@ -11025,22 +11074,22 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
              
                     afterParserOrEnumRuleCall();
                 
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4302:1: (kw= KEYWORD_8 this_FieldDef_3= ruleFieldDef )*
-            loop68:
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4307:1: (kw= KEYWORD_8 this_FieldDef_3= ruleFieldDef )*
+            loop69:
             do {
-                int alt68=2;
-                int LA68_0 = input.LA(1);
+                int alt69=2;
+                int LA69_0 = input.LA(1);
 
-                if ( (LA68_0==KEYWORD_8) ) {
-                    alt68=1;
+                if ( (LA69_0==KEYWORD_8) ) {
+                    alt69=1;
                 }
 
 
-                switch (alt68) {
+                switch (alt69) {
             	case 1 :
-            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4303:2: kw= KEYWORD_8 this_FieldDef_3= ruleFieldDef
+            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4308:2: kw= KEYWORD_8 this_FieldDef_3= ruleFieldDef
             	    {
-            	    kw=(Token)match(input,KEYWORD_8,FOLLOW_KEYWORD_8_in_ruleFieldFefList10676); 
+            	    kw=(Token)match(input,KEYWORD_8,FOLLOW_KEYWORD_8_in_ruleFieldFefList10694); 
 
             	            current.merge(kw);
             	            newLeafNode(kw, grammarAccess.getFieldFefListAccess().getCommaKeyword_2_0()); 
@@ -11048,7 +11097,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
             	     
             	            newCompositeNode(grammarAccess.getFieldFefListAccess().getFieldDefParserRuleCall_2_1()); 
             	        
-            	    pushFollow(FOLLOW_ruleFieldDef_in_ruleFieldFefList10698);
+            	    pushFollow(FOLLOW_ruleFieldDef_in_ruleFieldFefList10716);
             	    this_FieldDef_3=ruleFieldDef();
 
             	    state._fsp--;
@@ -11064,11 +11113,11 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop68;
+            	    break loop69;
                 }
             } while (true);
 
-            kw=(Token)match(input,KEYWORD_5,FOLLOW_KEYWORD_5_in_ruleFieldFefList10718); 
+            kw=(Token)match(input,KEYWORD_5,FOLLOW_KEYWORD_5_in_ruleFieldFefList10736); 
 
                     current.merge(kw);
                     newLeafNode(kw, grammarAccess.getFieldFefListAccess().getRightParenthesisKeyword_3()); 
@@ -11095,7 +11144,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleType"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4333:1: entryRuleType returns [String current=null] : iv_ruleType= ruleType EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4338:1: entryRuleType returns [String current=null] : iv_ruleType= ruleType EOF ;
     public final String entryRuleType() throws RecognitionException {
         String current = null;
 
@@ -11103,17 +11152,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4334:1: (iv_ruleType= ruleType EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4335:2: iv_ruleType= ruleType EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4339:1: (iv_ruleType= ruleType EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4340:2: iv_ruleType= ruleType EOF
             {
              newCompositeNode(grammarAccess.getTypeRule()); 
-            pushFollow(FOLLOW_ruleType_in_entryRuleType10758);
+            pushFollow(FOLLOW_ruleType_in_entryRuleType10776);
             iv_ruleType=ruleType();
 
             state._fsp--;
 
              current =iv_ruleType.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleType10769); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleType10787); 
 
             }
 
@@ -11131,7 +11180,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleType"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4342:1: ruleType returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_SimpleType_0= ruleSimpleType | this_TupleType_1= ruleTupleType | this_MapType_2= ruleMapType | this_bag_type_3= rulebag_type ) ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4347:1: ruleType returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_SimpleType_0= ruleSimpleType | this_TupleType_1= ruleTupleType | this_MapType_2= ruleMapType | this_bag_type_3= rulebag_type ) ;
     public final AntlrDatatypeRuleToken ruleType() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -11147,11 +11196,11 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4346:6: ( (this_SimpleType_0= ruleSimpleType | this_TupleType_1= ruleTupleType | this_MapType_2= ruleMapType | this_bag_type_3= rulebag_type ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4347:1: (this_SimpleType_0= ruleSimpleType | this_TupleType_1= ruleTupleType | this_MapType_2= ruleMapType | this_bag_type_3= rulebag_type )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4351:6: ( (this_SimpleType_0= ruleSimpleType | this_TupleType_1= ruleTupleType | this_MapType_2= ruleMapType | this_bag_type_3= rulebag_type ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4352:1: (this_SimpleType_0= ruleSimpleType | this_TupleType_1= ruleTupleType | this_MapType_2= ruleMapType | this_bag_type_3= rulebag_type )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4347:1: (this_SimpleType_0= ruleSimpleType | this_TupleType_1= ruleTupleType | this_MapType_2= ruleMapType | this_bag_type_3= rulebag_type )
-            int alt69=4;
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4352:1: (this_SimpleType_0= ruleSimpleType | this_TupleType_1= ruleTupleType | this_MapType_2= ruleMapType | this_bag_type_3= rulebag_type )
+            int alt70=4;
             switch ( input.LA(1) ) {
             case KEYWORD_88:
             case KEYWORD_89:
@@ -11160,41 +11209,41 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
             case KEYWORD_55:
             case KEYWORD_44:
                 {
-                alt69=1;
+                alt70=1;
                 }
                 break;
             case KEYWORD_68:
             case KEYWORD_4:
                 {
-                alt69=2;
+                alt70=2;
                 }
                 break;
             case KEYWORD_62:
                 {
-                alt69=3;
+                alt70=3;
                 }
                 break;
             case KEYWORD_42:
             case KEYWORD_21:
                 {
-                alt69=4;
+                alt70=4;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 69, 0, input);
+                    new NoViableAltException("", 70, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt69) {
+            switch (alt70) {
                 case 1 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4348:5: this_SimpleType_0= ruleSimpleType
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4353:5: this_SimpleType_0= ruleSimpleType
                     {
                      
                             newCompositeNode(grammarAccess.getTypeAccess().getSimpleTypeParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleSimpleType_in_ruleType10816);
+                    pushFollow(FOLLOW_ruleSimpleType_in_ruleType10834);
                     this_SimpleType_0=ruleSimpleType();
 
                     state._fsp--;
@@ -11209,12 +11258,12 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4360:5: this_TupleType_1= ruleTupleType
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4365:5: this_TupleType_1= ruleTupleType
                     {
                      
                             newCompositeNode(grammarAccess.getTypeAccess().getTupleTypeParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleTupleType_in_ruleType10849);
+                    pushFollow(FOLLOW_ruleTupleType_in_ruleType10867);
                     this_TupleType_1=ruleTupleType();
 
                     state._fsp--;
@@ -11229,12 +11278,12 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4372:5: this_MapType_2= ruleMapType
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4377:5: this_MapType_2= ruleMapType
                     {
                      
                             newCompositeNode(grammarAccess.getTypeAccess().getMapTypeParserRuleCall_2()); 
                         
-                    pushFollow(FOLLOW_ruleMapType_in_ruleType10882);
+                    pushFollow(FOLLOW_ruleMapType_in_ruleType10900);
                     this_MapType_2=ruleMapType();
 
                     state._fsp--;
@@ -11249,12 +11298,12 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4384:5: this_bag_type_3= rulebag_type
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4389:5: this_bag_type_3= rulebag_type
                     {
                      
                             newCompositeNode(grammarAccess.getTypeAccess().getBag_typeParserRuleCall_3()); 
                         
-                    pushFollow(FOLLOW_rulebag_type_in_ruleType10915);
+                    pushFollow(FOLLOW_rulebag_type_in_ruleType10933);
                     this_bag_type_3=rulebag_type();
 
                     state._fsp--;
@@ -11290,7 +11339,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSimpleType"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4402:1: entryRuleSimpleType returns [String current=null] : iv_ruleSimpleType= ruleSimpleType EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4407:1: entryRuleSimpleType returns [String current=null] : iv_ruleSimpleType= ruleSimpleType EOF ;
     public final String entryRuleSimpleType() throws RecognitionException {
         String current = null;
 
@@ -11298,17 +11347,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4403:1: (iv_ruleSimpleType= ruleSimpleType EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4404:2: iv_ruleSimpleType= ruleSimpleType EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4408:1: (iv_ruleSimpleType= ruleSimpleType EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4409:2: iv_ruleSimpleType= ruleSimpleType EOF
             {
              newCompositeNode(grammarAccess.getSimpleTypeRule()); 
-            pushFollow(FOLLOW_ruleSimpleType_in_entryRuleSimpleType10960);
+            pushFollow(FOLLOW_ruleSimpleType_in_entryRuleSimpleType10978);
             iv_ruleSimpleType=ruleSimpleType();
 
             state._fsp--;
 
              current =iv_ruleSimpleType.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSimpleType10971); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSimpleType10989); 
 
             }
 
@@ -11326,7 +11375,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSimpleType"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4411:1: ruleSimpleType returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= KEYWORD_44 | kw= KEYWORD_55 | kw= KEYWORD_58 | kw= KEYWORD_72 | kw= KEYWORD_89 | kw= KEYWORD_88 ) ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4416:1: ruleSimpleType returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= KEYWORD_44 | kw= KEYWORD_55 | kw= KEYWORD_58 | kw= KEYWORD_72 | kw= KEYWORD_89 | kw= KEYWORD_88 ) ;
     public final AntlrDatatypeRuleToken ruleSimpleType() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -11335,54 +11384,54 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4415:6: ( (kw= KEYWORD_44 | kw= KEYWORD_55 | kw= KEYWORD_58 | kw= KEYWORD_72 | kw= KEYWORD_89 | kw= KEYWORD_88 ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4416:1: (kw= KEYWORD_44 | kw= KEYWORD_55 | kw= KEYWORD_58 | kw= KEYWORD_72 | kw= KEYWORD_89 | kw= KEYWORD_88 )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4420:6: ( (kw= KEYWORD_44 | kw= KEYWORD_55 | kw= KEYWORD_58 | kw= KEYWORD_72 | kw= KEYWORD_89 | kw= KEYWORD_88 ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4421:1: (kw= KEYWORD_44 | kw= KEYWORD_55 | kw= KEYWORD_58 | kw= KEYWORD_72 | kw= KEYWORD_89 | kw= KEYWORD_88 )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4416:1: (kw= KEYWORD_44 | kw= KEYWORD_55 | kw= KEYWORD_58 | kw= KEYWORD_72 | kw= KEYWORD_89 | kw= KEYWORD_88 )
-            int alt70=6;
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4421:1: (kw= KEYWORD_44 | kw= KEYWORD_55 | kw= KEYWORD_58 | kw= KEYWORD_72 | kw= KEYWORD_89 | kw= KEYWORD_88 )
+            int alt71=6;
             switch ( input.LA(1) ) {
             case KEYWORD_44:
                 {
-                alt70=1;
+                alt71=1;
                 }
                 break;
             case KEYWORD_55:
                 {
-                alt70=2;
+                alt71=2;
                 }
                 break;
             case KEYWORD_58:
                 {
-                alt70=3;
+                alt71=3;
                 }
                 break;
             case KEYWORD_72:
                 {
-                alt70=4;
+                alt71=4;
                 }
                 break;
             case KEYWORD_89:
                 {
-                alt70=5;
+                alt71=5;
                 }
                 break;
             case KEYWORD_88:
                 {
-                alt70=6;
+                alt71=6;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 70, 0, input);
+                    new NoViableAltException("", 71, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt70) {
+            switch (alt71) {
                 case 1 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4417:2: kw= KEYWORD_44
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4422:2: kw= KEYWORD_44
                     {
-                    kw=(Token)match(input,KEYWORD_44,FOLLOW_KEYWORD_44_in_ruleSimpleType11009); 
+                    kw=(Token)match(input,KEYWORD_44,FOLLOW_KEYWORD_44_in_ruleSimpleType11027); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getSimpleTypeAccess().getINTKeyword_0()); 
@@ -11391,9 +11440,9 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4424:2: kw= KEYWORD_55
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4429:2: kw= KEYWORD_55
                     {
-                    kw=(Token)match(input,KEYWORD_55,FOLLOW_KEYWORD_55_in_ruleSimpleType11028); 
+                    kw=(Token)match(input,KEYWORD_55,FOLLOW_KEYWORD_55_in_ruleSimpleType11046); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getSimpleTypeAccess().getLONGKeyword_1()); 
@@ -11402,9 +11451,9 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4431:2: kw= KEYWORD_58
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4436:2: kw= KEYWORD_58
                     {
-                    kw=(Token)match(input,KEYWORD_58,FOLLOW_KEYWORD_58_in_ruleSimpleType11047); 
+                    kw=(Token)match(input,KEYWORD_58,FOLLOW_KEYWORD_58_in_ruleSimpleType11065); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getSimpleTypeAccess().getFLOATKeyword_2()); 
@@ -11413,9 +11462,9 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4438:2: kw= KEYWORD_72
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4443:2: kw= KEYWORD_72
                     {
-                    kw=(Token)match(input,KEYWORD_72,FOLLOW_KEYWORD_72_in_ruleSimpleType11066); 
+                    kw=(Token)match(input,KEYWORD_72,FOLLOW_KEYWORD_72_in_ruleSimpleType11084); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getSimpleTypeAccess().getDOUBLEKeyword_3()); 
@@ -11424,9 +11473,9 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4445:2: kw= KEYWORD_89
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4450:2: kw= KEYWORD_89
                     {
-                    kw=(Token)match(input,KEYWORD_89,FOLLOW_KEYWORD_89_in_ruleSimpleType11085); 
+                    kw=(Token)match(input,KEYWORD_89,FOLLOW_KEYWORD_89_in_ruleSimpleType11103); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getSimpleTypeAccess().getCHARARRAYKeyword_4()); 
@@ -11435,9 +11484,9 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4452:2: kw= KEYWORD_88
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4457:2: kw= KEYWORD_88
                     {
-                    kw=(Token)match(input,KEYWORD_88,FOLLOW_KEYWORD_88_in_ruleSimpleType11104); 
+                    kw=(Token)match(input,KEYWORD_88,FOLLOW_KEYWORD_88_in_ruleSimpleType11122); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getSimpleTypeAccess().getBYTEARRAYKeyword_5()); 
@@ -11467,7 +11516,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTupleType"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4465:1: entryRuleTupleType returns [String current=null] : iv_ruleTupleType= ruleTupleType EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4470:1: entryRuleTupleType returns [String current=null] : iv_ruleTupleType= ruleTupleType EOF ;
     public final String entryRuleTupleType() throws RecognitionException {
         String current = null;
 
@@ -11475,17 +11524,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4466:1: (iv_ruleTupleType= ruleTupleType EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4467:2: iv_ruleTupleType= ruleTupleType EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4471:1: (iv_ruleTupleType= ruleTupleType EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4472:2: iv_ruleTupleType= ruleTupleType EOF
             {
              newCompositeNode(grammarAccess.getTupleTypeRule()); 
-            pushFollow(FOLLOW_ruleTupleType_in_entryRuleTupleType11144);
+            pushFollow(FOLLOW_ruleTupleType_in_entryRuleTupleType11162);
             iv_ruleTupleType=ruleTupleType();
 
             state._fsp--;
 
              current =iv_ruleTupleType.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleTupleType11155); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleTupleType11173); 
 
             }
 
@@ -11503,7 +11552,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTupleType"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4474:1: ruleTupleType returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= KEYWORD_68 )? this_AliasDefList_1= ruleAliasDefList ) ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4479:1: ruleTupleType returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= KEYWORD_68 )? this_AliasDefList_1= ruleAliasDefList ) ;
     public final AntlrDatatypeRuleToken ruleTupleType() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -11514,24 +11563,24 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4478:6: ( ( (kw= KEYWORD_68 )? this_AliasDefList_1= ruleAliasDefList ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4479:1: ( (kw= KEYWORD_68 )? this_AliasDefList_1= ruleAliasDefList )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4483:6: ( ( (kw= KEYWORD_68 )? this_AliasDefList_1= ruleAliasDefList ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4484:1: ( (kw= KEYWORD_68 )? this_AliasDefList_1= ruleAliasDefList )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4479:1: ( (kw= KEYWORD_68 )? this_AliasDefList_1= ruleAliasDefList )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4479:2: (kw= KEYWORD_68 )? this_AliasDefList_1= ruleAliasDefList
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4484:1: ( (kw= KEYWORD_68 )? this_AliasDefList_1= ruleAliasDefList )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4484:2: (kw= KEYWORD_68 )? this_AliasDefList_1= ruleAliasDefList
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4479:2: (kw= KEYWORD_68 )?
-            int alt71=2;
-            int LA71_0 = input.LA(1);
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4484:2: (kw= KEYWORD_68 )?
+            int alt72=2;
+            int LA72_0 = input.LA(1);
 
-            if ( (LA71_0==KEYWORD_68) ) {
-                alt71=1;
+            if ( (LA72_0==KEYWORD_68) ) {
+                alt72=1;
             }
-            switch (alt71) {
+            switch (alt72) {
                 case 1 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4480:2: kw= KEYWORD_68
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4485:2: kw= KEYWORD_68
                     {
-                    kw=(Token)match(input,KEYWORD_68,FOLLOW_KEYWORD_68_in_ruleTupleType11194); 
+                    kw=(Token)match(input,KEYWORD_68,FOLLOW_KEYWORD_68_in_ruleTupleType11212); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getTupleTypeAccess().getTUPLEKeyword_0()); 
@@ -11545,7 +11594,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
              
                     newCompositeNode(grammarAccess.getTupleTypeAccess().getAliasDefListParserRuleCall_1()); 
                 
-            pushFollow(FOLLOW_ruleAliasDefList_in_ruleTupleType11218);
+            pushFollow(FOLLOW_ruleAliasDefList_in_ruleTupleType11236);
             this_AliasDefList_1=ruleAliasDefList();
 
             state._fsp--;
@@ -11578,7 +11627,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulebag_type"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4504:1: entryRulebag_type returns [String current=null] : iv_rulebag_type= rulebag_type EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4509:1: entryRulebag_type returns [String current=null] : iv_rulebag_type= rulebag_type EOF ;
     public final String entryRulebag_type() throws RecognitionException {
         String current = null;
 
@@ -11586,17 +11635,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4505:1: (iv_rulebag_type= rulebag_type EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4506:2: iv_rulebag_type= rulebag_type EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4510:1: (iv_rulebag_type= rulebag_type EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4511:2: iv_rulebag_type= rulebag_type EOF
             {
              newCompositeNode(grammarAccess.getBag_typeRule()); 
-            pushFollow(FOLLOW_rulebag_type_in_entryRulebag_type11263);
+            pushFollow(FOLLOW_rulebag_type_in_entryRulebag_type11281);
             iv_rulebag_type=rulebag_type();
 
             state._fsp--;
 
              current =iv_rulebag_type.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRulebag_type11274); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulebag_type11292); 
 
             }
 
@@ -11614,7 +11663,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulebag_type"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4513:1: rulebag_type returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= KEYWORD_42 )? kw= KEYWORD_21 ( (this_IDENTIFIER_2= ruleIDENTIFIER kw= KEYWORD_12 )? this_TupleType_4= ruleTupleType )? kw= KEYWORD_22 ) ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4518:1: rulebag_type returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= KEYWORD_42 )? kw= KEYWORD_21 ( (this_IDENTIFIER_2= ruleIDENTIFIER kw= KEYWORD_12 )? this_TupleType_4= ruleTupleType )? kw= KEYWORD_22 ) ;
     public final AntlrDatatypeRuleToken rulebag_type() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -11627,24 +11676,24 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4517:6: ( ( (kw= KEYWORD_42 )? kw= KEYWORD_21 ( (this_IDENTIFIER_2= ruleIDENTIFIER kw= KEYWORD_12 )? this_TupleType_4= ruleTupleType )? kw= KEYWORD_22 ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4518:1: ( (kw= KEYWORD_42 )? kw= KEYWORD_21 ( (this_IDENTIFIER_2= ruleIDENTIFIER kw= KEYWORD_12 )? this_TupleType_4= ruleTupleType )? kw= KEYWORD_22 )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4522:6: ( ( (kw= KEYWORD_42 )? kw= KEYWORD_21 ( (this_IDENTIFIER_2= ruleIDENTIFIER kw= KEYWORD_12 )? this_TupleType_4= ruleTupleType )? kw= KEYWORD_22 ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4523:1: ( (kw= KEYWORD_42 )? kw= KEYWORD_21 ( (this_IDENTIFIER_2= ruleIDENTIFIER kw= KEYWORD_12 )? this_TupleType_4= ruleTupleType )? kw= KEYWORD_22 )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4518:1: ( (kw= KEYWORD_42 )? kw= KEYWORD_21 ( (this_IDENTIFIER_2= ruleIDENTIFIER kw= KEYWORD_12 )? this_TupleType_4= ruleTupleType )? kw= KEYWORD_22 )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4518:2: (kw= KEYWORD_42 )? kw= KEYWORD_21 ( (this_IDENTIFIER_2= ruleIDENTIFIER kw= KEYWORD_12 )? this_TupleType_4= ruleTupleType )? kw= KEYWORD_22
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4523:1: ( (kw= KEYWORD_42 )? kw= KEYWORD_21 ( (this_IDENTIFIER_2= ruleIDENTIFIER kw= KEYWORD_12 )? this_TupleType_4= ruleTupleType )? kw= KEYWORD_22 )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4523:2: (kw= KEYWORD_42 )? kw= KEYWORD_21 ( (this_IDENTIFIER_2= ruleIDENTIFIER kw= KEYWORD_12 )? this_TupleType_4= ruleTupleType )? kw= KEYWORD_22
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4518:2: (kw= KEYWORD_42 )?
-            int alt72=2;
-            int LA72_0 = input.LA(1);
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4523:2: (kw= KEYWORD_42 )?
+            int alt73=2;
+            int LA73_0 = input.LA(1);
 
-            if ( (LA72_0==KEYWORD_42) ) {
-                alt72=1;
+            if ( (LA73_0==KEYWORD_42) ) {
+                alt73=1;
             }
-            switch (alt72) {
+            switch (alt73) {
                 case 1 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4519:2: kw= KEYWORD_42
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4524:2: kw= KEYWORD_42
                     {
-                    kw=(Token)match(input,KEYWORD_42,FOLLOW_KEYWORD_42_in_rulebag_type11313); 
+                    kw=(Token)match(input,KEYWORD_42,FOLLOW_KEYWORD_42_in_rulebag_type11331); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getBag_typeAccess().getBAGKeyword_0()); 
@@ -11655,37 +11704,37 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
             }
 
-            kw=(Token)match(input,KEYWORD_21,FOLLOW_KEYWORD_21_in_rulebag_type11328); 
+            kw=(Token)match(input,KEYWORD_21,FOLLOW_KEYWORD_21_in_rulebag_type11346); 
 
                     current.merge(kw);
                     newLeafNode(kw, grammarAccess.getBag_typeAccess().getLeftCurlyBracketKeyword_1()); 
                 
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4530:1: ( (this_IDENTIFIER_2= ruleIDENTIFIER kw= KEYWORD_12 )? this_TupleType_4= ruleTupleType )?
-            int alt74=2;
-            int LA74_0 = input.LA(1);
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4535:1: ( (this_IDENTIFIER_2= ruleIDENTIFIER kw= KEYWORD_12 )? this_TupleType_4= ruleTupleType )?
+            int alt75=2;
+            int LA75_0 = input.LA(1);
 
-            if ( (LA74_0==KEYWORD_68||LA74_0==KEYWORD_4||LA74_0==RULE_ID) ) {
-                alt74=1;
+            if ( (LA75_0==KEYWORD_68||LA75_0==KEYWORD_4||LA75_0==RULE_ID) ) {
+                alt75=1;
             }
-            switch (alt74) {
+            switch (alt75) {
                 case 1 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4530:2: (this_IDENTIFIER_2= ruleIDENTIFIER kw= KEYWORD_12 )? this_TupleType_4= ruleTupleType
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4535:2: (this_IDENTIFIER_2= ruleIDENTIFIER kw= KEYWORD_12 )? this_TupleType_4= ruleTupleType
                     {
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4530:2: (this_IDENTIFIER_2= ruleIDENTIFIER kw= KEYWORD_12 )?
-                    int alt73=2;
-                    int LA73_0 = input.LA(1);
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4535:2: (this_IDENTIFIER_2= ruleIDENTIFIER kw= KEYWORD_12 )?
+                    int alt74=2;
+                    int LA74_0 = input.LA(1);
 
-                    if ( (LA73_0==RULE_ID) ) {
-                        alt73=1;
+                    if ( (LA74_0==RULE_ID) ) {
+                        alt74=1;
                     }
-                    switch (alt73) {
+                    switch (alt74) {
                         case 1 :
-                            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4531:5: this_IDENTIFIER_2= ruleIDENTIFIER kw= KEYWORD_12
+                            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4536:5: this_IDENTIFIER_2= ruleIDENTIFIER kw= KEYWORD_12
                             {
                              
                                     newCompositeNode(grammarAccess.getBag_typeAccess().getIDENTIFIERParserRuleCall_2_0_0()); 
                                 
-                            pushFollow(FOLLOW_ruleIDENTIFIER_in_rulebag_type11352);
+                            pushFollow(FOLLOW_ruleIDENTIFIER_in_rulebag_type11370);
                             this_IDENTIFIER_2=ruleIDENTIFIER();
 
                             state._fsp--;
@@ -11696,7 +11745,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                              
                                     afterParserOrEnumRuleCall();
                                 
-                            kw=(Token)match(input,KEYWORD_12,FOLLOW_KEYWORD_12_in_rulebag_type11370); 
+                            kw=(Token)match(input,KEYWORD_12,FOLLOW_KEYWORD_12_in_rulebag_type11388); 
 
                                     current.merge(kw);
                                     newLeafNode(kw, grammarAccess.getBag_typeAccess().getColonKeyword_2_0_1()); 
@@ -11710,7 +11759,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                      
                             newCompositeNode(grammarAccess.getBag_typeAccess().getTupleTypeParserRuleCall_2_1()); 
                         
-                    pushFollow(FOLLOW_ruleTupleType_in_rulebag_type11394);
+                    pushFollow(FOLLOW_ruleTupleType_in_rulebag_type11412);
                     this_TupleType_4=ruleTupleType();
 
                     state._fsp--;
@@ -11727,7 +11776,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
             }
 
-            kw=(Token)match(input,KEYWORD_22,FOLLOW_KEYWORD_22_in_rulebag_type11414); 
+            kw=(Token)match(input,KEYWORD_22,FOLLOW_KEYWORD_22_in_rulebag_type11432); 
 
                     current.merge(kw);
                     newLeafNode(kw, grammarAccess.getBag_typeAccess().getRightCurlyBracketKeyword_3()); 
@@ -11754,7 +11803,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMapType"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4572:1: entryRuleMapType returns [String current=null] : iv_ruleMapType= ruleMapType EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4577:1: entryRuleMapType returns [String current=null] : iv_ruleMapType= ruleMapType EOF ;
     public final String entryRuleMapType() throws RecognitionException {
         String current = null;
 
@@ -11762,17 +11811,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4573:1: (iv_ruleMapType= ruleMapType EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4574:2: iv_ruleMapType= ruleMapType EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4578:1: (iv_ruleMapType= ruleMapType EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4579:2: iv_ruleMapType= ruleMapType EOF
             {
              newCompositeNode(grammarAccess.getMapTypeRule()); 
-            pushFollow(FOLLOW_ruleMapType_in_entryRuleMapType11454);
+            pushFollow(FOLLOW_ruleMapType_in_entryRuleMapType11472);
             iv_ruleMapType=ruleMapType();
 
             state._fsp--;
 
              current =iv_ruleMapType.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMapType11465); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleMapType11483); 
 
             }
 
@@ -11790,7 +11839,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMapType"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4581:1: ruleMapType returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= KEYWORD_62 ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4586:1: ruleMapType returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= KEYWORD_62 ;
     public final AntlrDatatypeRuleToken ruleMapType() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -11799,10 +11848,10 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4585:6: (kw= KEYWORD_62 )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4587:2: kw= KEYWORD_62
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4590:6: (kw= KEYWORD_62 )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4592:2: kw= KEYWORD_62
             {
-            kw=(Token)match(input,KEYWORD_62,FOLLOW_KEYWORD_62_in_ruleMapType11502); 
+            kw=(Token)match(input,KEYWORD_62,FOLLOW_KEYWORD_62_in_ruleMapType11520); 
 
                     current.merge(kw);
                     newLeafNode(kw, grammarAccess.getMapTypeAccess().getMAPKeyword()); 
@@ -11826,7 +11875,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSTR_OP_EQ"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4602:1: entryRuleSTR_OP_EQ returns [String current=null] : iv_ruleSTR_OP_EQ= ruleSTR_OP_EQ EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4607:1: entryRuleSTR_OP_EQ returns [String current=null] : iv_ruleSTR_OP_EQ= ruleSTR_OP_EQ EOF ;
     public final String entryRuleSTR_OP_EQ() throws RecognitionException {
         String current = null;
 
@@ -11834,17 +11883,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4603:1: (iv_ruleSTR_OP_EQ= ruleSTR_OP_EQ EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4604:2: iv_ruleSTR_OP_EQ= ruleSTR_OP_EQ EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4608:1: (iv_ruleSTR_OP_EQ= ruleSTR_OP_EQ EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4609:2: iv_ruleSTR_OP_EQ= ruleSTR_OP_EQ EOF
             {
              newCompositeNode(grammarAccess.getSTR_OP_EQRule()); 
-            pushFollow(FOLLOW_ruleSTR_OP_EQ_in_entryRuleSTR_OP_EQ11543);
+            pushFollow(FOLLOW_ruleSTR_OP_EQ_in_entryRuleSTR_OP_EQ11561);
             iv_ruleSTR_OP_EQ=ruleSTR_OP_EQ();
 
             state._fsp--;
 
              current =iv_ruleSTR_OP_EQ.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSTR_OP_EQ11554); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSTR_OP_EQ11572); 
 
             }
 
@@ -11862,7 +11911,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSTR_OP_EQ"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4611:1: ruleSTR_OP_EQ returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= KEYWORD_30 ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4616:1: ruleSTR_OP_EQ returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= KEYWORD_30 ;
     public final AntlrDatatypeRuleToken ruleSTR_OP_EQ() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -11871,10 +11920,10 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4615:6: (kw= KEYWORD_30 )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4617:2: kw= KEYWORD_30
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4620:6: (kw= KEYWORD_30 )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4622:2: kw= KEYWORD_30
             {
-            kw=(Token)match(input,KEYWORD_30,FOLLOW_KEYWORD_30_in_ruleSTR_OP_EQ11591); 
+            kw=(Token)match(input,KEYWORD_30,FOLLOW_KEYWORD_30_in_ruleSTR_OP_EQ11609); 
 
                     current.merge(kw);
                     newLeafNode(kw, grammarAccess.getSTR_OP_EQAccess().getEQKeyword()); 
@@ -11898,7 +11947,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSTR_OP_GT"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4630:1: entryRuleSTR_OP_GT returns [String current=null] : iv_ruleSTR_OP_GT= ruleSTR_OP_GT EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4635:1: entryRuleSTR_OP_GT returns [String current=null] : iv_ruleSTR_OP_GT= ruleSTR_OP_GT EOF ;
     public final String entryRuleSTR_OP_GT() throws RecognitionException {
         String current = null;
 
@@ -11906,17 +11955,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4631:1: (iv_ruleSTR_OP_GT= ruleSTR_OP_GT EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4632:2: iv_ruleSTR_OP_GT= ruleSTR_OP_GT EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4636:1: (iv_ruleSTR_OP_GT= ruleSTR_OP_GT EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4637:2: iv_ruleSTR_OP_GT= ruleSTR_OP_GT EOF
             {
              newCompositeNode(grammarAccess.getSTR_OP_GTRule()); 
-            pushFollow(FOLLOW_ruleSTR_OP_GT_in_entryRuleSTR_OP_GT11630);
+            pushFollow(FOLLOW_ruleSTR_OP_GT_in_entryRuleSTR_OP_GT11648);
             iv_ruleSTR_OP_GT=ruleSTR_OP_GT();
 
             state._fsp--;
 
              current =iv_ruleSTR_OP_GT.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSTR_OP_GT11641); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSTR_OP_GT11659); 
 
             }
 
@@ -11934,7 +11983,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSTR_OP_GT"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4639:1: ruleSTR_OP_GT returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= KEYWORD_31 ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4644:1: ruleSTR_OP_GT returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= KEYWORD_31 ;
     public final AntlrDatatypeRuleToken ruleSTR_OP_GT() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -11943,10 +11992,10 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4643:6: (kw= KEYWORD_31 )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4645:2: kw= KEYWORD_31
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4648:6: (kw= KEYWORD_31 )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4650:2: kw= KEYWORD_31
             {
-            kw=(Token)match(input,KEYWORD_31,FOLLOW_KEYWORD_31_in_ruleSTR_OP_GT11678); 
+            kw=(Token)match(input,KEYWORD_31,FOLLOW_KEYWORD_31_in_ruleSTR_OP_GT11696); 
 
                     current.merge(kw);
                     newLeafNode(kw, grammarAccess.getSTR_OP_GTAccess().getGTKeyword()); 
@@ -11970,7 +12019,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSTR_OP_LT"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4658:1: entryRuleSTR_OP_LT returns [String current=null] : iv_ruleSTR_OP_LT= ruleSTR_OP_LT EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4663:1: entryRuleSTR_OP_LT returns [String current=null] : iv_ruleSTR_OP_LT= ruleSTR_OP_LT EOF ;
     public final String entryRuleSTR_OP_LT() throws RecognitionException {
         String current = null;
 
@@ -11978,17 +12027,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4659:1: (iv_ruleSTR_OP_LT= ruleSTR_OP_LT EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4660:2: iv_ruleSTR_OP_LT= ruleSTR_OP_LT EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4664:1: (iv_ruleSTR_OP_LT= ruleSTR_OP_LT EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4665:2: iv_ruleSTR_OP_LT= ruleSTR_OP_LT EOF
             {
              newCompositeNode(grammarAccess.getSTR_OP_LTRule()); 
-            pushFollow(FOLLOW_ruleSTR_OP_LT_in_entryRuleSTR_OP_LT11717);
+            pushFollow(FOLLOW_ruleSTR_OP_LT_in_entryRuleSTR_OP_LT11735);
             iv_ruleSTR_OP_LT=ruleSTR_OP_LT();
 
             state._fsp--;
 
              current =iv_ruleSTR_OP_LT.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSTR_OP_LT11728); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSTR_OP_LT11746); 
 
             }
 
@@ -12006,7 +12055,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSTR_OP_LT"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4667:1: ruleSTR_OP_LT returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= KEYWORD_34 ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4672:1: ruleSTR_OP_LT returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= KEYWORD_34 ;
     public final AntlrDatatypeRuleToken ruleSTR_OP_LT() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -12015,10 +12064,10 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4671:6: (kw= KEYWORD_34 )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4673:2: kw= KEYWORD_34
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4676:6: (kw= KEYWORD_34 )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4678:2: kw= KEYWORD_34
             {
-            kw=(Token)match(input,KEYWORD_34,FOLLOW_KEYWORD_34_in_ruleSTR_OP_LT11765); 
+            kw=(Token)match(input,KEYWORD_34,FOLLOW_KEYWORD_34_in_ruleSTR_OP_LT11783); 
 
                     current.merge(kw);
                     newLeafNode(kw, grammarAccess.getSTR_OP_LTAccess().getLTKeyword()); 
@@ -12042,7 +12091,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSTR_OP_GTE"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4686:1: entryRuleSTR_OP_GTE returns [String current=null] : iv_ruleSTR_OP_GTE= ruleSTR_OP_GTE EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4691:1: entryRuleSTR_OP_GTE returns [String current=null] : iv_ruleSTR_OP_GTE= ruleSTR_OP_GTE EOF ;
     public final String entryRuleSTR_OP_GTE() throws RecognitionException {
         String current = null;
 
@@ -12050,17 +12099,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4687:1: (iv_ruleSTR_OP_GTE= ruleSTR_OP_GTE EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4688:2: iv_ruleSTR_OP_GTE= ruleSTR_OP_GTE EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4692:1: (iv_ruleSTR_OP_GTE= ruleSTR_OP_GTE EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4693:2: iv_ruleSTR_OP_GTE= ruleSTR_OP_GTE EOF
             {
              newCompositeNode(grammarAccess.getSTR_OP_GTERule()); 
-            pushFollow(FOLLOW_ruleSTR_OP_GTE_in_entryRuleSTR_OP_GTE11804);
+            pushFollow(FOLLOW_ruleSTR_OP_GTE_in_entryRuleSTR_OP_GTE11822);
             iv_ruleSTR_OP_GTE=ruleSTR_OP_GTE();
 
             state._fsp--;
 
              current =iv_ruleSTR_OP_GTE.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSTR_OP_GTE11815); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSTR_OP_GTE11833); 
 
             }
 
@@ -12078,7 +12127,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSTR_OP_GTE"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4695:1: ruleSTR_OP_GTE returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= KEYWORD_43 ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4700:1: ruleSTR_OP_GTE returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= KEYWORD_43 ;
     public final AntlrDatatypeRuleToken ruleSTR_OP_GTE() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -12087,10 +12136,10 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4699:6: (kw= KEYWORD_43 )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4701:2: kw= KEYWORD_43
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4704:6: (kw= KEYWORD_43 )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4706:2: kw= KEYWORD_43
             {
-            kw=(Token)match(input,KEYWORD_43,FOLLOW_KEYWORD_43_in_ruleSTR_OP_GTE11852); 
+            kw=(Token)match(input,KEYWORD_43,FOLLOW_KEYWORD_43_in_ruleSTR_OP_GTE11870); 
 
                     current.merge(kw);
                     newLeafNode(kw, grammarAccess.getSTR_OP_GTEAccess().getGTEKeyword()); 
@@ -12114,7 +12163,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSTR_OP_LTE"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4714:1: entryRuleSTR_OP_LTE returns [String current=null] : iv_ruleSTR_OP_LTE= ruleSTR_OP_LTE EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4719:1: entryRuleSTR_OP_LTE returns [String current=null] : iv_ruleSTR_OP_LTE= ruleSTR_OP_LTE EOF ;
     public final String entryRuleSTR_OP_LTE() throws RecognitionException {
         String current = null;
 
@@ -12122,17 +12171,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4715:1: (iv_ruleSTR_OP_LTE= ruleSTR_OP_LTE EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4716:2: iv_ruleSTR_OP_LTE= ruleSTR_OP_LTE EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4720:1: (iv_ruleSTR_OP_LTE= ruleSTR_OP_LTE EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4721:2: iv_ruleSTR_OP_LTE= ruleSTR_OP_LTE EOF
             {
              newCompositeNode(grammarAccess.getSTR_OP_LTERule()); 
-            pushFollow(FOLLOW_ruleSTR_OP_LTE_in_entryRuleSTR_OP_LTE11891);
+            pushFollow(FOLLOW_ruleSTR_OP_LTE_in_entryRuleSTR_OP_LTE11909);
             iv_ruleSTR_OP_LTE=ruleSTR_OP_LTE();
 
             state._fsp--;
 
              current =iv_ruleSTR_OP_LTE.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSTR_OP_LTE11902); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSTR_OP_LTE11920); 
 
             }
 
@@ -12150,7 +12199,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSTR_OP_LTE"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4723:1: ruleSTR_OP_LTE returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= KEYWORD_45 ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4728:1: ruleSTR_OP_LTE returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= KEYWORD_45 ;
     public final AntlrDatatypeRuleToken ruleSTR_OP_LTE() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -12159,10 +12208,10 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4727:6: (kw= KEYWORD_45 )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4729:2: kw= KEYWORD_45
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4732:6: (kw= KEYWORD_45 )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4734:2: kw= KEYWORD_45
             {
-            kw=(Token)match(input,KEYWORD_45,FOLLOW_KEYWORD_45_in_ruleSTR_OP_LTE11939); 
+            kw=(Token)match(input,KEYWORD_45,FOLLOW_KEYWORD_45_in_ruleSTR_OP_LTE11957); 
 
                     current.merge(kw);
                     newLeafNode(kw, grammarAccess.getSTR_OP_LTEAccess().getLTEKeyword()); 
@@ -12186,7 +12235,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSTR_OP_NE"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4742:1: entryRuleSTR_OP_NE returns [String current=null] : iv_ruleSTR_OP_NE= ruleSTR_OP_NE EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4747:1: entryRuleSTR_OP_NE returns [String current=null] : iv_ruleSTR_OP_NE= ruleSTR_OP_NE EOF ;
     public final String entryRuleSTR_OP_NE() throws RecognitionException {
         String current = null;
 
@@ -12194,17 +12243,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4743:1: (iv_ruleSTR_OP_NE= ruleSTR_OP_NE EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4744:2: iv_ruleSTR_OP_NE= ruleSTR_OP_NE EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4748:1: (iv_ruleSTR_OP_NE= ruleSTR_OP_NE EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4749:2: iv_ruleSTR_OP_NE= ruleSTR_OP_NE EOF
             {
              newCompositeNode(grammarAccess.getSTR_OP_NERule()); 
-            pushFollow(FOLLOW_ruleSTR_OP_NE_in_entryRuleSTR_OP_NE11978);
+            pushFollow(FOLLOW_ruleSTR_OP_NE_in_entryRuleSTR_OP_NE11996);
             iv_ruleSTR_OP_NE=ruleSTR_OP_NE();
 
             state._fsp--;
 
              current =iv_ruleSTR_OP_NE.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSTR_OP_NE11989); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSTR_OP_NE12007); 
 
             }
 
@@ -12222,7 +12271,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSTR_OP_NE"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4751:1: ruleSTR_OP_NE returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= KEYWORD_46 ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4756:1: ruleSTR_OP_NE returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= KEYWORD_46 ;
     public final AntlrDatatypeRuleToken ruleSTR_OP_NE() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -12231,10 +12280,10 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4755:6: (kw= KEYWORD_46 )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4757:2: kw= KEYWORD_46
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4760:6: (kw= KEYWORD_46 )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4762:2: kw= KEYWORD_46
             {
-            kw=(Token)match(input,KEYWORD_46,FOLLOW_KEYWORD_46_in_ruleSTR_OP_NE12026); 
+            kw=(Token)match(input,KEYWORD_46,FOLLOW_KEYWORD_46_in_ruleSTR_OP_NE12044); 
 
                     current.merge(kw);
                     newLeafNode(kw, grammarAccess.getSTR_OP_NEAccess().getNEQKeyword()); 
@@ -12258,7 +12307,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNUM_OP_EQ"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4772:1: entryRuleNUM_OP_EQ returns [String current=null] : iv_ruleNUM_OP_EQ= ruleNUM_OP_EQ EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4777:1: entryRuleNUM_OP_EQ returns [String current=null] : iv_ruleNUM_OP_EQ= ruleNUM_OP_EQ EOF ;
     public final String entryRuleNUM_OP_EQ() throws RecognitionException {
         String current = null;
 
@@ -12266,17 +12315,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4773:1: (iv_ruleNUM_OP_EQ= ruleNUM_OP_EQ EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4774:2: iv_ruleNUM_OP_EQ= ruleNUM_OP_EQ EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4778:1: (iv_ruleNUM_OP_EQ= ruleNUM_OP_EQ EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4779:2: iv_ruleNUM_OP_EQ= ruleNUM_OP_EQ EOF
             {
              newCompositeNode(grammarAccess.getNUM_OP_EQRule()); 
-            pushFollow(FOLLOW_ruleNUM_OP_EQ_in_entryRuleNUM_OP_EQ12067);
+            pushFollow(FOLLOW_ruleNUM_OP_EQ_in_entryRuleNUM_OP_EQ12085);
             iv_ruleNUM_OP_EQ=ruleNUM_OP_EQ();
 
             state._fsp--;
 
              current =iv_ruleNUM_OP_EQ.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNUM_OP_EQ12078); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNUM_OP_EQ12096); 
 
             }
 
@@ -12294,7 +12343,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNUM_OP_EQ"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4781:1: ruleNUM_OP_EQ returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= KEYWORD_26 ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4786:1: ruleNUM_OP_EQ returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= KEYWORD_26 ;
     public final AntlrDatatypeRuleToken ruleNUM_OP_EQ() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -12303,10 +12352,10 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4785:6: (kw= KEYWORD_26 )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4787:2: kw= KEYWORD_26
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4790:6: (kw= KEYWORD_26 )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4792:2: kw= KEYWORD_26
             {
-            kw=(Token)match(input,KEYWORD_26,FOLLOW_KEYWORD_26_in_ruleNUM_OP_EQ12115); 
+            kw=(Token)match(input,KEYWORD_26,FOLLOW_KEYWORD_26_in_ruleNUM_OP_EQ12133); 
 
                     current.merge(kw);
                     newLeafNode(kw, grammarAccess.getNUM_OP_EQAccess().getEqualsSignEqualsSignKeyword()); 
@@ -12330,7 +12379,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNUM_OP_LT"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4800:1: entryRuleNUM_OP_LT returns [String current=null] : iv_ruleNUM_OP_LT= ruleNUM_OP_LT EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4805:1: entryRuleNUM_OP_LT returns [String current=null] : iv_ruleNUM_OP_LT= ruleNUM_OP_LT EOF ;
     public final String entryRuleNUM_OP_LT() throws RecognitionException {
         String current = null;
 
@@ -12338,17 +12387,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4801:1: (iv_ruleNUM_OP_LT= ruleNUM_OP_LT EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4802:2: iv_ruleNUM_OP_LT= ruleNUM_OP_LT EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4806:1: (iv_ruleNUM_OP_LT= ruleNUM_OP_LT EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4807:2: iv_ruleNUM_OP_LT= ruleNUM_OP_LT EOF
             {
              newCompositeNode(grammarAccess.getNUM_OP_LTRule()); 
-            pushFollow(FOLLOW_ruleNUM_OP_LT_in_entryRuleNUM_OP_LT12154);
+            pushFollow(FOLLOW_ruleNUM_OP_LT_in_entryRuleNUM_OP_LT12172);
             iv_ruleNUM_OP_LT=ruleNUM_OP_LT();
 
             state._fsp--;
 
              current =iv_ruleNUM_OP_LT.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNUM_OP_LT12165); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNUM_OP_LT12183); 
 
             }
 
@@ -12366,7 +12415,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNUM_OP_LT"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4809:1: ruleNUM_OP_LT returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= KEYWORD_14 ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4814:1: ruleNUM_OP_LT returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= KEYWORD_14 ;
     public final AntlrDatatypeRuleToken ruleNUM_OP_LT() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -12375,10 +12424,10 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4813:6: (kw= KEYWORD_14 )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4815:2: kw= KEYWORD_14
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4818:6: (kw= KEYWORD_14 )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4820:2: kw= KEYWORD_14
             {
-            kw=(Token)match(input,KEYWORD_14,FOLLOW_KEYWORD_14_in_ruleNUM_OP_LT12202); 
+            kw=(Token)match(input,KEYWORD_14,FOLLOW_KEYWORD_14_in_ruleNUM_OP_LT12220); 
 
                     current.merge(kw);
                     newLeafNode(kw, grammarAccess.getNUM_OP_LTAccess().getLessThanSignKeyword()); 
@@ -12402,7 +12451,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNUM_OP_LTE"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4828:1: entryRuleNUM_OP_LTE returns [String current=null] : iv_ruleNUM_OP_LTE= ruleNUM_OP_LTE EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4833:1: entryRuleNUM_OP_LTE returns [String current=null] : iv_ruleNUM_OP_LTE= ruleNUM_OP_LTE EOF ;
     public final String entryRuleNUM_OP_LTE() throws RecognitionException {
         String current = null;
 
@@ -12410,17 +12459,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4829:1: (iv_ruleNUM_OP_LTE= ruleNUM_OP_LTE EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4830:2: iv_ruleNUM_OP_LTE= ruleNUM_OP_LTE EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4834:1: (iv_ruleNUM_OP_LTE= ruleNUM_OP_LTE EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4835:2: iv_ruleNUM_OP_LTE= ruleNUM_OP_LTE EOF
             {
              newCompositeNode(grammarAccess.getNUM_OP_LTERule()); 
-            pushFollow(FOLLOW_ruleNUM_OP_LTE_in_entryRuleNUM_OP_LTE12241);
+            pushFollow(FOLLOW_ruleNUM_OP_LTE_in_entryRuleNUM_OP_LTE12259);
             iv_ruleNUM_OP_LTE=ruleNUM_OP_LTE();
 
             state._fsp--;
 
              current =iv_ruleNUM_OP_LTE.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNUM_OP_LTE12252); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNUM_OP_LTE12270); 
 
             }
 
@@ -12438,7 +12487,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNUM_OP_LTE"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4837:1: ruleNUM_OP_LTE returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= KEYWORD_25 ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4842:1: ruleNUM_OP_LTE returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= KEYWORD_25 ;
     public final AntlrDatatypeRuleToken ruleNUM_OP_LTE() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -12447,10 +12496,10 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4841:6: (kw= KEYWORD_25 )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4843:2: kw= KEYWORD_25
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4846:6: (kw= KEYWORD_25 )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4848:2: kw= KEYWORD_25
             {
-            kw=(Token)match(input,KEYWORD_25,FOLLOW_KEYWORD_25_in_ruleNUM_OP_LTE12289); 
+            kw=(Token)match(input,KEYWORD_25,FOLLOW_KEYWORD_25_in_ruleNUM_OP_LTE12307); 
 
                     current.merge(kw);
                     newLeafNode(kw, grammarAccess.getNUM_OP_LTEAccess().getLessThanSignEqualsSignKeyword()); 
@@ -12474,7 +12523,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNUM_OP_GT"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4856:1: entryRuleNUM_OP_GT returns [String current=null] : iv_ruleNUM_OP_GT= ruleNUM_OP_GT EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4861:1: entryRuleNUM_OP_GT returns [String current=null] : iv_ruleNUM_OP_GT= ruleNUM_OP_GT EOF ;
     public final String entryRuleNUM_OP_GT() throws RecognitionException {
         String current = null;
 
@@ -12482,17 +12531,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4857:1: (iv_ruleNUM_OP_GT= ruleNUM_OP_GT EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4858:2: iv_ruleNUM_OP_GT= ruleNUM_OP_GT EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4862:1: (iv_ruleNUM_OP_GT= ruleNUM_OP_GT EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4863:2: iv_ruleNUM_OP_GT= ruleNUM_OP_GT EOF
             {
              newCompositeNode(grammarAccess.getNUM_OP_GTRule()); 
-            pushFollow(FOLLOW_ruleNUM_OP_GT_in_entryRuleNUM_OP_GT12328);
+            pushFollow(FOLLOW_ruleNUM_OP_GT_in_entryRuleNUM_OP_GT12346);
             iv_ruleNUM_OP_GT=ruleNUM_OP_GT();
 
             state._fsp--;
 
              current =iv_ruleNUM_OP_GT.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNUM_OP_GT12339); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNUM_OP_GT12357); 
 
             }
 
@@ -12510,7 +12559,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNUM_OP_GT"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4865:1: ruleNUM_OP_GT returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= KEYWORD_16 ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4870:1: ruleNUM_OP_GT returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= KEYWORD_16 ;
     public final AntlrDatatypeRuleToken ruleNUM_OP_GT() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -12519,10 +12568,10 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4869:6: (kw= KEYWORD_16 )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4871:2: kw= KEYWORD_16
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4874:6: (kw= KEYWORD_16 )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4876:2: kw= KEYWORD_16
             {
-            kw=(Token)match(input,KEYWORD_16,FOLLOW_KEYWORD_16_in_ruleNUM_OP_GT12376); 
+            kw=(Token)match(input,KEYWORD_16,FOLLOW_KEYWORD_16_in_ruleNUM_OP_GT12394); 
 
                     current.merge(kw);
                     newLeafNode(kw, grammarAccess.getNUM_OP_GTAccess().getGreaterThanSignKeyword()); 
@@ -12546,7 +12595,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNUM_OP_GTE"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4884:1: entryRuleNUM_OP_GTE returns [String current=null] : iv_ruleNUM_OP_GTE= ruleNUM_OP_GTE EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4889:1: entryRuleNUM_OP_GTE returns [String current=null] : iv_ruleNUM_OP_GTE= ruleNUM_OP_GTE EOF ;
     public final String entryRuleNUM_OP_GTE() throws RecognitionException {
         String current = null;
 
@@ -12554,17 +12603,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4885:1: (iv_ruleNUM_OP_GTE= ruleNUM_OP_GTE EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4886:2: iv_ruleNUM_OP_GTE= ruleNUM_OP_GTE EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4890:1: (iv_ruleNUM_OP_GTE= ruleNUM_OP_GTE EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4891:2: iv_ruleNUM_OP_GTE= ruleNUM_OP_GTE EOF
             {
              newCompositeNode(grammarAccess.getNUM_OP_GTERule()); 
-            pushFollow(FOLLOW_ruleNUM_OP_GTE_in_entryRuleNUM_OP_GTE12415);
+            pushFollow(FOLLOW_ruleNUM_OP_GTE_in_entryRuleNUM_OP_GTE12433);
             iv_ruleNUM_OP_GTE=ruleNUM_OP_GTE();
 
             state._fsp--;
 
              current =iv_ruleNUM_OP_GTE.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNUM_OP_GTE12426); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNUM_OP_GTE12444); 
 
             }
 
@@ -12582,7 +12631,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNUM_OP_GTE"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4893:1: ruleNUM_OP_GTE returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= KEYWORD_27 ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4898:1: ruleNUM_OP_GTE returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= KEYWORD_27 ;
     public final AntlrDatatypeRuleToken ruleNUM_OP_GTE() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -12591,10 +12640,10 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4897:6: (kw= KEYWORD_27 )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4899:2: kw= KEYWORD_27
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4902:6: (kw= KEYWORD_27 )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4904:2: kw= KEYWORD_27
             {
-            kw=(Token)match(input,KEYWORD_27,FOLLOW_KEYWORD_27_in_ruleNUM_OP_GTE12463); 
+            kw=(Token)match(input,KEYWORD_27,FOLLOW_KEYWORD_27_in_ruleNUM_OP_GTE12481); 
 
                     current.merge(kw);
                     newLeafNode(kw, grammarAccess.getNUM_OP_GTEAccess().getGreaterThanSignEqualsSignKeyword()); 
@@ -12618,7 +12667,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNUM_OP_NE"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4912:1: entryRuleNUM_OP_NE returns [String current=null] : iv_ruleNUM_OP_NE= ruleNUM_OP_NE EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4917:1: entryRuleNUM_OP_NE returns [String current=null] : iv_ruleNUM_OP_NE= ruleNUM_OP_NE EOF ;
     public final String entryRuleNUM_OP_NE() throws RecognitionException {
         String current = null;
 
@@ -12626,17 +12675,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4913:1: (iv_ruleNUM_OP_NE= ruleNUM_OP_NE EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4914:2: iv_ruleNUM_OP_NE= ruleNUM_OP_NE EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4918:1: (iv_ruleNUM_OP_NE= ruleNUM_OP_NE EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4919:2: iv_ruleNUM_OP_NE= ruleNUM_OP_NE EOF
             {
              newCompositeNode(grammarAccess.getNUM_OP_NERule()); 
-            pushFollow(FOLLOW_ruleNUM_OP_NE_in_entryRuleNUM_OP_NE12502);
+            pushFollow(FOLLOW_ruleNUM_OP_NE_in_entryRuleNUM_OP_NE12520);
             iv_ruleNUM_OP_NE=ruleNUM_OP_NE();
 
             state._fsp--;
 
              current =iv_ruleNUM_OP_NE.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNUM_OP_NE12513); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNUM_OP_NE12531); 
 
             }
 
@@ -12654,7 +12703,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNUM_OP_NE"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4921:1: ruleNUM_OP_NE returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= KEYWORD_23 ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4926:1: ruleNUM_OP_NE returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= KEYWORD_23 ;
     public final AntlrDatatypeRuleToken ruleNUM_OP_NE() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -12663,10 +12712,10 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4925:6: (kw= KEYWORD_23 )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4927:2: kw= KEYWORD_23
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4930:6: (kw= KEYWORD_23 )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4932:2: kw= KEYWORD_23
             {
-            kw=(Token)match(input,KEYWORD_23,FOLLOW_KEYWORD_23_in_ruleNUM_OP_NE12550); 
+            kw=(Token)match(input,KEYWORD_23,FOLLOW_KEYWORD_23_in_ruleNUM_OP_NE12568); 
 
                     current.merge(kw);
                     newLeafNode(kw, grammarAccess.getNUM_OP_NEAccess().getExclamationMarkEqualsSignKeyword()); 
@@ -12690,7 +12739,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSEMI_COLON"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4940:1: entryRuleSEMI_COLON returns [String current=null] : iv_ruleSEMI_COLON= ruleSEMI_COLON EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4945:1: entryRuleSEMI_COLON returns [String current=null] : iv_ruleSEMI_COLON= ruleSEMI_COLON EOF ;
     public final String entryRuleSEMI_COLON() throws RecognitionException {
         String current = null;
 
@@ -12698,17 +12747,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4941:1: (iv_ruleSEMI_COLON= ruleSEMI_COLON EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4942:2: iv_ruleSEMI_COLON= ruleSEMI_COLON EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4946:1: (iv_ruleSEMI_COLON= ruleSEMI_COLON EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4947:2: iv_ruleSEMI_COLON= ruleSEMI_COLON EOF
             {
              newCompositeNode(grammarAccess.getSEMI_COLONRule()); 
-            pushFollow(FOLLOW_ruleSEMI_COLON_in_entryRuleSEMI_COLON12589);
+            pushFollow(FOLLOW_ruleSEMI_COLON_in_entryRuleSEMI_COLON12607);
             iv_ruleSEMI_COLON=ruleSEMI_COLON();
 
             state._fsp--;
 
              current =iv_ruleSEMI_COLON.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSEMI_COLON12600); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSEMI_COLON12618); 
 
             }
 
@@ -12726,7 +12775,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSEMI_COLON"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4949:1: ruleSEMI_COLON returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= KEYWORD_13 ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4954:1: ruleSEMI_COLON returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= KEYWORD_13 ;
     public final AntlrDatatypeRuleToken ruleSEMI_COLON() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -12735,10 +12784,10 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4953:6: (kw= KEYWORD_13 )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4955:2: kw= KEYWORD_13
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4958:6: (kw= KEYWORD_13 )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4960:2: kw= KEYWORD_13
             {
-            kw=(Token)match(input,KEYWORD_13,FOLLOW_KEYWORD_13_in_ruleSEMI_COLON12637); 
+            kw=(Token)match(input,KEYWORD_13,FOLLOW_KEYWORD_13_in_ruleSEMI_COLON12655); 
 
                     current.merge(kw);
                     newLeafNode(kw, grammarAccess.getSEMI_COLONAccess().getSemicolonKeyword()); 
@@ -12762,7 +12811,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulePOUND"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4980:1: entryRulePOUND returns [String current=null] : iv_rulePOUND= rulePOUND EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4985:1: entryRulePOUND returns [String current=null] : iv_rulePOUND= rulePOUND EOF ;
     public final String entryRulePOUND() throws RecognitionException {
         String current = null;
 
@@ -12770,17 +12819,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4981:1: (iv_rulePOUND= rulePOUND EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4982:2: iv_rulePOUND= rulePOUND EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4986:1: (iv_rulePOUND= rulePOUND EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4987:2: iv_rulePOUND= rulePOUND EOF
             {
              newCompositeNode(grammarAccess.getPOUNDRule()); 
-            pushFollow(FOLLOW_rulePOUND_in_entryRulePOUND12688);
+            pushFollow(FOLLOW_rulePOUND_in_entryRulePOUND12706);
             iv_rulePOUND=rulePOUND();
 
             state._fsp--;
 
              current =iv_rulePOUND.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRulePOUND12699); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulePOUND12717); 
 
             }
 
@@ -12798,7 +12847,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePOUND"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4989:1: rulePOUND returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= KEYWORD_1 ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4994:1: rulePOUND returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= KEYWORD_1 ;
     public final AntlrDatatypeRuleToken rulePOUND() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -12807,10 +12856,10 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4993:6: (kw= KEYWORD_1 )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4995:2: kw= KEYWORD_1
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:4998:6: (kw= KEYWORD_1 )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5000:2: kw= KEYWORD_1
             {
-            kw=(Token)match(input,KEYWORD_1,FOLLOW_KEYWORD_1_in_rulePOUND12736); 
+            kw=(Token)match(input,KEYWORD_1,FOLLOW_KEYWORD_1_in_rulePOUND12754); 
 
                     current.merge(kw);
                     newLeafNode(kw, grammarAccess.getPOUNDAccess().getNumberSignKeyword()); 
@@ -12834,7 +12883,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCOMMA"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5010:1: entryRuleCOMMA returns [String current=null] : iv_ruleCOMMA= ruleCOMMA EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5015:1: entryRuleCOMMA returns [String current=null] : iv_ruleCOMMA= ruleCOMMA EOF ;
     public final String entryRuleCOMMA() throws RecognitionException {
         String current = null;
 
@@ -12842,17 +12891,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5011:1: (iv_ruleCOMMA= ruleCOMMA EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5012:2: iv_ruleCOMMA= ruleCOMMA EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5016:1: (iv_ruleCOMMA= ruleCOMMA EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5017:2: iv_ruleCOMMA= ruleCOMMA EOF
             {
              newCompositeNode(grammarAccess.getCOMMARule()); 
-            pushFollow(FOLLOW_ruleCOMMA_in_entryRuleCOMMA12777);
+            pushFollow(FOLLOW_ruleCOMMA_in_entryRuleCOMMA12795);
             iv_ruleCOMMA=ruleCOMMA();
 
             state._fsp--;
 
              current =iv_ruleCOMMA.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleCOMMA12788); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleCOMMA12806); 
 
             }
 
@@ -12870,7 +12919,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCOMMA"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5019:1: ruleCOMMA returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= KEYWORD_8 ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5024:1: ruleCOMMA returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= KEYWORD_8 ;
     public final AntlrDatatypeRuleToken ruleCOMMA() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -12879,10 +12928,10 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5023:6: (kw= KEYWORD_8 )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5025:2: kw= KEYWORD_8
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5028:6: (kw= KEYWORD_8 )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5030:2: kw= KEYWORD_8
             {
-            kw=(Token)match(input,KEYWORD_8,FOLLOW_KEYWORD_8_in_ruleCOMMA12825); 
+            kw=(Token)match(input,KEYWORD_8,FOLLOW_KEYWORD_8_in_ruleCOMMA12843); 
 
                     current.merge(kw);
                     newLeafNode(kw, grammarAccess.getCOMMAAccess().getCommaKeyword()); 
@@ -12906,7 +12955,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDIV"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5040:1: entryRuleDIV returns [String current=null] : iv_ruleDIV= ruleDIV EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5045:1: entryRuleDIV returns [String current=null] : iv_ruleDIV= ruleDIV EOF ;
     public final String entryRuleDIV() throws RecognitionException {
         String current = null;
 
@@ -12914,17 +12963,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5041:1: (iv_ruleDIV= ruleDIV EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5042:2: iv_ruleDIV= ruleDIV EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5046:1: (iv_ruleDIV= ruleDIV EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5047:2: iv_ruleDIV= ruleDIV EOF
             {
              newCompositeNode(grammarAccess.getDIVRule()); 
-            pushFollow(FOLLOW_ruleDIV_in_entryRuleDIV12866);
+            pushFollow(FOLLOW_ruleDIV_in_entryRuleDIV12884);
             iv_ruleDIV=ruleDIV();
 
             state._fsp--;
 
              current =iv_ruleDIV.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDIV12877); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDIV12895); 
 
             }
 
@@ -12942,7 +12991,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDIV"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5049:1: ruleDIV returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= KEYWORD_11 ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5054:1: ruleDIV returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= KEYWORD_11 ;
     public final AntlrDatatypeRuleToken ruleDIV() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -12951,10 +13000,10 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5053:6: (kw= KEYWORD_11 )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5055:2: kw= KEYWORD_11
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5058:6: (kw= KEYWORD_11 )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5060:2: kw= KEYWORD_11
             {
-            kw=(Token)match(input,KEYWORD_11,FOLLOW_KEYWORD_11_in_ruleDIV12914); 
+            kw=(Token)match(input,KEYWORD_11,FOLLOW_KEYWORD_11_in_ruleDIV12932); 
 
                     current.merge(kw);
                     newLeafNode(kw, grammarAccess.getDIVAccess().getSolidusKeyword()); 
@@ -12978,7 +13027,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulePERCENT"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5068:1: entryRulePERCENT returns [String current=null] : iv_rulePERCENT= rulePERCENT EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5073:1: entryRulePERCENT returns [String current=null] : iv_rulePERCENT= rulePERCENT EOF ;
     public final String entryRulePERCENT() throws RecognitionException {
         String current = null;
 
@@ -12986,17 +13035,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5069:1: (iv_rulePERCENT= rulePERCENT EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5070:2: iv_rulePERCENT= rulePERCENT EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5074:1: (iv_rulePERCENT= rulePERCENT EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5075:2: iv_rulePERCENT= rulePERCENT EOF
             {
              newCompositeNode(grammarAccess.getPERCENTRule()); 
-            pushFollow(FOLLOW_rulePERCENT_in_entryRulePERCENT12953);
+            pushFollow(FOLLOW_rulePERCENT_in_entryRulePERCENT12971);
             iv_rulePERCENT=rulePERCENT();
 
             state._fsp--;
 
              current =iv_rulePERCENT.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRulePERCENT12964); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulePERCENT12982); 
 
             }
 
@@ -13014,7 +13063,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePERCENT"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5077:1: rulePERCENT returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= KEYWORD_3 ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5082:1: rulePERCENT returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= KEYWORD_3 ;
     public final AntlrDatatypeRuleToken rulePERCENT() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -13023,10 +13072,10 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5081:6: (kw= KEYWORD_3 )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5083:2: kw= KEYWORD_3
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5086:6: (kw= KEYWORD_3 )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5088:2: kw= KEYWORD_3
             {
-            kw=(Token)match(input,KEYWORD_3,FOLLOW_KEYWORD_3_in_rulePERCENT13001); 
+            kw=(Token)match(input,KEYWORD_3,FOLLOW_KEYWORD_3_in_rulePERCENT13019); 
 
                     current.merge(kw);
                     newLeafNode(kw, grammarAccess.getPERCENTAccess().getPercentSignKeyword()); 
@@ -13050,7 +13099,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulePLUS"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5096:1: entryRulePLUS returns [String current=null] : iv_rulePLUS= rulePLUS EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5101:1: entryRulePLUS returns [String current=null] : iv_rulePLUS= rulePLUS EOF ;
     public final String entryRulePLUS() throws RecognitionException {
         String current = null;
 
@@ -13058,17 +13107,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5097:1: (iv_rulePLUS= rulePLUS EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5098:2: iv_rulePLUS= rulePLUS EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5102:1: (iv_rulePLUS= rulePLUS EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5103:2: iv_rulePLUS= rulePLUS EOF
             {
              newCompositeNode(grammarAccess.getPLUSRule()); 
-            pushFollow(FOLLOW_rulePLUS_in_entryRulePLUS13040);
+            pushFollow(FOLLOW_rulePLUS_in_entryRulePLUS13058);
             iv_rulePLUS=rulePLUS();
 
             state._fsp--;
 
              current =iv_rulePLUS.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRulePLUS13051); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulePLUS13069); 
 
             }
 
@@ -13086,7 +13135,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePLUS"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5105:1: rulePLUS returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= KEYWORD_7 ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5110:1: rulePLUS returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= KEYWORD_7 ;
     public final AntlrDatatypeRuleToken rulePLUS() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -13095,10 +13144,10 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5109:6: (kw= KEYWORD_7 )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5111:2: kw= KEYWORD_7
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5114:6: (kw= KEYWORD_7 )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5116:2: kw= KEYWORD_7
             {
-            kw=(Token)match(input,KEYWORD_7,FOLLOW_KEYWORD_7_in_rulePLUS13088); 
+            kw=(Token)match(input,KEYWORD_7,FOLLOW_KEYWORD_7_in_rulePLUS13106); 
 
                     current.merge(kw);
                     newLeafNode(kw, grammarAccess.getPLUSAccess().getPlusSignKeyword()); 
@@ -13122,7 +13171,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMINUS"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5124:1: entryRuleMINUS returns [String current=null] : iv_ruleMINUS= ruleMINUS EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5129:1: entryRuleMINUS returns [String current=null] : iv_ruleMINUS= ruleMINUS EOF ;
     public final String entryRuleMINUS() throws RecognitionException {
         String current = null;
 
@@ -13130,17 +13179,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5125:1: (iv_ruleMINUS= ruleMINUS EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5126:2: iv_ruleMINUS= ruleMINUS EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5130:1: (iv_ruleMINUS= ruleMINUS EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5131:2: iv_ruleMINUS= ruleMINUS EOF
             {
              newCompositeNode(grammarAccess.getMINUSRule()); 
-            pushFollow(FOLLOW_ruleMINUS_in_entryRuleMINUS13127);
+            pushFollow(FOLLOW_ruleMINUS_in_entryRuleMINUS13145);
             iv_ruleMINUS=ruleMINUS();
 
             state._fsp--;
 
              current =iv_ruleMINUS.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMINUS13138); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleMINUS13156); 
 
             }
 
@@ -13158,7 +13207,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMINUS"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5133:1: ruleMINUS returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= KEYWORD_9 ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5138:1: ruleMINUS returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= KEYWORD_9 ;
     public final AntlrDatatypeRuleToken ruleMINUS() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -13167,10 +13216,10 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5137:6: (kw= KEYWORD_9 )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5139:2: kw= KEYWORD_9
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5142:6: (kw= KEYWORD_9 )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5144:2: kw= KEYWORD_9
             {
-            kw=(Token)match(input,KEYWORD_9,FOLLOW_KEYWORD_9_in_ruleMINUS13175); 
+            kw=(Token)match(input,KEYWORD_9,FOLLOW_KEYWORD_9_in_ruleMINUS13193); 
 
                     current.merge(kw);
                     newLeafNode(kw, grammarAccess.getMINUSAccess().getHyphenMinusKeyword()); 
@@ -13194,7 +13243,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSTAR"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5152:1: entryRuleSTAR returns [String current=null] : iv_ruleSTAR= ruleSTAR EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5157:1: entryRuleSTAR returns [String current=null] : iv_ruleSTAR= ruleSTAR EOF ;
     public final String entryRuleSTAR() throws RecognitionException {
         String current = null;
 
@@ -13202,17 +13251,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5153:1: (iv_ruleSTAR= ruleSTAR EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5154:2: iv_ruleSTAR= ruleSTAR EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5158:1: (iv_ruleSTAR= ruleSTAR EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5159:2: iv_ruleSTAR= ruleSTAR EOF
             {
              newCompositeNode(grammarAccess.getSTARRule()); 
-            pushFollow(FOLLOW_ruleSTAR_in_entryRuleSTAR13214);
+            pushFollow(FOLLOW_ruleSTAR_in_entryRuleSTAR13232);
             iv_ruleSTAR=ruleSTAR();
 
             state._fsp--;
 
              current =iv_ruleSTAR.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSTAR13225); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSTAR13243); 
 
             }
 
@@ -13230,7 +13279,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSTAR"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5161:1: ruleSTAR returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= KEYWORD_6 ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5166:1: ruleSTAR returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= KEYWORD_6 ;
     public final AntlrDatatypeRuleToken ruleSTAR() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -13239,10 +13288,10 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5165:6: (kw= KEYWORD_6 )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5167:2: kw= KEYWORD_6
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5170:6: (kw= KEYWORD_6 )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5172:2: kw= KEYWORD_6
             {
-            kw=(Token)match(input,KEYWORD_6,FOLLOW_KEYWORD_6_in_ruleSTAR13262); 
+            kw=(Token)match(input,KEYWORD_6,FOLLOW_KEYWORD_6_in_ruleSTAR13280); 
 
                     current.merge(kw);
                     newLeafNode(kw, grammarAccess.getSTARAccess().getAsteriskKeyword()); 
@@ -13266,7 +13315,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDOLLAR"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5182:1: entryRuleDOLLAR returns [String current=null] : iv_ruleDOLLAR= ruleDOLLAR EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5187:1: entryRuleDOLLAR returns [String current=null] : iv_ruleDOLLAR= ruleDOLLAR EOF ;
     public final String entryRuleDOLLAR() throws RecognitionException {
         String current = null;
 
@@ -13274,17 +13323,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5183:1: (iv_ruleDOLLAR= ruleDOLLAR EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5184:2: iv_ruleDOLLAR= ruleDOLLAR EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5188:1: (iv_ruleDOLLAR= ruleDOLLAR EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5189:2: iv_ruleDOLLAR= ruleDOLLAR EOF
             {
              newCompositeNode(grammarAccess.getDOLLARRule()); 
-            pushFollow(FOLLOW_ruleDOLLAR_in_entryRuleDOLLAR13303);
+            pushFollow(FOLLOW_ruleDOLLAR_in_entryRuleDOLLAR13321);
             iv_ruleDOLLAR=ruleDOLLAR();
 
             state._fsp--;
 
              current =iv_ruleDOLLAR.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDOLLAR13314); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDOLLAR13332); 
 
             }
 
@@ -13302,7 +13351,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDOLLAR"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5191:1: ruleDOLLAR returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= KEYWORD_2 ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5196:1: ruleDOLLAR returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= KEYWORD_2 ;
     public final AntlrDatatypeRuleToken ruleDOLLAR() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -13311,10 +13360,10 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5195:6: (kw= KEYWORD_2 )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5197:2: kw= KEYWORD_2
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5200:6: (kw= KEYWORD_2 )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5202:2: kw= KEYWORD_2
             {
-            kw=(Token)match(input,KEYWORD_2,FOLLOW_KEYWORD_2_in_ruleDOLLAR13351); 
+            kw=(Token)match(input,KEYWORD_2,FOLLOW_KEYWORD_2_in_ruleDOLLAR13369); 
 
                     current.merge(kw);
                     newLeafNode(kw, grammarAccess.getDOLLARAccess().getDollarSignKeyword()); 
@@ -13338,7 +13387,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulegroup_type"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5210:1: entryRulegroup_type returns [String current=null] : iv_rulegroup_type= rulegroup_type EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5215:1: entryRulegroup_type returns [String current=null] : iv_rulegroup_type= rulegroup_type EOF ;
     public final String entryRulegroup_type() throws RecognitionException {
         String current = null;
 
@@ -13346,17 +13395,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5211:1: (iv_rulegroup_type= rulegroup_type EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5212:2: iv_rulegroup_type= rulegroup_type EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5216:1: (iv_rulegroup_type= rulegroup_type EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5217:2: iv_rulegroup_type= rulegroup_type EOF
             {
              newCompositeNode(grammarAccess.getGroup_typeRule()); 
-            pushFollow(FOLLOW_rulegroup_type_in_entryRulegroup_type13390);
+            pushFollow(FOLLOW_rulegroup_type_in_entryRulegroup_type13408);
             iv_rulegroup_type=rulegroup_type();
 
             state._fsp--;
 
              current =iv_rulegroup_type.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRulegroup_type13401); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulegroup_type13419); 
 
             }
 
@@ -13374,7 +13423,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulegroup_type"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5219:1: rulegroup_type returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_STRING_0= RULE_STRING ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5224:1: rulegroup_type returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_STRING_0= RULE_STRING ;
     public final AntlrDatatypeRuleToken rulegroup_type() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -13383,10 +13432,10 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5223:6: (this_STRING_0= RULE_STRING )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5224:5: this_STRING_0= RULE_STRING
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5228:6: (this_STRING_0= RULE_STRING )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5229:5: this_STRING_0= RULE_STRING
             {
-            this_STRING_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rulegroup_type13440); 
+            this_STRING_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rulegroup_type13458); 
 
             		current.merge(this_STRING_0);
                 
@@ -13412,7 +13461,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulegroup_item_list"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5239:1: entryRulegroup_item_list returns [EObject current=null] : iv_rulegroup_item_list= rulegroup_item_list EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5244:1: entryRulegroup_item_list returns [EObject current=null] : iv_rulegroup_item_list= rulegroup_item_list EOF ;
     public final EObject entryRulegroup_item_list() throws RecognitionException {
         EObject current = null;
 
@@ -13420,17 +13469,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5240:2: (iv_rulegroup_item_list= rulegroup_item_list EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5241:2: iv_rulegroup_item_list= rulegroup_item_list EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5245:2: (iv_rulegroup_item_list= rulegroup_item_list EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5246:2: iv_rulegroup_item_list= rulegroup_item_list EOF
             {
              newCompositeNode(grammarAccess.getGroup_item_listRule()); 
-            pushFollow(FOLLOW_rulegroup_item_list_in_entryRulegroup_item_list13483);
+            pushFollow(FOLLOW_rulegroup_item_list_in_entryRulegroup_item_list13501);
             iv_rulegroup_item_list=rulegroup_item_list();
 
             state._fsp--;
 
              current =iv_rulegroup_item_list; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulegroup_item_list13493); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulegroup_item_list13511); 
 
             }
 
@@ -13448,7 +13497,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulegroup_item_list"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5248:1: rulegroup_item_list returns [EObject current=null] : (this_group_item_0= rulegroup_item ( ruleCOMMA ( (lv_items_2_0= rulegroup_item ) ) )* ) ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5253:1: rulegroup_item_list returns [EObject current=null] : (this_group_item_0= rulegroup_item ( ruleCOMMA ( (lv_items_2_0= rulegroup_item ) ) )* ) ;
     public final EObject rulegroup_item_list() throws RecognitionException {
         EObject current = null;
 
@@ -13460,16 +13509,16 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5251:28: ( (this_group_item_0= rulegroup_item ( ruleCOMMA ( (lv_items_2_0= rulegroup_item ) ) )* ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5252:1: (this_group_item_0= rulegroup_item ( ruleCOMMA ( (lv_items_2_0= rulegroup_item ) ) )* )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5256:28: ( (this_group_item_0= rulegroup_item ( ruleCOMMA ( (lv_items_2_0= rulegroup_item ) ) )* ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5257:1: (this_group_item_0= rulegroup_item ( ruleCOMMA ( (lv_items_2_0= rulegroup_item ) ) )* )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5252:1: (this_group_item_0= rulegroup_item ( ruleCOMMA ( (lv_items_2_0= rulegroup_item ) ) )* )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5253:5: this_group_item_0= rulegroup_item ( ruleCOMMA ( (lv_items_2_0= rulegroup_item ) ) )*
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5257:1: (this_group_item_0= rulegroup_item ( ruleCOMMA ( (lv_items_2_0= rulegroup_item ) ) )* )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5258:5: this_group_item_0= rulegroup_item ( ruleCOMMA ( (lv_items_2_0= rulegroup_item ) ) )*
             {
              
                     newCompositeNode(grammarAccess.getGroup_item_listAccess().getGroup_itemParserRuleCall_0()); 
                 
-            pushFollow(FOLLOW_rulegroup_item_in_rulegroup_item_list13540);
+            pushFollow(FOLLOW_rulegroup_item_in_rulegroup_item_list13558);
             this_group_item_0=rulegroup_item();
 
             state._fsp--;
@@ -13478,25 +13527,25 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                     current = this_group_item_0;
                     afterParserOrEnumRuleCall();
                 
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5261:1: ( ruleCOMMA ( (lv_items_2_0= rulegroup_item ) ) )*
-            loop75:
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5266:1: ( ruleCOMMA ( (lv_items_2_0= rulegroup_item ) ) )*
+            loop76:
             do {
-                int alt75=2;
-                int LA75_0 = input.LA(1);
+                int alt76=2;
+                int LA76_0 = input.LA(1);
 
-                if ( (LA75_0==KEYWORD_8) ) {
-                    alt75=1;
+                if ( (LA76_0==KEYWORD_8) ) {
+                    alt76=1;
                 }
 
 
-                switch (alt75) {
+                switch (alt76) {
             	case 1 :
-            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5262:5: ruleCOMMA ( (lv_items_2_0= rulegroup_item ) )
+            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5267:5: ruleCOMMA ( (lv_items_2_0= rulegroup_item ) )
             	    {
             	     
             	            newCompositeNode(grammarAccess.getGroup_item_listAccess().getCOMMAParserRuleCall_1_0()); 
             	        
-            	    pushFollow(FOLLOW_ruleCOMMA_in_rulegroup_item_list13556);
+            	    pushFollow(FOLLOW_ruleCOMMA_in_rulegroup_item_list13574);
             	    ruleCOMMA();
 
             	    state._fsp--;
@@ -13504,16 +13553,16 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
             	            afterParserOrEnumRuleCall();
             	        
-            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5269:1: ( (lv_items_2_0= rulegroup_item ) )
-            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5270:1: (lv_items_2_0= rulegroup_item )
+            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5274:1: ( (lv_items_2_0= rulegroup_item ) )
+            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5275:1: (lv_items_2_0= rulegroup_item )
             	    {
-            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5270:1: (lv_items_2_0= rulegroup_item )
-            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5271:3: lv_items_2_0= rulegroup_item
+            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5275:1: (lv_items_2_0= rulegroup_item )
+            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5276:3: lv_items_2_0= rulegroup_item
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getGroup_item_listAccess().getItemsGroup_itemParserRuleCall_1_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_rulegroup_item_in_rulegroup_item_list13576);
+            	    pushFollow(FOLLOW_rulegroup_item_in_rulegroup_item_list13594);
             	    lv_items_2_0=rulegroup_item();
 
             	    state._fsp--;
@@ -13540,7 +13589,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop75;
+            	    break loop76;
                 }
             } while (true);
 
@@ -13565,7 +13614,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleorder_by_clause"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5295:1: entryRuleorder_by_clause returns [String current=null] : iv_ruleorder_by_clause= ruleorder_by_clause EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5300:1: entryRuleorder_by_clause returns [String current=null] : iv_ruleorder_by_clause= ruleorder_by_clause EOF ;
     public final String entryRuleorder_by_clause() throws RecognitionException {
         String current = null;
 
@@ -13573,17 +13622,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5296:1: (iv_ruleorder_by_clause= ruleorder_by_clause EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5297:2: iv_ruleorder_by_clause= ruleorder_by_clause EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5301:1: (iv_ruleorder_by_clause= ruleorder_by_clause EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5302:2: iv_ruleorder_by_clause= ruleorder_by_clause EOF
             {
              newCompositeNode(grammarAccess.getOrder_by_clauseRule()); 
-            pushFollow(FOLLOW_ruleorder_by_clause_in_entryRuleorder_by_clause13614);
+            pushFollow(FOLLOW_ruleorder_by_clause_in_entryRuleorder_by_clause13632);
             iv_ruleorder_by_clause=ruleorder_by_clause();
 
             state._fsp--;
 
              current =iv_ruleorder_by_clause.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleorder_by_clause13625); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleorder_by_clause13643); 
 
             }
 
@@ -13601,7 +13650,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleorder_by_clause"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5304:1: ruleorder_by_clause returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_STAR_0= ruleSTAR (kw= KEYWORD_41 | kw= KEYWORD_48 )? ) | this_order_col_list_3= ruleorder_col_list ) ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5309:1: ruleorder_by_clause returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_STAR_0= ruleSTAR (kw= KEYWORD_41 | kw= KEYWORD_48 )? ) | this_order_col_list_3= ruleorder_col_list ) ;
     public final AntlrDatatypeRuleToken ruleorder_by_clause() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -13614,36 +13663,36 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5308:6: ( ( (this_STAR_0= ruleSTAR (kw= KEYWORD_41 | kw= KEYWORD_48 )? ) | this_order_col_list_3= ruleorder_col_list ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5309:1: ( (this_STAR_0= ruleSTAR (kw= KEYWORD_41 | kw= KEYWORD_48 )? ) | this_order_col_list_3= ruleorder_col_list )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5313:6: ( ( (this_STAR_0= ruleSTAR (kw= KEYWORD_41 | kw= KEYWORD_48 )? ) | this_order_col_list_3= ruleorder_col_list ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5314:1: ( (this_STAR_0= ruleSTAR (kw= KEYWORD_41 | kw= KEYWORD_48 )? ) | this_order_col_list_3= ruleorder_col_list )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5309:1: ( (this_STAR_0= ruleSTAR (kw= KEYWORD_41 | kw= KEYWORD_48 )? ) | this_order_col_list_3= ruleorder_col_list )
-            int alt77=2;
-            int LA77_0 = input.LA(1);
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5314:1: ( (this_STAR_0= ruleSTAR (kw= KEYWORD_41 | kw= KEYWORD_48 )? ) | this_order_col_list_3= ruleorder_col_list )
+            int alt78=2;
+            int LA78_0 = input.LA(1);
 
-            if ( (LA77_0==KEYWORD_6) ) {
-                alt77=1;
+            if ( (LA78_0==KEYWORD_6) ) {
+                alt78=1;
             }
-            else if ( (LA77_0==KEYWORD_59||LA77_0==KEYWORD_2||LA77_0==KEYWORD_4||LA77_0==RULE_ID) ) {
-                alt77=2;
+            else if ( (LA78_0==KEYWORD_59||LA78_0==KEYWORD_2||LA78_0==KEYWORD_4||LA78_0==RULE_ID) ) {
+                alt78=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 77, 0, input);
+                    new NoViableAltException("", 78, 0, input);
 
                 throw nvae;
             }
-            switch (alt77) {
+            switch (alt78) {
                 case 1 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5309:2: (this_STAR_0= ruleSTAR (kw= KEYWORD_41 | kw= KEYWORD_48 )? )
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5314:2: (this_STAR_0= ruleSTAR (kw= KEYWORD_41 | kw= KEYWORD_48 )? )
                     {
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5309:2: (this_STAR_0= ruleSTAR (kw= KEYWORD_41 | kw= KEYWORD_48 )? )
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5310:5: this_STAR_0= ruleSTAR (kw= KEYWORD_41 | kw= KEYWORD_48 )?
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5314:2: (this_STAR_0= ruleSTAR (kw= KEYWORD_41 | kw= KEYWORD_48 )? )
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5315:5: this_STAR_0= ruleSTAR (kw= KEYWORD_41 | kw= KEYWORD_48 )?
                     {
                      
                             newCompositeNode(grammarAccess.getOrder_by_clauseAccess().getSTARParserRuleCall_0_0()); 
                         
-                    pushFollow(FOLLOW_ruleSTAR_in_ruleorder_by_clause13673);
+                    pushFollow(FOLLOW_ruleSTAR_in_ruleorder_by_clause13691);
                     this_STAR_0=ruleSTAR();
 
                     state._fsp--;
@@ -13654,21 +13703,21 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                      
                             afterParserOrEnumRuleCall();
                         
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5320:1: (kw= KEYWORD_41 | kw= KEYWORD_48 )?
-                    int alt76=3;
-                    int LA76_0 = input.LA(1);
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5325:1: (kw= KEYWORD_41 | kw= KEYWORD_48 )?
+                    int alt77=3;
+                    int LA77_0 = input.LA(1);
 
-                    if ( (LA76_0==KEYWORD_41) ) {
-                        alt76=1;
+                    if ( (LA77_0==KEYWORD_41) ) {
+                        alt77=1;
                     }
-                    else if ( (LA76_0==KEYWORD_48) ) {
-                        alt76=2;
+                    else if ( (LA77_0==KEYWORD_48) ) {
+                        alt77=2;
                     }
-                    switch (alt76) {
+                    switch (alt77) {
                         case 1 :
-                            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5321:2: kw= KEYWORD_41
+                            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5326:2: kw= KEYWORD_41
                             {
-                            kw=(Token)match(input,KEYWORD_41,FOLLOW_KEYWORD_41_in_ruleorder_by_clause13692); 
+                            kw=(Token)match(input,KEYWORD_41,FOLLOW_KEYWORD_41_in_ruleorder_by_clause13710); 
 
                                     current.merge(kw);
                                     newLeafNode(kw, grammarAccess.getOrder_by_clauseAccess().getASCKeyword_0_1_0()); 
@@ -13677,9 +13726,9 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5328:2: kw= KEYWORD_48
+                            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5333:2: kw= KEYWORD_48
                             {
-                            kw=(Token)match(input,KEYWORD_48,FOLLOW_KEYWORD_48_in_ruleorder_by_clause13711); 
+                            kw=(Token)match(input,KEYWORD_48,FOLLOW_KEYWORD_48_in_ruleorder_by_clause13729); 
 
                                     current.merge(kw);
                                     newLeafNode(kw, grammarAccess.getOrder_by_clauseAccess().getDESCKeyword_0_1_1()); 
@@ -13697,12 +13746,12 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5335:5: this_order_col_list_3= ruleorder_col_list
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5340:5: this_order_col_list_3= ruleorder_col_list
                     {
                      
                             newCompositeNode(grammarAccess.getOrder_by_clauseAccess().getOrder_col_listParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleorder_col_list_in_ruleorder_by_clause13742);
+                    pushFollow(FOLLOW_ruleorder_col_list_in_ruleorder_by_clause13760);
                     this_order_col_list_3=ruleorder_col_list();
 
                     state._fsp--;
@@ -13738,7 +13787,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleorder_col_list"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5353:1: entryRuleorder_col_list returns [String current=null] : iv_ruleorder_col_list= ruleorder_col_list EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5358:1: entryRuleorder_col_list returns [String current=null] : iv_ruleorder_col_list= ruleorder_col_list EOF ;
     public final String entryRuleorder_col_list() throws RecognitionException {
         String current = null;
 
@@ -13746,17 +13795,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5354:1: (iv_ruleorder_col_list= ruleorder_col_list EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5355:2: iv_ruleorder_col_list= ruleorder_col_list EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5359:1: (iv_ruleorder_col_list= ruleorder_col_list EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5360:2: iv_ruleorder_col_list= ruleorder_col_list EOF
             {
              newCompositeNode(grammarAccess.getOrder_col_listRule()); 
-            pushFollow(FOLLOW_ruleorder_col_list_in_entryRuleorder_col_list13787);
+            pushFollow(FOLLOW_ruleorder_col_list_in_entryRuleorder_col_list13805);
             iv_ruleorder_col_list=ruleorder_col_list();
 
             state._fsp--;
 
              current =iv_ruleorder_col_list.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleorder_col_list13798); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleorder_col_list13816); 
 
             }
 
@@ -13774,7 +13823,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleorder_col_list"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5362:1: ruleorder_col_list returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_order_col_0= ruleorder_col (kw= KEYWORD_8 this_order_col_2= ruleorder_col )* ) ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5367:1: ruleorder_col_list returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_order_col_0= ruleorder_col (kw= KEYWORD_8 this_order_col_2= ruleorder_col )* ) ;
     public final AntlrDatatypeRuleToken ruleorder_col_list() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -13787,16 +13836,16 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5366:6: ( (this_order_col_0= ruleorder_col (kw= KEYWORD_8 this_order_col_2= ruleorder_col )* ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5367:1: (this_order_col_0= ruleorder_col (kw= KEYWORD_8 this_order_col_2= ruleorder_col )* )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5371:6: ( (this_order_col_0= ruleorder_col (kw= KEYWORD_8 this_order_col_2= ruleorder_col )* ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5372:1: (this_order_col_0= ruleorder_col (kw= KEYWORD_8 this_order_col_2= ruleorder_col )* )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5367:1: (this_order_col_0= ruleorder_col (kw= KEYWORD_8 this_order_col_2= ruleorder_col )* )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5368:5: this_order_col_0= ruleorder_col (kw= KEYWORD_8 this_order_col_2= ruleorder_col )*
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5372:1: (this_order_col_0= ruleorder_col (kw= KEYWORD_8 this_order_col_2= ruleorder_col )* )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5373:5: this_order_col_0= ruleorder_col (kw= KEYWORD_8 this_order_col_2= ruleorder_col )*
             {
              
                     newCompositeNode(grammarAccess.getOrder_col_listAccess().getOrder_colParserRuleCall_0()); 
                 
-            pushFollow(FOLLOW_ruleorder_col_in_ruleorder_col_list13845);
+            pushFollow(FOLLOW_ruleorder_col_in_ruleorder_col_list13863);
             this_order_col_0=ruleorder_col();
 
             state._fsp--;
@@ -13807,22 +13856,22 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
              
                     afterParserOrEnumRuleCall();
                 
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5378:1: (kw= KEYWORD_8 this_order_col_2= ruleorder_col )*
-            loop78:
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5383:1: (kw= KEYWORD_8 this_order_col_2= ruleorder_col )*
+            loop79:
             do {
-                int alt78=2;
-                int LA78_0 = input.LA(1);
+                int alt79=2;
+                int LA79_0 = input.LA(1);
 
-                if ( (LA78_0==KEYWORD_8) ) {
-                    alt78=1;
+                if ( (LA79_0==KEYWORD_8) ) {
+                    alt79=1;
                 }
 
 
-                switch (alt78) {
+                switch (alt79) {
             	case 1 :
-            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5379:2: kw= KEYWORD_8 this_order_col_2= ruleorder_col
+            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5384:2: kw= KEYWORD_8 this_order_col_2= ruleorder_col
             	    {
-            	    kw=(Token)match(input,KEYWORD_8,FOLLOW_KEYWORD_8_in_ruleorder_col_list13864); 
+            	    kw=(Token)match(input,KEYWORD_8,FOLLOW_KEYWORD_8_in_ruleorder_col_list13882); 
 
             	            current.merge(kw);
             	            newLeafNode(kw, grammarAccess.getOrder_col_listAccess().getCommaKeyword_1_0()); 
@@ -13830,7 +13879,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
             	     
             	            newCompositeNode(grammarAccess.getOrder_col_listAccess().getOrder_colParserRuleCall_1_1()); 
             	        
-            	    pushFollow(FOLLOW_ruleorder_col_in_ruleorder_col_list13886);
+            	    pushFollow(FOLLOW_ruleorder_col_in_ruleorder_col_list13904);
             	    this_order_col_2=ruleorder_col();
 
             	    state._fsp--;
@@ -13846,7 +13895,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop78;
+            	    break loop79;
                 }
             } while (true);
 
@@ -13872,7 +13921,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleorder_col"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5403:1: entryRuleorder_col returns [String current=null] : iv_ruleorder_col= ruleorder_col EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5408:1: entryRuleorder_col returns [String current=null] : iv_ruleorder_col= ruleorder_col EOF ;
     public final String entryRuleorder_col() throws RecognitionException {
         String current = null;
 
@@ -13880,17 +13929,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5404:1: (iv_ruleorder_col= ruleorder_col EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5405:2: iv_ruleorder_col= ruleorder_col EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5409:1: (iv_ruleorder_col= ruleorder_col EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5410:2: iv_ruleorder_col= ruleorder_col EOF
             {
              newCompositeNode(grammarAccess.getOrder_colRule()); 
-            pushFollow(FOLLOW_ruleorder_col_in_entryRuleorder_col13933);
+            pushFollow(FOLLOW_ruleorder_col_in_entryRuleorder_col13951);
             iv_ruleorder_col=ruleorder_col();
 
             state._fsp--;
 
              current =iv_ruleorder_col.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleorder_col13944); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleorder_col13962); 
 
             }
 
@@ -13908,7 +13957,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleorder_col"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5412:1: ruleorder_col returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_col_ref_0= rulecol_ref (kw= KEYWORD_41 | kw= KEYWORD_48 )? ) | (kw= KEYWORD_4 this_col_ref_4= rulecol_ref (kw= KEYWORD_41 | kw= KEYWORD_48 )? kw= KEYWORD_5 ) ) ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5417:1: ruleorder_col returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_col_ref_0= rulecol_ref (kw= KEYWORD_41 | kw= KEYWORD_48 )? ) | (kw= KEYWORD_4 this_col_ref_4= rulecol_ref (kw= KEYWORD_41 | kw= KEYWORD_48 )? kw= KEYWORD_5 ) ) ;
     public final AntlrDatatypeRuleToken ruleorder_col() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -13921,36 +13970,36 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5416:6: ( ( (this_col_ref_0= rulecol_ref (kw= KEYWORD_41 | kw= KEYWORD_48 )? ) | (kw= KEYWORD_4 this_col_ref_4= rulecol_ref (kw= KEYWORD_41 | kw= KEYWORD_48 )? kw= KEYWORD_5 ) ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5417:1: ( (this_col_ref_0= rulecol_ref (kw= KEYWORD_41 | kw= KEYWORD_48 )? ) | (kw= KEYWORD_4 this_col_ref_4= rulecol_ref (kw= KEYWORD_41 | kw= KEYWORD_48 )? kw= KEYWORD_5 ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5421:6: ( ( (this_col_ref_0= rulecol_ref (kw= KEYWORD_41 | kw= KEYWORD_48 )? ) | (kw= KEYWORD_4 this_col_ref_4= rulecol_ref (kw= KEYWORD_41 | kw= KEYWORD_48 )? kw= KEYWORD_5 ) ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5422:1: ( (this_col_ref_0= rulecol_ref (kw= KEYWORD_41 | kw= KEYWORD_48 )? ) | (kw= KEYWORD_4 this_col_ref_4= rulecol_ref (kw= KEYWORD_41 | kw= KEYWORD_48 )? kw= KEYWORD_5 ) )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5417:1: ( (this_col_ref_0= rulecol_ref (kw= KEYWORD_41 | kw= KEYWORD_48 )? ) | (kw= KEYWORD_4 this_col_ref_4= rulecol_ref (kw= KEYWORD_41 | kw= KEYWORD_48 )? kw= KEYWORD_5 ) )
-            int alt81=2;
-            int LA81_0 = input.LA(1);
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5422:1: ( (this_col_ref_0= rulecol_ref (kw= KEYWORD_41 | kw= KEYWORD_48 )? ) | (kw= KEYWORD_4 this_col_ref_4= rulecol_ref (kw= KEYWORD_41 | kw= KEYWORD_48 )? kw= KEYWORD_5 ) )
+            int alt82=2;
+            int LA82_0 = input.LA(1);
 
-            if ( (LA81_0==KEYWORD_59||LA81_0==KEYWORD_2||LA81_0==RULE_ID) ) {
-                alt81=1;
+            if ( (LA82_0==KEYWORD_59||LA82_0==KEYWORD_2||LA82_0==RULE_ID) ) {
+                alt82=1;
             }
-            else if ( (LA81_0==KEYWORD_4) ) {
-                alt81=2;
+            else if ( (LA82_0==KEYWORD_4) ) {
+                alt82=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 81, 0, input);
+                    new NoViableAltException("", 82, 0, input);
 
                 throw nvae;
             }
-            switch (alt81) {
+            switch (alt82) {
                 case 1 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5417:2: (this_col_ref_0= rulecol_ref (kw= KEYWORD_41 | kw= KEYWORD_48 )? )
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5422:2: (this_col_ref_0= rulecol_ref (kw= KEYWORD_41 | kw= KEYWORD_48 )? )
                     {
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5417:2: (this_col_ref_0= rulecol_ref (kw= KEYWORD_41 | kw= KEYWORD_48 )? )
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5418:5: this_col_ref_0= rulecol_ref (kw= KEYWORD_41 | kw= KEYWORD_48 )?
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5422:2: (this_col_ref_0= rulecol_ref (kw= KEYWORD_41 | kw= KEYWORD_48 )? )
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5423:5: this_col_ref_0= rulecol_ref (kw= KEYWORD_41 | kw= KEYWORD_48 )?
                     {
                      
                             newCompositeNode(grammarAccess.getOrder_colAccess().getCol_refParserRuleCall_0_0()); 
                         
-                    pushFollow(FOLLOW_rulecol_ref_in_ruleorder_col13992);
+                    pushFollow(FOLLOW_rulecol_ref_in_ruleorder_col14010);
                     this_col_ref_0=rulecol_ref();
 
                     state._fsp--;
@@ -13961,21 +14010,21 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                      
                             afterParserOrEnumRuleCall();
                         
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5428:1: (kw= KEYWORD_41 | kw= KEYWORD_48 )?
-                    int alt79=3;
-                    int LA79_0 = input.LA(1);
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5433:1: (kw= KEYWORD_41 | kw= KEYWORD_48 )?
+                    int alt80=3;
+                    int LA80_0 = input.LA(1);
 
-                    if ( (LA79_0==KEYWORD_41) ) {
-                        alt79=1;
+                    if ( (LA80_0==KEYWORD_41) ) {
+                        alt80=1;
                     }
-                    else if ( (LA79_0==KEYWORD_48) ) {
-                        alt79=2;
+                    else if ( (LA80_0==KEYWORD_48) ) {
+                        alt80=2;
                     }
-                    switch (alt79) {
+                    switch (alt80) {
                         case 1 :
-                            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5429:2: kw= KEYWORD_41
+                            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5434:2: kw= KEYWORD_41
                             {
-                            kw=(Token)match(input,KEYWORD_41,FOLLOW_KEYWORD_41_in_ruleorder_col14011); 
+                            kw=(Token)match(input,KEYWORD_41,FOLLOW_KEYWORD_41_in_ruleorder_col14029); 
 
                                     current.merge(kw);
                                     newLeafNode(kw, grammarAccess.getOrder_colAccess().getASCKeyword_0_1_0()); 
@@ -13984,9 +14033,9 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5436:2: kw= KEYWORD_48
+                            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5441:2: kw= KEYWORD_48
                             {
-                            kw=(Token)match(input,KEYWORD_48,FOLLOW_KEYWORD_48_in_ruleorder_col14030); 
+                            kw=(Token)match(input,KEYWORD_48,FOLLOW_KEYWORD_48_in_ruleorder_col14048); 
 
                                     current.merge(kw);
                                     newLeafNode(kw, grammarAccess.getOrder_colAccess().getDESCKeyword_0_1_1()); 
@@ -14004,12 +14053,12 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5442:6: (kw= KEYWORD_4 this_col_ref_4= rulecol_ref (kw= KEYWORD_41 | kw= KEYWORD_48 )? kw= KEYWORD_5 )
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5447:6: (kw= KEYWORD_4 this_col_ref_4= rulecol_ref (kw= KEYWORD_41 | kw= KEYWORD_48 )? kw= KEYWORD_5 )
                     {
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5442:6: (kw= KEYWORD_4 this_col_ref_4= rulecol_ref (kw= KEYWORD_41 | kw= KEYWORD_48 )? kw= KEYWORD_5 )
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5443:2: kw= KEYWORD_4 this_col_ref_4= rulecol_ref (kw= KEYWORD_41 | kw= KEYWORD_48 )? kw= KEYWORD_5
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5447:6: (kw= KEYWORD_4 this_col_ref_4= rulecol_ref (kw= KEYWORD_41 | kw= KEYWORD_48 )? kw= KEYWORD_5 )
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5448:2: kw= KEYWORD_4 this_col_ref_4= rulecol_ref (kw= KEYWORD_41 | kw= KEYWORD_48 )? kw= KEYWORD_5
                     {
-                    kw=(Token)match(input,KEYWORD_4,FOLLOW_KEYWORD_4_in_ruleorder_col14053); 
+                    kw=(Token)match(input,KEYWORD_4,FOLLOW_KEYWORD_4_in_ruleorder_col14071); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getOrder_colAccess().getLeftParenthesisKeyword_1_0()); 
@@ -14017,7 +14066,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                      
                             newCompositeNode(grammarAccess.getOrder_colAccess().getCol_refParserRuleCall_1_1()); 
                         
-                    pushFollow(FOLLOW_rulecol_ref_in_ruleorder_col14075);
+                    pushFollow(FOLLOW_rulecol_ref_in_ruleorder_col14093);
                     this_col_ref_4=rulecol_ref();
 
                     state._fsp--;
@@ -14028,21 +14077,21 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                      
                             afterParserOrEnumRuleCall();
                         
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5459:1: (kw= KEYWORD_41 | kw= KEYWORD_48 )?
-                    int alt80=3;
-                    int LA80_0 = input.LA(1);
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5464:1: (kw= KEYWORD_41 | kw= KEYWORD_48 )?
+                    int alt81=3;
+                    int LA81_0 = input.LA(1);
 
-                    if ( (LA80_0==KEYWORD_41) ) {
-                        alt80=1;
+                    if ( (LA81_0==KEYWORD_41) ) {
+                        alt81=1;
                     }
-                    else if ( (LA80_0==KEYWORD_48) ) {
-                        alt80=2;
+                    else if ( (LA81_0==KEYWORD_48) ) {
+                        alt81=2;
                     }
-                    switch (alt80) {
+                    switch (alt81) {
                         case 1 :
-                            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5460:2: kw= KEYWORD_41
+                            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5465:2: kw= KEYWORD_41
                             {
-                            kw=(Token)match(input,KEYWORD_41,FOLLOW_KEYWORD_41_in_ruleorder_col14094); 
+                            kw=(Token)match(input,KEYWORD_41,FOLLOW_KEYWORD_41_in_ruleorder_col14112); 
 
                                     current.merge(kw);
                                     newLeafNode(kw, grammarAccess.getOrder_colAccess().getASCKeyword_1_2_0()); 
@@ -14051,9 +14100,9 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5467:2: kw= KEYWORD_48
+                            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5472:2: kw= KEYWORD_48
                             {
-                            kw=(Token)match(input,KEYWORD_48,FOLLOW_KEYWORD_48_in_ruleorder_col14113); 
+                            kw=(Token)match(input,KEYWORD_48,FOLLOW_KEYWORD_48_in_ruleorder_col14131); 
 
                                     current.merge(kw);
                                     newLeafNode(kw, grammarAccess.getOrder_colAccess().getDESCKeyword_1_2_1()); 
@@ -14064,7 +14113,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    kw=(Token)match(input,KEYWORD_5,FOLLOW_KEYWORD_5_in_ruleorder_col14128); 
+                    kw=(Token)match(input,KEYWORD_5,FOLLOW_KEYWORD_5_in_ruleorder_col14146); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getOrder_colAccess().getRightParenthesisKeyword_1_3()); 
@@ -14097,7 +14146,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulepartition_clause"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5486:1: entryRulepartition_clause returns [String current=null] : iv_rulepartition_clause= rulepartition_clause EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5491:1: entryRulepartition_clause returns [String current=null] : iv_rulepartition_clause= rulepartition_clause EOF ;
     public final String entryRulepartition_clause() throws RecognitionException {
         String current = null;
 
@@ -14105,17 +14154,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5487:1: (iv_rulepartition_clause= rulepartition_clause EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5488:2: iv_rulepartition_clause= rulepartition_clause EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5492:1: (iv_rulepartition_clause= rulepartition_clause EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5493:2: iv_rulepartition_clause= rulepartition_clause EOF
             {
              newCompositeNode(grammarAccess.getPartition_clauseRule()); 
-            pushFollow(FOLLOW_rulepartition_clause_in_entryRulepartition_clause14169);
+            pushFollow(FOLLOW_rulepartition_clause_in_entryRulepartition_clause14187);
             iv_rulepartition_clause=rulepartition_clause();
 
             state._fsp--;
 
              current =iv_rulepartition_clause.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRulepartition_clause14180); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulepartition_clause14198); 
 
             }
 
@@ -14133,7 +14182,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulepartition_clause"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5495:1: rulepartition_clause returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= KEYWORD_91 kw= KEYWORD_29 this_FuncName_2= ruleFuncName ) ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5500:1: rulepartition_clause returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= KEYWORD_91 kw= KEYWORD_29 this_FuncName_2= ruleFuncName ) ;
     public final AntlrDatatypeRuleToken rulepartition_clause() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -14144,18 +14193,18 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5499:6: ( (kw= KEYWORD_91 kw= KEYWORD_29 this_FuncName_2= ruleFuncName ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5500:1: (kw= KEYWORD_91 kw= KEYWORD_29 this_FuncName_2= ruleFuncName )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5504:6: ( (kw= KEYWORD_91 kw= KEYWORD_29 this_FuncName_2= ruleFuncName ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5505:1: (kw= KEYWORD_91 kw= KEYWORD_29 this_FuncName_2= ruleFuncName )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5500:1: (kw= KEYWORD_91 kw= KEYWORD_29 this_FuncName_2= ruleFuncName )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5501:2: kw= KEYWORD_91 kw= KEYWORD_29 this_FuncName_2= ruleFuncName
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5505:1: (kw= KEYWORD_91 kw= KEYWORD_29 this_FuncName_2= ruleFuncName )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5506:2: kw= KEYWORD_91 kw= KEYWORD_29 this_FuncName_2= ruleFuncName
             {
-            kw=(Token)match(input,KEYWORD_91,FOLLOW_KEYWORD_91_in_rulepartition_clause14218); 
+            kw=(Token)match(input,KEYWORD_91,FOLLOW_KEYWORD_91_in_rulepartition_clause14236); 
 
                     current.merge(kw);
                     newLeafNode(kw, grammarAccess.getPartition_clauseAccess().getPARTITIONKeyword_0()); 
                 
-            kw=(Token)match(input,KEYWORD_29,FOLLOW_KEYWORD_29_in_rulepartition_clause14231); 
+            kw=(Token)match(input,KEYWORD_29,FOLLOW_KEYWORD_29_in_rulepartition_clause14249); 
 
                     current.merge(kw);
                     newLeafNode(kw, grammarAccess.getPartition_clauseAccess().getBYKeyword_1()); 
@@ -14163,7 +14212,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
              
                     newCompositeNode(grammarAccess.getPartition_clauseAccess().getFuncNameParserRuleCall_2()); 
                 
-            pushFollow(FOLLOW_ruleFuncName_in_rulepartition_clause14253);
+            pushFollow(FOLLOW_ruleFuncName_in_rulepartition_clause14271);
             this_FuncName_2=ruleFuncName();
 
             state._fsp--;
@@ -14196,7 +14245,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulerel_list"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5531:1: entryRulerel_list returns [EObject current=null] : iv_rulerel_list= rulerel_list EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5536:1: entryRulerel_list returns [EObject current=null] : iv_rulerel_list= rulerel_list EOF ;
     public final EObject entryRulerel_list() throws RecognitionException {
         EObject current = null;
 
@@ -14204,17 +14253,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5532:2: (iv_rulerel_list= rulerel_list EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5533:2: iv_rulerel_list= rulerel_list EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5537:2: (iv_rulerel_list= rulerel_list EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5538:2: iv_rulerel_list= rulerel_list EOF
             {
              newCompositeNode(grammarAccess.getRel_listRule()); 
-            pushFollow(FOLLOW_rulerel_list_in_entryRulerel_list14297);
+            pushFollow(FOLLOW_rulerel_list_in_entryRulerel_list14315);
             iv_rulerel_list=rulerel_list();
 
             state._fsp--;
 
              current =iv_rulerel_list; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulerel_list14307); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulerel_list14325); 
 
             }
 
@@ -14232,7 +14281,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulerel_list"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5540:1: rulerel_list returns [EObject current=null] : ( ( (lv_type_0_0= ruleAliasType ) ) (otherlv_1= KEYWORD_8 ( (lv_type_2_0= ruleAliasType ) ) )* ) ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5545:1: rulerel_list returns [EObject current=null] : ( ( (lv_type_0_0= ruleAliasType ) ) (otherlv_1= KEYWORD_8 ( (lv_type_2_0= ruleAliasType ) ) )* ) ;
     public final EObject rulerel_list() throws RecognitionException {
         EObject current = null;
 
@@ -14245,22 +14294,22 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5543:28: ( ( ( (lv_type_0_0= ruleAliasType ) ) (otherlv_1= KEYWORD_8 ( (lv_type_2_0= ruleAliasType ) ) )* ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5544:1: ( ( (lv_type_0_0= ruleAliasType ) ) (otherlv_1= KEYWORD_8 ( (lv_type_2_0= ruleAliasType ) ) )* )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5548:28: ( ( ( (lv_type_0_0= ruleAliasType ) ) (otherlv_1= KEYWORD_8 ( (lv_type_2_0= ruleAliasType ) ) )* ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5549:1: ( ( (lv_type_0_0= ruleAliasType ) ) (otherlv_1= KEYWORD_8 ( (lv_type_2_0= ruleAliasType ) ) )* )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5544:1: ( ( (lv_type_0_0= ruleAliasType ) ) (otherlv_1= KEYWORD_8 ( (lv_type_2_0= ruleAliasType ) ) )* )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5544:2: ( (lv_type_0_0= ruleAliasType ) ) (otherlv_1= KEYWORD_8 ( (lv_type_2_0= ruleAliasType ) ) )*
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5549:1: ( ( (lv_type_0_0= ruleAliasType ) ) (otherlv_1= KEYWORD_8 ( (lv_type_2_0= ruleAliasType ) ) )* )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5549:2: ( (lv_type_0_0= ruleAliasType ) ) (otherlv_1= KEYWORD_8 ( (lv_type_2_0= ruleAliasType ) ) )*
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5544:2: ( (lv_type_0_0= ruleAliasType ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5545:1: (lv_type_0_0= ruleAliasType )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5549:2: ( (lv_type_0_0= ruleAliasType ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5550:1: (lv_type_0_0= ruleAliasType )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5545:1: (lv_type_0_0= ruleAliasType )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5546:3: lv_type_0_0= ruleAliasType
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5550:1: (lv_type_0_0= ruleAliasType )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5551:3: lv_type_0_0= ruleAliasType
             {
              
             	        newCompositeNode(grammarAccess.getRel_listAccess().getTypeAliasTypeParserRuleCall_0_0()); 
             	    
-            pushFollow(FOLLOW_ruleAliasType_in_rulerel_list14353);
+            pushFollow(FOLLOW_ruleAliasType_in_rulerel_list14371);
             lv_type_0_0=ruleAliasType();
 
             state._fsp--;
@@ -14282,35 +14331,35 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5562:2: (otherlv_1= KEYWORD_8 ( (lv_type_2_0= ruleAliasType ) ) )*
-            loop82:
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5567:2: (otherlv_1= KEYWORD_8 ( (lv_type_2_0= ruleAliasType ) ) )*
+            loop83:
             do {
-                int alt82=2;
-                int LA82_0 = input.LA(1);
+                int alt83=2;
+                int LA83_0 = input.LA(1);
 
-                if ( (LA82_0==KEYWORD_8) ) {
-                    alt82=1;
+                if ( (LA83_0==KEYWORD_8) ) {
+                    alt83=1;
                 }
 
 
-                switch (alt82) {
+                switch (alt83) {
             	case 1 :
-            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5563:2: otherlv_1= KEYWORD_8 ( (lv_type_2_0= ruleAliasType ) )
+            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5568:2: otherlv_1= KEYWORD_8 ( (lv_type_2_0= ruleAliasType ) )
             	    {
-            	    otherlv_1=(Token)match(input,KEYWORD_8,FOLLOW_KEYWORD_8_in_rulerel_list14367); 
+            	    otherlv_1=(Token)match(input,KEYWORD_8,FOLLOW_KEYWORD_8_in_rulerel_list14385); 
 
             	        	newLeafNode(otherlv_1, grammarAccess.getRel_listAccess().getCommaKeyword_1_0());
             	        
-            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5567:1: ( (lv_type_2_0= ruleAliasType ) )
-            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5568:1: (lv_type_2_0= ruleAliasType )
+            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5572:1: ( (lv_type_2_0= ruleAliasType ) )
+            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5573:1: (lv_type_2_0= ruleAliasType )
             	    {
-            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5568:1: (lv_type_2_0= ruleAliasType )
-            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5569:3: lv_type_2_0= ruleAliasType
+            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5573:1: (lv_type_2_0= ruleAliasType )
+            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5574:3: lv_type_2_0= ruleAliasType
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getRel_listAccess().getTypeAliasTypeParserRuleCall_1_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleAliasType_in_rulerel_list14387);
+            	    pushFollow(FOLLOW_ruleAliasType_in_rulerel_list14405);
             	    lv_type_2_0=ruleAliasType();
 
             	    state._fsp--;
@@ -14337,7 +14386,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop82;
+            	    break loop83;
                 }
             } while (true);
 
@@ -14362,7 +14411,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulejoin_type"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5593:1: entryRulejoin_type returns [String current=null] : iv_rulejoin_type= rulejoin_type EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5598:1: entryRulejoin_type returns [String current=null] : iv_rulejoin_type= rulejoin_type EOF ;
     public final String entryRulejoin_type() throws RecognitionException {
         String current = null;
 
@@ -14370,17 +14419,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5594:1: (iv_rulejoin_type= rulejoin_type EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5595:2: iv_rulejoin_type= rulejoin_type EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5599:1: (iv_rulejoin_type= rulejoin_type EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5600:2: iv_rulejoin_type= rulejoin_type EOF
             {
              newCompositeNode(grammarAccess.getJoin_typeRule()); 
-            pushFollow(FOLLOW_rulejoin_type_in_entryRulejoin_type14425);
+            pushFollow(FOLLOW_rulejoin_type_in_entryRulejoin_type14443);
             iv_rulejoin_type=rulejoin_type();
 
             state._fsp--;
 
              current =iv_rulejoin_type.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRulejoin_type14436); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulejoin_type14454); 
 
             }
 
@@ -14398,7 +14447,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulejoin_type"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5602:1: rulejoin_type returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_STRING_0= RULE_STRING ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5607:1: rulejoin_type returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_STRING_0= RULE_STRING ;
     public final AntlrDatatypeRuleToken rulejoin_type() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -14407,10 +14456,10 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5606:6: (this_STRING_0= RULE_STRING )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5607:5: this_STRING_0= RULE_STRING
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5611:6: (this_STRING_0= RULE_STRING )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5612:5: this_STRING_0= RULE_STRING
             {
-            this_STRING_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rulejoin_type14475); 
+            this_STRING_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rulejoin_type14493); 
 
             		current.merge(this_STRING_0);
                 
@@ -14436,7 +14485,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulejoin_sub_clause"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5622:1: entryRulejoin_sub_clause returns [EObject current=null] : iv_rulejoin_sub_clause= rulejoin_sub_clause EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5627:1: entryRulejoin_sub_clause returns [EObject current=null] : iv_rulejoin_sub_clause= rulejoin_sub_clause EOF ;
     public final EObject entryRulejoin_sub_clause() throws RecognitionException {
         EObject current = null;
 
@@ -14444,17 +14493,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5623:2: (iv_rulejoin_sub_clause= rulejoin_sub_clause EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5624:2: iv_rulejoin_sub_clause= rulejoin_sub_clause EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5628:2: (iv_rulejoin_sub_clause= rulejoin_sub_clause EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5629:2: iv_rulejoin_sub_clause= rulejoin_sub_clause EOF
             {
              newCompositeNode(grammarAccess.getJoin_sub_clauseRule()); 
-            pushFollow(FOLLOW_rulejoin_sub_clause_in_entryRulejoin_sub_clause14518);
+            pushFollow(FOLLOW_rulejoin_sub_clause_in_entryRulejoin_sub_clause14536);
             iv_rulejoin_sub_clause=rulejoin_sub_clause();
 
             state._fsp--;
 
              current =iv_rulejoin_sub_clause; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulejoin_sub_clause14528); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulejoin_sub_clause14546); 
 
             }
 
@@ -14472,7 +14521,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulejoin_sub_clause"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5631:1: rulejoin_sub_clause returns [EObject current=null] : (this_join_item_0= rulejoin_item (otherlv_1= KEYWORD_53 | otherlv_2= KEYWORD_65 | otherlv_3= KEYWORD_50 )? (otherlv_4= KEYWORD_64 )? (otherlv_5= KEYWORD_8 ( (lv_others_6_0= rulejoin_item ) ) )+ ) ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5636:1: rulejoin_sub_clause returns [EObject current=null] : (this_join_item_0= rulejoin_item (otherlv_1= KEYWORD_53 | otherlv_2= KEYWORD_65 | otherlv_3= KEYWORD_50 )? (otherlv_4= KEYWORD_64 )? (otherlv_5= KEYWORD_8 ( (lv_others_6_0= rulejoin_item ) ) )+ ) ;
     public final EObject rulejoin_sub_clause() throws RecognitionException {
         EObject current = null;
 
@@ -14489,16 +14538,16 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5634:28: ( (this_join_item_0= rulejoin_item (otherlv_1= KEYWORD_53 | otherlv_2= KEYWORD_65 | otherlv_3= KEYWORD_50 )? (otherlv_4= KEYWORD_64 )? (otherlv_5= KEYWORD_8 ( (lv_others_6_0= rulejoin_item ) ) )+ ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5635:1: (this_join_item_0= rulejoin_item (otherlv_1= KEYWORD_53 | otherlv_2= KEYWORD_65 | otherlv_3= KEYWORD_50 )? (otherlv_4= KEYWORD_64 )? (otherlv_5= KEYWORD_8 ( (lv_others_6_0= rulejoin_item ) ) )+ )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5639:28: ( (this_join_item_0= rulejoin_item (otherlv_1= KEYWORD_53 | otherlv_2= KEYWORD_65 | otherlv_3= KEYWORD_50 )? (otherlv_4= KEYWORD_64 )? (otherlv_5= KEYWORD_8 ( (lv_others_6_0= rulejoin_item ) ) )+ ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5640:1: (this_join_item_0= rulejoin_item (otherlv_1= KEYWORD_53 | otherlv_2= KEYWORD_65 | otherlv_3= KEYWORD_50 )? (otherlv_4= KEYWORD_64 )? (otherlv_5= KEYWORD_8 ( (lv_others_6_0= rulejoin_item ) ) )+ )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5635:1: (this_join_item_0= rulejoin_item (otherlv_1= KEYWORD_53 | otherlv_2= KEYWORD_65 | otherlv_3= KEYWORD_50 )? (otherlv_4= KEYWORD_64 )? (otherlv_5= KEYWORD_8 ( (lv_others_6_0= rulejoin_item ) ) )+ )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5636:5: this_join_item_0= rulejoin_item (otherlv_1= KEYWORD_53 | otherlv_2= KEYWORD_65 | otherlv_3= KEYWORD_50 )? (otherlv_4= KEYWORD_64 )? (otherlv_5= KEYWORD_8 ( (lv_others_6_0= rulejoin_item ) ) )+
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5640:1: (this_join_item_0= rulejoin_item (otherlv_1= KEYWORD_53 | otherlv_2= KEYWORD_65 | otherlv_3= KEYWORD_50 )? (otherlv_4= KEYWORD_64 )? (otherlv_5= KEYWORD_8 ( (lv_others_6_0= rulejoin_item ) ) )+ )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5641:5: this_join_item_0= rulejoin_item (otherlv_1= KEYWORD_53 | otherlv_2= KEYWORD_65 | otherlv_3= KEYWORD_50 )? (otherlv_4= KEYWORD_64 )? (otherlv_5= KEYWORD_8 ( (lv_others_6_0= rulejoin_item ) ) )+
             {
              
                     newCompositeNode(grammarAccess.getJoin_sub_clauseAccess().getJoin_itemParserRuleCall_0()); 
                 
-            pushFollow(FOLLOW_rulejoin_item_in_rulejoin_sub_clause14575);
+            pushFollow(FOLLOW_rulejoin_item_in_rulejoin_sub_clause14593);
             this_join_item_0=rulejoin_item();
 
             state._fsp--;
@@ -14507,31 +14556,31 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                     current = this_join_item_0;
                     afterParserOrEnumRuleCall();
                 
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5644:1: (otherlv_1= KEYWORD_53 | otherlv_2= KEYWORD_65 | otherlv_3= KEYWORD_50 )?
-            int alt83=4;
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5649:1: (otherlv_1= KEYWORD_53 | otherlv_2= KEYWORD_65 | otherlv_3= KEYWORD_50 )?
+            int alt84=4;
             switch ( input.LA(1) ) {
                 case KEYWORD_53:
                     {
-                    alt83=1;
+                    alt84=1;
                     }
                     break;
                 case KEYWORD_65:
                     {
-                    alt83=2;
+                    alt84=2;
                     }
                     break;
                 case KEYWORD_50:
                     {
-                    alt83=3;
+                    alt84=3;
                     }
                     break;
             }
 
-            switch (alt83) {
+            switch (alt84) {
                 case 1 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5645:2: otherlv_1= KEYWORD_53
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5650:2: otherlv_1= KEYWORD_53
                     {
-                    otherlv_1=(Token)match(input,KEYWORD_53,FOLLOW_KEYWORD_53_in_rulejoin_sub_clause14588); 
+                    otherlv_1=(Token)match(input,KEYWORD_53,FOLLOW_KEYWORD_53_in_rulejoin_sub_clause14606); 
 
                         	newLeafNode(otherlv_1, grammarAccess.getJoin_sub_clauseAccess().getLEFTKeyword_1_0());
                         
@@ -14539,9 +14588,9 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5651:2: otherlv_2= KEYWORD_65
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5656:2: otherlv_2= KEYWORD_65
                     {
-                    otherlv_2=(Token)match(input,KEYWORD_65,FOLLOW_KEYWORD_65_in_rulejoin_sub_clause14606); 
+                    otherlv_2=(Token)match(input,KEYWORD_65,FOLLOW_KEYWORD_65_in_rulejoin_sub_clause14624); 
 
                         	newLeafNode(otherlv_2, grammarAccess.getJoin_sub_clauseAccess().getRIGHTKeyword_1_1());
                         
@@ -14549,9 +14598,9 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5657:2: otherlv_3= KEYWORD_50
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5662:2: otherlv_3= KEYWORD_50
                     {
-                    otherlv_3=(Token)match(input,KEYWORD_50,FOLLOW_KEYWORD_50_in_rulejoin_sub_clause14624); 
+                    otherlv_3=(Token)match(input,KEYWORD_50,FOLLOW_KEYWORD_50_in_rulejoin_sub_clause14642); 
 
                         	newLeafNode(otherlv_3, grammarAccess.getJoin_sub_clauseAccess().getFULLKeyword_1_2());
                         
@@ -14561,18 +14610,18 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5661:3: (otherlv_4= KEYWORD_64 )?
-            int alt84=2;
-            int LA84_0 = input.LA(1);
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5666:3: (otherlv_4= KEYWORD_64 )?
+            int alt85=2;
+            int LA85_0 = input.LA(1);
 
-            if ( (LA84_0==KEYWORD_64) ) {
-                alt84=1;
+            if ( (LA85_0==KEYWORD_64) ) {
+                alt85=1;
             }
-            switch (alt84) {
+            switch (alt85) {
                 case 1 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5662:2: otherlv_4= KEYWORD_64
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5667:2: otherlv_4= KEYWORD_64
                     {
-                    otherlv_4=(Token)match(input,KEYWORD_64,FOLLOW_KEYWORD_64_in_rulejoin_sub_clause14639); 
+                    otherlv_4=(Token)match(input,KEYWORD_64,FOLLOW_KEYWORD_64_in_rulejoin_sub_clause14657); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getJoin_sub_clauseAccess().getOUTERKeyword_2());
                         
@@ -14582,36 +14631,36 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5666:3: (otherlv_5= KEYWORD_8 ( (lv_others_6_0= rulejoin_item ) ) )+
-            int cnt85=0;
-            loop85:
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5671:3: (otherlv_5= KEYWORD_8 ( (lv_others_6_0= rulejoin_item ) ) )+
+            int cnt86=0;
+            loop86:
             do {
-                int alt85=2;
-                int LA85_0 = input.LA(1);
+                int alt86=2;
+                int LA86_0 = input.LA(1);
 
-                if ( (LA85_0==KEYWORD_8) ) {
-                    alt85=1;
+                if ( (LA86_0==KEYWORD_8) ) {
+                    alt86=1;
                 }
 
 
-                switch (alt85) {
+                switch (alt86) {
             	case 1 :
-            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5667:2: otherlv_5= KEYWORD_8 ( (lv_others_6_0= rulejoin_item ) )
+            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5672:2: otherlv_5= KEYWORD_8 ( (lv_others_6_0= rulejoin_item ) )
             	    {
-            	    otherlv_5=(Token)match(input,KEYWORD_8,FOLLOW_KEYWORD_8_in_rulejoin_sub_clause14654); 
+            	    otherlv_5=(Token)match(input,KEYWORD_8,FOLLOW_KEYWORD_8_in_rulejoin_sub_clause14672); 
 
             	        	newLeafNode(otherlv_5, grammarAccess.getJoin_sub_clauseAccess().getCommaKeyword_3_0());
             	        
-            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5671:1: ( (lv_others_6_0= rulejoin_item ) )
-            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5672:1: (lv_others_6_0= rulejoin_item )
+            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5676:1: ( (lv_others_6_0= rulejoin_item ) )
+            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5677:1: (lv_others_6_0= rulejoin_item )
             	    {
-            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5672:1: (lv_others_6_0= rulejoin_item )
-            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5673:3: lv_others_6_0= rulejoin_item
+            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5677:1: (lv_others_6_0= rulejoin_item )
+            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5678:3: lv_others_6_0= rulejoin_item
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getJoin_sub_clauseAccess().getOthersJoin_itemParserRuleCall_3_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_rulejoin_item_in_rulejoin_sub_clause14674);
+            	    pushFollow(FOLLOW_rulejoin_item_in_rulejoin_sub_clause14692);
             	    lv_others_6_0=rulejoin_item();
 
             	    state._fsp--;
@@ -14638,12 +14687,12 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    if ( cnt85 >= 1 ) break loop85;
+            	    if ( cnt86 >= 1 ) break loop86;
                         EarlyExitException eee =
-                            new EarlyExitException(85, input);
+                            new EarlyExitException(86, input);
                         throw eee;
                 }
-                cnt85++;
+                cnt86++;
             } while (true);
 
 
@@ -14667,7 +14716,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulejoin_item"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5697:1: entryRulejoin_item returns [EObject current=null] : iv_rulejoin_item= rulejoin_item EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5702:1: entryRulejoin_item returns [EObject current=null] : iv_rulejoin_item= rulejoin_item EOF ;
     public final EObject entryRulejoin_item() throws RecognitionException {
         EObject current = null;
 
@@ -14675,17 +14724,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5698:2: (iv_rulejoin_item= rulejoin_item EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5699:2: iv_rulejoin_item= rulejoin_item EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5703:2: (iv_rulejoin_item= rulejoin_item EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5704:2: iv_rulejoin_item= rulejoin_item EOF
             {
              newCompositeNode(grammarAccess.getJoin_itemRule()); 
-            pushFollow(FOLLOW_rulejoin_item_in_entryRulejoin_item14711);
+            pushFollow(FOLLOW_rulejoin_item_in_entryRulejoin_item14729);
             iv_rulejoin_item=rulejoin_item();
 
             state._fsp--;
 
              current =iv_rulejoin_item; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulejoin_item14721); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulejoin_item14739); 
 
             }
 
@@ -14703,7 +14752,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulejoin_item"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5706:1: rulejoin_item returns [EObject current=null] : ( ( (lv_type_0_0= ruleAliasType ) ) ( (lv_expressions_1_0= rulejoin_group_by_clause ) ) ) ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5711:1: rulejoin_item returns [EObject current=null] : ( ( (lv_type_0_0= ruleAliasType ) ) ( (lv_expressions_1_0= rulejoin_group_by_clause ) ) ) ;
     public final EObject rulejoin_item() throws RecognitionException {
         EObject current = null;
 
@@ -14715,22 +14764,22 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5709:28: ( ( ( (lv_type_0_0= ruleAliasType ) ) ( (lv_expressions_1_0= rulejoin_group_by_clause ) ) ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5710:1: ( ( (lv_type_0_0= ruleAliasType ) ) ( (lv_expressions_1_0= rulejoin_group_by_clause ) ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5714:28: ( ( ( (lv_type_0_0= ruleAliasType ) ) ( (lv_expressions_1_0= rulejoin_group_by_clause ) ) ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5715:1: ( ( (lv_type_0_0= ruleAliasType ) ) ( (lv_expressions_1_0= rulejoin_group_by_clause ) ) )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5710:1: ( ( (lv_type_0_0= ruleAliasType ) ) ( (lv_expressions_1_0= rulejoin_group_by_clause ) ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5710:2: ( (lv_type_0_0= ruleAliasType ) ) ( (lv_expressions_1_0= rulejoin_group_by_clause ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5715:1: ( ( (lv_type_0_0= ruleAliasType ) ) ( (lv_expressions_1_0= rulejoin_group_by_clause ) ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5715:2: ( (lv_type_0_0= ruleAliasType ) ) ( (lv_expressions_1_0= rulejoin_group_by_clause ) )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5710:2: ( (lv_type_0_0= ruleAliasType ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5711:1: (lv_type_0_0= ruleAliasType )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5715:2: ( (lv_type_0_0= ruleAliasType ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5716:1: (lv_type_0_0= ruleAliasType )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5711:1: (lv_type_0_0= ruleAliasType )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5712:3: lv_type_0_0= ruleAliasType
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5716:1: (lv_type_0_0= ruleAliasType )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5717:3: lv_type_0_0= ruleAliasType
             {
              
             	        newCompositeNode(grammarAccess.getJoin_itemAccess().getTypeAliasTypeParserRuleCall_0_0()); 
             	    
-            pushFollow(FOLLOW_ruleAliasType_in_rulejoin_item14767);
+            pushFollow(FOLLOW_ruleAliasType_in_rulejoin_item14785);
             lv_type_0_0=ruleAliasType();
 
             state._fsp--;
@@ -14752,16 +14801,16 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5728:2: ( (lv_expressions_1_0= rulejoin_group_by_clause ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5729:1: (lv_expressions_1_0= rulejoin_group_by_clause )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5733:2: ( (lv_expressions_1_0= rulejoin_group_by_clause ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5734:1: (lv_expressions_1_0= rulejoin_group_by_clause )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5729:1: (lv_expressions_1_0= rulejoin_group_by_clause )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5730:3: lv_expressions_1_0= rulejoin_group_by_clause
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5734:1: (lv_expressions_1_0= rulejoin_group_by_clause )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5735:3: lv_expressions_1_0= rulejoin_group_by_clause
             {
              
             	        newCompositeNode(grammarAccess.getJoin_itemAccess().getExpressionsJoin_group_by_clauseParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_rulejoin_group_by_clause_in_rulejoin_item14788);
+            pushFollow(FOLLOW_rulejoin_group_by_clause_in_rulejoin_item14806);
             lv_expressions_1_0=rulejoin_group_by_clause();
 
             state._fsp--;
@@ -14804,7 +14853,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulegroup_item"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5754:1: entryRulegroup_item returns [EObject current=null] : iv_rulegroup_item= rulegroup_item EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5759:1: entryRulegroup_item returns [EObject current=null] : iv_rulegroup_item= rulegroup_item EOF ;
     public final EObject entryRulegroup_item() throws RecognitionException {
         EObject current = null;
 
@@ -14812,17 +14861,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5755:2: (iv_rulegroup_item= rulegroup_item EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5756:2: iv_rulegroup_item= rulegroup_item EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5760:2: (iv_rulegroup_item= rulegroup_item EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5761:2: iv_rulegroup_item= rulegroup_item EOF
             {
              newCompositeNode(grammarAccess.getGroup_itemRule()); 
-            pushFollow(FOLLOW_rulegroup_item_in_entryRulegroup_item14823);
+            pushFollow(FOLLOW_rulegroup_item_in_entryRulegroup_item14841);
             iv_rulegroup_item=rulegroup_item();
 
             state._fsp--;
 
              current =iv_rulegroup_item; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulegroup_item14833); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulegroup_item14851); 
 
             }
 
@@ -14840,7 +14889,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulegroup_item"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5763:1: rulegroup_item returns [EObject current=null] : ( ( (otherlv_0= KEYWORD_29 this_join_group_by_expr_list_1= rulejoin_group_by_expr_list ) | otherlv_2= KEYWORD_38 | otherlv_3= KEYWORD_40 ) (otherlv_4= KEYWORD_60 | otherlv_5= KEYWORD_64 )? ) ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5768:1: rulegroup_item returns [EObject current=null] : ( ( (otherlv_0= KEYWORD_29 this_join_group_by_expr_list_1= rulejoin_group_by_expr_list ) | otherlv_2= KEYWORD_38 | otherlv_3= KEYWORD_40 ) (otherlv_4= KEYWORD_60 | otherlv_5= KEYWORD_64 )? ) ;
     public final EObject rulegroup_item() throws RecognitionException {
         EObject current = null;
 
@@ -14855,52 +14904,52 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5766:28: ( ( ( (otherlv_0= KEYWORD_29 this_join_group_by_expr_list_1= rulejoin_group_by_expr_list ) | otherlv_2= KEYWORD_38 | otherlv_3= KEYWORD_40 ) (otherlv_4= KEYWORD_60 | otherlv_5= KEYWORD_64 )? ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5767:1: ( ( (otherlv_0= KEYWORD_29 this_join_group_by_expr_list_1= rulejoin_group_by_expr_list ) | otherlv_2= KEYWORD_38 | otherlv_3= KEYWORD_40 ) (otherlv_4= KEYWORD_60 | otherlv_5= KEYWORD_64 )? )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5771:28: ( ( ( (otherlv_0= KEYWORD_29 this_join_group_by_expr_list_1= rulejoin_group_by_expr_list ) | otherlv_2= KEYWORD_38 | otherlv_3= KEYWORD_40 ) (otherlv_4= KEYWORD_60 | otherlv_5= KEYWORD_64 )? ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5772:1: ( ( (otherlv_0= KEYWORD_29 this_join_group_by_expr_list_1= rulejoin_group_by_expr_list ) | otherlv_2= KEYWORD_38 | otherlv_3= KEYWORD_40 ) (otherlv_4= KEYWORD_60 | otherlv_5= KEYWORD_64 )? )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5767:1: ( ( (otherlv_0= KEYWORD_29 this_join_group_by_expr_list_1= rulejoin_group_by_expr_list ) | otherlv_2= KEYWORD_38 | otherlv_3= KEYWORD_40 ) (otherlv_4= KEYWORD_60 | otherlv_5= KEYWORD_64 )? )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5767:2: ( (otherlv_0= KEYWORD_29 this_join_group_by_expr_list_1= rulejoin_group_by_expr_list ) | otherlv_2= KEYWORD_38 | otherlv_3= KEYWORD_40 ) (otherlv_4= KEYWORD_60 | otherlv_5= KEYWORD_64 )?
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5772:1: ( ( (otherlv_0= KEYWORD_29 this_join_group_by_expr_list_1= rulejoin_group_by_expr_list ) | otherlv_2= KEYWORD_38 | otherlv_3= KEYWORD_40 ) (otherlv_4= KEYWORD_60 | otherlv_5= KEYWORD_64 )? )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5772:2: ( (otherlv_0= KEYWORD_29 this_join_group_by_expr_list_1= rulejoin_group_by_expr_list ) | otherlv_2= KEYWORD_38 | otherlv_3= KEYWORD_40 ) (otherlv_4= KEYWORD_60 | otherlv_5= KEYWORD_64 )?
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5767:2: ( (otherlv_0= KEYWORD_29 this_join_group_by_expr_list_1= rulejoin_group_by_expr_list ) | otherlv_2= KEYWORD_38 | otherlv_3= KEYWORD_40 )
-            int alt86=3;
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5772:2: ( (otherlv_0= KEYWORD_29 this_join_group_by_expr_list_1= rulejoin_group_by_expr_list ) | otherlv_2= KEYWORD_38 | otherlv_3= KEYWORD_40 )
+            int alt87=3;
             switch ( input.LA(1) ) {
             case KEYWORD_29:
                 {
-                alt86=1;
+                alt87=1;
                 }
                 break;
             case KEYWORD_38:
                 {
-                alt86=2;
+                alt87=2;
                 }
                 break;
             case KEYWORD_40:
                 {
-                alt86=3;
+                alt87=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 86, 0, input);
+                    new NoViableAltException("", 87, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt86) {
+            switch (alt87) {
                 case 1 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5767:3: (otherlv_0= KEYWORD_29 this_join_group_by_expr_list_1= rulejoin_group_by_expr_list )
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5772:3: (otherlv_0= KEYWORD_29 this_join_group_by_expr_list_1= rulejoin_group_by_expr_list )
                     {
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5767:3: (otherlv_0= KEYWORD_29 this_join_group_by_expr_list_1= rulejoin_group_by_expr_list )
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5768:2: otherlv_0= KEYWORD_29 this_join_group_by_expr_list_1= rulejoin_group_by_expr_list
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5772:3: (otherlv_0= KEYWORD_29 this_join_group_by_expr_list_1= rulejoin_group_by_expr_list )
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5773:2: otherlv_0= KEYWORD_29 this_join_group_by_expr_list_1= rulejoin_group_by_expr_list
                     {
-                    otherlv_0=(Token)match(input,KEYWORD_29,FOLLOW_KEYWORD_29_in_rulegroup_item14873); 
+                    otherlv_0=(Token)match(input,KEYWORD_29,FOLLOW_KEYWORD_29_in_rulegroup_item14891); 
 
                         	newLeafNode(otherlv_0, grammarAccess.getGroup_itemAccess().getBYKeyword_0_0_0());
                         
                      
                             newCompositeNode(grammarAccess.getGroup_itemAccess().getJoin_group_by_expr_listParserRuleCall_0_0_1()); 
                         
-                    pushFollow(FOLLOW_rulejoin_group_by_expr_list_in_rulegroup_item14894);
+                    pushFollow(FOLLOW_rulejoin_group_by_expr_list_in_rulegroup_item14912);
                     this_join_group_by_expr_list_1=rulejoin_group_by_expr_list();
 
                     state._fsp--;
@@ -14916,9 +14965,9 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5783:2: otherlv_2= KEYWORD_38
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5788:2: otherlv_2= KEYWORD_38
                     {
-                    otherlv_2=(Token)match(input,KEYWORD_38,FOLLOW_KEYWORD_38_in_rulegroup_item14913); 
+                    otherlv_2=(Token)match(input,KEYWORD_38,FOLLOW_KEYWORD_38_in_rulegroup_item14931); 
 
                         	newLeafNode(otherlv_2, grammarAccess.getGroup_itemAccess().getALLKeyword_0_1());
                         
@@ -14926,9 +14975,9 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5789:2: otherlv_3= KEYWORD_40
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5794:2: otherlv_3= KEYWORD_40
                     {
-                    otherlv_3=(Token)match(input,KEYWORD_40,FOLLOW_KEYWORD_40_in_rulegroup_item14931); 
+                    otherlv_3=(Token)match(input,KEYWORD_40,FOLLOW_KEYWORD_40_in_rulegroup_item14949); 
 
                         	newLeafNode(otherlv_3, grammarAccess.getGroup_itemAccess().getANYKeyword_0_2());
                         
@@ -14938,21 +14987,21 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5793:2: (otherlv_4= KEYWORD_60 | otherlv_5= KEYWORD_64 )?
-            int alt87=3;
-            int LA87_0 = input.LA(1);
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5798:2: (otherlv_4= KEYWORD_60 | otherlv_5= KEYWORD_64 )?
+            int alt88=3;
+            int LA88_0 = input.LA(1);
 
-            if ( (LA87_0==KEYWORD_60) ) {
-                alt87=1;
+            if ( (LA88_0==KEYWORD_60) ) {
+                alt88=1;
             }
-            else if ( (LA87_0==KEYWORD_64) ) {
-                alt87=2;
+            else if ( (LA88_0==KEYWORD_64) ) {
+                alt88=2;
             }
-            switch (alt87) {
+            switch (alt88) {
                 case 1 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5794:2: otherlv_4= KEYWORD_60
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5799:2: otherlv_4= KEYWORD_60
                     {
-                    otherlv_4=(Token)match(input,KEYWORD_60,FOLLOW_KEYWORD_60_in_rulegroup_item14945); 
+                    otherlv_4=(Token)match(input,KEYWORD_60,FOLLOW_KEYWORD_60_in_rulegroup_item14963); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getGroup_itemAccess().getINNERKeyword_1_0());
                         
@@ -14960,9 +15009,9 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5800:2: otherlv_5= KEYWORD_64
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5805:2: otherlv_5= KEYWORD_64
                     {
-                    otherlv_5=(Token)match(input,KEYWORD_64,FOLLOW_KEYWORD_64_in_rulegroup_item14963); 
+                    otherlv_5=(Token)match(input,KEYWORD_64,FOLLOW_KEYWORD_64_in_rulegroup_item14981); 
 
                         	newLeafNode(otherlv_5, grammarAccess.getGroup_itemAccess().getOUTERKeyword_1_1());
                         
@@ -14993,7 +15042,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulejoin_group_by_clause"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5812:1: entryRulejoin_group_by_clause returns [EObject current=null] : iv_rulejoin_group_by_clause= rulejoin_group_by_clause EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5817:1: entryRulejoin_group_by_clause returns [EObject current=null] : iv_rulejoin_group_by_clause= rulejoin_group_by_clause EOF ;
     public final EObject entryRulejoin_group_by_clause() throws RecognitionException {
         EObject current = null;
 
@@ -15001,17 +15050,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5813:2: (iv_rulejoin_group_by_clause= rulejoin_group_by_clause EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5814:2: iv_rulejoin_group_by_clause= rulejoin_group_by_clause EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5818:2: (iv_rulejoin_group_by_clause= rulejoin_group_by_clause EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5819:2: iv_rulejoin_group_by_clause= rulejoin_group_by_clause EOF
             {
              newCompositeNode(grammarAccess.getJoin_group_by_clauseRule()); 
-            pushFollow(FOLLOW_rulejoin_group_by_clause_in_entryRulejoin_group_by_clause14999);
+            pushFollow(FOLLOW_rulejoin_group_by_clause_in_entryRulejoin_group_by_clause15017);
             iv_rulejoin_group_by_clause=rulejoin_group_by_clause();
 
             state._fsp--;
 
              current =iv_rulejoin_group_by_clause; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulejoin_group_by_clause15009); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulejoin_group_by_clause15027); 
 
             }
 
@@ -15029,7 +15078,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulejoin_group_by_clause"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5821:1: rulejoin_group_by_clause returns [EObject current=null] : (otherlv_0= KEYWORD_29 this_join_group_by_expr_list_1= rulejoin_group_by_expr_list ) ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5826:1: rulejoin_group_by_clause returns [EObject current=null] : (otherlv_0= KEYWORD_29 this_join_group_by_expr_list_1= rulejoin_group_by_expr_list ) ;
     public final EObject rulejoin_group_by_clause() throws RecognitionException {
         EObject current = null;
 
@@ -15040,20 +15089,20 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5824:28: ( (otherlv_0= KEYWORD_29 this_join_group_by_expr_list_1= rulejoin_group_by_expr_list ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5825:1: (otherlv_0= KEYWORD_29 this_join_group_by_expr_list_1= rulejoin_group_by_expr_list )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5829:28: ( (otherlv_0= KEYWORD_29 this_join_group_by_expr_list_1= rulejoin_group_by_expr_list ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5830:1: (otherlv_0= KEYWORD_29 this_join_group_by_expr_list_1= rulejoin_group_by_expr_list )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5825:1: (otherlv_0= KEYWORD_29 this_join_group_by_expr_list_1= rulejoin_group_by_expr_list )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5826:2: otherlv_0= KEYWORD_29 this_join_group_by_expr_list_1= rulejoin_group_by_expr_list
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5830:1: (otherlv_0= KEYWORD_29 this_join_group_by_expr_list_1= rulejoin_group_by_expr_list )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5831:2: otherlv_0= KEYWORD_29 this_join_group_by_expr_list_1= rulejoin_group_by_expr_list
             {
-            otherlv_0=(Token)match(input,KEYWORD_29,FOLLOW_KEYWORD_29_in_rulejoin_group_by_clause15047); 
+            otherlv_0=(Token)match(input,KEYWORD_29,FOLLOW_KEYWORD_29_in_rulejoin_group_by_clause15065); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getJoin_group_by_clauseAccess().getBYKeyword_0());
                 
              
                     newCompositeNode(grammarAccess.getJoin_group_by_clauseAccess().getJoin_group_by_expr_listParserRuleCall_1()); 
                 
-            pushFollow(FOLLOW_rulejoin_group_by_expr_list_in_rulejoin_group_by_clause15068);
+            pushFollow(FOLLOW_rulejoin_group_by_expr_list_in_rulejoin_group_by_clause15086);
             this_join_group_by_expr_list_1=rulejoin_group_by_expr_list();
 
             state._fsp--;
@@ -15083,7 +15132,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulejoin_group_by_expr_list"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5847:1: entryRulejoin_group_by_expr_list returns [EObject current=null] : iv_rulejoin_group_by_expr_list= rulejoin_group_by_expr_list EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5852:1: entryRulejoin_group_by_expr_list returns [EObject current=null] : iv_rulejoin_group_by_expr_list= rulejoin_group_by_expr_list EOF ;
     public final EObject entryRulejoin_group_by_expr_list() throws RecognitionException {
         EObject current = null;
 
@@ -15091,17 +15140,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5848:2: (iv_rulejoin_group_by_expr_list= rulejoin_group_by_expr_list EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5849:2: iv_rulejoin_group_by_expr_list= rulejoin_group_by_expr_list EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5853:2: (iv_rulejoin_group_by_expr_list= rulejoin_group_by_expr_list EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5854:2: iv_rulejoin_group_by_expr_list= rulejoin_group_by_expr_list EOF
             {
              newCompositeNode(grammarAccess.getJoin_group_by_expr_listRule()); 
-            pushFollow(FOLLOW_rulejoin_group_by_expr_list_in_entryRulejoin_group_by_expr_list15102);
+            pushFollow(FOLLOW_rulejoin_group_by_expr_list_in_entryRulejoin_group_by_expr_list15120);
             iv_rulejoin_group_by_expr_list=rulejoin_group_by_expr_list();
 
             state._fsp--;
 
              current =iv_rulejoin_group_by_expr_list; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulejoin_group_by_expr_list15112); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulejoin_group_by_expr_list15130); 
 
             }
 
@@ -15119,7 +15168,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulejoin_group_by_expr_list"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5856:1: rulejoin_group_by_expr_list returns [EObject current=null] : (this_join_group_by_expr_0= rulejoin_group_by_expr | (otherlv_1= KEYWORD_4 ( (lv_left_2_0= rulejoin_group_by_expr ) ) (otherlv_3= KEYWORD_8 ( (lv_expressions_4_0= rulejoin_group_by_expr ) ) )* otherlv_5= KEYWORD_5 ) ) ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5861:1: rulejoin_group_by_expr_list returns [EObject current=null] : (this_join_group_by_expr_0= rulejoin_group_by_expr | (otherlv_1= KEYWORD_4 ( (lv_left_2_0= rulejoin_group_by_expr ) ) (otherlv_3= KEYWORD_8 ( (lv_expressions_4_0= rulejoin_group_by_expr ) ) )* otherlv_5= KEYWORD_5 ) ) ;
     public final EObject rulejoin_group_by_expr_list() throws RecognitionException {
         EObject current = null;
 
@@ -15136,33 +15185,33 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5859:28: ( (this_join_group_by_expr_0= rulejoin_group_by_expr | (otherlv_1= KEYWORD_4 ( (lv_left_2_0= rulejoin_group_by_expr ) ) (otherlv_3= KEYWORD_8 ( (lv_expressions_4_0= rulejoin_group_by_expr ) ) )* otherlv_5= KEYWORD_5 ) ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5860:1: (this_join_group_by_expr_0= rulejoin_group_by_expr | (otherlv_1= KEYWORD_4 ( (lv_left_2_0= rulejoin_group_by_expr ) ) (otherlv_3= KEYWORD_8 ( (lv_expressions_4_0= rulejoin_group_by_expr ) ) )* otherlv_5= KEYWORD_5 ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5864:28: ( (this_join_group_by_expr_0= rulejoin_group_by_expr | (otherlv_1= KEYWORD_4 ( (lv_left_2_0= rulejoin_group_by_expr ) ) (otherlv_3= KEYWORD_8 ( (lv_expressions_4_0= rulejoin_group_by_expr ) ) )* otherlv_5= KEYWORD_5 ) ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5865:1: (this_join_group_by_expr_0= rulejoin_group_by_expr | (otherlv_1= KEYWORD_4 ( (lv_left_2_0= rulejoin_group_by_expr ) ) (otherlv_3= KEYWORD_8 ( (lv_expressions_4_0= rulejoin_group_by_expr ) ) )* otherlv_5= KEYWORD_5 ) )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5860:1: (this_join_group_by_expr_0= rulejoin_group_by_expr | (otherlv_1= KEYWORD_4 ( (lv_left_2_0= rulejoin_group_by_expr ) ) (otherlv_3= KEYWORD_8 ( (lv_expressions_4_0= rulejoin_group_by_expr ) ) )* otherlv_5= KEYWORD_5 ) )
-            int alt89=2;
-            int LA89_0 = input.LA(1);
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5865:1: (this_join_group_by_expr_0= rulejoin_group_by_expr | (otherlv_1= KEYWORD_4 ( (lv_left_2_0= rulejoin_group_by_expr ) ) (otherlv_3= KEYWORD_8 ( (lv_expressions_4_0= rulejoin_group_by_expr ) ) )* otherlv_5= KEYWORD_5 ) )
+            int alt90=2;
+            int LA90_0 = input.LA(1);
 
-            if ( (LA89_0==KEYWORD_59||LA89_0==KEYWORD_56||LA89_0==KEYWORD_47||LA89_0==KEYWORD_37||LA89_0==KEYWORD_2||LA89_0==KEYWORD_6||(LA89_0>=KEYWORD_9 && LA89_0<=KEYWORD_10)||LA89_0==RULE_DIGIT||(LA89_0>=RULE_FLOATINGPOINT && LA89_0<=RULE_LONGINTEGER)||(LA89_0>=RULE_ID && LA89_0<=RULE_STRING)) ) {
-                alt89=1;
+            if ( (LA90_0==KEYWORD_59||LA90_0==KEYWORD_56||LA90_0==KEYWORD_47||LA90_0==KEYWORD_37||LA90_0==KEYWORD_2||LA90_0==KEYWORD_6||(LA90_0>=KEYWORD_9 && LA90_0<=KEYWORD_10)||LA90_0==RULE_DIGIT||(LA90_0>=RULE_FLOATINGPOINT && LA90_0<=RULE_LONGINTEGER)||(LA90_0>=RULE_ID && LA90_0<=RULE_STRING)) ) {
+                alt90=1;
             }
-            else if ( (LA89_0==KEYWORD_4) ) {
-                alt89=2;
+            else if ( (LA90_0==KEYWORD_4) ) {
+                alt90=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 89, 0, input);
+                    new NoViableAltException("", 90, 0, input);
 
                 throw nvae;
             }
-            switch (alt89) {
+            switch (alt90) {
                 case 1 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5861:5: this_join_group_by_expr_0= rulejoin_group_by_expr
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5866:5: this_join_group_by_expr_0= rulejoin_group_by_expr
                     {
                      
                             newCompositeNode(grammarAccess.getJoin_group_by_expr_listAccess().getJoin_group_by_exprParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_rulejoin_group_by_expr_in_rulejoin_group_by_expr_list15159);
+                    pushFollow(FOLLOW_rulejoin_group_by_expr_in_rulejoin_group_by_expr_list15177);
                     this_join_group_by_expr_0=rulejoin_group_by_expr();
 
                     state._fsp--;
@@ -15175,25 +15224,25 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5870:6: (otherlv_1= KEYWORD_4 ( (lv_left_2_0= rulejoin_group_by_expr ) ) (otherlv_3= KEYWORD_8 ( (lv_expressions_4_0= rulejoin_group_by_expr ) ) )* otherlv_5= KEYWORD_5 )
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5875:6: (otherlv_1= KEYWORD_4 ( (lv_left_2_0= rulejoin_group_by_expr ) ) (otherlv_3= KEYWORD_8 ( (lv_expressions_4_0= rulejoin_group_by_expr ) ) )* otherlv_5= KEYWORD_5 )
                     {
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5870:6: (otherlv_1= KEYWORD_4 ( (lv_left_2_0= rulejoin_group_by_expr ) ) (otherlv_3= KEYWORD_8 ( (lv_expressions_4_0= rulejoin_group_by_expr ) ) )* otherlv_5= KEYWORD_5 )
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5871:2: otherlv_1= KEYWORD_4 ( (lv_left_2_0= rulejoin_group_by_expr ) ) (otherlv_3= KEYWORD_8 ( (lv_expressions_4_0= rulejoin_group_by_expr ) ) )* otherlv_5= KEYWORD_5
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5875:6: (otherlv_1= KEYWORD_4 ( (lv_left_2_0= rulejoin_group_by_expr ) ) (otherlv_3= KEYWORD_8 ( (lv_expressions_4_0= rulejoin_group_by_expr ) ) )* otherlv_5= KEYWORD_5 )
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5876:2: otherlv_1= KEYWORD_4 ( (lv_left_2_0= rulejoin_group_by_expr ) ) (otherlv_3= KEYWORD_8 ( (lv_expressions_4_0= rulejoin_group_by_expr ) ) )* otherlv_5= KEYWORD_5
                     {
-                    otherlv_1=(Token)match(input,KEYWORD_4,FOLLOW_KEYWORD_4_in_rulejoin_group_by_expr_list15178); 
+                    otherlv_1=(Token)match(input,KEYWORD_4,FOLLOW_KEYWORD_4_in_rulejoin_group_by_expr_list15196); 
 
                         	newLeafNode(otherlv_1, grammarAccess.getJoin_group_by_expr_listAccess().getLeftParenthesisKeyword_1_0());
                         
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5875:1: ( (lv_left_2_0= rulejoin_group_by_expr ) )
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5876:1: (lv_left_2_0= rulejoin_group_by_expr )
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5880:1: ( (lv_left_2_0= rulejoin_group_by_expr ) )
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5881:1: (lv_left_2_0= rulejoin_group_by_expr )
                     {
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5876:1: (lv_left_2_0= rulejoin_group_by_expr )
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5877:3: lv_left_2_0= rulejoin_group_by_expr
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5881:1: (lv_left_2_0= rulejoin_group_by_expr )
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5882:3: lv_left_2_0= rulejoin_group_by_expr
                     {
                      
                     	        newCompositeNode(grammarAccess.getJoin_group_by_expr_listAccess().getLeftJoin_group_by_exprParserRuleCall_1_1_0()); 
                     	    
-                    pushFollow(FOLLOW_rulejoin_group_by_expr_in_rulejoin_group_by_expr_list15198);
+                    pushFollow(FOLLOW_rulejoin_group_by_expr_in_rulejoin_group_by_expr_list15216);
                     lv_left_2_0=rulejoin_group_by_expr();
 
                     state._fsp--;
@@ -15215,35 +15264,35 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5893:2: (otherlv_3= KEYWORD_8 ( (lv_expressions_4_0= rulejoin_group_by_expr ) ) )*
-                    loop88:
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5898:2: (otherlv_3= KEYWORD_8 ( (lv_expressions_4_0= rulejoin_group_by_expr ) ) )*
+                    loop89:
                     do {
-                        int alt88=2;
-                        int LA88_0 = input.LA(1);
+                        int alt89=2;
+                        int LA89_0 = input.LA(1);
 
-                        if ( (LA88_0==KEYWORD_8) ) {
-                            alt88=1;
+                        if ( (LA89_0==KEYWORD_8) ) {
+                            alt89=1;
                         }
 
 
-                        switch (alt88) {
+                        switch (alt89) {
                     	case 1 :
-                    	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5894:2: otherlv_3= KEYWORD_8 ( (lv_expressions_4_0= rulejoin_group_by_expr ) )
+                    	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5899:2: otherlv_3= KEYWORD_8 ( (lv_expressions_4_0= rulejoin_group_by_expr ) )
                     	    {
-                    	    otherlv_3=(Token)match(input,KEYWORD_8,FOLLOW_KEYWORD_8_in_rulejoin_group_by_expr_list15212); 
+                    	    otherlv_3=(Token)match(input,KEYWORD_8,FOLLOW_KEYWORD_8_in_rulejoin_group_by_expr_list15230); 
 
                     	        	newLeafNode(otherlv_3, grammarAccess.getJoin_group_by_expr_listAccess().getCommaKeyword_1_2_0());
                     	        
-                    	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5898:1: ( (lv_expressions_4_0= rulejoin_group_by_expr ) )
-                    	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5899:1: (lv_expressions_4_0= rulejoin_group_by_expr )
+                    	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5903:1: ( (lv_expressions_4_0= rulejoin_group_by_expr ) )
+                    	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5904:1: (lv_expressions_4_0= rulejoin_group_by_expr )
                     	    {
-                    	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5899:1: (lv_expressions_4_0= rulejoin_group_by_expr )
-                    	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5900:3: lv_expressions_4_0= rulejoin_group_by_expr
+                    	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5904:1: (lv_expressions_4_0= rulejoin_group_by_expr )
+                    	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5905:3: lv_expressions_4_0= rulejoin_group_by_expr
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getJoin_group_by_expr_listAccess().getExpressionsJoin_group_by_exprParserRuleCall_1_2_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_rulejoin_group_by_expr_in_rulejoin_group_by_expr_list15232);
+                    	    pushFollow(FOLLOW_rulejoin_group_by_expr_in_rulejoin_group_by_expr_list15250);
                     	    lv_expressions_4_0=rulejoin_group_by_expr();
 
                     	    state._fsp--;
@@ -15270,11 +15319,11 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop88;
+                    	    break loop89;
                         }
                     } while (true);
 
-                    otherlv_5=(Token)match(input,KEYWORD_5,FOLLOW_KEYWORD_5_in_rulejoin_group_by_expr_list15247); 
+                    otherlv_5=(Token)match(input,KEYWORD_5,FOLLOW_KEYWORD_5_in_rulejoin_group_by_expr_list15265); 
 
                         	newLeafNode(otherlv_5, grammarAccess.getJoin_group_by_expr_listAccess().getRightParenthesisKeyword_1_3());
                         
@@ -15305,7 +15354,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulejoin_group_by_expr"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5929:1: entryRulejoin_group_by_expr returns [EObject current=null] : iv_rulejoin_group_by_expr= rulejoin_group_by_expr EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5934:1: entryRulejoin_group_by_expr returns [EObject current=null] : iv_rulejoin_group_by_expr= rulejoin_group_by_expr EOF ;
     public final EObject entryRulejoin_group_by_expr() throws RecognitionException {
         EObject current = null;
 
@@ -15313,17 +15362,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5930:2: (iv_rulejoin_group_by_expr= rulejoin_group_by_expr EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5931:2: iv_rulejoin_group_by_expr= rulejoin_group_by_expr EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5935:2: (iv_rulejoin_group_by_expr= rulejoin_group_by_expr EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5936:2: iv_rulejoin_group_by_expr= rulejoin_group_by_expr EOF
             {
              newCompositeNode(grammarAccess.getJoin_group_by_exprRule()); 
-            pushFollow(FOLLOW_rulejoin_group_by_expr_in_entryRulejoin_group_by_expr15282);
+            pushFollow(FOLLOW_rulejoin_group_by_expr_in_entryRulejoin_group_by_expr15300);
             iv_rulejoin_group_by_expr=rulejoin_group_by_expr();
 
             state._fsp--;
 
              current =iv_rulejoin_group_by_expr; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulejoin_group_by_expr15292); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulejoin_group_by_expr15310); 
 
             }
 
@@ -15341,7 +15390,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulejoin_group_by_expr"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5938:1: rulejoin_group_by_expr returns [EObject current=null] : (this_Expression_0= ruleExpression | ruleSTAR ) ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5943:1: rulejoin_group_by_expr returns [EObject current=null] : (this_Expression_0= ruleExpression | ruleSTAR ) ;
     public final EObject rulejoin_group_by_expr() throws RecognitionException {
         EObject current = null;
 
@@ -15351,33 +15400,33 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5941:28: ( (this_Expression_0= ruleExpression | ruleSTAR ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5942:1: (this_Expression_0= ruleExpression | ruleSTAR )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5946:28: ( (this_Expression_0= ruleExpression | ruleSTAR ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5947:1: (this_Expression_0= ruleExpression | ruleSTAR )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5942:1: (this_Expression_0= ruleExpression | ruleSTAR )
-            int alt90=2;
-            int LA90_0 = input.LA(1);
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5947:1: (this_Expression_0= ruleExpression | ruleSTAR )
+            int alt91=2;
+            int LA91_0 = input.LA(1);
 
-            if ( (LA90_0==KEYWORD_59||LA90_0==KEYWORD_56||LA90_0==KEYWORD_47||LA90_0==KEYWORD_37||LA90_0==KEYWORD_2||(LA90_0>=KEYWORD_9 && LA90_0<=KEYWORD_10)||LA90_0==RULE_DIGIT||(LA90_0>=RULE_FLOATINGPOINT && LA90_0<=RULE_LONGINTEGER)||(LA90_0>=RULE_ID && LA90_0<=RULE_STRING)) ) {
-                alt90=1;
+            if ( (LA91_0==KEYWORD_59||LA91_0==KEYWORD_56||LA91_0==KEYWORD_47||LA91_0==KEYWORD_37||LA91_0==KEYWORD_2||(LA91_0>=KEYWORD_9 && LA91_0<=KEYWORD_10)||LA91_0==RULE_DIGIT||(LA91_0>=RULE_FLOATINGPOINT && LA91_0<=RULE_LONGINTEGER)||(LA91_0>=RULE_ID && LA91_0<=RULE_STRING)) ) {
+                alt91=1;
             }
-            else if ( (LA90_0==KEYWORD_6) ) {
-                alt90=2;
+            else if ( (LA91_0==KEYWORD_6) ) {
+                alt91=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 90, 0, input);
+                    new NoViableAltException("", 91, 0, input);
 
                 throw nvae;
             }
-            switch (alt90) {
+            switch (alt91) {
                 case 1 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5943:5: this_Expression_0= ruleExpression
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5948:5: this_Expression_0= ruleExpression
                     {
                      
                             newCompositeNode(grammarAccess.getJoin_group_by_exprAccess().getExpressionParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleExpression_in_rulejoin_group_by_expr15339);
+                    pushFollow(FOLLOW_ruleExpression_in_rulejoin_group_by_expr15357);
                     this_Expression_0=ruleExpression();
 
                     state._fsp--;
@@ -15390,12 +15439,12 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5953:5: ruleSTAR
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5958:5: ruleSTAR
                     {
                      
                             newCompositeNode(grammarAccess.getJoin_group_by_exprAccess().getSTARParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleSTAR_in_rulejoin_group_by_expr15360);
+                    pushFollow(FOLLOW_ruleSTAR_in_rulejoin_group_by_expr15378);
                     ruleSTAR();
 
                     state._fsp--;
@@ -15427,7 +15476,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulenested_blk"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5968:1: entryRulenested_blk returns [EObject current=null] : iv_rulenested_blk= rulenested_blk EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5973:1: entryRulenested_blk returns [EObject current=null] : iv_rulenested_blk= rulenested_blk EOF ;
     public final EObject entryRulenested_blk() throws RecognitionException {
         EObject current = null;
 
@@ -15435,17 +15484,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5969:2: (iv_rulenested_blk= rulenested_blk EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5970:2: iv_rulenested_blk= rulenested_blk EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5974:2: (iv_rulenested_blk= rulenested_blk EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5975:2: iv_rulenested_blk= rulenested_blk EOF
             {
              newCompositeNode(grammarAccess.getNested_blkRule()); 
-            pushFollow(FOLLOW_rulenested_blk_in_entryRulenested_blk15394);
+            pushFollow(FOLLOW_rulenested_blk_in_entryRulenested_blk15412);
             iv_rulenested_blk=rulenested_blk();
 
             state._fsp--;
 
              current =iv_rulenested_blk; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulenested_blk15404); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulenested_blk15422); 
 
             }
 
@@ -15463,7 +15512,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulenested_blk"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5977:1: rulenested_blk returns [EObject current=null] : (otherlv_0= KEYWORD_21 this_nested_command_list_1= rulenested_command_list ( (lv_clauses_2_0= rulegenerate_clause ) ) otherlv_3= KEYWORD_13 otherlv_4= KEYWORD_22 ) ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5982:1: rulenested_blk returns [EObject current=null] : (otherlv_0= KEYWORD_21 this_nested_command_list_1= rulenested_command_list ( (lv_clauses_2_0= rulegenerate_clause ) ) otherlv_3= KEYWORD_13 otherlv_4= KEYWORD_22 ) ;
     public final EObject rulenested_blk() throws RecognitionException {
         EObject current = null;
 
@@ -15478,20 +15527,20 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5980:28: ( (otherlv_0= KEYWORD_21 this_nested_command_list_1= rulenested_command_list ( (lv_clauses_2_0= rulegenerate_clause ) ) otherlv_3= KEYWORD_13 otherlv_4= KEYWORD_22 ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5981:1: (otherlv_0= KEYWORD_21 this_nested_command_list_1= rulenested_command_list ( (lv_clauses_2_0= rulegenerate_clause ) ) otherlv_3= KEYWORD_13 otherlv_4= KEYWORD_22 )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5985:28: ( (otherlv_0= KEYWORD_21 this_nested_command_list_1= rulenested_command_list ( (lv_clauses_2_0= rulegenerate_clause ) ) otherlv_3= KEYWORD_13 otherlv_4= KEYWORD_22 ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5986:1: (otherlv_0= KEYWORD_21 this_nested_command_list_1= rulenested_command_list ( (lv_clauses_2_0= rulegenerate_clause ) ) otherlv_3= KEYWORD_13 otherlv_4= KEYWORD_22 )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5981:1: (otherlv_0= KEYWORD_21 this_nested_command_list_1= rulenested_command_list ( (lv_clauses_2_0= rulegenerate_clause ) ) otherlv_3= KEYWORD_13 otherlv_4= KEYWORD_22 )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5982:2: otherlv_0= KEYWORD_21 this_nested_command_list_1= rulenested_command_list ( (lv_clauses_2_0= rulegenerate_clause ) ) otherlv_3= KEYWORD_13 otherlv_4= KEYWORD_22
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5986:1: (otherlv_0= KEYWORD_21 this_nested_command_list_1= rulenested_command_list ( (lv_clauses_2_0= rulegenerate_clause ) ) otherlv_3= KEYWORD_13 otherlv_4= KEYWORD_22 )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5987:2: otherlv_0= KEYWORD_21 this_nested_command_list_1= rulenested_command_list ( (lv_clauses_2_0= rulegenerate_clause ) ) otherlv_3= KEYWORD_13 otherlv_4= KEYWORD_22
             {
-            otherlv_0=(Token)match(input,KEYWORD_21,FOLLOW_KEYWORD_21_in_rulenested_blk15442); 
+            otherlv_0=(Token)match(input,KEYWORD_21,FOLLOW_KEYWORD_21_in_rulenested_blk15460); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getNested_blkAccess().getLeftCurlyBracketKeyword_0());
                 
              
                     newCompositeNode(grammarAccess.getNested_blkAccess().getNested_command_listParserRuleCall_1()); 
                 
-            pushFollow(FOLLOW_rulenested_command_list_in_rulenested_blk15463);
+            pushFollow(FOLLOW_rulenested_command_list_in_rulenested_blk15481);
             this_nested_command_list_1=rulenested_command_list();
 
             state._fsp--;
@@ -15500,16 +15549,16 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                     current = this_nested_command_list_1;
                     afterParserOrEnumRuleCall();
                 
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5995:1: ( (lv_clauses_2_0= rulegenerate_clause ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5996:1: (lv_clauses_2_0= rulegenerate_clause )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6000:1: ( (lv_clauses_2_0= rulegenerate_clause ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6001:1: (lv_clauses_2_0= rulegenerate_clause )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5996:1: (lv_clauses_2_0= rulegenerate_clause )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:5997:3: lv_clauses_2_0= rulegenerate_clause
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6001:1: (lv_clauses_2_0= rulegenerate_clause )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6002:3: lv_clauses_2_0= rulegenerate_clause
             {
              
             	        newCompositeNode(grammarAccess.getNested_blkAccess().getClausesGenerate_clauseParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_rulegenerate_clause_in_rulenested_blk15483);
+            pushFollow(FOLLOW_rulegenerate_clause_in_rulenested_blk15501);
             lv_clauses_2_0=rulegenerate_clause();
 
             state._fsp--;
@@ -15531,11 +15580,11 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,KEYWORD_13,FOLLOW_KEYWORD_13_in_rulenested_blk15496); 
+            otherlv_3=(Token)match(input,KEYWORD_13,FOLLOW_KEYWORD_13_in_rulenested_blk15514); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getNested_blkAccess().getSemicolonKeyword_3());
                 
-            otherlv_4=(Token)match(input,KEYWORD_22,FOLLOW_KEYWORD_22_in_rulenested_blk15508); 
+            otherlv_4=(Token)match(input,KEYWORD_22,FOLLOW_KEYWORD_22_in_rulenested_blk15526); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getNested_blkAccess().getRightCurlyBracketKeyword_4());
                 
@@ -15560,7 +15609,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulegenerate_clause"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6031:1: entryRulegenerate_clause returns [EObject current=null] : iv_rulegenerate_clause= rulegenerate_clause EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6036:1: entryRulegenerate_clause returns [EObject current=null] : iv_rulegenerate_clause= rulegenerate_clause EOF ;
     public final EObject entryRulegenerate_clause() throws RecognitionException {
         EObject current = null;
 
@@ -15568,17 +15617,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6032:2: (iv_rulegenerate_clause= rulegenerate_clause EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6033:2: iv_rulegenerate_clause= rulegenerate_clause EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6037:2: (iv_rulegenerate_clause= rulegenerate_clause EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6038:2: iv_rulegenerate_clause= rulegenerate_clause EOF
             {
              newCompositeNode(grammarAccess.getGenerate_clauseRule()); 
-            pushFollow(FOLLOW_rulegenerate_clause_in_entryRulegenerate_clause15542);
+            pushFollow(FOLLOW_rulegenerate_clause_in_entryRulegenerate_clause15560);
             iv_rulegenerate_clause=rulegenerate_clause();
 
             state._fsp--;
 
              current =iv_rulegenerate_clause; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulegenerate_clause15552); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulegenerate_clause15570); 
 
             }
 
@@ -15596,7 +15645,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulegenerate_clause"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6040:1: rulegenerate_clause returns [EObject current=null] : (otherlv_0= KEYWORD_85 ( (lv_items_1_0= ruleFlattenGeneratedItem ) ) (otherlv_2= KEYWORD_8 ( (lv_items_3_0= ruleFlattenGeneratedItem ) ) )* ) ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6045:1: rulegenerate_clause returns [EObject current=null] : (otherlv_0= KEYWORD_85 ( (lv_items_1_0= ruleFlattenGeneratedItem ) ) (otherlv_2= KEYWORD_8 ( (lv_items_3_0= ruleFlattenGeneratedItem ) ) )* ) ;
     public final EObject rulegenerate_clause() throws RecognitionException {
         EObject current = null;
 
@@ -15610,26 +15659,26 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6043:28: ( (otherlv_0= KEYWORD_85 ( (lv_items_1_0= ruleFlattenGeneratedItem ) ) (otherlv_2= KEYWORD_8 ( (lv_items_3_0= ruleFlattenGeneratedItem ) ) )* ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6044:1: (otherlv_0= KEYWORD_85 ( (lv_items_1_0= ruleFlattenGeneratedItem ) ) (otherlv_2= KEYWORD_8 ( (lv_items_3_0= ruleFlattenGeneratedItem ) ) )* )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6048:28: ( (otherlv_0= KEYWORD_85 ( (lv_items_1_0= ruleFlattenGeneratedItem ) ) (otherlv_2= KEYWORD_8 ( (lv_items_3_0= ruleFlattenGeneratedItem ) ) )* ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6049:1: (otherlv_0= KEYWORD_85 ( (lv_items_1_0= ruleFlattenGeneratedItem ) ) (otherlv_2= KEYWORD_8 ( (lv_items_3_0= ruleFlattenGeneratedItem ) ) )* )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6044:1: (otherlv_0= KEYWORD_85 ( (lv_items_1_0= ruleFlattenGeneratedItem ) ) (otherlv_2= KEYWORD_8 ( (lv_items_3_0= ruleFlattenGeneratedItem ) ) )* )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6045:2: otherlv_0= KEYWORD_85 ( (lv_items_1_0= ruleFlattenGeneratedItem ) ) (otherlv_2= KEYWORD_8 ( (lv_items_3_0= ruleFlattenGeneratedItem ) ) )*
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6049:1: (otherlv_0= KEYWORD_85 ( (lv_items_1_0= ruleFlattenGeneratedItem ) ) (otherlv_2= KEYWORD_8 ( (lv_items_3_0= ruleFlattenGeneratedItem ) ) )* )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6050:2: otherlv_0= KEYWORD_85 ( (lv_items_1_0= ruleFlattenGeneratedItem ) ) (otherlv_2= KEYWORD_8 ( (lv_items_3_0= ruleFlattenGeneratedItem ) ) )*
             {
-            otherlv_0=(Token)match(input,KEYWORD_85,FOLLOW_KEYWORD_85_in_rulegenerate_clause15590); 
+            otherlv_0=(Token)match(input,KEYWORD_85,FOLLOW_KEYWORD_85_in_rulegenerate_clause15608); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getGenerate_clauseAccess().getGENERATEKeyword_0());
                 
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6049:1: ( (lv_items_1_0= ruleFlattenGeneratedItem ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6050:1: (lv_items_1_0= ruleFlattenGeneratedItem )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6054:1: ( (lv_items_1_0= ruleFlattenGeneratedItem ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6055:1: (lv_items_1_0= ruleFlattenGeneratedItem )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6050:1: (lv_items_1_0= ruleFlattenGeneratedItem )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6051:3: lv_items_1_0= ruleFlattenGeneratedItem
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6055:1: (lv_items_1_0= ruleFlattenGeneratedItem )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6056:3: lv_items_1_0= ruleFlattenGeneratedItem
             {
              
             	        newCompositeNode(grammarAccess.getGenerate_clauseAccess().getItemsFlattenGeneratedItemParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleFlattenGeneratedItem_in_rulegenerate_clause15610);
+            pushFollow(FOLLOW_ruleFlattenGeneratedItem_in_rulegenerate_clause15628);
             lv_items_1_0=ruleFlattenGeneratedItem();
 
             state._fsp--;
@@ -15651,35 +15700,35 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6067:2: (otherlv_2= KEYWORD_8 ( (lv_items_3_0= ruleFlattenGeneratedItem ) ) )*
-            loop91:
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6072:2: (otherlv_2= KEYWORD_8 ( (lv_items_3_0= ruleFlattenGeneratedItem ) ) )*
+            loop92:
             do {
-                int alt91=2;
-                int LA91_0 = input.LA(1);
+                int alt92=2;
+                int LA92_0 = input.LA(1);
 
-                if ( (LA91_0==KEYWORD_8) ) {
-                    alt91=1;
+                if ( (LA92_0==KEYWORD_8) ) {
+                    alt92=1;
                 }
 
 
-                switch (alt91) {
+                switch (alt92) {
             	case 1 :
-            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6068:2: otherlv_2= KEYWORD_8 ( (lv_items_3_0= ruleFlattenGeneratedItem ) )
+            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6073:2: otherlv_2= KEYWORD_8 ( (lv_items_3_0= ruleFlattenGeneratedItem ) )
             	    {
-            	    otherlv_2=(Token)match(input,KEYWORD_8,FOLLOW_KEYWORD_8_in_rulegenerate_clause15624); 
+            	    otherlv_2=(Token)match(input,KEYWORD_8,FOLLOW_KEYWORD_8_in_rulegenerate_clause15642); 
 
             	        	newLeafNode(otherlv_2, grammarAccess.getGenerate_clauseAccess().getCommaKeyword_2_0());
             	        
-            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6072:1: ( (lv_items_3_0= ruleFlattenGeneratedItem ) )
-            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6073:1: (lv_items_3_0= ruleFlattenGeneratedItem )
+            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6077:1: ( (lv_items_3_0= ruleFlattenGeneratedItem ) )
+            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6078:1: (lv_items_3_0= ruleFlattenGeneratedItem )
             	    {
-            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6073:1: (lv_items_3_0= ruleFlattenGeneratedItem )
-            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6074:3: lv_items_3_0= ruleFlattenGeneratedItem
+            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6078:1: (lv_items_3_0= ruleFlattenGeneratedItem )
+            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6079:3: lv_items_3_0= ruleFlattenGeneratedItem
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getGenerate_clauseAccess().getItemsFlattenGeneratedItemParserRuleCall_2_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleFlattenGeneratedItem_in_rulegenerate_clause15644);
+            	    pushFollow(FOLLOW_ruleFlattenGeneratedItem_in_rulegenerate_clause15662);
             	    lv_items_3_0=ruleFlattenGeneratedItem();
 
             	    state._fsp--;
@@ -15706,7 +15755,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop91;
+            	    break loop92;
                 }
             } while (true);
 
@@ -15731,7 +15780,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulenested_command_list"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6098:1: entryRulenested_command_list returns [EObject current=null] : iv_rulenested_command_list= rulenested_command_list EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6103:1: entryRulenested_command_list returns [EObject current=null] : iv_rulenested_command_list= rulenested_command_list EOF ;
     public final EObject entryRulenested_command_list() throws RecognitionException {
         EObject current = null;
 
@@ -15739,17 +15788,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6099:2: (iv_rulenested_command_list= rulenested_command_list EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6100:2: iv_rulenested_command_list= rulenested_command_list EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6104:2: (iv_rulenested_command_list= rulenested_command_list EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6105:2: iv_rulenested_command_list= rulenested_command_list EOF
             {
              newCompositeNode(grammarAccess.getNested_command_listRule()); 
-            pushFollow(FOLLOW_rulenested_command_list_in_entryRulenested_command_list15681);
+            pushFollow(FOLLOW_rulenested_command_list_in_entryRulenested_command_list15699);
             iv_rulenested_command_list=rulenested_command_list();
 
             state._fsp--;
 
              current =iv_rulenested_command_list; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulenested_command_list15691); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulenested_command_list15709); 
 
             }
 
@@ -15767,7 +15816,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulenested_command_list"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6107:1: rulenested_command_list returns [EObject current=null] : ( () ( ( (lv_cmds_1_0= rulenested_command ) ) ruleSEMI_COLON )* ) ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6112:1: rulenested_command_list returns [EObject current=null] : ( () ( ( (lv_cmds_1_0= rulenested_command ) ) ruleSEMI_COLON )* ) ;
     public final EObject rulenested_command_list() throws RecognitionException {
         EObject current = null;
 
@@ -15777,14 +15826,14 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6110:28: ( ( () ( ( (lv_cmds_1_0= rulenested_command ) ) ruleSEMI_COLON )* ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6111:1: ( () ( ( (lv_cmds_1_0= rulenested_command ) ) ruleSEMI_COLON )* )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6115:28: ( ( () ( ( (lv_cmds_1_0= rulenested_command ) ) ruleSEMI_COLON )* ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6116:1: ( () ( ( (lv_cmds_1_0= rulenested_command ) ) ruleSEMI_COLON )* )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6111:1: ( () ( ( (lv_cmds_1_0= rulenested_command ) ) ruleSEMI_COLON )* )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6111:2: () ( ( (lv_cmds_1_0= rulenested_command ) ) ruleSEMI_COLON )*
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6116:1: ( () ( ( (lv_cmds_1_0= rulenested_command ) ) ruleSEMI_COLON )* )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6116:2: () ( ( (lv_cmds_1_0= rulenested_command ) ) ruleSEMI_COLON )*
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6111:2: ()
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6112:5: 
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6116:2: ()
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6117:5: 
             {
 
                     current = forceCreateModelElement(
@@ -15794,31 +15843,31 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6117:2: ( ( (lv_cmds_1_0= rulenested_command ) ) ruleSEMI_COLON )*
-            loop92:
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6122:2: ( ( (lv_cmds_1_0= rulenested_command ) ) ruleSEMI_COLON )*
+            loop93:
             do {
-                int alt92=2;
-                int LA92_0 = input.LA(1);
+                int alt93=2;
+                int LA93_0 = input.LA(1);
 
-                if ( (LA92_0==RULE_ID) ) {
-                    alt92=1;
+                if ( (LA93_0==RULE_ID) ) {
+                    alt93=1;
                 }
 
 
-                switch (alt92) {
+                switch (alt93) {
             	case 1 :
-            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6117:3: ( (lv_cmds_1_0= rulenested_command ) ) ruleSEMI_COLON
+            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6122:3: ( (lv_cmds_1_0= rulenested_command ) ) ruleSEMI_COLON
             	    {
-            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6117:3: ( (lv_cmds_1_0= rulenested_command ) )
-            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6118:1: (lv_cmds_1_0= rulenested_command )
+            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6122:3: ( (lv_cmds_1_0= rulenested_command ) )
+            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6123:1: (lv_cmds_1_0= rulenested_command )
             	    {
-            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6118:1: (lv_cmds_1_0= rulenested_command )
-            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6119:3: lv_cmds_1_0= rulenested_command
+            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6123:1: (lv_cmds_1_0= rulenested_command )
+            	    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6124:3: lv_cmds_1_0= rulenested_command
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getNested_command_listAccess().getCmdsNested_commandParserRuleCall_1_0_0()); 
             	    	    
-            	    pushFollow(FOLLOW_rulenested_command_in_rulenested_command_list15747);
+            	    pushFollow(FOLLOW_rulenested_command_in_rulenested_command_list15765);
             	    lv_cmds_1_0=rulenested_command();
 
             	    state._fsp--;
@@ -15843,7 +15892,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
             	     
             	            newCompositeNode(grammarAccess.getNested_command_listAccess().getSEMI_COLONParserRuleCall_1_1()); 
             	        
-            	    pushFollow(FOLLOW_ruleSEMI_COLON_in_rulenested_command_list15763);
+            	    pushFollow(FOLLOW_ruleSEMI_COLON_in_rulenested_command_list15781);
             	    ruleSEMI_COLON();
 
             	    state._fsp--;
@@ -15856,7 +15905,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop92;
+            	    break loop93;
                 }
             } while (true);
 
@@ -15881,7 +15930,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulenested_command"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6151:1: entryRulenested_command returns [EObject current=null] : iv_rulenested_command= rulenested_command EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6156:1: entryRulenested_command returns [EObject current=null] : iv_rulenested_command= rulenested_command EOF ;
     public final EObject entryRulenested_command() throws RecognitionException {
         EObject current = null;
 
@@ -15889,17 +15938,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6152:2: (iv_rulenested_command= rulenested_command EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6153:2: iv_rulenested_command= rulenested_command EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6157:2: (iv_rulenested_command= rulenested_command EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6158:2: iv_rulenested_command= rulenested_command EOF
             {
              newCompositeNode(grammarAccess.getNested_commandRule()); 
-            pushFollow(FOLLOW_rulenested_command_in_entryRulenested_command15799);
+            pushFollow(FOLLOW_rulenested_command_in_entryRulenested_command15817);
             iv_rulenested_command=rulenested_command();
 
             state._fsp--;
 
              current =iv_rulenested_command; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulenested_command15809); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulenested_command15827); 
 
             }
 
@@ -15917,7 +15966,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulenested_command"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6160:1: rulenested_command returns [EObject current=null] : ( ruleAlias otherlv_1= KEYWORD_15 this_nested_op_2= rulenested_op ) ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6165:1: rulenested_command returns [EObject current=null] : ( ruleAlias otherlv_1= KEYWORD_15 this_nested_op_2= rulenested_op ) ;
     public final EObject rulenested_command() throws RecognitionException {
         EObject current = null;
 
@@ -15928,16 +15977,16 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6163:28: ( ( ruleAlias otherlv_1= KEYWORD_15 this_nested_op_2= rulenested_op ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6164:1: ( ruleAlias otherlv_1= KEYWORD_15 this_nested_op_2= rulenested_op )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6168:28: ( ( ruleAlias otherlv_1= KEYWORD_15 this_nested_op_2= rulenested_op ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6169:1: ( ruleAlias otherlv_1= KEYWORD_15 this_nested_op_2= rulenested_op )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6164:1: ( ruleAlias otherlv_1= KEYWORD_15 this_nested_op_2= rulenested_op )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6165:5: ruleAlias otherlv_1= KEYWORD_15 this_nested_op_2= rulenested_op
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6169:1: ( ruleAlias otherlv_1= KEYWORD_15 this_nested_op_2= rulenested_op )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6170:5: ruleAlias otherlv_1= KEYWORD_15 this_nested_op_2= rulenested_op
             {
              
                     newCompositeNode(grammarAccess.getNested_commandAccess().getAliasParserRuleCall_0()); 
                 
-            pushFollow(FOLLOW_ruleAlias_in_rulenested_command15850);
+            pushFollow(FOLLOW_ruleAlias_in_rulenested_command15868);
             ruleAlias();
 
             state._fsp--;
@@ -15945,14 +15994,14 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
                     afterParserOrEnumRuleCall();
                 
-            otherlv_1=(Token)match(input,KEYWORD_15,FOLLOW_KEYWORD_15_in_rulenested_command15862); 
+            otherlv_1=(Token)match(input,KEYWORD_15,FOLLOW_KEYWORD_15_in_rulenested_command15880); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getNested_commandAccess().getEqualsSignKeyword_1());
                 
              
                     newCompositeNode(grammarAccess.getNested_commandAccess().getNested_opParserRuleCall_2()); 
                 
-            pushFollow(FOLLOW_rulenested_op_in_rulenested_command15883);
+            pushFollow(FOLLOW_rulenested_op_in_rulenested_command15901);
             this_nested_op_2=rulenested_op();
 
             state._fsp--;
@@ -15982,7 +16031,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulenested_op"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6194:1: entryRulenested_op returns [EObject current=null] : iv_rulenested_op= rulenested_op EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6199:1: entryRulenested_op returns [EObject current=null] : iv_rulenested_op= rulenested_op EOF ;
     public final EObject entryRulenested_op() throws RecognitionException {
         EObject current = null;
 
@@ -15990,17 +16039,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6195:2: (iv_rulenested_op= rulenested_op EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6196:2: iv_rulenested_op= rulenested_op EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6200:2: (iv_rulenested_op= rulenested_op EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6201:2: iv_rulenested_op= rulenested_op EOF
             {
              newCompositeNode(grammarAccess.getNested_opRule()); 
-            pushFollow(FOLLOW_rulenested_op_in_entryRulenested_op15917);
+            pushFollow(FOLLOW_rulenested_op_in_entryRulenested_op15935);
             iv_rulenested_op=rulenested_op();
 
             state._fsp--;
 
              current =iv_rulenested_op; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulenested_op15927); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulenested_op15945); 
 
             }
 
@@ -16018,7 +16067,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulenested_op"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6203:1: rulenested_op returns [EObject current=null] : (this_NestedFilter_0= ruleNestedFilter | this_nested_sort_1= rulenested_sort | this_nested_distinct_2= rulenested_distinct | this_nested_limit_3= rulenested_limit | ( (otherlv_4= KEYWORD_4 ruleType otherlv_6= KEYWORD_5 )? this_AddExpression_7= ruleAddExpression ) ) ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6208:1: rulenested_op returns [EObject current=null] : (this_NestedFilter_0= ruleNestedFilter | this_nested_sort_1= rulenested_sort | this_nested_distinct_2= rulenested_distinct | this_nested_limit_3= rulenested_limit | ( (otherlv_4= KEYWORD_4 ruleType otherlv_6= KEYWORD_5 )? this_AddExpression_7= ruleAddExpression ) ) ;
     public final EObject rulenested_op() throws RecognitionException {
         EObject current = null;
 
@@ -16038,30 +16087,30 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6206:28: ( (this_NestedFilter_0= ruleNestedFilter | this_nested_sort_1= rulenested_sort | this_nested_distinct_2= rulenested_distinct | this_nested_limit_3= rulenested_limit | ( (otherlv_4= KEYWORD_4 ruleType otherlv_6= KEYWORD_5 )? this_AddExpression_7= ruleAddExpression ) ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6207:1: (this_NestedFilter_0= ruleNestedFilter | this_nested_sort_1= rulenested_sort | this_nested_distinct_2= rulenested_distinct | this_nested_limit_3= rulenested_limit | ( (otherlv_4= KEYWORD_4 ruleType otherlv_6= KEYWORD_5 )? this_AddExpression_7= ruleAddExpression ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6211:28: ( (this_NestedFilter_0= ruleNestedFilter | this_nested_sort_1= rulenested_sort | this_nested_distinct_2= rulenested_distinct | this_nested_limit_3= rulenested_limit | ( (otherlv_4= KEYWORD_4 ruleType otherlv_6= KEYWORD_5 )? this_AddExpression_7= ruleAddExpression ) ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6212:1: (this_NestedFilter_0= ruleNestedFilter | this_nested_sort_1= rulenested_sort | this_nested_distinct_2= rulenested_distinct | this_nested_limit_3= rulenested_limit | ( (otherlv_4= KEYWORD_4 ruleType otherlv_6= KEYWORD_5 )? this_AddExpression_7= ruleAddExpression ) )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6207:1: (this_NestedFilter_0= ruleNestedFilter | this_nested_sort_1= rulenested_sort | this_nested_distinct_2= rulenested_distinct | this_nested_limit_3= rulenested_limit | ( (otherlv_4= KEYWORD_4 ruleType otherlv_6= KEYWORD_5 )? this_AddExpression_7= ruleAddExpression ) )
-            int alt94=5;
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6212:1: (this_NestedFilter_0= ruleNestedFilter | this_nested_sort_1= rulenested_sort | this_nested_distinct_2= rulenested_distinct | this_nested_limit_3= rulenested_limit | ( (otherlv_4= KEYWORD_4 ruleType otherlv_6= KEYWORD_5 )? this_AddExpression_7= ruleAddExpression ) )
+            int alt95=5;
             switch ( input.LA(1) ) {
             case KEYWORD_73:
                 {
-                alt94=1;
+                alt95=1;
                 }
                 break;
             case KEYWORD_63:
                 {
-                alt94=2;
+                alt95=2;
                 }
                 break;
             case KEYWORD_84:
                 {
-                alt94=3;
+                alt95=3;
                 }
                 break;
             case KEYWORD_61:
                 {
-                alt94=4;
+                alt95=4;
                 }
                 break;
             case KEYWORD_59:
@@ -16078,24 +16127,24 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
             case RULE_ID:
             case RULE_STRING:
                 {
-                alt94=5;
+                alt95=5;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 94, 0, input);
+                    new NoViableAltException("", 95, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt94) {
+            switch (alt95) {
                 case 1 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6208:5: this_NestedFilter_0= ruleNestedFilter
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6213:5: this_NestedFilter_0= ruleNestedFilter
                     {
                      
                             newCompositeNode(grammarAccess.getNested_opAccess().getNestedFilterParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleNestedFilter_in_rulenested_op15974);
+                    pushFollow(FOLLOW_ruleNestedFilter_in_rulenested_op15992);
                     this_NestedFilter_0=ruleNestedFilter();
 
                     state._fsp--;
@@ -16108,12 +16157,12 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6218:5: this_nested_sort_1= rulenested_sort
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6223:5: this_nested_sort_1= rulenested_sort
                     {
                      
                             newCompositeNode(grammarAccess.getNested_opAccess().getNested_sortParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_rulenested_sort_in_rulenested_op16001);
+                    pushFollow(FOLLOW_rulenested_sort_in_rulenested_op16019);
                     this_nested_sort_1=rulenested_sort();
 
                     state._fsp--;
@@ -16126,12 +16175,12 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6228:5: this_nested_distinct_2= rulenested_distinct
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6233:5: this_nested_distinct_2= rulenested_distinct
                     {
                      
                             newCompositeNode(grammarAccess.getNested_opAccess().getNested_distinctParserRuleCall_2()); 
                         
-                    pushFollow(FOLLOW_rulenested_distinct_in_rulenested_op16028);
+                    pushFollow(FOLLOW_rulenested_distinct_in_rulenested_op16046);
                     this_nested_distinct_2=rulenested_distinct();
 
                     state._fsp--;
@@ -16144,12 +16193,12 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6238:5: this_nested_limit_3= rulenested_limit
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6243:5: this_nested_limit_3= rulenested_limit
                     {
                      
                             newCompositeNode(grammarAccess.getNested_opAccess().getNested_limitParserRuleCall_3()); 
                         
-                    pushFollow(FOLLOW_rulenested_limit_in_rulenested_op16055);
+                    pushFollow(FOLLOW_rulenested_limit_in_rulenested_op16073);
                     this_nested_limit_3=rulenested_limit();
 
                     state._fsp--;
@@ -16162,30 +16211,30 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6247:6: ( (otherlv_4= KEYWORD_4 ruleType otherlv_6= KEYWORD_5 )? this_AddExpression_7= ruleAddExpression )
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6252:6: ( (otherlv_4= KEYWORD_4 ruleType otherlv_6= KEYWORD_5 )? this_AddExpression_7= ruleAddExpression )
                     {
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6247:6: ( (otherlv_4= KEYWORD_4 ruleType otherlv_6= KEYWORD_5 )? this_AddExpression_7= ruleAddExpression )
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6247:7: (otherlv_4= KEYWORD_4 ruleType otherlv_6= KEYWORD_5 )? this_AddExpression_7= ruleAddExpression
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6252:6: ( (otherlv_4= KEYWORD_4 ruleType otherlv_6= KEYWORD_5 )? this_AddExpression_7= ruleAddExpression )
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6252:7: (otherlv_4= KEYWORD_4 ruleType otherlv_6= KEYWORD_5 )? this_AddExpression_7= ruleAddExpression
                     {
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6247:7: (otherlv_4= KEYWORD_4 ruleType otherlv_6= KEYWORD_5 )?
-                    int alt93=2;
-                    int LA93_0 = input.LA(1);
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6252:7: (otherlv_4= KEYWORD_4 ruleType otherlv_6= KEYWORD_5 )?
+                    int alt94=2;
+                    int LA94_0 = input.LA(1);
 
-                    if ( (LA93_0==KEYWORD_4) ) {
-                        alt93=1;
+                    if ( (LA94_0==KEYWORD_4) ) {
+                        alt94=1;
                     }
-                    switch (alt93) {
+                    switch (alt94) {
                         case 1 :
-                            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6248:2: otherlv_4= KEYWORD_4 ruleType otherlv_6= KEYWORD_5
+                            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6253:2: otherlv_4= KEYWORD_4 ruleType otherlv_6= KEYWORD_5
                             {
-                            otherlv_4=(Token)match(input,KEYWORD_4,FOLLOW_KEYWORD_4_in_rulenested_op16075); 
+                            otherlv_4=(Token)match(input,KEYWORD_4,FOLLOW_KEYWORD_4_in_rulenested_op16093); 
 
                                 	newLeafNode(otherlv_4, grammarAccess.getNested_opAccess().getLeftParenthesisKeyword_4_0_0());
                                 
                              
                                     newCompositeNode(grammarAccess.getNested_opAccess().getTypeParserRuleCall_4_0_1()); 
                                 
-                            pushFollow(FOLLOW_ruleType_in_rulenested_op16090);
+                            pushFollow(FOLLOW_ruleType_in_rulenested_op16108);
                             ruleType();
 
                             state._fsp--;
@@ -16193,7 +16242,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
                                     afterParserOrEnumRuleCall();
                                 
-                            otherlv_6=(Token)match(input,KEYWORD_5,FOLLOW_KEYWORD_5_in_rulenested_op16102); 
+                            otherlv_6=(Token)match(input,KEYWORD_5,FOLLOW_KEYWORD_5_in_rulenested_op16120); 
 
                                 	newLeafNode(otherlv_6, grammarAccess.getNested_opAccess().getRightParenthesisKeyword_4_0_2());
                                 
@@ -16206,7 +16255,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                      
                             newCompositeNode(grammarAccess.getNested_opAccess().getAddExpressionParserRuleCall_4_1()); 
                         
-                    pushFollow(FOLLOW_ruleAddExpression_in_rulenested_op16125);
+                    pushFollow(FOLLOW_ruleAddExpression_in_rulenested_op16143);
                     this_AddExpression_7=ruleAddExpression();
 
                     state._fsp--;
@@ -16242,7 +16291,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNestedFilter"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6282:1: entryRuleNestedFilter returns [EObject current=null] : iv_ruleNestedFilter= ruleNestedFilter EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6287:1: entryRuleNestedFilter returns [EObject current=null] : iv_ruleNestedFilter= ruleNestedFilter EOF ;
     public final EObject entryRuleNestedFilter() throws RecognitionException {
         EObject current = null;
 
@@ -16250,17 +16299,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6283:2: (iv_ruleNestedFilter= ruleNestedFilter EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6284:2: iv_ruleNestedFilter= ruleNestedFilter EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6288:2: (iv_ruleNestedFilter= ruleNestedFilter EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6289:2: iv_ruleNestedFilter= ruleNestedFilter EOF
             {
              newCompositeNode(grammarAccess.getNestedFilterRule()); 
-            pushFollow(FOLLOW_ruleNestedFilter_in_entryRuleNestedFilter16160);
+            pushFollow(FOLLOW_ruleNestedFilter_in_entryRuleNestedFilter16178);
             iv_ruleNestedFilter=ruleNestedFilter();
 
             state._fsp--;
 
              current =iv_ruleNestedFilter; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNestedFilter16170); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNestedFilter16188); 
 
             }
 
@@ -16278,7 +16327,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNestedFilter"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6291:1: ruleNestedFilter returns [EObject current=null] : (otherlv_0= KEYWORD_73 ( (lv_exp_1_0= rulevar_expr ) ) otherlv_2= KEYWORD_29 ( (lv_cond_3_0= ruleCondition ) ) ) ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6296:1: ruleNestedFilter returns [EObject current=null] : (otherlv_0= KEYWORD_73 ( (lv_exp_1_0= rulevar_expr ) ) otherlv_2= KEYWORD_29 ( (lv_cond_3_0= ruleCondition ) ) ) ;
     public final EObject ruleNestedFilter() throws RecognitionException {
         EObject current = null;
 
@@ -16292,26 +16341,26 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6294:28: ( (otherlv_0= KEYWORD_73 ( (lv_exp_1_0= rulevar_expr ) ) otherlv_2= KEYWORD_29 ( (lv_cond_3_0= ruleCondition ) ) ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6295:1: (otherlv_0= KEYWORD_73 ( (lv_exp_1_0= rulevar_expr ) ) otherlv_2= KEYWORD_29 ( (lv_cond_3_0= ruleCondition ) ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6299:28: ( (otherlv_0= KEYWORD_73 ( (lv_exp_1_0= rulevar_expr ) ) otherlv_2= KEYWORD_29 ( (lv_cond_3_0= ruleCondition ) ) ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6300:1: (otherlv_0= KEYWORD_73 ( (lv_exp_1_0= rulevar_expr ) ) otherlv_2= KEYWORD_29 ( (lv_cond_3_0= ruleCondition ) ) )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6295:1: (otherlv_0= KEYWORD_73 ( (lv_exp_1_0= rulevar_expr ) ) otherlv_2= KEYWORD_29 ( (lv_cond_3_0= ruleCondition ) ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6296:2: otherlv_0= KEYWORD_73 ( (lv_exp_1_0= rulevar_expr ) ) otherlv_2= KEYWORD_29 ( (lv_cond_3_0= ruleCondition ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6300:1: (otherlv_0= KEYWORD_73 ( (lv_exp_1_0= rulevar_expr ) ) otherlv_2= KEYWORD_29 ( (lv_cond_3_0= ruleCondition ) ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6301:2: otherlv_0= KEYWORD_73 ( (lv_exp_1_0= rulevar_expr ) ) otherlv_2= KEYWORD_29 ( (lv_cond_3_0= ruleCondition ) )
             {
-            otherlv_0=(Token)match(input,KEYWORD_73,FOLLOW_KEYWORD_73_in_ruleNestedFilter16208); 
+            otherlv_0=(Token)match(input,KEYWORD_73,FOLLOW_KEYWORD_73_in_ruleNestedFilter16226); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getNestedFilterAccess().getFILTERKeyword_0());
                 
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6300:1: ( (lv_exp_1_0= rulevar_expr ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6301:1: (lv_exp_1_0= rulevar_expr )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6305:1: ( (lv_exp_1_0= rulevar_expr ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6306:1: (lv_exp_1_0= rulevar_expr )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6301:1: (lv_exp_1_0= rulevar_expr )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6302:3: lv_exp_1_0= rulevar_expr
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6306:1: (lv_exp_1_0= rulevar_expr )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6307:3: lv_exp_1_0= rulevar_expr
             {
              
             	        newCompositeNode(grammarAccess.getNestedFilterAccess().getExpVar_exprParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_rulevar_expr_in_ruleNestedFilter16228);
+            pushFollow(FOLLOW_rulevar_expr_in_ruleNestedFilter16246);
             lv_exp_1_0=rulevar_expr();
 
             state._fsp--;
@@ -16333,20 +16382,20 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,KEYWORD_29,FOLLOW_KEYWORD_29_in_ruleNestedFilter16241); 
+            otherlv_2=(Token)match(input,KEYWORD_29,FOLLOW_KEYWORD_29_in_ruleNestedFilter16259); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getNestedFilterAccess().getBYKeyword_2());
                 
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6323:1: ( (lv_cond_3_0= ruleCondition ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6324:1: (lv_cond_3_0= ruleCondition )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6328:1: ( (lv_cond_3_0= ruleCondition ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6329:1: (lv_cond_3_0= ruleCondition )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6324:1: (lv_cond_3_0= ruleCondition )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6325:3: lv_cond_3_0= ruleCondition
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6329:1: (lv_cond_3_0= ruleCondition )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6330:3: lv_cond_3_0= ruleCondition
             {
              
             	        newCompositeNode(grammarAccess.getNestedFilterAccess().getCondConditionParserRuleCall_3_0()); 
             	    
-            pushFollow(FOLLOW_ruleCondition_in_ruleNestedFilter16261);
+            pushFollow(FOLLOW_ruleCondition_in_ruleNestedFilter16279);
             lv_cond_3_0=ruleCondition();
 
             state._fsp--;
@@ -16389,7 +16438,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulenested_sort"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6349:1: entryRulenested_sort returns [EObject current=null] : iv_rulenested_sort= rulenested_sort EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6354:1: entryRulenested_sort returns [EObject current=null] : iv_rulenested_sort= rulenested_sort EOF ;
     public final EObject entryRulenested_sort() throws RecognitionException {
         EObject current = null;
 
@@ -16397,17 +16446,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6350:2: (iv_rulenested_sort= rulenested_sort EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6351:2: iv_rulenested_sort= rulenested_sort EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6355:2: (iv_rulenested_sort= rulenested_sort EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6356:2: iv_rulenested_sort= rulenested_sort EOF
             {
              newCompositeNode(grammarAccess.getNested_sortRule()); 
-            pushFollow(FOLLOW_rulenested_sort_in_entryRulenested_sort16296);
+            pushFollow(FOLLOW_rulenested_sort_in_entryRulenested_sort16314);
             iv_rulenested_sort=rulenested_sort();
 
             state._fsp--;
 
              current =iv_rulenested_sort; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulenested_sort16306); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulenested_sort16324); 
 
             }
 
@@ -16425,7 +16474,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulenested_sort"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6358:1: rulenested_sort returns [EObject current=null] : (otherlv_0= KEYWORD_63 this_var_expr_1= rulevar_expr otherlv_2= KEYWORD_29 ruleorder_by_clause (otherlv_4= KEYWORD_70 ruleFuncClause )? ) ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6363:1: rulenested_sort returns [EObject current=null] : (otherlv_0= KEYWORD_63 this_var_expr_1= rulevar_expr otherlv_2= KEYWORD_29 ruleorder_by_clause (otherlv_4= KEYWORD_70 ruleFuncClause )? ) ;
     public final EObject rulenested_sort() throws RecognitionException {
         EObject current = null;
 
@@ -16438,20 +16487,20 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6361:28: ( (otherlv_0= KEYWORD_63 this_var_expr_1= rulevar_expr otherlv_2= KEYWORD_29 ruleorder_by_clause (otherlv_4= KEYWORD_70 ruleFuncClause )? ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6362:1: (otherlv_0= KEYWORD_63 this_var_expr_1= rulevar_expr otherlv_2= KEYWORD_29 ruleorder_by_clause (otherlv_4= KEYWORD_70 ruleFuncClause )? )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6366:28: ( (otherlv_0= KEYWORD_63 this_var_expr_1= rulevar_expr otherlv_2= KEYWORD_29 ruleorder_by_clause (otherlv_4= KEYWORD_70 ruleFuncClause )? ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6367:1: (otherlv_0= KEYWORD_63 this_var_expr_1= rulevar_expr otherlv_2= KEYWORD_29 ruleorder_by_clause (otherlv_4= KEYWORD_70 ruleFuncClause )? )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6362:1: (otherlv_0= KEYWORD_63 this_var_expr_1= rulevar_expr otherlv_2= KEYWORD_29 ruleorder_by_clause (otherlv_4= KEYWORD_70 ruleFuncClause )? )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6363:2: otherlv_0= KEYWORD_63 this_var_expr_1= rulevar_expr otherlv_2= KEYWORD_29 ruleorder_by_clause (otherlv_4= KEYWORD_70 ruleFuncClause )?
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6367:1: (otherlv_0= KEYWORD_63 this_var_expr_1= rulevar_expr otherlv_2= KEYWORD_29 ruleorder_by_clause (otherlv_4= KEYWORD_70 ruleFuncClause )? )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6368:2: otherlv_0= KEYWORD_63 this_var_expr_1= rulevar_expr otherlv_2= KEYWORD_29 ruleorder_by_clause (otherlv_4= KEYWORD_70 ruleFuncClause )?
             {
-            otherlv_0=(Token)match(input,KEYWORD_63,FOLLOW_KEYWORD_63_in_rulenested_sort16344); 
+            otherlv_0=(Token)match(input,KEYWORD_63,FOLLOW_KEYWORD_63_in_rulenested_sort16362); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getNested_sortAccess().getORDERKeyword_0());
                 
              
                     newCompositeNode(grammarAccess.getNested_sortAccess().getVar_exprParserRuleCall_1()); 
                 
-            pushFollow(FOLLOW_rulevar_expr_in_rulenested_sort16365);
+            pushFollow(FOLLOW_rulevar_expr_in_rulenested_sort16383);
             this_var_expr_1=rulevar_expr();
 
             state._fsp--;
@@ -16460,14 +16509,14 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                     current = this_var_expr_1;
                     afterParserOrEnumRuleCall();
                 
-            otherlv_2=(Token)match(input,KEYWORD_29,FOLLOW_KEYWORD_29_in_rulenested_sort16377); 
+            otherlv_2=(Token)match(input,KEYWORD_29,FOLLOW_KEYWORD_29_in_rulenested_sort16395); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getNested_sortAccess().getBYKeyword_2());
                 
              
                     newCompositeNode(grammarAccess.getNested_sortAccess().getOrder_by_clauseParserRuleCall_3()); 
                 
-            pushFollow(FOLLOW_ruleorder_by_clause_in_rulenested_sort16392);
+            pushFollow(FOLLOW_ruleorder_by_clause_in_rulenested_sort16410);
             ruleorder_by_clause();
 
             state._fsp--;
@@ -16475,25 +16524,25 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
                     afterParserOrEnumRuleCall();
                 
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6389:1: (otherlv_4= KEYWORD_70 ruleFuncClause )?
-            int alt95=2;
-            int LA95_0 = input.LA(1);
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6394:1: (otherlv_4= KEYWORD_70 ruleFuncClause )?
+            int alt96=2;
+            int LA96_0 = input.LA(1);
 
-            if ( (LA95_0==KEYWORD_70) ) {
-                alt95=1;
+            if ( (LA96_0==KEYWORD_70) ) {
+                alt96=1;
             }
-            switch (alt95) {
+            switch (alt96) {
                 case 1 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6390:2: otherlv_4= KEYWORD_70 ruleFuncClause
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6395:2: otherlv_4= KEYWORD_70 ruleFuncClause
                     {
-                    otherlv_4=(Token)match(input,KEYWORD_70,FOLLOW_KEYWORD_70_in_rulenested_sort16405); 
+                    otherlv_4=(Token)match(input,KEYWORD_70,FOLLOW_KEYWORD_70_in_rulenested_sort16423); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getNested_sortAccess().getUSINGKeyword_4_0());
                         
                      
                             newCompositeNode(grammarAccess.getNested_sortAccess().getFuncClauseParserRuleCall_4_1()); 
                         
-                    pushFollow(FOLLOW_ruleFuncClause_in_rulenested_sort16420);
+                    pushFollow(FOLLOW_ruleFuncClause_in_rulenested_sort16438);
                     ruleFuncClause();
 
                     state._fsp--;
@@ -16528,7 +16577,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulenested_distinct"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6410:1: entryRulenested_distinct returns [EObject current=null] : iv_rulenested_distinct= rulenested_distinct EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6415:1: entryRulenested_distinct returns [EObject current=null] : iv_rulenested_distinct= rulenested_distinct EOF ;
     public final EObject entryRulenested_distinct() throws RecognitionException {
         EObject current = null;
 
@@ -16536,17 +16585,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6411:2: (iv_rulenested_distinct= rulenested_distinct EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6412:2: iv_rulenested_distinct= rulenested_distinct EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6416:2: (iv_rulenested_distinct= rulenested_distinct EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6417:2: iv_rulenested_distinct= rulenested_distinct EOF
             {
              newCompositeNode(grammarAccess.getNested_distinctRule()); 
-            pushFollow(FOLLOW_rulenested_distinct_in_entryRulenested_distinct16456);
+            pushFollow(FOLLOW_rulenested_distinct_in_entryRulenested_distinct16474);
             iv_rulenested_distinct=rulenested_distinct();
 
             state._fsp--;
 
              current =iv_rulenested_distinct; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulenested_distinct16466); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulenested_distinct16484); 
 
             }
 
@@ -16564,7 +16613,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulenested_distinct"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6419:1: rulenested_distinct returns [EObject current=null] : (otherlv_0= KEYWORD_84 this_var_expr_1= rulevar_expr ) ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6424:1: rulenested_distinct returns [EObject current=null] : (otherlv_0= KEYWORD_84 this_var_expr_1= rulevar_expr ) ;
     public final EObject rulenested_distinct() throws RecognitionException {
         EObject current = null;
 
@@ -16575,20 +16624,20 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6422:28: ( (otherlv_0= KEYWORD_84 this_var_expr_1= rulevar_expr ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6423:1: (otherlv_0= KEYWORD_84 this_var_expr_1= rulevar_expr )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6427:28: ( (otherlv_0= KEYWORD_84 this_var_expr_1= rulevar_expr ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6428:1: (otherlv_0= KEYWORD_84 this_var_expr_1= rulevar_expr )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6423:1: (otherlv_0= KEYWORD_84 this_var_expr_1= rulevar_expr )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6424:2: otherlv_0= KEYWORD_84 this_var_expr_1= rulevar_expr
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6428:1: (otherlv_0= KEYWORD_84 this_var_expr_1= rulevar_expr )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6429:2: otherlv_0= KEYWORD_84 this_var_expr_1= rulevar_expr
             {
-            otherlv_0=(Token)match(input,KEYWORD_84,FOLLOW_KEYWORD_84_in_rulenested_distinct16504); 
+            otherlv_0=(Token)match(input,KEYWORD_84,FOLLOW_KEYWORD_84_in_rulenested_distinct16522); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getNested_distinctAccess().getDISTINCTKeyword_0());
                 
              
                     newCompositeNode(grammarAccess.getNested_distinctAccess().getVar_exprParserRuleCall_1()); 
                 
-            pushFollow(FOLLOW_rulevar_expr_in_rulenested_distinct16525);
+            pushFollow(FOLLOW_rulevar_expr_in_rulenested_distinct16543);
             this_var_expr_1=rulevar_expr();
 
             state._fsp--;
@@ -16618,7 +16667,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulenested_limit"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6445:1: entryRulenested_limit returns [EObject current=null] : iv_rulenested_limit= rulenested_limit EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6450:1: entryRulenested_limit returns [EObject current=null] : iv_rulenested_limit= rulenested_limit EOF ;
     public final EObject entryRulenested_limit() throws RecognitionException {
         EObject current = null;
 
@@ -16626,17 +16675,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6446:2: (iv_rulenested_limit= rulenested_limit EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6447:2: iv_rulenested_limit= rulenested_limit EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6451:2: (iv_rulenested_limit= rulenested_limit EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6452:2: iv_rulenested_limit= rulenested_limit EOF
             {
              newCompositeNode(grammarAccess.getNested_limitRule()); 
-            pushFollow(FOLLOW_rulenested_limit_in_entryRulenested_limit16559);
+            pushFollow(FOLLOW_rulenested_limit_in_entryRulenested_limit16577);
             iv_rulenested_limit=rulenested_limit();
 
             state._fsp--;
 
              current =iv_rulenested_limit; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulenested_limit16569); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulenested_limit16587); 
 
             }
 
@@ -16654,7 +16703,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulenested_limit"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6454:1: rulenested_limit returns [EObject current=null] : (otherlv_0= KEYWORD_61 this_var_expr_1= rulevar_expr (this_INT_2= RULE_INT | this_LONGINTEGER_3= RULE_LONGINTEGER ) ) ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6459:1: rulenested_limit returns [EObject current=null] : (otherlv_0= KEYWORD_61 this_var_expr_1= rulevar_expr (this_INT_2= RULE_INT | this_LONGINTEGER_3= RULE_LONGINTEGER ) ) ;
     public final EObject rulenested_limit() throws RecognitionException {
         EObject current = null;
 
@@ -16667,20 +16716,20 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6457:28: ( (otherlv_0= KEYWORD_61 this_var_expr_1= rulevar_expr (this_INT_2= RULE_INT | this_LONGINTEGER_3= RULE_LONGINTEGER ) ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6458:1: (otherlv_0= KEYWORD_61 this_var_expr_1= rulevar_expr (this_INT_2= RULE_INT | this_LONGINTEGER_3= RULE_LONGINTEGER ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6462:28: ( (otherlv_0= KEYWORD_61 this_var_expr_1= rulevar_expr (this_INT_2= RULE_INT | this_LONGINTEGER_3= RULE_LONGINTEGER ) ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6463:1: (otherlv_0= KEYWORD_61 this_var_expr_1= rulevar_expr (this_INT_2= RULE_INT | this_LONGINTEGER_3= RULE_LONGINTEGER ) )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6458:1: (otherlv_0= KEYWORD_61 this_var_expr_1= rulevar_expr (this_INT_2= RULE_INT | this_LONGINTEGER_3= RULE_LONGINTEGER ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6459:2: otherlv_0= KEYWORD_61 this_var_expr_1= rulevar_expr (this_INT_2= RULE_INT | this_LONGINTEGER_3= RULE_LONGINTEGER )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6463:1: (otherlv_0= KEYWORD_61 this_var_expr_1= rulevar_expr (this_INT_2= RULE_INT | this_LONGINTEGER_3= RULE_LONGINTEGER ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6464:2: otherlv_0= KEYWORD_61 this_var_expr_1= rulevar_expr (this_INT_2= RULE_INT | this_LONGINTEGER_3= RULE_LONGINTEGER )
             {
-            otherlv_0=(Token)match(input,KEYWORD_61,FOLLOW_KEYWORD_61_in_rulenested_limit16607); 
+            otherlv_0=(Token)match(input,KEYWORD_61,FOLLOW_KEYWORD_61_in_rulenested_limit16625); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getNested_limitAccess().getLIMITKeyword_0());
                 
              
                     newCompositeNode(grammarAccess.getNested_limitAccess().getVar_exprParserRuleCall_1()); 
                 
-            pushFollow(FOLLOW_rulevar_expr_in_rulenested_limit16628);
+            pushFollow(FOLLOW_rulevar_expr_in_rulenested_limit16646);
             this_var_expr_1=rulevar_expr();
 
             state._fsp--;
@@ -16689,27 +16738,27 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                     current = this_var_expr_1;
                     afterParserOrEnumRuleCall();
                 
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6472:1: (this_INT_2= RULE_INT | this_LONGINTEGER_3= RULE_LONGINTEGER )
-            int alt96=2;
-            int LA96_0 = input.LA(1);
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6477:1: (this_INT_2= RULE_INT | this_LONGINTEGER_3= RULE_LONGINTEGER )
+            int alt97=2;
+            int LA97_0 = input.LA(1);
 
-            if ( (LA96_0==RULE_INT) ) {
-                alt96=1;
+            if ( (LA97_0==RULE_INT) ) {
+                alt97=1;
             }
-            else if ( (LA96_0==RULE_LONGINTEGER) ) {
-                alt96=2;
+            else if ( (LA97_0==RULE_LONGINTEGER) ) {
+                alt97=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 96, 0, input);
+                    new NoViableAltException("", 97, 0, input);
 
                 throw nvae;
             }
-            switch (alt96) {
+            switch (alt97) {
                 case 1 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6472:2: this_INT_2= RULE_INT
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6477:2: this_INT_2= RULE_INT
                     {
-                    this_INT_2=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_rulenested_limit16639); 
+                    this_INT_2=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_rulenested_limit16657); 
                      
                         newLeafNode(this_INT_2, grammarAccess.getNested_limitAccess().getINTTerminalRuleCall_2_0()); 
                         
@@ -16717,9 +16766,9 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6477:6: this_LONGINTEGER_3= RULE_LONGINTEGER
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6482:6: this_LONGINTEGER_3= RULE_LONGINTEGER
                     {
-                    this_LONGINTEGER_3=(Token)match(input,RULE_LONGINTEGER,FOLLOW_RULE_LONGINTEGER_in_rulenested_limit16655); 
+                    this_LONGINTEGER_3=(Token)match(input,RULE_LONGINTEGER,FOLLOW_RULE_LONGINTEGER_in_rulenested_limit16673); 
                      
                         newLeafNode(this_LONGINTEGER_3, grammarAccess.getNested_limitAccess().getLONGINTEGERTerminalRuleCall_2_1()); 
                         
@@ -16750,7 +16799,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulesplit_branch"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6489:1: entryRulesplit_branch returns [EObject current=null] : iv_rulesplit_branch= rulesplit_branch EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6494:1: entryRulesplit_branch returns [EObject current=null] : iv_rulesplit_branch= rulesplit_branch EOF ;
     public final EObject entryRulesplit_branch() throws RecognitionException {
         EObject current = null;
 
@@ -16758,17 +16807,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6490:2: (iv_rulesplit_branch= rulesplit_branch EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6491:2: iv_rulesplit_branch= rulesplit_branch EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6495:2: (iv_rulesplit_branch= rulesplit_branch EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6496:2: iv_rulesplit_branch= rulesplit_branch EOF
             {
              newCompositeNode(grammarAccess.getSplit_branchRule()); 
-            pushFollow(FOLLOW_rulesplit_branch_in_entryRulesplit_branch16690);
+            pushFollow(FOLLOW_rulesplit_branch_in_entryRulesplit_branch16708);
             iv_rulesplit_branch=rulesplit_branch();
 
             state._fsp--;
 
              current =iv_rulesplit_branch; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulesplit_branch16700); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulesplit_branch16718); 
 
             }
 
@@ -16786,7 +16835,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulesplit_branch"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6498:1: rulesplit_branch returns [EObject current=null] : ( ruleIDENTIFIER otherlv_1= KEYWORD_32 this_Condition_2= ruleCondition ) ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6503:1: rulesplit_branch returns [EObject current=null] : ( ruleIDENTIFIER otherlv_1= KEYWORD_32 this_Condition_2= ruleCondition ) ;
     public final EObject rulesplit_branch() throws RecognitionException {
         EObject current = null;
 
@@ -16797,16 +16846,16 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6501:28: ( ( ruleIDENTIFIER otherlv_1= KEYWORD_32 this_Condition_2= ruleCondition ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6502:1: ( ruleIDENTIFIER otherlv_1= KEYWORD_32 this_Condition_2= ruleCondition )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6506:28: ( ( ruleIDENTIFIER otherlv_1= KEYWORD_32 this_Condition_2= ruleCondition ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6507:1: ( ruleIDENTIFIER otherlv_1= KEYWORD_32 this_Condition_2= ruleCondition )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6502:1: ( ruleIDENTIFIER otherlv_1= KEYWORD_32 this_Condition_2= ruleCondition )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6503:5: ruleIDENTIFIER otherlv_1= KEYWORD_32 this_Condition_2= ruleCondition
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6507:1: ( ruleIDENTIFIER otherlv_1= KEYWORD_32 this_Condition_2= ruleCondition )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6508:5: ruleIDENTIFIER otherlv_1= KEYWORD_32 this_Condition_2= ruleCondition
             {
              
                     newCompositeNode(grammarAccess.getSplit_branchAccess().getIDENTIFIERParserRuleCall_0()); 
                 
-            pushFollow(FOLLOW_ruleIDENTIFIER_in_rulesplit_branch16741);
+            pushFollow(FOLLOW_ruleIDENTIFIER_in_rulesplit_branch16759);
             ruleIDENTIFIER();
 
             state._fsp--;
@@ -16814,14 +16863,14 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
                     afterParserOrEnumRuleCall();
                 
-            otherlv_1=(Token)match(input,KEYWORD_32,FOLLOW_KEYWORD_32_in_rulesplit_branch16753); 
+            otherlv_1=(Token)match(input,KEYWORD_32,FOLLOW_KEYWORD_32_in_rulesplit_branch16771); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getSplit_branchAccess().getIFKeyword_1());
                 
              
                     newCompositeNode(grammarAccess.getSplit_branchAccess().getConditionParserRuleCall_2()); 
                 
-            pushFollow(FOLLOW_ruleCondition_in_rulesplit_branch16774);
+            pushFollow(FOLLOW_ruleCondition_in_rulesplit_branch16792);
             this_Condition_2=ruleCondition();
 
             state._fsp--;
@@ -16851,7 +16900,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulecol_ref"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6532:1: entryRulecol_ref returns [String current=null] : iv_rulecol_ref= rulecol_ref EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6537:1: entryRulecol_ref returns [String current=null] : iv_rulecol_ref= rulecol_ref EOF ;
     public final String entryRulecol_ref() throws RecognitionException {
         String current = null;
 
@@ -16859,17 +16908,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6533:1: (iv_rulecol_ref= rulecol_ref EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6534:2: iv_rulecol_ref= rulecol_ref EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6538:1: (iv_rulecol_ref= rulecol_ref EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6539:2: iv_rulecol_ref= rulecol_ref EOF
             {
              newCompositeNode(grammarAccess.getCol_refRule()); 
-            pushFollow(FOLLOW_rulecol_ref_in_entryRulecol_ref16809);
+            pushFollow(FOLLOW_rulecol_ref_in_entryRulecol_ref16827);
             iv_rulecol_ref=rulecol_ref();
 
             state._fsp--;
 
              current =iv_rulecol_ref.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRulecol_ref16820); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulecol_ref16838); 
 
             }
 
@@ -16887,7 +16936,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulecol_ref"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6541:1: rulecol_ref returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_alias_col_ref_0= rulealias_col_ref | this_dollar_col_ref_1= ruledollar_col_ref ) ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6546:1: rulecol_ref returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_alias_col_ref_0= rulealias_col_ref | this_dollar_col_ref_1= ruledollar_col_ref ) ;
     public final AntlrDatatypeRuleToken rulecol_ref() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -16899,33 +16948,33 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6545:6: ( (this_alias_col_ref_0= rulealias_col_ref | this_dollar_col_ref_1= ruledollar_col_ref ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6546:1: (this_alias_col_ref_0= rulealias_col_ref | this_dollar_col_ref_1= ruledollar_col_ref )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6550:6: ( (this_alias_col_ref_0= rulealias_col_ref | this_dollar_col_ref_1= ruledollar_col_ref ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6551:1: (this_alias_col_ref_0= rulealias_col_ref | this_dollar_col_ref_1= ruledollar_col_ref )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6546:1: (this_alias_col_ref_0= rulealias_col_ref | this_dollar_col_ref_1= ruledollar_col_ref )
-            int alt97=2;
-            int LA97_0 = input.LA(1);
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6551:1: (this_alias_col_ref_0= rulealias_col_ref | this_dollar_col_ref_1= ruledollar_col_ref )
+            int alt98=2;
+            int LA98_0 = input.LA(1);
 
-            if ( (LA97_0==KEYWORD_59||LA97_0==RULE_ID) ) {
-                alt97=1;
+            if ( (LA98_0==KEYWORD_59||LA98_0==RULE_ID) ) {
+                alt98=1;
             }
-            else if ( (LA97_0==KEYWORD_2) ) {
-                alt97=2;
+            else if ( (LA98_0==KEYWORD_2) ) {
+                alt98=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 97, 0, input);
+                    new NoViableAltException("", 98, 0, input);
 
                 throw nvae;
             }
-            switch (alt97) {
+            switch (alt98) {
                 case 1 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6547:5: this_alias_col_ref_0= rulealias_col_ref
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6552:5: this_alias_col_ref_0= rulealias_col_ref
                     {
                      
                             newCompositeNode(grammarAccess.getCol_refAccess().getAlias_col_refParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_rulealias_col_ref_in_rulecol_ref16867);
+                    pushFollow(FOLLOW_rulealias_col_ref_in_rulecol_ref16885);
                     this_alias_col_ref_0=rulealias_col_ref();
 
                     state._fsp--;
@@ -16940,12 +16989,12 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6559:5: this_dollar_col_ref_1= ruledollar_col_ref
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6564:5: this_dollar_col_ref_1= ruledollar_col_ref
                     {
                      
                             newCompositeNode(grammarAccess.getCol_refAccess().getDollar_col_refParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruledollar_col_ref_in_rulecol_ref16900);
+                    pushFollow(FOLLOW_ruledollar_col_ref_in_rulecol_ref16918);
                     this_dollar_col_ref_1=ruledollar_col_ref();
 
                     state._fsp--;
@@ -16981,7 +17030,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulealias_col_ref"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6577:1: entryRulealias_col_ref returns [String current=null] : iv_rulealias_col_ref= rulealias_col_ref EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6582:1: entryRulealias_col_ref returns [String current=null] : iv_rulealias_col_ref= rulealias_col_ref EOF ;
     public final String entryRulealias_col_ref() throws RecognitionException {
         String current = null;
 
@@ -16989,17 +17038,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6578:1: (iv_rulealias_col_ref= rulealias_col_ref EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6579:2: iv_rulealias_col_ref= rulealias_col_ref EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6583:1: (iv_rulealias_col_ref= rulealias_col_ref EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6584:2: iv_rulealias_col_ref= rulealias_col_ref EOF
             {
              newCompositeNode(grammarAccess.getAlias_col_refRule()); 
-            pushFollow(FOLLOW_rulealias_col_ref_in_entryRulealias_col_ref16945);
+            pushFollow(FOLLOW_rulealias_col_ref_in_entryRulealias_col_ref16963);
             iv_rulealias_col_ref=rulealias_col_ref();
 
             state._fsp--;
 
              current =iv_rulealias_col_ref.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRulealias_col_ref16956); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulealias_col_ref16974); 
 
             }
 
@@ -17017,7 +17066,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulealias_col_ref"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6586:1: rulealias_col_ref returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= KEYWORD_59 | this_IDENTIFIER_1= ruleIDENTIFIER ) ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6591:1: rulealias_col_ref returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= KEYWORD_59 | this_IDENTIFIER_1= ruleIDENTIFIER ) ;
     public final AntlrDatatypeRuleToken rulealias_col_ref() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -17028,30 +17077,30 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6590:6: ( (kw= KEYWORD_59 | this_IDENTIFIER_1= ruleIDENTIFIER ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6591:1: (kw= KEYWORD_59 | this_IDENTIFIER_1= ruleIDENTIFIER )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6595:6: ( (kw= KEYWORD_59 | this_IDENTIFIER_1= ruleIDENTIFIER ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6596:1: (kw= KEYWORD_59 | this_IDENTIFIER_1= ruleIDENTIFIER )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6591:1: (kw= KEYWORD_59 | this_IDENTIFIER_1= ruleIDENTIFIER )
-            int alt98=2;
-            int LA98_0 = input.LA(1);
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6596:1: (kw= KEYWORD_59 | this_IDENTIFIER_1= ruleIDENTIFIER )
+            int alt99=2;
+            int LA99_0 = input.LA(1);
 
-            if ( (LA98_0==KEYWORD_59) ) {
-                alt98=1;
+            if ( (LA99_0==KEYWORD_59) ) {
+                alt99=1;
             }
-            else if ( (LA98_0==RULE_ID) ) {
-                alt98=2;
+            else if ( (LA99_0==RULE_ID) ) {
+                alt99=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 98, 0, input);
+                    new NoViableAltException("", 99, 0, input);
 
                 throw nvae;
             }
-            switch (alt98) {
+            switch (alt99) {
                 case 1 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6592:2: kw= KEYWORD_59
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6597:2: kw= KEYWORD_59
                     {
-                    kw=(Token)match(input,KEYWORD_59,FOLLOW_KEYWORD_59_in_rulealias_col_ref16994); 
+                    kw=(Token)match(input,KEYWORD_59,FOLLOW_KEYWORD_59_in_rulealias_col_ref17012); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getAlias_col_refAccess().getGROUPKeyword_0()); 
@@ -17060,12 +17109,12 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6599:5: this_IDENTIFIER_1= ruleIDENTIFIER
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6604:5: this_IDENTIFIER_1= ruleIDENTIFIER
                     {
                      
                             newCompositeNode(grammarAccess.getAlias_col_refAccess().getIDENTIFIERParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleIDENTIFIER_in_rulealias_col_ref17022);
+                    pushFollow(FOLLOW_ruleIDENTIFIER_in_rulealias_col_ref17040);
                     this_IDENTIFIER_1=ruleIDENTIFIER();
 
                     state._fsp--;
@@ -17101,7 +17150,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuledollar_col_ref"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6617:1: entryRuledollar_col_ref returns [String current=null] : iv_ruledollar_col_ref= ruledollar_col_ref EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6622:1: entryRuledollar_col_ref returns [String current=null] : iv_ruledollar_col_ref= ruledollar_col_ref EOF ;
     public final String entryRuledollar_col_ref() throws RecognitionException {
         String current = null;
 
@@ -17109,17 +17158,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6618:1: (iv_ruledollar_col_ref= ruledollar_col_ref EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6619:2: iv_ruledollar_col_ref= ruledollar_col_ref EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6623:1: (iv_ruledollar_col_ref= ruledollar_col_ref EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6624:2: iv_ruledollar_col_ref= ruledollar_col_ref EOF
             {
              newCompositeNode(grammarAccess.getDollar_col_refRule()); 
-            pushFollow(FOLLOW_ruledollar_col_ref_in_entryRuledollar_col_ref17067);
+            pushFollow(FOLLOW_ruledollar_col_ref_in_entryRuledollar_col_ref17085);
             iv_ruledollar_col_ref=ruledollar_col_ref();
 
             state._fsp--;
 
              current =iv_ruledollar_col_ref.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuledollar_col_ref17078); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuledollar_col_ref17096); 
 
             }
 
@@ -17137,7 +17186,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruledollar_col_ref"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6626:1: ruledollar_col_ref returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_DOLLAR_0= ruleDOLLAR this_INT_1= RULE_INT ) ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6631:1: ruledollar_col_ref returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_DOLLAR_0= ruleDOLLAR this_INT_1= RULE_INT ) ;
     public final AntlrDatatypeRuleToken ruledollar_col_ref() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -17148,16 +17197,16 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6630:6: ( (this_DOLLAR_0= ruleDOLLAR this_INT_1= RULE_INT ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6631:1: (this_DOLLAR_0= ruleDOLLAR this_INT_1= RULE_INT )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6635:6: ( (this_DOLLAR_0= ruleDOLLAR this_INT_1= RULE_INT ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6636:1: (this_DOLLAR_0= ruleDOLLAR this_INT_1= RULE_INT )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6631:1: (this_DOLLAR_0= ruleDOLLAR this_INT_1= RULE_INT )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6632:5: this_DOLLAR_0= ruleDOLLAR this_INT_1= RULE_INT
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6636:1: (this_DOLLAR_0= ruleDOLLAR this_INT_1= RULE_INT )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6637:5: this_DOLLAR_0= ruleDOLLAR this_INT_1= RULE_INT
             {
              
                     newCompositeNode(grammarAccess.getDollar_col_refAccess().getDOLLARParserRuleCall_0()); 
                 
-            pushFollow(FOLLOW_ruleDOLLAR_in_ruledollar_col_ref17125);
+            pushFollow(FOLLOW_ruleDOLLAR_in_ruledollar_col_ref17143);
             this_DOLLAR_0=ruleDOLLAR();
 
             state._fsp--;
@@ -17168,7 +17217,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
              
                     afterParserOrEnumRuleCall();
                 
-            this_INT_1=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruledollar_col_ref17145); 
+            this_INT_1=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruledollar_col_ref17163); 
 
             		current.merge(this_INT_1);
                 
@@ -17197,7 +17246,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleconst_expr"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6657:1: entryRuleconst_expr returns [String current=null] : iv_ruleconst_expr= ruleconst_expr EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6662:1: entryRuleconst_expr returns [String current=null] : iv_ruleconst_expr= ruleconst_expr EOF ;
     public final String entryRuleconst_expr() throws RecognitionException {
         String current = null;
 
@@ -17205,17 +17254,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6658:1: (iv_ruleconst_expr= ruleconst_expr EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6659:2: iv_ruleconst_expr= ruleconst_expr EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6663:1: (iv_ruleconst_expr= ruleconst_expr EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6664:2: iv_ruleconst_expr= ruleconst_expr EOF
             {
              newCompositeNode(grammarAccess.getConst_exprRule()); 
-            pushFollow(FOLLOW_ruleconst_expr_in_entryRuleconst_expr17190);
+            pushFollow(FOLLOW_ruleconst_expr_in_entryRuleconst_expr17208);
             iv_ruleconst_expr=ruleconst_expr();
 
             state._fsp--;
 
              current =iv_ruleconst_expr.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleconst_expr17201); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleconst_expr17219); 
 
             }
 
@@ -17233,7 +17282,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleconst_expr"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6666:1: ruleconst_expr returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_literal_0= ruleliteral ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6671:1: ruleconst_expr returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_literal_0= ruleliteral ;
     public final AntlrDatatypeRuleToken ruleconst_expr() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -17243,13 +17292,13 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6670:6: (this_literal_0= ruleliteral )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6672:5: this_literal_0= ruleliteral
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6675:6: (this_literal_0= ruleliteral )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6677:5: this_literal_0= ruleliteral
             {
              
                     newCompositeNode(grammarAccess.getConst_exprAccess().getLiteralParserRuleCall()); 
                 
-            pushFollow(FOLLOW_ruleliteral_in_ruleconst_expr17247);
+            pushFollow(FOLLOW_ruleliteral_in_ruleconst_expr17265);
             this_literal_0=ruleliteral();
 
             state._fsp--;
@@ -17279,7 +17328,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleliteral"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6690:1: entryRuleliteral returns [String current=null] : iv_ruleliteral= ruleliteral EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6695:1: entryRuleliteral returns [String current=null] : iv_ruleliteral= ruleliteral EOF ;
     public final String entryRuleliteral() throws RecognitionException {
         String current = null;
 
@@ -17287,17 +17336,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6691:1: (iv_ruleliteral= ruleliteral EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6692:2: iv_ruleliteral= ruleliteral EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6696:1: (iv_ruleliteral= ruleliteral EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6697:2: iv_ruleliteral= ruleliteral EOF
             {
              newCompositeNode(grammarAccess.getLiteralRule()); 
-            pushFollow(FOLLOW_ruleliteral_in_entryRuleliteral17291);
+            pushFollow(FOLLOW_ruleliteral_in_entryRuleliteral17309);
             iv_ruleliteral=ruleliteral();
 
             state._fsp--;
 
              current =iv_ruleliteral.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleliteral17302); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleliteral17320); 
 
             }
 
@@ -17315,7 +17364,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleliteral"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6699:1: ruleliteral returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_scalar_0= rulescalar | this_STRING_1= RULE_STRING | kw= KEYWORD_37 | kw= KEYWORD_56 ) ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6704:1: ruleliteral returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_scalar_0= rulescalar | this_STRING_1= RULE_STRING | kw= KEYWORD_37 | kw= KEYWORD_56 ) ;
     public final AntlrDatatypeRuleToken ruleliteral() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -17327,11 +17376,11 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6703:6: ( (this_scalar_0= rulescalar | this_STRING_1= RULE_STRING | kw= KEYWORD_37 | kw= KEYWORD_56 ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6704:1: (this_scalar_0= rulescalar | this_STRING_1= RULE_STRING | kw= KEYWORD_37 | kw= KEYWORD_56 )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6708:6: ( (this_scalar_0= rulescalar | this_STRING_1= RULE_STRING | kw= KEYWORD_37 | kw= KEYWORD_56 ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6709:1: (this_scalar_0= rulescalar | this_STRING_1= RULE_STRING | kw= KEYWORD_37 | kw= KEYWORD_56 )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6704:1: (this_scalar_0= rulescalar | this_STRING_1= RULE_STRING | kw= KEYWORD_37 | kw= KEYWORD_56 )
-            int alt99=4;
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6709:1: (this_scalar_0= rulescalar | this_STRING_1= RULE_STRING | kw= KEYWORD_37 | kw= KEYWORD_56 )
+            int alt100=4;
             switch ( input.LA(1) ) {
             case KEYWORD_2:
             case RULE_DIGIT:
@@ -17339,39 +17388,39 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
             case RULE_INT:
             case RULE_LONGINTEGER:
                 {
-                alt99=1;
+                alt100=1;
                 }
                 break;
             case RULE_STRING:
                 {
-                alt99=2;
+                alt100=2;
                 }
                 break;
             case KEYWORD_37:
                 {
-                alt99=3;
+                alt100=3;
                 }
                 break;
             case KEYWORD_56:
                 {
-                alt99=4;
+                alt100=4;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 99, 0, input);
+                    new NoViableAltException("", 100, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt99) {
+            switch (alt100) {
                 case 1 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6705:5: this_scalar_0= rulescalar
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6710:5: this_scalar_0= rulescalar
                     {
                      
                             newCompositeNode(grammarAccess.getLiteralAccess().getScalarParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_rulescalar_in_ruleliteral17349);
+                    pushFollow(FOLLOW_rulescalar_in_ruleliteral17367);
                     this_scalar_0=rulescalar();
 
                     state._fsp--;
@@ -17386,9 +17435,9 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6716:10: this_STRING_1= RULE_STRING
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6721:10: this_STRING_1= RULE_STRING
                     {
-                    this_STRING_1=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleliteral17375); 
+                    this_STRING_1=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleliteral17393); 
 
                     		current.merge(this_STRING_1);
                         
@@ -17399,9 +17448,9 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6725:2: kw= KEYWORD_37
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6730:2: kw= KEYWORD_37
                     {
-                    kw=(Token)match(input,KEYWORD_37,FOLLOW_KEYWORD_37_in_ruleliteral17399); 
+                    kw=(Token)match(input,KEYWORD_37,FOLLOW_KEYWORD_37_in_ruleliteral17417); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getLiteralAccess().getUKeyword_2()); 
@@ -17410,9 +17459,9 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6732:2: kw= KEYWORD_56
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6737:2: kw= KEYWORD_56
                     {
-                    kw=(Token)match(input,KEYWORD_56,FOLLOW_KEYWORD_56_in_ruleliteral17418); 
+                    kw=(Token)match(input,KEYWORD_56,FOLLOW_KEYWORD_56_in_ruleliteral17436); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getLiteralAccess().getNULLKeyword_3()); 
@@ -17442,7 +17491,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulescalar"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6745:1: entryRulescalar returns [String current=null] : iv_rulescalar= rulescalar EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6750:1: entryRulescalar returns [String current=null] : iv_rulescalar= rulescalar EOF ;
     public final String entryRulescalar() throws RecognitionException {
         String current = null;
 
@@ -17450,17 +17499,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6746:1: (iv_rulescalar= rulescalar EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6747:2: iv_rulescalar= rulescalar EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6751:1: (iv_rulescalar= rulescalar EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6752:2: iv_rulescalar= rulescalar EOF
             {
              newCompositeNode(grammarAccess.getScalarRule()); 
-            pushFollow(FOLLOW_rulescalar_in_entryRulescalar17458);
+            pushFollow(FOLLOW_rulescalar_in_entryRulescalar17476);
             iv_rulescalar=rulescalar();
 
             state._fsp--;
 
              current =iv_rulescalar.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRulescalar17469); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulescalar17487); 
 
             }
 
@@ -17478,7 +17527,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulescalar"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6754:1: rulescalar returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_FLOATINGPOINT_0= RULE_FLOATINGPOINT | this_scalarInt_1= rulescalarInt ) ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6759:1: rulescalar returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_FLOATINGPOINT_0= RULE_FLOATINGPOINT | this_scalarInt_1= rulescalarInt ) ;
     public final AntlrDatatypeRuleToken rulescalar() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -17489,30 +17538,30 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6758:6: ( (this_FLOATINGPOINT_0= RULE_FLOATINGPOINT | this_scalarInt_1= rulescalarInt ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6759:1: (this_FLOATINGPOINT_0= RULE_FLOATINGPOINT | this_scalarInt_1= rulescalarInt )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6763:6: ( (this_FLOATINGPOINT_0= RULE_FLOATINGPOINT | this_scalarInt_1= rulescalarInt ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6764:1: (this_FLOATINGPOINT_0= RULE_FLOATINGPOINT | this_scalarInt_1= rulescalarInt )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6759:1: (this_FLOATINGPOINT_0= RULE_FLOATINGPOINT | this_scalarInt_1= rulescalarInt )
-            int alt100=2;
-            int LA100_0 = input.LA(1);
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6764:1: (this_FLOATINGPOINT_0= RULE_FLOATINGPOINT | this_scalarInt_1= rulescalarInt )
+            int alt101=2;
+            int LA101_0 = input.LA(1);
 
-            if ( (LA100_0==RULE_FLOATINGPOINT) ) {
-                alt100=1;
+            if ( (LA101_0==RULE_FLOATINGPOINT) ) {
+                alt101=1;
             }
-            else if ( (LA100_0==KEYWORD_2||LA100_0==RULE_DIGIT||(LA100_0>=RULE_INT && LA100_0<=RULE_LONGINTEGER)) ) {
-                alt100=2;
+            else if ( (LA101_0==KEYWORD_2||LA101_0==RULE_DIGIT||(LA101_0>=RULE_INT && LA101_0<=RULE_LONGINTEGER)) ) {
+                alt101=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 100, 0, input);
+                    new NoViableAltException("", 101, 0, input);
 
                 throw nvae;
             }
-            switch (alt100) {
+            switch (alt101) {
                 case 1 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6759:6: this_FLOATINGPOINT_0= RULE_FLOATINGPOINT
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6764:6: this_FLOATINGPOINT_0= RULE_FLOATINGPOINT
                     {
-                    this_FLOATINGPOINT_0=(Token)match(input,RULE_FLOATINGPOINT,FOLLOW_RULE_FLOATINGPOINT_in_rulescalar17509); 
+                    this_FLOATINGPOINT_0=(Token)match(input,RULE_FLOATINGPOINT,FOLLOW_RULE_FLOATINGPOINT_in_rulescalar17527); 
 
                     		current.merge(this_FLOATINGPOINT_0);
                         
@@ -17523,12 +17572,12 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6768:5: this_scalarInt_1= rulescalarInt
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6773:5: this_scalarInt_1= rulescalarInt
                     {
                      
                             newCompositeNode(grammarAccess.getScalarAccess().getScalarIntParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_rulescalarInt_in_rulescalar17542);
+                    pushFollow(FOLLOW_rulescalarInt_in_rulescalar17560);
                     this_scalarInt_1=rulescalarInt();
 
                     state._fsp--;
@@ -17564,7 +17613,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulescalarInt"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6786:1: entryRulescalarInt returns [String current=null] : iv_rulescalarInt= rulescalarInt EOF ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6791:1: entryRulescalarInt returns [String current=null] : iv_rulescalarInt= rulescalarInt EOF ;
     public final String entryRulescalarInt() throws RecognitionException {
         String current = null;
 
@@ -17572,17 +17621,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6787:1: (iv_rulescalarInt= rulescalarInt EOF )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6788:2: iv_rulescalarInt= rulescalarInt EOF
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6792:1: (iv_rulescalarInt= rulescalarInt EOF )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6793:2: iv_rulescalarInt= rulescalarInt EOF
             {
              newCompositeNode(grammarAccess.getScalarIntRule()); 
-            pushFollow(FOLLOW_rulescalarInt_in_entryRulescalarInt17587);
+            pushFollow(FOLLOW_rulescalarInt_in_entryRulescalarInt17605);
             iv_rulescalarInt=rulescalarInt();
 
             state._fsp--;
 
              current =iv_rulescalarInt.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRulescalarInt17598); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulescalarInt17616); 
 
             }
 
@@ -17600,7 +17649,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulescalarInt"
-    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6795:1: rulescalarInt returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_DIGIT_0= RULE_DIGIT | this_INT_1= RULE_INT | this_LONGINTEGER_2= RULE_LONGINTEGER | (kw= KEYWORD_2 this_ID_4= RULE_ID ) ) ;
+    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6800:1: rulescalarInt returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_DIGIT_0= RULE_DIGIT | this_INT_1= RULE_INT | this_LONGINTEGER_2= RULE_LONGINTEGER | (kw= KEYWORD_2 this_ID_4= RULE_ID ) ) ;
     public final AntlrDatatypeRuleToken rulescalarInt() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -17613,44 +17662,44 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6799:6: ( (this_DIGIT_0= RULE_DIGIT | this_INT_1= RULE_INT | this_LONGINTEGER_2= RULE_LONGINTEGER | (kw= KEYWORD_2 this_ID_4= RULE_ID ) ) )
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6800:1: (this_DIGIT_0= RULE_DIGIT | this_INT_1= RULE_INT | this_LONGINTEGER_2= RULE_LONGINTEGER | (kw= KEYWORD_2 this_ID_4= RULE_ID ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6804:6: ( (this_DIGIT_0= RULE_DIGIT | this_INT_1= RULE_INT | this_LONGINTEGER_2= RULE_LONGINTEGER | (kw= KEYWORD_2 this_ID_4= RULE_ID ) ) )
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6805:1: (this_DIGIT_0= RULE_DIGIT | this_INT_1= RULE_INT | this_LONGINTEGER_2= RULE_LONGINTEGER | (kw= KEYWORD_2 this_ID_4= RULE_ID ) )
             {
-            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6800:1: (this_DIGIT_0= RULE_DIGIT | this_INT_1= RULE_INT | this_LONGINTEGER_2= RULE_LONGINTEGER | (kw= KEYWORD_2 this_ID_4= RULE_ID ) )
-            int alt101=4;
+            // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6805:1: (this_DIGIT_0= RULE_DIGIT | this_INT_1= RULE_INT | this_LONGINTEGER_2= RULE_LONGINTEGER | (kw= KEYWORD_2 this_ID_4= RULE_ID ) )
+            int alt102=4;
             switch ( input.LA(1) ) {
             case RULE_DIGIT:
                 {
-                alt101=1;
+                alt102=1;
                 }
                 break;
             case RULE_INT:
                 {
-                alt101=2;
+                alt102=2;
                 }
                 break;
             case RULE_LONGINTEGER:
                 {
-                alt101=3;
+                alt102=3;
                 }
                 break;
             case KEYWORD_2:
                 {
-                alt101=4;
+                alt102=4;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 101, 0, input);
+                    new NoViableAltException("", 102, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt101) {
+            switch (alt102) {
                 case 1 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6800:6: this_DIGIT_0= RULE_DIGIT
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6805:6: this_DIGIT_0= RULE_DIGIT
                     {
-                    this_DIGIT_0=(Token)match(input,RULE_DIGIT,FOLLOW_RULE_DIGIT_in_rulescalarInt17638); 
+                    this_DIGIT_0=(Token)match(input,RULE_DIGIT,FOLLOW_RULE_DIGIT_in_rulescalarInt17656); 
 
                     		current.merge(this_DIGIT_0);
                         
@@ -17661,9 +17710,9 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6808:10: this_INT_1= RULE_INT
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6813:10: this_INT_1= RULE_INT
                     {
-                    this_INT_1=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_rulescalarInt17664); 
+                    this_INT_1=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_rulescalarInt17682); 
 
                     		current.merge(this_INT_1);
                         
@@ -17674,9 +17723,9 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6816:10: this_LONGINTEGER_2= RULE_LONGINTEGER
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6821:10: this_LONGINTEGER_2= RULE_LONGINTEGER
                     {
-                    this_LONGINTEGER_2=(Token)match(input,RULE_LONGINTEGER,FOLLOW_RULE_LONGINTEGER_in_rulescalarInt17690); 
+                    this_LONGINTEGER_2=(Token)match(input,RULE_LONGINTEGER,FOLLOW_RULE_LONGINTEGER_in_rulescalarInt17708); 
 
                     		current.merge(this_LONGINTEGER_2);
                         
@@ -17687,17 +17736,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6824:6: (kw= KEYWORD_2 this_ID_4= RULE_ID )
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6829:6: (kw= KEYWORD_2 this_ID_4= RULE_ID )
                     {
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6824:6: (kw= KEYWORD_2 this_ID_4= RULE_ID )
-                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6825:2: kw= KEYWORD_2 this_ID_4= RULE_ID
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6829:6: (kw= KEYWORD_2 this_ID_4= RULE_ID )
+                    // ../org.apache.pigeditor/src-gen/org/apache/pigeditor/parser/antlr/internal/InternalPigParser.g:6830:2: kw= KEYWORD_2 this_ID_4= RULE_ID
                     {
-                    kw=(Token)match(input,KEYWORD_2,FOLLOW_KEYWORD_2_in_rulescalarInt17715); 
+                    kw=(Token)match(input,KEYWORD_2,FOLLOW_KEYWORD_2_in_rulescalarInt17733); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getScalarIntAccess().getDollarSignKeyword_3_0()); 
                         
-                    this_ID_4=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulescalarInt17730); 
+                    this_ID_4=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulescalarInt17748); 
 
                     		current.merge(this_ID_4);
                         
@@ -17736,23 +17785,23 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
     protected DFA4 dfa4 = new DFA4(this);
     protected DFA2 dfa2 = new DFA2(this);
     protected DFA45 dfa45 = new DFA45(this);
-    protected DFA63 dfa63 = new DFA63(this);
+    protected DFA64 dfa64 = new DFA64(this);
     static final String DFA4_eotS =
         "\16\uffff";
     static final String DFA4_eofS =
         "\16\uffff";
     static final String DFA4_minS =
-        "\1\10\1\uffff\1\127\4\uffff\1\6\6\uffff";
+        "\1\11\1\uffff\1\127\4\uffff\1\6\6\uffff";
     static final String DFA4_maxS =
-        "\1\151\1\uffff\1\127\4\uffff\1\55\6\uffff";
+        "\1\152\1\uffff\1\127\4\uffff\1\55\6\uffff";
     static final String DFA4_acceptS =
         "\1\uffff\1\1\1\uffff\1\10\1\11\1\12\1\13\1\uffff\1\5\1\3\1\7\1\6"+
         "\1\4\1\2";
     static final String DFA4_specialS =
         "\16\uffff}>";
     static final String[] DFA4_transitionS = {
-            "\2\1\1\5\3\uffff\1\1\1\uffff\1\6\3\uffff\1\1\16\uffff\1\3\4"+
-            "\uffff\1\4\100\uffff\1\2",
+            "\1\1\1\5\3\uffff\1\1\1\uffff\1\6\3\uffff\1\1\16\uffff\1\3\4"+
+            "\uffff\1\4\101\uffff\1\2",
             "",
             "\1\7",
             "",
@@ -17808,9 +17857,9 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
     static final String DFA2_eofS =
         "\15\uffff";
     static final String DFA2_minS =
-        "\1\151\1\127\1\13\12\uffff";
+        "\1\152\1\127\1\13\12\uffff";
     static final String DFA2_maxS =
-        "\1\151\1\127\1\53\12\uffff";
+        "\1\152\1\127\1\53\12\uffff";
     static final String DFA2_acceptS =
         "\3\uffff\1\6\1\2\1\11\1\12\1\5\1\1\1\4\1\7\1\3\1\10";
     static final String DFA2_specialS =
@@ -17872,26 +17921,26 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
     static final String DFA45_minS =
         "\1\33\1\7\1\uffff\1\112\1\uffff\1\112\1\7\1\112";
     static final String DFA45_maxS =
-        "\2\151\1\uffff\1\151\1\uffff\3\151";
+        "\2\152\1\uffff\1\152\1\uffff\3\152";
     static final String DFA45_acceptS =
         "\2\uffff\1\1\1\uffff\1\2\3\uffff";
     static final String DFA45_specialS =
         "\10\uffff}>";
     static final String[] DFA45_transitionS = {
-            "\1\4\56\uffff\1\3\7\uffff\1\2\26\uffff\1\1",
+            "\1\4\56\uffff\1\3\7\uffff\1\2\27\uffff\1\1",
             "\1\4\5\uffff\1\4\4\uffff\1\4\11\uffff\1\4\3\uffff\2\4\4\uffff"+
             "\1\4\2\uffff\1\4\2\uffff\1\4\4\uffff\1\4\3\uffff\1\4\1\uffff"+
             "\2\4\1\uffff\11\4\1\uffff\2\4\1\uffff\1\4\1\uffff\1\4\1\2\1"+
-            "\4\1\2\5\4\1\5\4\4\1\uffff\2\4\13\uffff\2\4\2\uffff\1\2",
+            "\4\1\2\5\4\1\5\4\4\1\uffff\2\4\13\uffff\2\4\3\uffff\1\2",
             "",
-            "\1\2\1\uffff\1\2\5\uffff\1\2\22\uffff\1\4\3\uffff\1\2",
+            "\1\2\1\uffff\1\2\5\uffff\1\2\22\uffff\1\4\4\uffff\1\2",
             "",
-            "\1\7\1\uffff\1\2\5\uffff\1\2\26\uffff\1\6",
+            "\1\7\1\uffff\1\2\5\uffff\1\2\27\uffff\1\6",
             "\1\4\5\uffff\1\4\4\uffff\1\4\11\uffff\1\4\3\uffff\2\4\4\uffff"+
             "\1\4\2\uffff\1\4\2\uffff\1\4\4\uffff\1\4\3\uffff\1\4\1\uffff"+
             "\2\4\1\uffff\11\4\1\uffff\2\4\1\uffff\1\4\1\uffff\1\4\1\2\1"+
-            "\4\1\2\5\4\1\5\4\4\1\uffff\2\4\13\uffff\2\4\2\uffff\1\2",
-            "\1\2\1\uffff\1\2\5\uffff\1\2\16\uffff\1\4\3\uffff\1\4\3\uffff"+
+            "\4\1\2\5\4\1\5\4\4\1\uffff\2\4\13\uffff\2\4\3\uffff\1\2",
+            "\1\2\1\uffff\1\2\5\uffff\1\2\16\uffff\1\4\3\uffff\1\4\4\uffff"+
             "\1\2"
     };
 
@@ -17928,26 +17977,26 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
             return "2771:1: (this_func_eval_0= rulefunc_eval | rulecol_ref )";
         }
     }
-    static final String DFA63_eotS =
+    static final String DFA64_eotS =
         "\14\uffff";
-    static final String DFA63_eofS =
-        "\1\1\3\uffff\1\13\7\uffff";
-    static final String DFA63_minS =
+    static final String DFA64_eofS =
+        "\1\1\3\uffff\1\12\7\uffff";
+    static final String DFA64_minS =
         "\1\60\3\uffff\1\60\7\uffff";
-    static final String DFA63_maxS =
-        "\1\151\3\uffff\1\151\7\uffff";
-    static final String DFA63_acceptS =
-        "\1\uffff\1\11\1\1\1\2\1\uffff\1\3\1\4\1\6\1\7\1\10\1\2\1\5";
-    static final String DFA63_specialS =
+    static final String DFA64_maxS =
+        "\1\152\3\uffff\1\152\7\uffff";
+    static final String DFA64_acceptS =
+        "\1\uffff\1\11\1\1\1\2\1\uffff\1\3\1\4\1\6\1\7\1\10\1\5\1\2";
+    static final String DFA64_specialS =
         "\14\uffff}>";
-    static final String[] DFA63_transitionS = {
+    static final String[] DFA64_transitionS = {
             "\1\2\31\uffff\1\4\6\uffff\1\11\1\6\1\7\1\uffff\1\1\5\uffff\1"+
-            "\10\5\uffff\1\3\2\uffff\3\3\2\uffff\1\5",
+            "\10\5\uffff\1\3\2\uffff\3\3\3\uffff\1\5",
             "",
             "",
             "",
-            "\1\13\31\uffff\1\13\6\uffff\3\13\1\uffff\1\13\5\uffff\1\13"+
-            "\5\uffff\1\13\2\uffff\3\13\2\uffff\1\12",
+            "\1\12\31\uffff\1\12\6\uffff\3\12\1\uffff\1\12\5\uffff\1\12"+
+            "\5\uffff\1\12\2\uffff\3\12\3\uffff\1\13",
             "",
             "",
             "",
@@ -17957,44 +18006,44 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
             ""
     };
 
-    static final short[] DFA63_eot = DFA.unpackEncodedString(DFA63_eotS);
-    static final short[] DFA63_eof = DFA.unpackEncodedString(DFA63_eofS);
-    static final char[] DFA63_min = DFA.unpackEncodedStringToUnsignedChars(DFA63_minS);
-    static final char[] DFA63_max = DFA.unpackEncodedStringToUnsignedChars(DFA63_maxS);
-    static final short[] DFA63_accept = DFA.unpackEncodedString(DFA63_acceptS);
-    static final short[] DFA63_special = DFA.unpackEncodedString(DFA63_specialS);
-    static final short[][] DFA63_transition;
+    static final short[] DFA64_eot = DFA.unpackEncodedString(DFA64_eotS);
+    static final short[] DFA64_eof = DFA.unpackEncodedString(DFA64_eofS);
+    static final char[] DFA64_min = DFA.unpackEncodedStringToUnsignedChars(DFA64_minS);
+    static final char[] DFA64_max = DFA.unpackEncodedStringToUnsignedChars(DFA64_maxS);
+    static final short[] DFA64_accept = DFA.unpackEncodedString(DFA64_acceptS);
+    static final short[] DFA64_special = DFA.unpackEncodedString(DFA64_specialS);
+    static final short[][] DFA64_transition;
 
     static {
-        int numStates = DFA63_transitionS.length;
-        DFA63_transition = new short[numStates][];
+        int numStates = DFA64_transitionS.length;
+        DFA64_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA63_transition[i] = DFA.unpackEncodedString(DFA63_transitionS[i]);
+            DFA64_transition[i] = DFA.unpackEncodedString(DFA64_transitionS[i]);
         }
     }
 
-    class DFA63 extends DFA {
+    class DFA64 extends DFA {
 
-        public DFA63(BaseRecognizer recognizer) {
+        public DFA64(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 63;
-            this.eot = DFA63_eot;
-            this.eof = DFA63_eof;
-            this.min = DFA63_min;
-            this.max = DFA63_max;
-            this.accept = DFA63_accept;
-            this.special = DFA63_special;
-            this.transition = DFA63_transition;
+            this.decisionNumber = 64;
+            this.eot = DFA64_eot;
+            this.eof = DFA64_eof;
+            this.min = DFA64_min;
+            this.max = DFA64_max;
+            this.accept = DFA64_accept;
+            this.special = DFA64_special;
+            this.transition = DFA64_transition;
         }
         public String getDescription() {
-            return "()+ loopback of 3960:1: (kw= KEYWORD_38 | this_scalar_1= rulescalar | this_ID_2= RULE_ID | kw= KEYWORD_10 | kw= KEYWORD_2 | kw= KEYWORD_11 | kw= KEYWORD_19 | kw= KEYWORD_9 )+";
+            return "()+ loopback of 3965:1: (kw= KEYWORD_38 | this_scalar_1= rulescalar | this_ID_2= RULE_ID | kw= KEYWORD_10 | kw= KEYWORD_2 | kw= KEYWORD_11 | kw= KEYWORD_19 | kw= KEYWORD_9 )+";
         }
     }
  
 
     public static final BitSet FOLLOW_ruleQuery_in_entryRuleQuery67 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleQuery77 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStatement_in_ruleQuery122 = new BitSet(new long[]{0x0000010800114702L,0x0000020100000000L});
+    public static final BitSet FOLLOW_ruleStatement_in_ruleQuery122 = new BitSet(new long[]{0x0000010800114702L,0x0000040100000000L});
     public static final BitSet FOLLOW_ruleStatement_in_entryRuleStatement157 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleStatement167 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleDefineStatement_in_ruleStatement216 = new BitSet(new long[]{0x0000000000000000L,0x0000000000200000L});
@@ -18019,18 +18068,18 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleDescribeStatement_in_ruleStatement724 = new BitSet(new long[]{0x0000000000000000L,0x0000000000200000L});
     public static final BitSet FOLLOW_ruleExplainStatement_in_ruleStatement751 = new BitSet(new long[]{0x0000000000000000L,0x0000000000200000L});
     public static final BitSet FOLLOW_KEYWORD_13_in_ruleStatement764 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCommentStatement_in_ruleStatement786 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDefineStatement_in_entryRuleDefineStatement820 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDefineStatement830 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRegisterClause_in_ruleDefineStatement871 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDefineClause_in_ruleDefineStatement898 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDefaultClause_in_ruleDefineStatement925 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDeclareClause_in_ruleDefineStatement952 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDeclareClause_in_ruleStatement792 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCommentStatement_in_ruleStatement813 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDefineStatement_in_entryRuleDefineStatement847 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDefineStatement857 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRegisterClause_in_ruleDefineStatement898 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDefineClause_in_ruleDefineStatement925 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDefaultClause_in_ruleDefineStatement952 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleLoadStatement_in_entryRuleLoadStatement986 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleLoadStatement996 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleAlias_in_ruleLoadStatement1042 = new BitSet(new long[]{0x0000000000000000L,0x0000000000800000L});
     public static final BitSet FOLLOW_KEYWORD_15_in_ruleLoadStatement1055 = new BitSet(new long[]{0x0000200000000000L});
-    public static final BitSet FOLLOW_KEYWORD_54_in_ruleLoadStatement1067 = new BitSet(new long[]{0x0000000000000000L,0x0000040000000000L});
+    public static final BitSet FOLLOW_KEYWORD_54_in_ruleLoadStatement1067 = new BitSet(new long[]{0x0000000000000000L,0x0000080000000000L});
     public static final BitSet FOLLOW_RULE_STRING_in_ruleLoadStatement1077 = new BitSet(new long[]{0x8000004000000002L});
     public static final BitSet FOLLOW_ruleLoadUsing_in_ruleLoadStatement1093 = new BitSet(new long[]{0x8000000000000002L});
     public static final BitSet FOLLOW_ruleAsClause_in_ruleLoadStatement1111 = new BitSet(new long[]{0x0000000000000002L});
@@ -18038,7 +18087,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_EOF_in_entryRuleForeachStatement1157 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleAlias_in_ruleForeachStatement1203 = new BitSet(new long[]{0x0000000000000000L,0x0000000000800000L});
     public static final BitSet FOLLOW_KEYWORD_15_in_ruleForeachStatement1216 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_KEYWORD_78_in_ruleForeachStatement1228 = new BitSet(new long[]{0x0000000000000000L,0x0000020000000000L});
+    public static final BitSet FOLLOW_KEYWORD_78_in_ruleForeachStatement1228 = new BitSet(new long[]{0x0000000000000000L,0x0000040000000000L});
     public static final BitSet FOLLOW_ruleAliasType_in_ruleForeachStatement1248 = new BitSet(new long[]{0x0000000000001000L,0x0000000020000000L});
     public static final BitSet FOLLOW_rulenested_blk_in_ruleForeachStatement1271 = new BitSet(new long[]{0x0000000000000002L,0x0000000000200000L});
     public static final BitSet FOLLOW_KEYWORD_13_in_ruleForeachStatement1285 = new BitSet(new long[]{0x0000000000000002L});
@@ -18047,25 +18096,25 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_EOF_in_entryRuleFilterStatement1360 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleAlias_in_ruleFilterStatement1406 = new BitSet(new long[]{0x0000000000000000L,0x0000000000800000L});
     public static final BitSet FOLLOW_KEYWORD_15_in_ruleFilterStatement1419 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_KEYWORD_73_in_ruleFilterStatement1431 = new BitSet(new long[]{0x0000000000000000L,0x0000020000000000L});
+    public static final BitSet FOLLOW_KEYWORD_73_in_ruleFilterStatement1431 = new BitSet(new long[]{0x0000000000000000L,0x0000040000000000L});
     public static final BitSet FOLLOW_ruleAliasType_in_ruleFilterStatement1451 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_KEYWORD_29_in_ruleFilterStatement1464 = new BitSet(new long[]{0x0200800008000000L,0x0000067200061500L});
+    public static final BitSet FOLLOW_KEYWORD_29_in_ruleFilterStatement1464 = new BitSet(new long[]{0x0200800008000000L,0x00000C7200061500L});
     public static final BitSet FOLLOW_ruleCondition_in_ruleFilterStatement1484 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleGroupByStatement_in_entryRuleGroupByStatement1519 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleGroupByStatement1529 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleAlias_in_ruleGroupByStatement1575 = new BitSet(new long[]{0x0000000000000000L,0x0000000000800000L});
     public static final BitSet FOLLOW_KEYWORD_15_in_ruleGroupByStatement1588 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_KEYWORD_59_in_ruleGroupByStatement1600 = new BitSet(new long[]{0x0000000000000000L,0x0000020000000000L});
+    public static final BitSet FOLLOW_KEYWORD_59_in_ruleGroupByStatement1600 = new BitSet(new long[]{0x0000000000000000L,0x0000040000000000L});
     public static final BitSet FOLLOW_ruleAliasType_in_ruleGroupByStatement1620 = new BitSet(new long[]{0x0005000000000000L,0x0000000000000001L});
     public static final BitSet FOLLOW_rulegroup_item_list_in_ruleGroupByStatement1641 = new BitSet(new long[]{0x0000004000000082L});
-    public static final BitSet FOLLOW_KEYWORD_70_in_ruleGroupByStatement1655 = new BitSet(new long[]{0x0000000000000000L,0x0000040000000000L});
+    public static final BitSet FOLLOW_KEYWORD_70_in_ruleGroupByStatement1655 = new BitSet(new long[]{0x0000000000000000L,0x0000080000000000L});
     public static final BitSet FOLLOW_rulegroup_type_in_ruleGroupByStatement1670 = new BitSet(new long[]{0x0000000000000082L});
     public static final BitSet FOLLOW_rulepartition_clause_in_ruleGroupByStatement1688 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleCoGroupByStatement_in_entryRuleCoGroupByStatement1724 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleCoGroupByStatement1734 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleAlias_in_ruleCoGroupByStatement1780 = new BitSet(new long[]{0x0000000000000000L,0x0000000000800000L});
     public static final BitSet FOLLOW_KEYWORD_15_in_ruleCoGroupByStatement1793 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_KEYWORD_76_in_ruleCoGroupByStatement1805 = new BitSet(new long[]{0x0000000000000000L,0x0000020000000000L});
+    public static final BitSet FOLLOW_KEYWORD_76_in_ruleCoGroupByStatement1805 = new BitSet(new long[]{0x0000000000000000L,0x0000040000000000L});
     public static final BitSet FOLLOW_rulejoin_sub_clause_in_ruleCoGroupByStatement1825 = new BitSet(new long[]{0x0000004000000082L});
     public static final BitSet FOLLOW_KEYWORD_70_in_ruleCoGroupByStatement1839 = new BitSet(new long[]{0x0000000000000000L,0x0000000080000000L});
     public static final BitSet FOLLOW_RULE_COGROUP_TYPE_in_ruleCoGroupByStatement1849 = new BitSet(new long[]{0x0000000000000082L});
@@ -18074,17 +18123,17 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_EOF_in_entryRuleOrderStatement1913 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleAlias_in_ruleOrderStatement1959 = new BitSet(new long[]{0x0000000000000000L,0x0000000000800000L});
     public static final BitSet FOLLOW_KEYWORD_15_in_ruleOrderStatement1972 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_KEYWORD_63_in_ruleOrderStatement1984 = new BitSet(new long[]{0x0000000000000000L,0x0000020000000000L});
+    public static final BitSet FOLLOW_KEYWORD_63_in_ruleOrderStatement1984 = new BitSet(new long[]{0x0000000000000000L,0x0000040000000000L});
     public static final BitSet FOLLOW_ruleAliasType_in_ruleOrderStatement2004 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_KEYWORD_29_in_ruleOrderStatement2017 = new BitSet(new long[]{0x0000800008000000L,0x0000067200045500L});
+    public static final BitSet FOLLOW_KEYWORD_29_in_ruleOrderStatement2017 = new BitSet(new long[]{0x0000800008000000L,0x00000C7200045500L});
     public static final BitSet FOLLOW_ruleorder_by_clause_in_ruleOrderStatement2032 = new BitSet(new long[]{0x0000004000000002L});
-    public static final BitSet FOLLOW_KEYWORD_70_in_ruleOrderStatement2045 = new BitSet(new long[]{0x0000000000000000L,0x0000020000040400L});
+    public static final BitSet FOLLOW_KEYWORD_70_in_ruleOrderStatement2045 = new BitSet(new long[]{0x0000000000000000L,0x0000040000040400L});
     public static final BitSet FOLLOW_ruleFuncClause_in_ruleOrderStatement2060 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleCrossStatement_in_entryRuleCrossStatement2096 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleCrossStatement2106 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleAlias_in_ruleCrossStatement2152 = new BitSet(new long[]{0x0000000000000000L,0x0000000000800000L});
     public static final BitSet FOLLOW_KEYWORD_15_in_ruleCrossStatement2165 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_KEYWORD_57_in_ruleCrossStatement2177 = new BitSet(new long[]{0x0000000000000000L,0x0000020000000000L});
+    public static final BitSet FOLLOW_KEYWORD_57_in_ruleCrossStatement2177 = new BitSet(new long[]{0x0000000000000000L,0x0000040000000000L});
     public static final BitSet FOLLOW_rulerel_list_in_ruleCrossStatement2197 = new BitSet(new long[]{0x0000000000000082L});
     public static final BitSet FOLLOW_rulepartition_clause_in_ruleCrossStatement2214 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleUnionStatement_in_entryRuleUnionStatement2250 = new BitSet(new long[]{0x0000000000000000L});
@@ -18092,45 +18141,45 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleAlias_in_ruleUnionStatement2306 = new BitSet(new long[]{0x0000000000000000L,0x0000000000800000L});
     public static final BitSet FOLLOW_KEYWORD_15_in_ruleUnionStatement2319 = new BitSet(new long[]{0x0000002000000000L});
     public static final BitSet FOLLOW_KEYWORD_69_in_ruleUnionStatement2331 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000040L});
-    public static final BitSet FOLLOW_KEYWORD_35_in_ruleUnionStatement2343 = new BitSet(new long[]{0x0000000000000000L,0x0000020000000000L});
+    public static final BitSet FOLLOW_KEYWORD_35_in_ruleUnionStatement2343 = new BitSet(new long[]{0x0000000000000000L,0x0000040000000000L});
     public static final BitSet FOLLOW_rulerel_list_in_ruleUnionStatement2363 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleJoinStatement_in_entryRuleJoinStatement2398 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleJoinStatement2408 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleAlias_in_ruleJoinStatement2454 = new BitSet(new long[]{0x0000000000000000L,0x0000000000800000L});
     public static final BitSet FOLLOW_KEYWORD_15_in_ruleJoinStatement2467 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_KEYWORD_52_in_ruleJoinStatement2479 = new BitSet(new long[]{0x0000000000000000L,0x0000020000000000L});
+    public static final BitSet FOLLOW_KEYWORD_52_in_ruleJoinStatement2479 = new BitSet(new long[]{0x0000000000000000L,0x0000040000000000L});
     public static final BitSet FOLLOW_rulejoin_sub_clause_in_ruleJoinStatement2499 = new BitSet(new long[]{0x0000004000000082L});
-    public static final BitSet FOLLOW_KEYWORD_70_in_ruleJoinStatement2513 = new BitSet(new long[]{0x0000000000000000L,0x0000040000000000L});
+    public static final BitSet FOLLOW_KEYWORD_70_in_ruleJoinStatement2513 = new BitSet(new long[]{0x0000000000000000L,0x0000080000000000L});
     public static final BitSet FOLLOW_rulejoin_type_in_ruleJoinStatement2528 = new BitSet(new long[]{0x0000000000000082L});
     public static final BitSet FOLLOW_rulepartition_clause_in_ruleJoinStatement2546 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleLimitStatement_in_entryRuleLimitStatement2582 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleLimitStatement2592 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleAlias_in_ruleLimitStatement2638 = new BitSet(new long[]{0x0000000000000000L,0x0000000000800000L});
     public static final BitSet FOLLOW_KEYWORD_15_in_ruleLimitStatement2651 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_KEYWORD_61_in_ruleLimitStatement2663 = new BitSet(new long[]{0x0000000000000000L,0x0000020000000000L});
+    public static final BitSet FOLLOW_KEYWORD_61_in_ruleLimitStatement2663 = new BitSet(new long[]{0x0000000000000000L,0x0000040000000000L});
     public static final BitSet FOLLOW_ruleAliasType_in_ruleLimitStatement2683 = new BitSet(new long[]{0x0000000000000000L,0x0000007200000400L});
     public static final BitSet FOLLOW_rulescalarInt_in_ruleLimitStatement2699 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleSampleStatement_in_entryRuleSampleStatement2733 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleSampleStatement2743 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleAlias_in_ruleSampleStatement2789 = new BitSet(new long[]{0x0000000000000000L,0x0000000000800000L});
     public static final BitSet FOLLOW_KEYWORD_15_in_ruleSampleStatement2802 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_KEYWORD_74_in_ruleSampleStatement2814 = new BitSet(new long[]{0x0000000000000000L,0x0000020000000000L});
+    public static final BitSet FOLLOW_KEYWORD_74_in_ruleSampleStatement2814 = new BitSet(new long[]{0x0000000000000000L,0x0000040000000000L});
     public static final BitSet FOLLOW_ruleAliasType_in_ruleSampleStatement2834 = new BitSet(new long[]{0x0000000000000000L,0x0000008000000000L});
     public static final BitSet FOLLOW_RULE_DOUBLENUMBER_in_ruleSampleStatement2845 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleDistinctStatement_in_entryRuleDistinctStatement2879 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleDistinctStatement2889 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleAlias_in_ruleDistinctStatement2935 = new BitSet(new long[]{0x0000000000000000L,0x0000000000800000L});
     public static final BitSet FOLLOW_KEYWORD_15_in_ruleDistinctStatement2948 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_KEYWORD_84_in_ruleDistinctStatement2960 = new BitSet(new long[]{0x0000000000000000L,0x0000020000000000L});
+    public static final BitSet FOLLOW_KEYWORD_84_in_ruleDistinctStatement2960 = new BitSet(new long[]{0x0000000000000000L,0x0000040000000000L});
     public static final BitSet FOLLOW_ruleAliasType_in_ruleDistinctStatement2980 = new BitSet(new long[]{0x0000000000000082L});
     public static final BitSet FOLLOW_rulepartition_clause_in_ruleDistinctStatement2997 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleStreamStatement_in_entryRuleStreamStatement3033 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleStreamStatement3043 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleAlias_in_ruleStreamStatement3089 = new BitSet(new long[]{0x0000000000000000L,0x0000000000800000L});
     public static final BitSet FOLLOW_KEYWORD_15_in_ruleStreamStatement3102 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_KEYWORD_75_in_ruleStreamStatement3114 = new BitSet(new long[]{0x0000000000000000L,0x0000020000000000L});
+    public static final BitSet FOLLOW_KEYWORD_75_in_ruleStreamStatement3114 = new BitSet(new long[]{0x0000000000000000L,0x0000040000000000L});
     public static final BitSet FOLLOW_ruleAliasType_in_ruleStreamStatement3134 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_KEYWORD_80_in_ruleStreamStatement3147 = new BitSet(new long[]{0x0000000008000000L,0x0000030000000000L});
+    public static final BitSet FOLLOW_KEYWORD_80_in_ruleStreamStatement3147 = new BitSet(new long[]{0x0000000008000000L,0x0000050000000000L});
     public static final BitSet FOLLOW_RULE_EXECCOMMAND_in_ruleStreamStatement3158 = new BitSet(new long[]{0x8000000000000002L});
     public static final BitSet FOLLOW_ruleIDENTIFIER_in_ruleStreamStatement3179 = new BitSet(new long[]{0x8000000000000002L});
     public static final BitSet FOLLOW_ruleAsClause_in_ruleStreamStatement3196 = new BitSet(new long[]{0x0000000000000002L});
@@ -18138,70 +18187,70 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_EOF_in_entryRuleMrStatement3242 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleAlias_in_ruleMrStatement3288 = new BitSet(new long[]{0x0000000000000000L,0x0000000000800000L});
     public static final BitSet FOLLOW_KEYWORD_15_in_ruleMrStatement3301 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_KEYWORD_90_in_ruleMrStatement3313 = new BitSet(new long[]{0x0000000000000000L,0x0000040000000000L});
+    public static final BitSet FOLLOW_KEYWORD_90_in_ruleMrStatement3313 = new BitSet(new long[]{0x0000000000000000L,0x0000080000000000L});
     public static final BitSet FOLLOW_RULE_STRING_in_ruleMrStatement3323 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_ruleStoreStatement_in_ruleMrStatement3344 = new BitSet(new long[]{0x0000000000000000L,0x0000020000000000L});
+    public static final BitSet FOLLOW_ruleStoreStatement_in_ruleMrStatement3344 = new BitSet(new long[]{0x0000000000000000L,0x0000040000000000L});
     public static final BitSet FOLLOW_ruleLoadStatement_in_ruleMrStatement3364 = new BitSet(new long[]{0x0000000000000002L,0x0000010000000000L});
     public static final BitSet FOLLOW_RULE_EXECCOMMAND_in_ruleMrStatement3376 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleSplitStatement_in_entryRuleSplitStatement3412 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleSplitStatement3422 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleAlias_in_ruleSplitStatement3468 = new BitSet(new long[]{0x0000000000000000L,0x0000000000800000L});
     public static final BitSet FOLLOW_KEYWORD_15_in_ruleSplitStatement3481 = new BitSet(new long[]{0x0000000400000000L});
-    public static final BitSet FOLLOW_KEYWORD_66_in_ruleSplitStatement3493 = new BitSet(new long[]{0x0000000000000000L,0x0000020000000000L});
+    public static final BitSet FOLLOW_KEYWORD_66_in_ruleSplitStatement3493 = new BitSet(new long[]{0x0000000000000000L,0x0000040000000000L});
     public static final BitSet FOLLOW_ruleAliasType_in_ruleSplitStatement3513 = new BitSet(new long[]{0x0000040000000000L});
-    public static final BitSet FOLLOW_KEYWORD_51_in_ruleSplitStatement3526 = new BitSet(new long[]{0x0000000008000000L,0x0000020000000000L});
+    public static final BitSet FOLLOW_KEYWORD_51_in_ruleSplitStatement3526 = new BitSet(new long[]{0x0000000008000000L,0x0000040000000000L});
     public static final BitSet FOLLOW_rulesplit_branch_in_ruleSplitStatement3546 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_KEYWORD_8_in_ruleSplitStatement3560 = new BitSet(new long[]{0x0000000008000000L,0x0000020000000000L});
+    public static final BitSet FOLLOW_KEYWORD_8_in_ruleSplitStatement3560 = new BitSet(new long[]{0x0000000008000000L,0x0000040000000000L});
     public static final BitSet FOLLOW_rulesplit_branch_in_ruleSplitStatement3580 = new BitSet(new long[]{0x0000000000000002L,0x0000000000010000L});
     public static final BitSet FOLLOW_ruleStoreStatement_in_entryRuleStoreStatement3617 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleStoreStatement3627 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_67_in_ruleStoreStatement3665 = new BitSet(new long[]{0x0000000000000000L,0x0000020000000000L});
+    public static final BitSet FOLLOW_KEYWORD_67_in_ruleStoreStatement3665 = new BitSet(new long[]{0x0000000000000000L,0x0000040000000000L});
     public static final BitSet FOLLOW_ruleAliasType_in_ruleStoreStatement3685 = new BitSet(new long[]{0x0000040000000000L});
-    public static final BitSet FOLLOW_KEYWORD_51_in_ruleStoreStatement3698 = new BitSet(new long[]{0x0000000000000000L,0x0000040000000000L});
+    public static final BitSet FOLLOW_KEYWORD_51_in_ruleStoreStatement3698 = new BitSet(new long[]{0x0000000000000000L,0x0000080000000000L});
     public static final BitSet FOLLOW_RULE_STRING_in_ruleStoreStatement3708 = new BitSet(new long[]{0x0000004000000002L});
-    public static final BitSet FOLLOW_KEYWORD_70_in_ruleStoreStatement3721 = new BitSet(new long[]{0x0000000000000000L,0x0000020000040400L});
+    public static final BitSet FOLLOW_KEYWORD_70_in_ruleStoreStatement3721 = new BitSet(new long[]{0x0000000000000000L,0x0000040000040400L});
     public static final BitSet FOLLOW_ruleFuncClause_in_ruleStoreStatement3736 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleDescribeStatement_in_entryRuleDescribeStatement3772 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleDescribeStatement3782 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_83_in_ruleDescribeStatement3820 = new BitSet(new long[]{0x0000000000000000L,0x0000020000000000L});
+    public static final BitSet FOLLOW_KEYWORD_83_in_ruleDescribeStatement3820 = new BitSet(new long[]{0x0000000000000000L,0x0000040000000000L});
     public static final BitSet FOLLOW_ruleAliasType_in_ruleDescribeStatement3840 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleExplainStatement_in_entryRuleExplainStatement3875 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleExplainStatement3885 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_77_in_ruleExplainStatement3923 = new BitSet(new long[]{0x0000000000000000L,0x0000020000000000L});
+    public static final BitSet FOLLOW_KEYWORD_77_in_ruleExplainStatement3923 = new BitSet(new long[]{0x0000000000000000L,0x0000040000000000L});
     public static final BitSet FOLLOW_ruleAliasType_in_ruleExplainStatement3943 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleDumpStatement_in_entryRuleDumpStatement3978 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleDumpStatement3988 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_49_in_ruleDumpStatement4026 = new BitSet(new long[]{0x0000000000000000L,0x0000020000000000L});
+    public static final BitSet FOLLOW_KEYWORD_49_in_ruleDumpStatement4026 = new BitSet(new long[]{0x0000000000000000L,0x0000040000000000L});
     public static final BitSet FOLLOW_ruleAliasType_in_ruleDumpStatement4046 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleCondition_in_entryRuleCondition4081 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleCondition4091 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_KEYWORD_4_in_ruleCondition4130 = new BitSet(new long[]{0x0050401044200030L,0x0000000020001000L});
     public static final BitSet FOLLOW_ruleType_in_ruleCondition4145 = new BitSet(new long[]{0x0000000000000000L,0x0000000000002000L});
-    public static final BitSet FOLLOW_KEYWORD_5_in_ruleCondition4157 = new BitSet(new long[]{0x0200800008000000L,0x0000067200061500L});
+    public static final BitSet FOLLOW_KEYWORD_5_in_ruleCondition4157 = new BitSet(new long[]{0x0200800008000000L,0x00000C7200061500L});
     public static final BitSet FOLLOW_ruleOrCondition_in_ruleCondition4180 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleOrCondition_in_entryRuleOrCondition4214 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleOrCondition4224 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleAndCondition_in_ruleOrCondition4271 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000080L});
-    public static final BitSet FOLLOW_KEYWORD_36_in_ruleOrCondition4293 = new BitSet(new long[]{0x0200800008000000L,0x0000067200061500L});
+    public static final BitSet FOLLOW_KEYWORD_36_in_ruleOrCondition4293 = new BitSet(new long[]{0x0200800008000000L,0x00000C7200061500L});
     public static final BitSet FOLLOW_ruleAndCondition_in_ruleOrCondition4313 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000080L});
     public static final BitSet FOLLOW_ruleAndCondition_in_entryRuleAndCondition4350 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleAndCondition4360 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleUnaryCondition_in_ruleAndCondition4407 = new BitSet(new long[]{0x0002000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_39_in_ruleAndCondition4429 = new BitSet(new long[]{0x0200800008000000L,0x0000067200061500L});
+    public static final BitSet FOLLOW_KEYWORD_39_in_ruleAndCondition4429 = new BitSet(new long[]{0x0200800008000000L,0x00000C7200061500L});
     public static final BitSet FOLLOW_ruleUnaryCondition_in_ruleAndCondition4449 = new BitSet(new long[]{0x0002000000000002L});
     public static final BitSet FOLLOW_ruleUnaryCondition_in_entryRuleUnaryCondition4486 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleUnaryCondition4496 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_4_in_ruleUnaryCondition4535 = new BitSet(new long[]{0x0200800008000000L,0x0000067200061500L});
+    public static final BitSet FOLLOW_KEYWORD_4_in_ruleUnaryCondition4535 = new BitSet(new long[]{0x0200800008000000L,0x00000C7200061500L});
     public static final BitSet FOLLOW_ruleCondition_in_ruleUnaryCondition4556 = new BitSet(new long[]{0x0000000000000000L,0x0000000002002000L});
-    public static final BitSet FOLLOW_KEYWORD_17_in_ruleUnaryCondition4569 = new BitSet(new long[]{0x0200800008000000L,0x0000067200061500L});
+    public static final BitSet FOLLOW_KEYWORD_17_in_ruleUnaryCondition4569 = new BitSet(new long[]{0x0200800008000000L,0x00000C7200061500L});
     public static final BitSet FOLLOW_ruleCondition_in_ruleUnaryCondition4589 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
-    public static final BitSet FOLLOW_KEYWORD_12_in_ruleUnaryCondition4602 = new BitSet(new long[]{0x0200800008000000L,0x0000067200061500L});
+    public static final BitSet FOLLOW_KEYWORD_12_in_ruleUnaryCondition4602 = new BitSet(new long[]{0x0200800008000000L,0x00000C7200061500L});
     public static final BitSet FOLLOW_ruleCondition_in_ruleUnaryCondition4622 = new BitSet(new long[]{0x0000000000000000L,0x0000000000002000L});
     public static final BitSet FOLLOW_KEYWORD_5_in_ruleUnaryCondition4637 = new BitSet(new long[]{0x0000000000000002L,0x0000000000008000L});
-    public static final BitSet FOLLOW_KEYWORD_7_in_ruleUnaryCondition4659 = new BitSet(new long[]{0x0200800008000000L,0x0000067200061500L});
+    public static final BitSet FOLLOW_KEYWORD_7_in_ruleUnaryCondition4659 = new BitSet(new long[]{0x0200800008000000L,0x00000C7200061500L});
     public static final BitSet FOLLOW_ruleCondition_in_ruleUnaryCondition4679 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleTE_in_ruleUnaryCondition4711 = new BitSet(new long[]{0x75A0000000040002L,0x0000000001400026L});
-    public static final BitSet FOLLOW_rulerel_op_in_ruleUnaryCondition4736 = new BitSet(new long[]{0x0200800008000000L,0x0000067200061500L});
+    public static final BitSet FOLLOW_rulerel_op_in_ruleUnaryCondition4736 = new BitSet(new long[]{0x0200800008000000L,0x00000C7200061500L});
     public static final BitSet FOLLOW_ruleTE_in_ruleUnaryCondition4756 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleTE_in_entryRuleTE4794 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleTE4804 = new BitSet(new long[]{0x0000000000000002L});
@@ -18212,13 +18261,13 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_rulefunc_eval_in_entryRulefunc_eval4927 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRulefunc_eval4937 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleFuncName_in_rulefunc_eval4978 = new BitSet(new long[]{0x0000000000000000L,0x0000000000001000L});
-    public static final BitSet FOLLOW_KEYWORD_4_in_rulefunc_eval4999 = new BitSet(new long[]{0x0200800008000000L,0x0000067200067500L});
+    public static final BitSet FOLLOW_KEYWORD_4_in_rulefunc_eval4999 = new BitSet(new long[]{0x0200800008000000L,0x00000C7200067500L});
     public static final BitSet FOLLOW_rulereal_arg_list_in_rulefunc_eval5019 = new BitSet(new long[]{0x0000000000000000L,0x0000000000002000L});
     public static final BitSet FOLLOW_KEYWORD_5_in_rulefunc_eval5033 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rulereal_arg_list_in_entryRulereal_arg_list5067 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRulereal_arg_list5077 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rulereal_arg_in_rulereal_arg_list5123 = new BitSet(new long[]{0x0000000000000002L,0x0000000000010000L});
-    public static final BitSet FOLLOW_KEYWORD_8_in_rulereal_arg_list5137 = new BitSet(new long[]{0x0200800008000000L,0x0000067200065500L});
+    public static final BitSet FOLLOW_KEYWORD_8_in_rulereal_arg_list5137 = new BitSet(new long[]{0x0200800008000000L,0x00000C7200065500L});
     public static final BitSet FOLLOW_rulereal_arg_in_rulereal_arg_list5157 = new BitSet(new long[]{0x0000000000000002L,0x0000000000010000L});
     public static final BitSet FOLLOW_rulereal_arg_in_entryRulereal_arg5194 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRulereal_arg5204 = new BitSet(new long[]{0x0000000000000002L});
@@ -18226,20 +18275,20 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleSTAR_in_rulereal_arg5272 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleExpression_in_entryRuleExpression5306 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleExpression5316 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_47_in_ruleExpression5355 = new BitSet(new long[]{0x0200800008000000L,0x0000067200061500L});
+    public static final BitSet FOLLOW_KEYWORD_47_in_ruleExpression5355 = new BitSet(new long[]{0x0200800008000000L,0x00000C7200061500L});
     public static final BitSet FOLLOW_ruleAddExpression_in_ruleExpression5378 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleAddExpression_in_entryRuleAddExpression5412 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleAddExpression5422 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rulemulti_expr_in_ruleAddExpression5469 = new BitSet(new long[]{0x0000000000000002L,0x0000000000028000L});
-    public static final BitSet FOLLOW_rulePLUS_in_ruleAddExpression5486 = new BitSet(new long[]{0x0200800008000000L,0x0000067200061500L});
-    public static final BitSet FOLLOW_ruleMINUS_in_ruleAddExpression5507 = new BitSet(new long[]{0x0200800008000000L,0x0000067200061500L});
+    public static final BitSet FOLLOW_rulePLUS_in_ruleAddExpression5486 = new BitSet(new long[]{0x0200800008000000L,0x00000C7200061500L});
+    public static final BitSet FOLLOW_ruleMINUS_in_ruleAddExpression5507 = new BitSet(new long[]{0x0200800008000000L,0x00000C7200061500L});
     public static final BitSet FOLLOW_rulemulti_expr_in_ruleAddExpression5528 = new BitSet(new long[]{0x0000000000000002L,0x0000000000028000L});
     public static final BitSet FOLLOW_rulemulti_expr_in_entryRulemulti_expr5565 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRulemulti_expr5575 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rulecast_expr_in_rulemulti_expr5622 = new BitSet(new long[]{0x0000000000000002L,0x0000000000084800L});
-    public static final BitSet FOLLOW_ruleSTAR_in_rulemulti_expr5639 = new BitSet(new long[]{0x0200800008000000L,0x0000067200061500L});
-    public static final BitSet FOLLOW_ruleDIV_in_rulemulti_expr5660 = new BitSet(new long[]{0x0200800008000000L,0x0000067200061500L});
-    public static final BitSet FOLLOW_rulePERCENT_in_rulemulti_expr5681 = new BitSet(new long[]{0x0200800008000000L,0x0000067200061500L});
+    public static final BitSet FOLLOW_ruleSTAR_in_rulemulti_expr5639 = new BitSet(new long[]{0x0200800008000000L,0x00000C7200061500L});
+    public static final BitSet FOLLOW_ruleDIV_in_rulemulti_expr5660 = new BitSet(new long[]{0x0200800008000000L,0x00000C7200061500L});
+    public static final BitSet FOLLOW_rulePERCENT_in_rulemulti_expr5681 = new BitSet(new long[]{0x0200800008000000L,0x00000C7200061500L});
     public static final BitSet FOLLOW_rulecast_expr_in_rulemulti_expr5702 = new BitSet(new long[]{0x0000000000000002L,0x0000000000084800L});
     public static final BitSet FOLLOW_rulecast_expr_in_entryRulecast_expr5739 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRulecast_expr5749 = new BitSet(new long[]{0x0000000000000002L});
@@ -18263,8 +18312,8 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_rulecol_ref_in_ruleprojectable_expr6266 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruledot_proj_in_entryRuledot_proj6301 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuledot_proj6312 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_10_in_ruledot_proj6351 = new BitSet(new long[]{0x0000800008000000L,0x0000067200040500L});
-    public static final BitSet FOLLOW_KEYWORD_24_in_ruledot_proj6370 = new BitSet(new long[]{0x0000800008000000L,0x0000067200040500L});
+    public static final BitSet FOLLOW_KEYWORD_10_in_ruledot_proj6351 = new BitSet(new long[]{0x0000800008000000L,0x00000C7200040500L});
+    public static final BitSet FOLLOW_KEYWORD_24_in_ruledot_proj6370 = new BitSet(new long[]{0x0000800008000000L,0x00000C7200040500L});
     public static final BitSet FOLLOW_rulecol_alias_or_index_in_ruledot_proj6393 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rulecol_alias_or_index_in_entryRulecol_alias_or_index6438 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRulecol_alias_or_index6449 = new BitSet(new long[]{0x0000000000000002L});
@@ -18280,12 +18329,12 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_RULE_INT_in_rulecol_index6780 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rulepound_proj_in_entryRulepound_proj6826 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRulepound_proj6837 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePOUND_in_rulepound_proj6884 = new BitSet(new long[]{0x0000800000000000L,0x0000040000000000L});
+    public static final BitSet FOLLOW_rulePOUND_in_rulepound_proj6884 = new BitSet(new long[]{0x0000800000000000L,0x0000080000000000L});
     public static final BitSet FOLLOW_RULE_STRING_in_rulepound_proj6905 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_KEYWORD_56_in_rulepound_proj6929 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleneg_expr_in_entryRuleneg_expr6971 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleneg_expr6981 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_9_in_ruleneg_expr7019 = new BitSet(new long[]{0x0200800008000000L,0x0000067200061500L});
+    public static final BitSet FOLLOW_KEYWORD_9_in_ruleneg_expr7019 = new BitSet(new long[]{0x0200800008000000L,0x00000C7200061500L});
     public static final BitSet FOLLOW_rulecast_expr_in_ruleneg_expr7040 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rulerel_op_in_entryRulerel_op7075 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRulerel_op7086 = new BitSet(new long[]{0x0000000000000002L});
@@ -18327,7 +18376,7 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_EOF_in_entryRuleFlattenGeneratedItem8275 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleCondition_in_ruleFlattenGeneratedItem8323 = new BitSet(new long[]{0x8000000000000002L});
     public static final BitSet FOLLOW_KEYWORD_6_in_ruleFlattenGeneratedItem8341 = new BitSet(new long[]{0x8000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_28_in_ruleFlattenGeneratedItem8355 = new BitSet(new long[]{0x0000000008000000L,0x0000020000001000L});
+    public static final BitSet FOLLOW_KEYWORD_28_in_ruleFlattenGeneratedItem8355 = new BitSet(new long[]{0x0000000008000000L,0x0000040000001000L});
     public static final BitSet FOLLOW_ruleFieldDef_in_ruleFlattenGeneratedItem8371 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleFieldFefList_in_ruleFlattenGeneratedItem8392 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleCommentStatement_in_entryRuleCommentStatement8430 = new BitSet(new long[]{0x0000000000000000L});
@@ -18342,345 +18391,346 @@ public class InternalPigParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_rulescalarInt_in_ruleParallelClause8689 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleRegisterClause_in_entryRuleRegisterClause8734 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleRegisterClause8745 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_87_in_ruleRegisterClause8783 = new BitSet(new long[]{0x0001000000000000L,0x00000272080E0400L});
+    public static final BitSet FOLLOW_KEYWORD_87_in_ruleRegisterClause8783 = new BitSet(new long[]{0x0001000000000000L,0x00000472080E0400L});
     public static final BitSet FOLLOW_rulePathClause_in_ruleRegisterClause8805 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleDefaultClause_in_entryRuleDefaultClause8849 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleDefaultClause8859 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_82_in_ruleDefaultClause8897 = new BitSet(new long[]{0x0000000000000000L,0x0000020000000000L});
-    public static final BitSet FOLLOW_ruleAlias_in_ruleDefaultClause8917 = new BitSet(new long[]{0x0000000000000000L,0x0000040000000000L});
+    public static final BitSet FOLLOW_KEYWORD_82_in_ruleDefaultClause8897 = new BitSet(new long[]{0x0000000000000000L,0x0000040000000000L});
+    public static final BitSet FOLLOW_ruleAlias_in_ruleDefaultClause8917 = new BitSet(new long[]{0x0000000000000000L,0x0000080000000000L});
     public static final BitSet FOLLOW_RULE_STRING_in_ruleDefaultClause8928 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleDeclareClause_in_entryRuleDeclareClause8962 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleDeclareClause8972 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_81_in_ruleDeclareClause9010 = new BitSet(new long[]{0x0000000000000000L,0x0000020000000000L});
-    public static final BitSet FOLLOW_ruleAlias_in_ruleDeclareClause9030 = new BitSet(new long[]{0x0000000000000000L,0x0000040000000000L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleDeclareClause9041 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDefineClause_in_entryRuleDefineClause9075 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDefineClause9085 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_71_in_ruleDefineClause9123 = new BitSet(new long[]{0x0000000000000000L,0x0000020000000000L});
-    public static final BitSet FOLLOW_ruleAlias_in_ruleDefineClause9143 = new BitSet(new long[]{0x0000000000000000L,0x0000020000040400L});
-    public static final BitSet FOLLOW_ruleFuncClause_in_ruleDefineClause9159 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLoadUsing_in_entryRuleLoadUsing9194 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLoadUsing9205 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_70_in_ruleLoadUsing9243 = new BitSet(new long[]{0x0000000000000000L,0x0000020000040400L});
-    public static final BitSet FOLLOW_ruleFuncClause_in_ruleLoadUsing9265 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFuncClause_in_entryRuleFuncClause9310 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFuncClause9321 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFuncName_in_ruleFuncClause9368 = new BitSet(new long[]{0x0000000000000000L,0x0000000000001000L});
-    public static final BitSet FOLLOW_KEYWORD_4_in_ruleFuncClause9386 = new BitSet(new long[]{0x0000000000000000L,0x0000040000012000L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleFuncClause9402 = new BitSet(new long[]{0x0000000000000000L,0x0000000000012000L});
-    public static final BitSet FOLLOW_KEYWORD_8_in_ruleFuncClause9423 = new BitSet(new long[]{0x0000000000000000L,0x0000040000000000L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleFuncClause9438 = new BitSet(new long[]{0x0000000000000000L,0x0000000000012000L});
-    public static final BitSet FOLLOW_KEYWORD_5_in_ruleFuncClause9458 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFuncName_in_entryRuleFuncName9498 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFuncName9509 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleFuncName9549 = new BitSet(new long[]{0x0000000000000002L,0x0000020000040400L});
-    public static final BitSet FOLLOW_KEYWORD_10_in_ruleFuncName9573 = new BitSet(new long[]{0x0000000000000002L,0x0000020000040400L});
-    public static final BitSet FOLLOW_KEYWORD_2_in_ruleFuncName9592 = new BitSet(new long[]{0x0000000000000002L,0x0000020000040400L});
-    public static final BitSet FOLLOW_rulePathClause_in_entryRulePathClause9633 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulePathClause9644 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_38_in_rulePathClause9682 = new BitSet(new long[]{0x0001000000000002L,0x00000272080E0400L});
-    public static final BitSet FOLLOW_rulescalar_in_rulePathClause9710 = new BitSet(new long[]{0x0001000000000002L,0x00000272080E0400L});
-    public static final BitSet FOLLOW_RULE_ID_in_rulePathClause9736 = new BitSet(new long[]{0x0001000000000002L,0x00000272080E0400L});
-    public static final BitSet FOLLOW_KEYWORD_10_in_rulePathClause9760 = new BitSet(new long[]{0x0001000000000002L,0x00000272080E0400L});
-    public static final BitSet FOLLOW_KEYWORD_2_in_rulePathClause9779 = new BitSet(new long[]{0x0001000000000002L,0x00000272080E0400L});
-    public static final BitSet FOLLOW_KEYWORD_11_in_rulePathClause9798 = new BitSet(new long[]{0x0001000000000002L,0x00000272080E0400L});
-    public static final BitSet FOLLOW_KEYWORD_19_in_rulePathClause9817 = new BitSet(new long[]{0x0001000000000002L,0x00000272080E0400L});
-    public static final BitSet FOLLOW_KEYWORD_9_in_rulePathClause9836 = new BitSet(new long[]{0x0001000000000002L,0x00000272080E0400L});
-    public static final BitSet FOLLOW_ruleAsClause_in_entryRuleAsClause9877 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAsClause9888 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_28_in_ruleAsClause9926 = new BitSet(new long[]{0x0000001000000000L,0x0000020000001000L});
-    public static final BitSet FOLLOW_ruleAliasDef_in_ruleAsClause9949 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAliasDefList_in_ruleAsClause9982 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAliasDef_in_entryRuleAliasDef10028 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAliasDef10039 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAlias_in_ruleAliasDef10086 = new BitSet(new long[]{0x0000000000000002L,0x0000000000100000L});
-    public static final BitSet FOLLOW_KEYWORD_12_in_ruleAliasDef10105 = new BitSet(new long[]{0x0050401044200030L,0x0000000020001000L});
-    public static final BitSet FOLLOW_ruleType_in_ruleAliasDef10127 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAliasDefList_in_entryRuleAliasDefList10174 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAliasDefList10185 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_4_in_ruleAliasDefList10223 = new BitSet(new long[]{0x0000000000000000L,0x0000020000000000L});
-    public static final BitSet FOLLOW_ruleAliasDef_in_ruleAliasDefList10245 = new BitSet(new long[]{0x0000000000000000L,0x0000000000012000L});
-    public static final BitSet FOLLOW_KEYWORD_8_in_ruleAliasDefList10264 = new BitSet(new long[]{0x0000000000000000L,0x0000020000000000L});
-    public static final BitSet FOLLOW_ruleAliasDef_in_ruleAliasDefList10286 = new BitSet(new long[]{0x0000000000000000L,0x0000000000012000L});
-    public static final BitSet FOLLOW_KEYWORD_5_in_ruleAliasDefList10306 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIDENTIFIER_in_entryRuleIDENTIFIER10346 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleIDENTIFIER10357 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleIDENTIFIER10396 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFieldDef_in_entryRuleFieldDef10440 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFieldDef10451 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIDENTIFIER_in_ruleFieldDef10498 = new BitSet(new long[]{0x0000000000000002L,0x0000000000100000L});
-    public static final BitSet FOLLOW_KEYWORD_12_in_ruleFieldDef10517 = new BitSet(new long[]{0x0050401044200030L,0x0000000020001000L});
-    public static final BitSet FOLLOW_ruleType_in_ruleFieldDef10539 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFieldFefList_in_entryRuleFieldFefList10586 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFieldFefList10597 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_4_in_ruleFieldFefList10635 = new BitSet(new long[]{0x0000000008000000L,0x0000020000000000L});
-    public static final BitSet FOLLOW_ruleFieldDef_in_ruleFieldFefList10657 = new BitSet(new long[]{0x0000000000000000L,0x0000000000012000L});
-    public static final BitSet FOLLOW_KEYWORD_8_in_ruleFieldFefList10676 = new BitSet(new long[]{0x0000000008000000L,0x0000020000000000L});
-    public static final BitSet FOLLOW_ruleFieldDef_in_ruleFieldFefList10698 = new BitSet(new long[]{0x0000000000000000L,0x0000000000012000L});
-    public static final BitSet FOLLOW_KEYWORD_5_in_ruleFieldFefList10718 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleType_in_entryRuleType10758 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleType10769 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSimpleType_in_ruleType10816 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTupleType_in_ruleType10849 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMapType_in_ruleType10882 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulebag_type_in_ruleType10915 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSimpleType_in_entryRuleSimpleType10960 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSimpleType10971 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_44_in_ruleSimpleType11009 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_55_in_ruleSimpleType11028 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_58_in_ruleSimpleType11047 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_72_in_ruleSimpleType11066 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_89_in_ruleSimpleType11085 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_88_in_ruleSimpleType11104 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTupleType_in_entryRuleTupleType11144 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleTupleType11155 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_68_in_ruleTupleType11194 = new BitSet(new long[]{0x0000001000000000L,0x0000000000001000L});
-    public static final BitSet FOLLOW_ruleAliasDefList_in_ruleTupleType11218 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulebag_type_in_entryRulebag_type11263 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulebag_type11274 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_42_in_rulebag_type11313 = new BitSet(new long[]{0x0000000000000000L,0x0000000020000000L});
-    public static final BitSet FOLLOW_KEYWORD_21_in_rulebag_type11328 = new BitSet(new long[]{0x0000001008000000L,0x0000020040001000L});
-    public static final BitSet FOLLOW_ruleIDENTIFIER_in_rulebag_type11352 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
-    public static final BitSet FOLLOW_KEYWORD_12_in_rulebag_type11370 = new BitSet(new long[]{0x0000001000000000L,0x0000000000001000L});
-    public static final BitSet FOLLOW_ruleTupleType_in_rulebag_type11394 = new BitSet(new long[]{0x0000000000000000L,0x0000000040000000L});
-    public static final BitSet FOLLOW_KEYWORD_22_in_rulebag_type11414 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMapType_in_entryRuleMapType11454 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMapType11465 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_62_in_ruleMapType11502 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSTR_OP_EQ_in_entryRuleSTR_OP_EQ11543 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSTR_OP_EQ11554 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_30_in_ruleSTR_OP_EQ11591 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSTR_OP_GT_in_entryRuleSTR_OP_GT11630 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSTR_OP_GT11641 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_31_in_ruleSTR_OP_GT11678 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSTR_OP_LT_in_entryRuleSTR_OP_LT11717 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSTR_OP_LT11728 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_34_in_ruleSTR_OP_LT11765 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSTR_OP_GTE_in_entryRuleSTR_OP_GTE11804 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSTR_OP_GTE11815 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_43_in_ruleSTR_OP_GTE11852 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSTR_OP_LTE_in_entryRuleSTR_OP_LTE11891 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSTR_OP_LTE11902 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_45_in_ruleSTR_OP_LTE11939 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSTR_OP_NE_in_entryRuleSTR_OP_NE11978 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSTR_OP_NE11989 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_46_in_ruleSTR_OP_NE12026 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNUM_OP_EQ_in_entryRuleNUM_OP_EQ12067 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNUM_OP_EQ12078 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_26_in_ruleNUM_OP_EQ12115 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNUM_OP_LT_in_entryRuleNUM_OP_LT12154 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNUM_OP_LT12165 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_14_in_ruleNUM_OP_LT12202 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNUM_OP_LTE_in_entryRuleNUM_OP_LTE12241 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNUM_OP_LTE12252 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_25_in_ruleNUM_OP_LTE12289 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNUM_OP_GT_in_entryRuleNUM_OP_GT12328 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNUM_OP_GT12339 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_16_in_ruleNUM_OP_GT12376 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNUM_OP_GTE_in_entryRuleNUM_OP_GTE12415 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNUM_OP_GTE12426 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_27_in_ruleNUM_OP_GTE12463 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNUM_OP_NE_in_entryRuleNUM_OP_NE12502 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNUM_OP_NE12513 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_23_in_ruleNUM_OP_NE12550 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSEMI_COLON_in_entryRuleSEMI_COLON12589 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSEMI_COLON12600 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_13_in_ruleSEMI_COLON12637 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePOUND_in_entryRulePOUND12688 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulePOUND12699 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_1_in_rulePOUND12736 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCOMMA_in_entryRuleCOMMA12777 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleCOMMA12788 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_8_in_ruleCOMMA12825 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDIV_in_entryRuleDIV12866 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDIV12877 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_11_in_ruleDIV12914 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePERCENT_in_entryRulePERCENT12953 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulePERCENT12964 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_3_in_rulePERCENT13001 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePLUS_in_entryRulePLUS13040 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulePLUS13051 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_7_in_rulePLUS13088 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMINUS_in_entryRuleMINUS13127 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMINUS13138 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_9_in_ruleMINUS13175 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSTAR_in_entryRuleSTAR13214 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSTAR13225 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_6_in_ruleSTAR13262 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDOLLAR_in_entryRuleDOLLAR13303 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDOLLAR13314 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_2_in_ruleDOLLAR13351 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulegroup_type_in_entryRulegroup_type13390 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulegroup_type13401 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rulegroup_type13440 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulegroup_item_list_in_entryRulegroup_item_list13483 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulegroup_item_list13493 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulegroup_item_in_rulegroup_item_list13540 = new BitSet(new long[]{0x0000000000000002L,0x0000000000010000L});
-    public static final BitSet FOLLOW_ruleCOMMA_in_rulegroup_item_list13556 = new BitSet(new long[]{0x0005000000000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_rulegroup_item_in_rulegroup_item_list13576 = new BitSet(new long[]{0x0000000000000002L,0x0000000000010000L});
-    public static final BitSet FOLLOW_ruleorder_by_clause_in_entryRuleorder_by_clause13614 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleorder_by_clause13625 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSTAR_in_ruleorder_by_clause13673 = new BitSet(new long[]{0x0008008000000002L});
-    public static final BitSet FOLLOW_KEYWORD_41_in_ruleorder_by_clause13692 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_48_in_ruleorder_by_clause13711 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleorder_col_list_in_ruleorder_by_clause13742 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleorder_col_list_in_entryRuleorder_col_list13787 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleorder_col_list13798 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleorder_col_in_ruleorder_col_list13845 = new BitSet(new long[]{0x0000000000000002L,0x0000000000010000L});
-    public static final BitSet FOLLOW_KEYWORD_8_in_ruleorder_col_list13864 = new BitSet(new long[]{0x0000800008000000L,0x0000067200045500L});
-    public static final BitSet FOLLOW_ruleorder_col_in_ruleorder_col_list13886 = new BitSet(new long[]{0x0000000000000002L,0x0000000000010000L});
-    public static final BitSet FOLLOW_ruleorder_col_in_entryRuleorder_col13933 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleorder_col13944 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulecol_ref_in_ruleorder_col13992 = new BitSet(new long[]{0x0008008000000002L});
-    public static final BitSet FOLLOW_KEYWORD_41_in_ruleorder_col14011 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_48_in_ruleorder_col14030 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_4_in_ruleorder_col14053 = new BitSet(new long[]{0x0000800008000000L,0x0000067200040500L});
-    public static final BitSet FOLLOW_rulecol_ref_in_ruleorder_col14075 = new BitSet(new long[]{0x0008008000000000L,0x0000000000002000L});
-    public static final BitSet FOLLOW_KEYWORD_41_in_ruleorder_col14094 = new BitSet(new long[]{0x0000000000000000L,0x0000000000002000L});
-    public static final BitSet FOLLOW_KEYWORD_48_in_ruleorder_col14113 = new BitSet(new long[]{0x0000000000000000L,0x0000000000002000L});
-    public static final BitSet FOLLOW_KEYWORD_5_in_ruleorder_col14128 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulepartition_clause_in_entryRulepartition_clause14169 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulepartition_clause14180 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_91_in_rulepartition_clause14218 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_KEYWORD_29_in_rulepartition_clause14231 = new BitSet(new long[]{0x0000000000000000L,0x0000020000040400L});
-    public static final BitSet FOLLOW_ruleFuncName_in_rulepartition_clause14253 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulerel_list_in_entryRulerel_list14297 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulerel_list14307 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAliasType_in_rulerel_list14353 = new BitSet(new long[]{0x0000000000000002L,0x0000000000010000L});
-    public static final BitSet FOLLOW_KEYWORD_8_in_rulerel_list14367 = new BitSet(new long[]{0x0000000000000000L,0x0000020000000000L});
-    public static final BitSet FOLLOW_ruleAliasType_in_rulerel_list14387 = new BitSet(new long[]{0x0000000000000002L,0x0000000000010000L});
-    public static final BitSet FOLLOW_rulejoin_type_in_entryRulejoin_type14425 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulejoin_type14436 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rulejoin_type14475 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulejoin_sub_clause_in_entryRulejoin_sub_clause14518 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulejoin_sub_clause14528 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulejoin_item_in_rulejoin_sub_clause14575 = new BitSet(new long[]{0x0000120300000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_KEYWORD_53_in_rulejoin_sub_clause14588 = new BitSet(new long[]{0x0000000100000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_KEYWORD_65_in_rulejoin_sub_clause14606 = new BitSet(new long[]{0x0000000100000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_KEYWORD_50_in_rulejoin_sub_clause14624 = new BitSet(new long[]{0x0000000100000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_KEYWORD_64_in_rulejoin_sub_clause14639 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_KEYWORD_8_in_rulejoin_sub_clause14654 = new BitSet(new long[]{0x0000000000000000L,0x0000020000000000L});
-    public static final BitSet FOLLOW_rulejoin_item_in_rulejoin_sub_clause14674 = new BitSet(new long[]{0x0000000000000002L,0x0000000000010000L});
-    public static final BitSet FOLLOW_rulejoin_item_in_entryRulejoin_item14711 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulejoin_item14721 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAliasType_in_rulejoin_item14767 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_rulejoin_group_by_clause_in_rulejoin_item14788 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulegroup_item_in_entryRulegroup_item14823 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulegroup_item14833 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_29_in_rulegroup_item14873 = new BitSet(new long[]{0x0200800008000000L,0x0000067200065500L});
-    public static final BitSet FOLLOW_rulejoin_group_by_expr_list_in_rulegroup_item14894 = new BitSet(new long[]{0x0000000110000002L});
-    public static final BitSet FOLLOW_KEYWORD_38_in_rulegroup_item14913 = new BitSet(new long[]{0x0000000110000002L});
-    public static final BitSet FOLLOW_KEYWORD_40_in_rulegroup_item14931 = new BitSet(new long[]{0x0000000110000002L});
-    public static final BitSet FOLLOW_KEYWORD_60_in_rulegroup_item14945 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_64_in_rulegroup_item14963 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulejoin_group_by_clause_in_entryRulejoin_group_by_clause14999 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulejoin_group_by_clause15009 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_29_in_rulejoin_group_by_clause15047 = new BitSet(new long[]{0x0200800008000000L,0x0000067200065500L});
-    public static final BitSet FOLLOW_rulejoin_group_by_expr_list_in_rulejoin_group_by_clause15068 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulejoin_group_by_expr_list_in_entryRulejoin_group_by_expr_list15102 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulejoin_group_by_expr_list15112 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulejoin_group_by_expr_in_rulejoin_group_by_expr_list15159 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_4_in_rulejoin_group_by_expr_list15178 = new BitSet(new long[]{0x0200800008000000L,0x0000067200065500L});
-    public static final BitSet FOLLOW_rulejoin_group_by_expr_in_rulejoin_group_by_expr_list15198 = new BitSet(new long[]{0x0000000000000000L,0x0000000000012000L});
-    public static final BitSet FOLLOW_KEYWORD_8_in_rulejoin_group_by_expr_list15212 = new BitSet(new long[]{0x0200800008000000L,0x0000067200065500L});
-    public static final BitSet FOLLOW_rulejoin_group_by_expr_in_rulejoin_group_by_expr_list15232 = new BitSet(new long[]{0x0000000000000000L,0x0000000000012000L});
-    public static final BitSet FOLLOW_KEYWORD_5_in_rulejoin_group_by_expr_list15247 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulejoin_group_by_expr_in_entryRulejoin_group_by_expr15282 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulejoin_group_by_expr15292 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rulejoin_group_by_expr15339 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSTAR_in_rulejoin_group_by_expr15360 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulenested_blk_in_entryRulenested_blk15394 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulenested_blk15404 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_21_in_rulenested_blk15442 = new BitSet(new long[]{0x0000000000001000L,0x0000020020000000L});
-    public static final BitSet FOLLOW_rulenested_command_list_in_rulenested_blk15463 = new BitSet(new long[]{0x0000000000001000L,0x0000000020000000L});
-    public static final BitSet FOLLOW_rulegenerate_clause_in_rulenested_blk15483 = new BitSet(new long[]{0x0000000000000000L,0x0000000000200000L});
-    public static final BitSet FOLLOW_KEYWORD_13_in_rulenested_blk15496 = new BitSet(new long[]{0x0000000000000000L,0x0000000040000000L});
-    public static final BitSet FOLLOW_KEYWORD_22_in_rulenested_blk15508 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulegenerate_clause_in_entryRulegenerate_clause15542 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulegenerate_clause15552 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_85_in_rulegenerate_clause15590 = new BitSet(new long[]{0x0200800008000000L,0x0000067200065500L});
-    public static final BitSet FOLLOW_ruleFlattenGeneratedItem_in_rulegenerate_clause15610 = new BitSet(new long[]{0x0000000000000002L,0x0000000000010000L});
-    public static final BitSet FOLLOW_KEYWORD_8_in_rulegenerate_clause15624 = new BitSet(new long[]{0x0200800008000000L,0x0000067200065500L});
-    public static final BitSet FOLLOW_ruleFlattenGeneratedItem_in_rulegenerate_clause15644 = new BitSet(new long[]{0x0000000000000002L,0x0000000000010000L});
-    public static final BitSet FOLLOW_rulenested_command_list_in_entryRulenested_command_list15681 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulenested_command_list15691 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulenested_command_in_rulenested_command_list15747 = new BitSet(new long[]{0x0000000000000000L,0x0000000000200000L});
-    public static final BitSet FOLLOW_ruleSEMI_COLON_in_rulenested_command_list15763 = new BitSet(new long[]{0x0000000000000002L,0x0000020000000000L});
-    public static final BitSet FOLLOW_rulenested_command_in_entryRulenested_command15799 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulenested_command15809 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAlias_in_rulenested_command15850 = new BitSet(new long[]{0x0000000000000000L,0x0000000000800000L});
-    public static final BitSet FOLLOW_KEYWORD_15_in_rulenested_command15862 = new BitSet(new long[]{0x02008000A8400800L,0x0000067200061500L});
-    public static final BitSet FOLLOW_rulenested_op_in_rulenested_command15883 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulenested_op_in_entryRulenested_op15917 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulenested_op15927 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNestedFilter_in_rulenested_op15974 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulenested_sort_in_rulenested_op16001 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulenested_distinct_in_rulenested_op16028 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulenested_limit_in_rulenested_op16055 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_4_in_rulenested_op16075 = new BitSet(new long[]{0x0050401044200030L,0x0000000020001000L});
-    public static final BitSet FOLLOW_ruleType_in_rulenested_op16090 = new BitSet(new long[]{0x0000000000000000L,0x0000000000002000L});
-    public static final BitSet FOLLOW_KEYWORD_5_in_rulenested_op16102 = new BitSet(new long[]{0x0200800008000000L,0x0000067200061500L});
-    public static final BitSet FOLLOW_ruleAddExpression_in_rulenested_op16125 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNestedFilter_in_entryRuleNestedFilter16160 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNestedFilter16170 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_73_in_ruleNestedFilter16208 = new BitSet(new long[]{0x0000800008000000L,0x0000067200040500L});
-    public static final BitSet FOLLOW_rulevar_expr_in_ruleNestedFilter16228 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_KEYWORD_29_in_ruleNestedFilter16241 = new BitSet(new long[]{0x0200800008000000L,0x0000067200061500L});
-    public static final BitSet FOLLOW_ruleCondition_in_ruleNestedFilter16261 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulenested_sort_in_entryRulenested_sort16296 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulenested_sort16306 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_63_in_rulenested_sort16344 = new BitSet(new long[]{0x0000800008000000L,0x0000067200040500L});
-    public static final BitSet FOLLOW_rulevar_expr_in_rulenested_sort16365 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_KEYWORD_29_in_rulenested_sort16377 = new BitSet(new long[]{0x0000800008000000L,0x0000067200045500L});
-    public static final BitSet FOLLOW_ruleorder_by_clause_in_rulenested_sort16392 = new BitSet(new long[]{0x0000004000000002L});
-    public static final BitSet FOLLOW_KEYWORD_70_in_rulenested_sort16405 = new BitSet(new long[]{0x0000000000000000L,0x0000020000040400L});
-    public static final BitSet FOLLOW_ruleFuncClause_in_rulenested_sort16420 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulenested_distinct_in_entryRulenested_distinct16456 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulenested_distinct16466 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_84_in_rulenested_distinct16504 = new BitSet(new long[]{0x0000800008000000L,0x0000067200040500L});
-    public static final BitSet FOLLOW_rulevar_expr_in_rulenested_distinct16525 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulenested_limit_in_entryRulenested_limit16559 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulenested_limit16569 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_61_in_rulenested_limit16607 = new BitSet(new long[]{0x0000800008000000L,0x0000067200040500L});
-    public static final BitSet FOLLOW_rulevar_expr_in_rulenested_limit16628 = new BitSet(new long[]{0x0000000000000000L,0x0000006000000000L});
-    public static final BitSet FOLLOW_RULE_INT_in_rulenested_limit16639 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_LONGINTEGER_in_rulenested_limit16655 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulesplit_branch_in_entryRulesplit_branch16690 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulesplit_branch16700 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIDENTIFIER_in_rulesplit_branch16741 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000008L});
-    public static final BitSet FOLLOW_KEYWORD_32_in_rulesplit_branch16753 = new BitSet(new long[]{0x0200800008000000L,0x0000067200061500L});
-    public static final BitSet FOLLOW_ruleCondition_in_rulesplit_branch16774 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulecol_ref_in_entryRulecol_ref16809 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulecol_ref16820 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulealias_col_ref_in_rulecol_ref16867 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruledollar_col_ref_in_rulecol_ref16900 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulealias_col_ref_in_entryRulealias_col_ref16945 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulealias_col_ref16956 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_59_in_rulealias_col_ref16994 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIDENTIFIER_in_rulealias_col_ref17022 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruledollar_col_ref_in_entryRuledollar_col_ref17067 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuledollar_col_ref17078 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDOLLAR_in_ruledollar_col_ref17125 = new BitSet(new long[]{0x0000000000000000L,0x0000002000000000L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruledollar_col_ref17145 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleconst_expr_in_entryRuleconst_expr17190 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleconst_expr17201 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleliteral_in_ruleconst_expr17247 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleliteral_in_entryRuleliteral17291 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleliteral17302 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulescalar_in_ruleliteral17349 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleliteral17375 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_37_in_ruleliteral17399 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_56_in_ruleliteral17418 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulescalar_in_entryRulescalar17458 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulescalar17469 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_FLOATINGPOINT_in_rulescalar17509 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulescalarInt_in_rulescalar17542 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulescalarInt_in_entryRulescalarInt17587 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulescalarInt17598 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_DIGIT_in_rulescalarInt17638 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rulescalarInt17664 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_LONGINTEGER_in_rulescalarInt17690 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_2_in_rulescalarInt17715 = new BitSet(new long[]{0x0000000000000000L,0x0000020000000000L});
-    public static final BitSet FOLLOW_RULE_ID_in_rulescalarInt17730 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_81_in_ruleDeclareClause9010 = new BitSet(new long[]{0x0000000000000000L,0x0000040000000000L});
+    public static final BitSet FOLLOW_ruleAlias_in_ruleDeclareClause9030 = new BitSet(new long[]{0x0000000000000000L,0x0000090000000000L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleDeclareClause9042 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_EXECCOMMAND_in_ruleDeclareClause9058 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDefineClause_in_entryRuleDefineClause9093 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDefineClause9103 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_71_in_ruleDefineClause9141 = new BitSet(new long[]{0x0000000000000000L,0x0000040000000000L});
+    public static final BitSet FOLLOW_ruleAlias_in_ruleDefineClause9161 = new BitSet(new long[]{0x0000000000000000L,0x0000040000040400L});
+    public static final BitSet FOLLOW_ruleFuncClause_in_ruleDefineClause9177 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLoadUsing_in_entryRuleLoadUsing9212 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleLoadUsing9223 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_70_in_ruleLoadUsing9261 = new BitSet(new long[]{0x0000000000000000L,0x0000040000040400L});
+    public static final BitSet FOLLOW_ruleFuncClause_in_ruleLoadUsing9283 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFuncClause_in_entryRuleFuncClause9328 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFuncClause9339 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFuncName_in_ruleFuncClause9386 = new BitSet(new long[]{0x0000000000000000L,0x0000000000001000L});
+    public static final BitSet FOLLOW_KEYWORD_4_in_ruleFuncClause9404 = new BitSet(new long[]{0x0000000000000000L,0x0000080000012000L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleFuncClause9420 = new BitSet(new long[]{0x0000000000000000L,0x0000000000012000L});
+    public static final BitSet FOLLOW_KEYWORD_8_in_ruleFuncClause9441 = new BitSet(new long[]{0x0000000000000000L,0x0000080000000000L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleFuncClause9456 = new BitSet(new long[]{0x0000000000000000L,0x0000000000012000L});
+    public static final BitSet FOLLOW_KEYWORD_5_in_ruleFuncClause9476 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFuncName_in_entryRuleFuncName9516 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFuncName9527 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleFuncName9567 = new BitSet(new long[]{0x0000000000000002L,0x0000040000040400L});
+    public static final BitSet FOLLOW_KEYWORD_10_in_ruleFuncName9591 = new BitSet(new long[]{0x0000000000000002L,0x0000040000040400L});
+    public static final BitSet FOLLOW_KEYWORD_2_in_ruleFuncName9610 = new BitSet(new long[]{0x0000000000000002L,0x0000040000040400L});
+    public static final BitSet FOLLOW_rulePathClause_in_entryRulePathClause9651 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulePathClause9662 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_38_in_rulePathClause9700 = new BitSet(new long[]{0x0001000000000002L,0x00000472080E0400L});
+    public static final BitSet FOLLOW_rulescalar_in_rulePathClause9728 = new BitSet(new long[]{0x0001000000000002L,0x00000472080E0400L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulePathClause9754 = new BitSet(new long[]{0x0001000000000002L,0x00000472080E0400L});
+    public static final BitSet FOLLOW_KEYWORD_10_in_rulePathClause9778 = new BitSet(new long[]{0x0001000000000002L,0x00000472080E0400L});
+    public static final BitSet FOLLOW_KEYWORD_2_in_rulePathClause9797 = new BitSet(new long[]{0x0001000000000002L,0x00000472080E0400L});
+    public static final BitSet FOLLOW_KEYWORD_11_in_rulePathClause9816 = new BitSet(new long[]{0x0001000000000002L,0x00000472080E0400L});
+    public static final BitSet FOLLOW_KEYWORD_19_in_rulePathClause9835 = new BitSet(new long[]{0x0001000000000002L,0x00000472080E0400L});
+    public static final BitSet FOLLOW_KEYWORD_9_in_rulePathClause9854 = new BitSet(new long[]{0x0001000000000002L,0x00000472080E0400L});
+    public static final BitSet FOLLOW_ruleAsClause_in_entryRuleAsClause9895 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAsClause9906 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_28_in_ruleAsClause9944 = new BitSet(new long[]{0x0000001000000000L,0x0000040000001000L});
+    public static final BitSet FOLLOW_ruleAliasDef_in_ruleAsClause9967 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAliasDefList_in_ruleAsClause10000 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAliasDef_in_entryRuleAliasDef10046 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAliasDef10057 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAlias_in_ruleAliasDef10104 = new BitSet(new long[]{0x0000000000000002L,0x0000000000100000L});
+    public static final BitSet FOLLOW_KEYWORD_12_in_ruleAliasDef10123 = new BitSet(new long[]{0x0050401044200030L,0x0000000020001000L});
+    public static final BitSet FOLLOW_ruleType_in_ruleAliasDef10145 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAliasDefList_in_entryRuleAliasDefList10192 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAliasDefList10203 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_4_in_ruleAliasDefList10241 = new BitSet(new long[]{0x0000000000000000L,0x0000040000000000L});
+    public static final BitSet FOLLOW_ruleAliasDef_in_ruleAliasDefList10263 = new BitSet(new long[]{0x0000000000000000L,0x0000000000012000L});
+    public static final BitSet FOLLOW_KEYWORD_8_in_ruleAliasDefList10282 = new BitSet(new long[]{0x0000000000000000L,0x0000040000000000L});
+    public static final BitSet FOLLOW_ruleAliasDef_in_ruleAliasDefList10304 = new BitSet(new long[]{0x0000000000000000L,0x0000000000012000L});
+    public static final BitSet FOLLOW_KEYWORD_5_in_ruleAliasDefList10324 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIDENTIFIER_in_entryRuleIDENTIFIER10364 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleIDENTIFIER10375 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleIDENTIFIER10414 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFieldDef_in_entryRuleFieldDef10458 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFieldDef10469 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIDENTIFIER_in_ruleFieldDef10516 = new BitSet(new long[]{0x0000000000000002L,0x0000000000100000L});
+    public static final BitSet FOLLOW_KEYWORD_12_in_ruleFieldDef10535 = new BitSet(new long[]{0x0050401044200030L,0x0000000020001000L});
+    public static final BitSet FOLLOW_ruleType_in_ruleFieldDef10557 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFieldFefList_in_entryRuleFieldFefList10604 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFieldFefList10615 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_4_in_ruleFieldFefList10653 = new BitSet(new long[]{0x0000000008000000L,0x0000040000000000L});
+    public static final BitSet FOLLOW_ruleFieldDef_in_ruleFieldFefList10675 = new BitSet(new long[]{0x0000000000000000L,0x0000000000012000L});
+    public static final BitSet FOLLOW_KEYWORD_8_in_ruleFieldFefList10694 = new BitSet(new long[]{0x0000000008000000L,0x0000040000000000L});
+    public static final BitSet FOLLOW_ruleFieldDef_in_ruleFieldFefList10716 = new BitSet(new long[]{0x0000000000000000L,0x0000000000012000L});
+    public static final BitSet FOLLOW_KEYWORD_5_in_ruleFieldFefList10736 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleType_in_entryRuleType10776 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleType10787 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSimpleType_in_ruleType10834 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTupleType_in_ruleType10867 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMapType_in_ruleType10900 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulebag_type_in_ruleType10933 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSimpleType_in_entryRuleSimpleType10978 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSimpleType10989 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_44_in_ruleSimpleType11027 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_55_in_ruleSimpleType11046 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_58_in_ruleSimpleType11065 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_72_in_ruleSimpleType11084 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_89_in_ruleSimpleType11103 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_88_in_ruleSimpleType11122 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTupleType_in_entryRuleTupleType11162 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleTupleType11173 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_68_in_ruleTupleType11212 = new BitSet(new long[]{0x0000001000000000L,0x0000000000001000L});
+    public static final BitSet FOLLOW_ruleAliasDefList_in_ruleTupleType11236 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulebag_type_in_entryRulebag_type11281 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulebag_type11292 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_42_in_rulebag_type11331 = new BitSet(new long[]{0x0000000000000000L,0x0000000020000000L});
+    public static final BitSet FOLLOW_KEYWORD_21_in_rulebag_type11346 = new BitSet(new long[]{0x0000001008000000L,0x0000040040001000L});
+    public static final BitSet FOLLOW_ruleIDENTIFIER_in_rulebag_type11370 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+    public static final BitSet FOLLOW_KEYWORD_12_in_rulebag_type11388 = new BitSet(new long[]{0x0000001000000000L,0x0000000000001000L});
+    public static final BitSet FOLLOW_ruleTupleType_in_rulebag_type11412 = new BitSet(new long[]{0x0000000000000000L,0x0000000040000000L});
+    public static final BitSet FOLLOW_KEYWORD_22_in_rulebag_type11432 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMapType_in_entryRuleMapType11472 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleMapType11483 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_62_in_ruleMapType11520 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSTR_OP_EQ_in_entryRuleSTR_OP_EQ11561 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSTR_OP_EQ11572 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_30_in_ruleSTR_OP_EQ11609 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSTR_OP_GT_in_entryRuleSTR_OP_GT11648 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSTR_OP_GT11659 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_31_in_ruleSTR_OP_GT11696 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSTR_OP_LT_in_entryRuleSTR_OP_LT11735 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSTR_OP_LT11746 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_34_in_ruleSTR_OP_LT11783 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSTR_OP_GTE_in_entryRuleSTR_OP_GTE11822 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSTR_OP_GTE11833 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_43_in_ruleSTR_OP_GTE11870 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSTR_OP_LTE_in_entryRuleSTR_OP_LTE11909 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSTR_OP_LTE11920 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_45_in_ruleSTR_OP_LTE11957 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSTR_OP_NE_in_entryRuleSTR_OP_NE11996 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSTR_OP_NE12007 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_46_in_ruleSTR_OP_NE12044 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNUM_OP_EQ_in_entryRuleNUM_OP_EQ12085 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNUM_OP_EQ12096 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_26_in_ruleNUM_OP_EQ12133 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNUM_OP_LT_in_entryRuleNUM_OP_LT12172 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNUM_OP_LT12183 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_14_in_ruleNUM_OP_LT12220 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNUM_OP_LTE_in_entryRuleNUM_OP_LTE12259 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNUM_OP_LTE12270 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_25_in_ruleNUM_OP_LTE12307 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNUM_OP_GT_in_entryRuleNUM_OP_GT12346 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNUM_OP_GT12357 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_16_in_ruleNUM_OP_GT12394 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNUM_OP_GTE_in_entryRuleNUM_OP_GTE12433 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNUM_OP_GTE12444 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_27_in_ruleNUM_OP_GTE12481 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNUM_OP_NE_in_entryRuleNUM_OP_NE12520 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNUM_OP_NE12531 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_23_in_ruleNUM_OP_NE12568 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSEMI_COLON_in_entryRuleSEMI_COLON12607 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSEMI_COLON12618 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_13_in_ruleSEMI_COLON12655 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePOUND_in_entryRulePOUND12706 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulePOUND12717 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_1_in_rulePOUND12754 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCOMMA_in_entryRuleCOMMA12795 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleCOMMA12806 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_8_in_ruleCOMMA12843 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDIV_in_entryRuleDIV12884 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDIV12895 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_11_in_ruleDIV12932 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePERCENT_in_entryRulePERCENT12971 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulePERCENT12982 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_3_in_rulePERCENT13019 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePLUS_in_entryRulePLUS13058 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulePLUS13069 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_7_in_rulePLUS13106 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMINUS_in_entryRuleMINUS13145 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleMINUS13156 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_9_in_ruleMINUS13193 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSTAR_in_entryRuleSTAR13232 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSTAR13243 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_6_in_ruleSTAR13280 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDOLLAR_in_entryRuleDOLLAR13321 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDOLLAR13332 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_2_in_ruleDOLLAR13369 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulegroup_type_in_entryRulegroup_type13408 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulegroup_type13419 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rulegroup_type13458 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulegroup_item_list_in_entryRulegroup_item_list13501 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulegroup_item_list13511 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulegroup_item_in_rulegroup_item_list13558 = new BitSet(new long[]{0x0000000000000002L,0x0000000000010000L});
+    public static final BitSet FOLLOW_ruleCOMMA_in_rulegroup_item_list13574 = new BitSet(new long[]{0x0005000000000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_rulegroup_item_in_rulegroup_item_list13594 = new BitSet(new long[]{0x0000000000000002L,0x0000000000010000L});
+    public static final BitSet FOLLOW_ruleorder_by_clause_in_entryRuleorder_by_clause13632 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleorder_by_clause13643 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSTAR_in_ruleorder_by_clause13691 = new BitSet(new long[]{0x0008008000000002L});
+    public static final BitSet FOLLOW_KEYWORD_41_in_ruleorder_by_clause13710 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_48_in_ruleorder_by_clause13729 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleorder_col_list_in_ruleorder_by_clause13760 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleorder_col_list_in_entryRuleorder_col_list13805 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleorder_col_list13816 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleorder_col_in_ruleorder_col_list13863 = new BitSet(new long[]{0x0000000000000002L,0x0000000000010000L});
+    public static final BitSet FOLLOW_KEYWORD_8_in_ruleorder_col_list13882 = new BitSet(new long[]{0x0000800008000000L,0x00000C7200045500L});
+    public static final BitSet FOLLOW_ruleorder_col_in_ruleorder_col_list13904 = new BitSet(new long[]{0x0000000000000002L,0x0000000000010000L});
+    public static final BitSet FOLLOW_ruleorder_col_in_entryRuleorder_col13951 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleorder_col13962 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulecol_ref_in_ruleorder_col14010 = new BitSet(new long[]{0x0008008000000002L});
+    public static final BitSet FOLLOW_KEYWORD_41_in_ruleorder_col14029 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_48_in_ruleorder_col14048 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_4_in_ruleorder_col14071 = new BitSet(new long[]{0x0000800008000000L,0x00000C7200040500L});
+    public static final BitSet FOLLOW_rulecol_ref_in_ruleorder_col14093 = new BitSet(new long[]{0x0008008000000000L,0x0000000000002000L});
+    public static final BitSet FOLLOW_KEYWORD_41_in_ruleorder_col14112 = new BitSet(new long[]{0x0000000000000000L,0x0000000000002000L});
+    public static final BitSet FOLLOW_KEYWORD_48_in_ruleorder_col14131 = new BitSet(new long[]{0x0000000000000000L,0x0000000000002000L});
+    public static final BitSet FOLLOW_KEYWORD_5_in_ruleorder_col14146 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulepartition_clause_in_entryRulepartition_clause14187 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulepartition_clause14198 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_91_in_rulepartition_clause14236 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_KEYWORD_29_in_rulepartition_clause14249 = new BitSet(new long[]{0x0000000000000000L,0x0000040000040400L});
+    public static final BitSet FOLLOW_ruleFuncName_in_rulepartition_clause14271 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulerel_list_in_entryRulerel_list14315 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulerel_list14325 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAliasType_in_rulerel_list14371 = new BitSet(new long[]{0x0000000000000002L,0x0000000000010000L});
+    public static final BitSet FOLLOW_KEYWORD_8_in_rulerel_list14385 = new BitSet(new long[]{0x0000000000000000L,0x0000040000000000L});
+    public static final BitSet FOLLOW_ruleAliasType_in_rulerel_list14405 = new BitSet(new long[]{0x0000000000000002L,0x0000000000010000L});
+    public static final BitSet FOLLOW_rulejoin_type_in_entryRulejoin_type14443 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulejoin_type14454 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rulejoin_type14493 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulejoin_sub_clause_in_entryRulejoin_sub_clause14536 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulejoin_sub_clause14546 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulejoin_item_in_rulejoin_sub_clause14593 = new BitSet(new long[]{0x0000120300000000L,0x0000000000010000L});
+    public static final BitSet FOLLOW_KEYWORD_53_in_rulejoin_sub_clause14606 = new BitSet(new long[]{0x0000000100000000L,0x0000000000010000L});
+    public static final BitSet FOLLOW_KEYWORD_65_in_rulejoin_sub_clause14624 = new BitSet(new long[]{0x0000000100000000L,0x0000000000010000L});
+    public static final BitSet FOLLOW_KEYWORD_50_in_rulejoin_sub_clause14642 = new BitSet(new long[]{0x0000000100000000L,0x0000000000010000L});
+    public static final BitSet FOLLOW_KEYWORD_64_in_rulejoin_sub_clause14657 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
+    public static final BitSet FOLLOW_KEYWORD_8_in_rulejoin_sub_clause14672 = new BitSet(new long[]{0x0000000000000000L,0x0000040000000000L});
+    public static final BitSet FOLLOW_rulejoin_item_in_rulejoin_sub_clause14692 = new BitSet(new long[]{0x0000000000000002L,0x0000000000010000L});
+    public static final BitSet FOLLOW_rulejoin_item_in_entryRulejoin_item14729 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulejoin_item14739 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAliasType_in_rulejoin_item14785 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_rulejoin_group_by_clause_in_rulejoin_item14806 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulegroup_item_in_entryRulegroup_item14841 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulegroup_item14851 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_29_in_rulegroup_item14891 = new BitSet(new long[]{0x0200800008000000L,0x00000C7200065500L});
+    public static final BitSet FOLLOW_rulejoin_group_by_expr_list_in_rulegroup_item14912 = new BitSet(new long[]{0x0000000110000002L});
+    public static final BitSet FOLLOW_KEYWORD_38_in_rulegroup_item14931 = new BitSet(new long[]{0x0000000110000002L});
+    public static final BitSet FOLLOW_KEYWORD_40_in_rulegroup_item14949 = new BitSet(new long[]{0x0000000110000002L});
+    public static final BitSet FOLLOW_KEYWORD_60_in_rulegroup_item14963 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_64_in_rulegroup_item14981 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulejoin_group_by_clause_in_entryRulejoin_group_by_clause15017 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulejoin_group_by_clause15027 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_29_in_rulejoin_group_by_clause15065 = new BitSet(new long[]{0x0200800008000000L,0x00000C7200065500L});
+    public static final BitSet FOLLOW_rulejoin_group_by_expr_list_in_rulejoin_group_by_clause15086 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulejoin_group_by_expr_list_in_entryRulejoin_group_by_expr_list15120 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulejoin_group_by_expr_list15130 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulejoin_group_by_expr_in_rulejoin_group_by_expr_list15177 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_4_in_rulejoin_group_by_expr_list15196 = new BitSet(new long[]{0x0200800008000000L,0x00000C7200065500L});
+    public static final BitSet FOLLOW_rulejoin_group_by_expr_in_rulejoin_group_by_expr_list15216 = new BitSet(new long[]{0x0000000000000000L,0x0000000000012000L});
+    public static final BitSet FOLLOW_KEYWORD_8_in_rulejoin_group_by_expr_list15230 = new BitSet(new long[]{0x0200800008000000L,0x00000C7200065500L});
+    public static final BitSet FOLLOW_rulejoin_group_by_expr_in_rulejoin_group_by_expr_list15250 = new BitSet(new long[]{0x0000000000000000L,0x0000000000012000L});
+    public static final BitSet FOLLOW_KEYWORD_5_in_rulejoin_group_by_expr_list15265 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulejoin_group_by_expr_in_entryRulejoin_group_by_expr15300 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulejoin_group_by_expr15310 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rulejoin_group_by_expr15357 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSTAR_in_rulejoin_group_by_expr15378 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulenested_blk_in_entryRulenested_blk15412 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulenested_blk15422 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_21_in_rulenested_blk15460 = new BitSet(new long[]{0x0000000000001000L,0x0000040020000000L});
+    public static final BitSet FOLLOW_rulenested_command_list_in_rulenested_blk15481 = new BitSet(new long[]{0x0000000000001000L,0x0000000020000000L});
+    public static final BitSet FOLLOW_rulegenerate_clause_in_rulenested_blk15501 = new BitSet(new long[]{0x0000000000000000L,0x0000000000200000L});
+    public static final BitSet FOLLOW_KEYWORD_13_in_rulenested_blk15514 = new BitSet(new long[]{0x0000000000000000L,0x0000000040000000L});
+    public static final BitSet FOLLOW_KEYWORD_22_in_rulenested_blk15526 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulegenerate_clause_in_entryRulegenerate_clause15560 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulegenerate_clause15570 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_85_in_rulegenerate_clause15608 = new BitSet(new long[]{0x0200800008000000L,0x00000C7200065500L});
+    public static final BitSet FOLLOW_ruleFlattenGeneratedItem_in_rulegenerate_clause15628 = new BitSet(new long[]{0x0000000000000002L,0x0000000000010000L});
+    public static final BitSet FOLLOW_KEYWORD_8_in_rulegenerate_clause15642 = new BitSet(new long[]{0x0200800008000000L,0x00000C7200065500L});
+    public static final BitSet FOLLOW_ruleFlattenGeneratedItem_in_rulegenerate_clause15662 = new BitSet(new long[]{0x0000000000000002L,0x0000000000010000L});
+    public static final BitSet FOLLOW_rulenested_command_list_in_entryRulenested_command_list15699 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulenested_command_list15709 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulenested_command_in_rulenested_command_list15765 = new BitSet(new long[]{0x0000000000000000L,0x0000000000200000L});
+    public static final BitSet FOLLOW_ruleSEMI_COLON_in_rulenested_command_list15781 = new BitSet(new long[]{0x0000000000000002L,0x0000040000000000L});
+    public static final BitSet FOLLOW_rulenested_command_in_entryRulenested_command15817 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulenested_command15827 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAlias_in_rulenested_command15868 = new BitSet(new long[]{0x0000000000000000L,0x0000000000800000L});
+    public static final BitSet FOLLOW_KEYWORD_15_in_rulenested_command15880 = new BitSet(new long[]{0x02008000A8400800L,0x00000C7200061500L});
+    public static final BitSet FOLLOW_rulenested_op_in_rulenested_command15901 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulenested_op_in_entryRulenested_op15935 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulenested_op15945 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNestedFilter_in_rulenested_op15992 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulenested_sort_in_rulenested_op16019 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulenested_distinct_in_rulenested_op16046 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulenested_limit_in_rulenested_op16073 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_4_in_rulenested_op16093 = new BitSet(new long[]{0x0050401044200030L,0x0000000020001000L});
+    public static final BitSet FOLLOW_ruleType_in_rulenested_op16108 = new BitSet(new long[]{0x0000000000000000L,0x0000000000002000L});
+    public static final BitSet FOLLOW_KEYWORD_5_in_rulenested_op16120 = new BitSet(new long[]{0x0200800008000000L,0x00000C7200061500L});
+    public static final BitSet FOLLOW_ruleAddExpression_in_rulenested_op16143 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNestedFilter_in_entryRuleNestedFilter16178 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNestedFilter16188 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_73_in_ruleNestedFilter16226 = new BitSet(new long[]{0x0000800008000000L,0x00000C7200040500L});
+    public static final BitSet FOLLOW_rulevar_expr_in_ruleNestedFilter16246 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_KEYWORD_29_in_ruleNestedFilter16259 = new BitSet(new long[]{0x0200800008000000L,0x00000C7200061500L});
+    public static final BitSet FOLLOW_ruleCondition_in_ruleNestedFilter16279 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulenested_sort_in_entryRulenested_sort16314 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulenested_sort16324 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_63_in_rulenested_sort16362 = new BitSet(new long[]{0x0000800008000000L,0x00000C7200040500L});
+    public static final BitSet FOLLOW_rulevar_expr_in_rulenested_sort16383 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_KEYWORD_29_in_rulenested_sort16395 = new BitSet(new long[]{0x0000800008000000L,0x00000C7200045500L});
+    public static final BitSet FOLLOW_ruleorder_by_clause_in_rulenested_sort16410 = new BitSet(new long[]{0x0000004000000002L});
+    public static final BitSet FOLLOW_KEYWORD_70_in_rulenested_sort16423 = new BitSet(new long[]{0x0000000000000000L,0x0000040000040400L});
+    public static final BitSet FOLLOW_ruleFuncClause_in_rulenested_sort16438 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulenested_distinct_in_entryRulenested_distinct16474 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulenested_distinct16484 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_84_in_rulenested_distinct16522 = new BitSet(new long[]{0x0000800008000000L,0x00000C7200040500L});
+    public static final BitSet FOLLOW_rulevar_expr_in_rulenested_distinct16543 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulenested_limit_in_entryRulenested_limit16577 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulenested_limit16587 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_61_in_rulenested_limit16625 = new BitSet(new long[]{0x0000800008000000L,0x00000C7200040500L});
+    public static final BitSet FOLLOW_rulevar_expr_in_rulenested_limit16646 = new BitSet(new long[]{0x0000000000000000L,0x0000006000000000L});
+    public static final BitSet FOLLOW_RULE_INT_in_rulenested_limit16657 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_LONGINTEGER_in_rulenested_limit16673 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulesplit_branch_in_entryRulesplit_branch16708 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulesplit_branch16718 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIDENTIFIER_in_rulesplit_branch16759 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000008L});
+    public static final BitSet FOLLOW_KEYWORD_32_in_rulesplit_branch16771 = new BitSet(new long[]{0x0200800008000000L,0x00000C7200061500L});
+    public static final BitSet FOLLOW_ruleCondition_in_rulesplit_branch16792 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulecol_ref_in_entryRulecol_ref16827 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulecol_ref16838 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulealias_col_ref_in_rulecol_ref16885 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruledollar_col_ref_in_rulecol_ref16918 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulealias_col_ref_in_entryRulealias_col_ref16963 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulealias_col_ref16974 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_59_in_rulealias_col_ref17012 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIDENTIFIER_in_rulealias_col_ref17040 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruledollar_col_ref_in_entryRuledollar_col_ref17085 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuledollar_col_ref17096 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDOLLAR_in_ruledollar_col_ref17143 = new BitSet(new long[]{0x0000000000000000L,0x0000002000000000L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruledollar_col_ref17163 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleconst_expr_in_entryRuleconst_expr17208 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleconst_expr17219 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleliteral_in_ruleconst_expr17265 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleliteral_in_entryRuleliteral17309 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleliteral17320 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulescalar_in_ruleliteral17367 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleliteral17393 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_37_in_ruleliteral17417 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_56_in_ruleliteral17436 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulescalar_in_entryRulescalar17476 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulescalar17487 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_FLOATINGPOINT_in_rulescalar17527 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulescalarInt_in_rulescalar17560 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulescalarInt_in_entryRulescalarInt17605 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulescalarInt17616 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_DIGIT_in_rulescalarInt17656 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rulescalarInt17682 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_LONGINTEGER_in_rulescalarInt17708 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_2_in_rulescalarInt17733 = new BitSet(new long[]{0x0000000000000000L,0x0000040000000000L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulescalarInt17748 = new BitSet(new long[]{0x0000000000000002L});
 
 }

@@ -325,7 +325,17 @@ ruleParallelClause
 )
     |
     { 
-        newCompositeNode(grammarAccess.getStatementAccess().getCommentStatementParserRuleCall_1()); 
+        newCompositeNode(grammarAccess.getStatementAccess().getDeclareClauseParserRuleCall_1()); 
+    }
+    this_DeclareClause_22=ruleDeclareClause
+    {
+        $current = $this_DeclareClause_22.current;
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getStatementAccess().getCommentStatementParserRuleCall_2()); 
     }
 ruleCommentStatement
     {
@@ -378,16 +388,6 @@ ruleRegisterClause
     this_DefaultClause_2=ruleDefaultClause
     {
         $current = $this_DefaultClause_2.current;
-        afterParserOrEnumRuleCall();
-    }
-
-    |
-    { 
-        newCompositeNode(grammarAccess.getDefineStatementAccess().getDeclareClauseParserRuleCall_3()); 
-    }
-    this_DeclareClause_3=ruleDeclareClause
-    {
-        $current = $this_DeclareClause_3.current;
         afterParserOrEnumRuleCall();
     }
 )
@@ -3732,11 +3732,16 @@ ruleDeclareClause returns [EObject current=null]
 	    }
 
 )
-)this_STRING_2=RULE_STRING
+)(this_STRING_2=RULE_STRING
     { 
-    newLeafNode(this_STRING_2, grammarAccess.getDeclareClauseAccess().getSTRINGTerminalRuleCall_2()); 
+    newLeafNode(this_STRING_2, grammarAccess.getDeclareClauseAccess().getSTRINGTerminalRuleCall_2_0()); 
     }
-)
+
+    |this_EXECCOMMAND_3=RULE_EXECCOMMAND
+    { 
+    newLeafNode(this_EXECCOMMAND_3, grammarAccess.getDeclareClauseAccess().getEXECCOMMANDTerminalRuleCall_2_1()); 
+    }
+))
 ;
 
 

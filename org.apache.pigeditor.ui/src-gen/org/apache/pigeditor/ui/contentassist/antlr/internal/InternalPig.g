@@ -3708,9 +3708,15 @@ rule__Statement__Alternatives
 )
 
     |(
-{ before(grammarAccess.getStatementAccess().getCommentStatementParserRuleCall_1()); }
+{ before(grammarAccess.getStatementAccess().getDeclareClauseParserRuleCall_1()); }
+	ruleDeclareClause
+{ after(grammarAccess.getStatementAccess().getDeclareClauseParserRuleCall_1()); }
+)
+
+    |(
+{ before(grammarAccess.getStatementAccess().getCommentStatementParserRuleCall_2()); }
 	ruleCommentStatement
-{ after(grammarAccess.getStatementAccess().getCommentStatementParserRuleCall_1()); }
+{ after(grammarAccess.getStatementAccess().getCommentStatementParserRuleCall_2()); }
 )
 
 ;
@@ -3885,12 +3891,6 @@ rule__DefineStatement__Alternatives
 { before(grammarAccess.getDefineStatementAccess().getDefaultClauseParserRuleCall_2()); }
 	ruleDefaultClause
 { after(grammarAccess.getDefineStatementAccess().getDefaultClauseParserRuleCall_2()); }
-)
-
-    |(
-{ before(grammarAccess.getDefineStatementAccess().getDeclareClauseParserRuleCall_3()); }
-	ruleDeclareClause
-{ after(grammarAccess.getDefineStatementAccess().getDeclareClauseParserRuleCall_3()); }
 )
 
 ;
@@ -4443,6 +4443,28 @@ rule__FlattenGeneratedItem__Alternatives_1_1
 { before(grammarAccess.getFlattenGeneratedItemAccess().getFieldFefListParserRuleCall_1_1_1()); }
 	ruleFieldFefList
 { after(grammarAccess.getFlattenGeneratedItemAccess().getFieldFefListParserRuleCall_1_1_1()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__DeclareClause__Alternatives_2
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getDeclareClauseAccess().getSTRINGTerminalRuleCall_2_0()); }
+	RULE_STRING
+{ after(grammarAccess.getDeclareClauseAccess().getSTRINGTerminalRuleCall_2_0()); }
+)
+
+    |(
+{ before(grammarAccess.getDeclareClauseAccess().getEXECCOMMANDTerminalRuleCall_2_1()); }
+	RULE_EXECCOMMAND
+{ after(grammarAccess.getDeclareClauseAccess().getEXECCOMMANDTerminalRuleCall_2_1()); }
 )
 
 ;
@@ -11347,9 +11369,9 @@ rule__DeclareClause__Group__2__Impl
     }
 :
 (
-{ before(grammarAccess.getDeclareClauseAccess().getSTRINGTerminalRuleCall_2()); }
-	RULE_STRING
-{ after(grammarAccess.getDeclareClauseAccess().getSTRINGTerminalRuleCall_2()); }
+{ before(grammarAccess.getDeclareClauseAccess().getAlternatives_2()); }
+(rule__DeclareClause__Alternatives_2)
+{ after(grammarAccess.getDeclareClauseAccess().getAlternatives_2()); }
 )
 
 ;
@@ -16572,6 +16594,8 @@ RULE_LONGINTEGER : RULE_INT 'L';
 RULE_DOUBLENUMBER : RULE_FLOATINGPOINT ('E' ('-'|'+')? RULE_INT)?;
 
 RULE_EXECCOMMAND : '`' ~('`')* '`';
+
+RULE_BACKQUOTE_STRING : '`' ('\\' ('b'|'t'|'n'|'f'|'r'|'u'|'`'|'`'|'\\')|~(('\\'|'`')))* '`';
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 

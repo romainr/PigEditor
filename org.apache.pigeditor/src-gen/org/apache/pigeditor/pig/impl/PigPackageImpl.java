@@ -1339,6 +1339,16 @@ public class PigPackageImpl extends EPackageImpl implements PigPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getDeclareClause_Name()
+  {
+    return (EAttribute)declareClauseEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getDefineClause()
   {
     return defineClauseEClass;
@@ -1877,6 +1887,7 @@ public class PigPackageImpl extends EPackageImpl implements PigPackage
     defaultClauseEClass = createEClass(DEFAULT_CLAUSE);
 
     declareClauseEClass = createEClass(DECLARE_CLAUSE);
+    createEAttribute(declareClauseEClass, DECLARE_CLAUSE__NAME);
 
     defineClauseEClass = createEClass(DEFINE_CLAUSE);
 
@@ -2005,7 +2016,7 @@ public class PigPackageImpl extends EPackageImpl implements PigPackage
     var_exprEClass.getESuperTypes().add(this.getnested_limit());
     projectable_exprEClass.getESuperTypes().add(this.getvar_expr());
     defaultClauseEClass.getESuperTypes().add(this.getDefineStatement());
-    declareClauseEClass.getESuperTypes().add(this.getDefineStatement());
+    declareClauseEClass.getESuperTypes().add(this.getStatement());
     defineClauseEClass.getESuperTypes().add(this.getDefineStatement());
     join_itemEClass.getESuperTypes().add(this.getjoin_sub_clause());
     group_itemEClass.getESuperTypes().add(this.getgroup_item_list());
@@ -2136,6 +2147,7 @@ public class PigPackageImpl extends EPackageImpl implements PigPackage
     initEClass(defaultClauseEClass, DefaultClause.class, "DefaultClause", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(declareClauseEClass, DeclareClause.class, "DeclareClause", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getDeclareClause_Name(), ecorePackage.getEString(), "name", null, 0, 1, DeclareClause.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(defineClauseEClass, DefineClause.class, "DefineClause", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

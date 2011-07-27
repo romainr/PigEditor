@@ -22,7 +22,11 @@ public class PigGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cElementsAssignment = (Assignment)rule.eContents().get(1);
 		private final RuleCall cElementsStatementParserRuleCall_0 = (RuleCall)cElementsAssignment.eContents().get(0);
 		
-		//Query:
+		/// *
+		// * Grammar heavily borrowed from Pig and adapted to Xtext. 
+		// * 
+		// * There are a few conflicts to solve.
+		// * / Query:
 		//	elements+=Statement*;
 		public ParserRule getRule() { return rule; }
 
@@ -62,19 +66,20 @@ public class PigGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cDescribeStatementParserRuleCall_0_0_9 = (RuleCall)cAlternatives_0_0.eContents().get(9);
 		private final RuleCall cExplainStatementParserRuleCall_0_0_10 = (RuleCall)cAlternatives_0_0.eContents().get(10);
 		private final Keyword cSemicolonKeyword_0_1 = (Keyword)cGroup_0.eContents().get(1);
-		private final RuleCall cCommentStatementParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cDeclareClauseParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cCommentStatementParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		
 		//Statement:
 		//	(DefineStatement | LoadStatement | (ForeachStatement | FilterStatement | GroupByStatement | OrderStatement |
 		//	LimitStatement | DistinctStatement | CrossStatement | JoinStatement | CoGroupByStatement | StreamStatement)
 		//	ParallelClause? | MrStatement | SplitStatement | UnionStatement | SampleStatement | StoreStatement | DumpStatement |
-		//	DescribeStatement | ExplainStatement) ";" | CommentStatement;
+		//	DescribeStatement | ExplainStatement) ";" | DeclareClause | CommentStatement;
 		public ParserRule getRule() { return rule; }
 
 		//(DefineStatement | LoadStatement | (ForeachStatement | FilterStatement | GroupByStatement | OrderStatement |
 		//LimitStatement | DistinctStatement | CrossStatement | JoinStatement | CoGroupByStatement | StreamStatement)
 		//ParallelClause? | MrStatement | SplitStatement | UnionStatement | SampleStatement | StoreStatement | DumpStatement |
-		//DescribeStatement | ExplainStatement) ";" | CommentStatement
+		//DescribeStatement | ExplainStatement) ";" | DeclareClause | CommentStatement
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//(DefineStatement | LoadStatement | (ForeachStatement | FilterStatement | GroupByStatement | OrderStatement |
@@ -163,8 +168,11 @@ public class PigGrammarAccess extends AbstractGrammarElementFinder {
 		//";"
 		public Keyword getSemicolonKeyword_0_1() { return cSemicolonKeyword_0_1; }
 
+		//DeclareClause
+		public RuleCall getDeclareClauseParserRuleCall_1() { return cDeclareClauseParserRuleCall_1; }
+
 		//CommentStatement
-		public RuleCall getCommentStatementParserRuleCall_1() { return cCommentStatementParserRuleCall_1; }
+		public RuleCall getCommentStatementParserRuleCall_2() { return cCommentStatementParserRuleCall_2; }
 	}
 
 	public class DefineStatementElements extends AbstractParserRuleElementFinder {
@@ -173,13 +181,12 @@ public class PigGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cRegisterClauseParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cDefineClauseParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		private final RuleCall cDefaultClauseParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final RuleCall cDeclareClauseParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		
 		//DefineStatement:
-		//	RegisterClause | DefineClause | DefaultClause | DeclareClause;
+		//	RegisterClause | DefineClause | DefaultClause;
 		public ParserRule getRule() { return rule; }
 
-		//RegisterClause | DefineClause | DefaultClause | DeclareClause
+		//RegisterClause | DefineClause | DefaultClause
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//RegisterClause
@@ -190,9 +197,6 @@ public class PigGrammarAccess extends AbstractGrammarElementFinder {
 
 		//DefaultClause
 		public RuleCall getDefaultClauseParserRuleCall_2() { return cDefaultClauseParserRuleCall_2; }
-
-		//DeclareClause
-		public RuleCall getDeclareClauseParserRuleCall_3() { return cDeclareClauseParserRuleCall_3; }
 	}
 
 	public class LoadStatementElements extends AbstractParserRuleElementFinder {
@@ -2101,13 +2105,15 @@ public class PigGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cDECLAREKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameAliasParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final RuleCall cSTRINGTerminalRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
+		private final Alternatives cAlternatives_2 = (Alternatives)cGroup.eContents().get(2);
+		private final RuleCall cSTRINGTerminalRuleCall_2_0 = (RuleCall)cAlternatives_2.eContents().get(0);
+		private final RuleCall cEXECCOMMANDTerminalRuleCall_2_1 = (RuleCall)cAlternatives_2.eContents().get(1);
 		
 		//DeclareClause:
-		//	"%DECLARE" name=Alias STRING;
+		//	"%DECLARE" name=Alias (STRING | EXECCOMMAND);
 		public ParserRule getRule() { return rule; }
 
-		//"%DECLARE" name=Alias STRING
+		//"%DECLARE" name=Alias (STRING | EXECCOMMAND)
 		public Group getGroup() { return cGroup; }
 
 		//"%DECLARE"
@@ -2119,8 +2125,14 @@ public class PigGrammarAccess extends AbstractGrammarElementFinder {
 		//Alias
 		public RuleCall getNameAliasParserRuleCall_1_0() { return cNameAliasParserRuleCall_1_0; }
 
+		//STRING | EXECCOMMAND
+		public Alternatives getAlternatives_2() { return cAlternatives_2; }
+
 		//STRING
-		public RuleCall getSTRINGTerminalRuleCall_2() { return cSTRINGTerminalRuleCall_2; }
+		public RuleCall getSTRINGTerminalRuleCall_2_0() { return cSTRINGTerminalRuleCall_2_0; }
+
+		//EXECCOMMAND
+		public RuleCall getEXECCOMMANDTerminalRuleCall_2_1() { return cEXECCOMMANDTerminalRuleCall_2_1; }
 	}
 
 	public class DefineClauseElements extends AbstractParserRuleElementFinder {
@@ -4083,6 +4095,7 @@ public class PigGrammarAccess extends AbstractGrammarElementFinder {
 	private LiteralElements pLiteral;
 	private ScalarElements pScalar;
 	private ScalarIntElements pScalarInt;
+	private TerminalRule tBACKQUOTE_STRING;
 	
 	private final GrammarProvider grammarProvider;
 
@@ -4105,7 +4118,11 @@ public class PigGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	
-	//Query:
+	/// *
+	// * Grammar heavily borrowed from Pig and adapted to Xtext. 
+	// * 
+	// * There are a few conflicts to solve.
+	// * / Query:
 	//	elements+=Statement*;
 	public QueryElements getQueryAccess() {
 		return (pQuery != null) ? pQuery : (pQuery = new QueryElements());
@@ -4119,7 +4136,7 @@ public class PigGrammarAccess extends AbstractGrammarElementFinder {
 	//	(DefineStatement | LoadStatement | (ForeachStatement | FilterStatement | GroupByStatement | OrderStatement |
 	//	LimitStatement | DistinctStatement | CrossStatement | JoinStatement | CoGroupByStatement | StreamStatement)
 	//	ParallelClause? | MrStatement | SplitStatement | UnionStatement | SampleStatement | StoreStatement | DumpStatement |
-	//	DescribeStatement | ExplainStatement) ";" | CommentStatement;
+	//	DescribeStatement | ExplainStatement) ";" | DeclareClause | CommentStatement;
 	public StatementElements getStatementAccess() {
 		return (pStatement != null) ? pStatement : (pStatement = new StatementElements());
 	}
@@ -4129,7 +4146,7 @@ public class PigGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//DefineStatement:
-	//	RegisterClause | DefineClause | DefaultClause | DeclareClause;
+	//	RegisterClause | DefineClause | DefaultClause;
 	public DefineStatementElements getDefineStatementAccess() {
 		return (pDefineStatement != null) ? pDefineStatement : (pDefineStatement = new DefineStatementElements());
 	}
@@ -4707,7 +4724,7 @@ public class PigGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//DeclareClause:
-	//	"%DECLARE" name=Alias STRING;
+	//	"%DECLARE" name=Alias (STRING | EXECCOMMAND);
 	public DeclareClauseElements getDeclareClauseAccess() {
 		return (pDeclareClause != null) ? pDeclareClause : (pDeclareClause = new DeclareClauseElements());
 	}
@@ -5558,6 +5575,12 @@ public class PigGrammarAccess extends AbstractGrammarElementFinder {
 	public ParserRule getScalarIntRule() {
 		return getScalarIntAccess().getRule();
 	}
+
+	//terminal BACKQUOTE_STRING:
+	//	"`" ("\\" ("b" | "t" | "n" | "f" | "r" | "u" | "`" | "`" | "\\") | !("\\" | "`"))* "`";
+	public TerminalRule getBACKQUOTE_STRINGRule() {
+		return (tBACKQUOTE_STRING != null) ? tBACKQUOTE_STRING : (tBACKQUOTE_STRING = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "BACKQUOTE_STRING"));
+	} 
 
 	//terminal ID:
 	//	"^"? ("a".."z" | "A".."Z" | "_") ("a".."z" | "A".."Z" | "_" | "0".."9")*;

@@ -400,7 +400,6 @@ public class PigSwitch<T> extends Switch<T>
       {
         DeclareClause declareClause = (DeclareClause)theEObject;
         T result = caseDeclareClause(declareClause);
-        if (result == null) result = caseDefineStatement(declareClause);
         if (result == null) result = caseStatement(declareClause);
         if (result == null) result = defaultCase(theEObject);
         return result;

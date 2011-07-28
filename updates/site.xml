@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/PigEditor_1.0.0.2.jar" id="PigEditor" version="1.0.0.2"/>
+   <feature url="features/PigEditor_1.0.0.4.jar" id="PigEditor" version="1.0.0.4">
+      <category name="Editor"/>
+   </feature>
+   <category-def name="Editor" label="Editor"/>
 </site>

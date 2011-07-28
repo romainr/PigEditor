@@ -2,7 +2,7 @@
 <feature
       id="PigEditor"
       label="PigEditor"
-      version="1.0.0.2">
+      version="1.0.0.4">
 
    <description url="http://www.example.com/description">
       [Enter Feature Description here.]
@@ -20,21 +20,21 @@
          id="org.apache.pigeditor"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0.4"
          unpack="false"/>
 
    <plugin
          id="org.apache.pigeditor.tests"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0.4"
          unpack="false"/>
 
    <plugin
          id="org.apache.pigeditor.ui"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.0.0.4"
          unpack="false"/>
 
 </feature>

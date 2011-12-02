@@ -152,7 +152,111 @@ TE returns Condition:
 ;
 
 func_eval: 
-    FuncName {func_eval} '(' arg_list=real_arg_list? ')'
+    ('ABS' |
+	'ACOS' |
+	'ARITY' |
+	'ASIN' |
+	'ATAN' |
+	'AVG' |
+	'BagSize' |
+	'Base' |
+	'BinStorage' |
+	'Bloom' |
+	'BuildBloomBase' |
+	'BuildBloom' |
+	'CBRT' |
+	'CEIL' |
+	'CONCAT' |
+	'ConstantSize' |
+	'COR' |
+	'COSH' |
+	'COS' |
+	'COUNT' |
+	'COUNT_STAR' |
+	'COV' |
+	'CubeDimensions' |
+	'DIFF' |
+	'Distinct' |
+	'DoubleAbs' |
+	'DoubleAvg' |
+	'DoubleBase' |
+	'DoubleMax' |
+	'DoubleMin' |
+	'DoubleRound' |
+	'DoubleSum' |
+	'EXP' |
+	'FloatAbs' |
+	'FloatAvg' |
+	'FloatMax' |
+	'FloatMin' |
+	'FloatRound' |
+	'FloatSum' |
+	'FLOOR' |
+	'GenericInvoker' |
+	'INDEXOF' |
+	'IntAbs' |
+	'IntAvg' |
+	'IntMax' |
+	'IntMin' |
+	'IntSum' |
+	'InvokeForDouble' |
+	'InvokeForFloat' |
+	'InvokeForInt' |
+	'InvokeForLong' |
+	'InvokeForString' |
+	'Invoker' |
+	'IsEmpty' |
+	'JsonLoader' |
+	'JsonMetadata' |
+	'JsonStorage' |
+	'LAST_INDEX_OF' |
+	'LCFIRST' |
+	'LOG10' |
+	'LOG' |
+	'LongAbs' |
+	'LongAvg' |
+	'LongMax' |
+	'LongMin' |
+	'LongSum' |
+	'LOWER' |
+	'MapSize' |
+	'MAX' |
+	'MIN' |
+	'MonitoredUDF' |
+	'Nondeterministic' |
+	'OutputSchema' |
+	'package.html' |
+	'PigStorage' |
+	'PigStreaming' |
+	'RANDOM' |
+	'REGEX_EXTRACT_ALL' |
+	'REGEX_EXTRACT' |
+	'REPLACE' |
+	'ROUND' |
+	'SINH' |
+	'SIN' |
+	'SIZE' |
+	'SQRT' |
+	'StringConcat' |
+	'StringMax' |
+	'StringMin' |
+	'StringSize' |
+	'STRSPLIT' |
+	'SUBSTRING' |
+	'SUM' |
+	'TANH' |
+	'TAN' |
+	'TextLoader' |
+	'TOBAG' |
+	'TOKENIZE' |
+	'TOMAP' |
+	'TOP' |
+	'TOTUPLE' |
+	'TRIM' |
+	'TupleSize' |
+	'UCFIRST' |
+	'UPPER' |
+	'Utf8StorageConverter' | FuncName) {func_eval} '(' arg_list=real_arg_list? ')'
 ;
 
 real_arg_list : 
@@ -565,7 +669,7 @@ NestedFilter :
 ;
 
 nested_sort : 
-    'ORDER' var_expr 'BY' order_by_clause ( 'USING' FuncClause )?
+    'ORDER' var_expr 'BY' order_by_clause
 ;
 
 nested_distinct : 

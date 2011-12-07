@@ -11,7 +11,7 @@ generate pig "http://www.apache.org/pigeditor/Pig"
 Query :
     (elements+=Statement)*;
 
-Statement : 
+Statement :
     (DefineStatement |
       LoadStatement |
 	  (ForeachStatement |
@@ -44,7 +44,20 @@ DefineStatement :
 ;
 
 LoadStatement :
-    name=Alias '=' 'LOAD' STRING LoadUsing? AsClause?
+    name=Alias '=' 'LOAD' STRING 
+                  ('USING' ('JsonLoader' |
+							'PigStorage' |
+							'TextLoader'  | 
+							'org.apache.pig.piggybank.storage.CSVLoader' |
+							'org.apache.pig.piggybank.storage.HadoopJobHistoryLoader' |
+							'org.apache.pig.piggybank.storage.MyRegExLoader' |
+							'org.apache.pig.piggybank.storage.PigStorageSchema' |
+							'org.apache.pig.piggybank.storage.RegExLoader' |
+							'org.apache.pig.piggybank.storage.SequenceFileLoader' |
+							'org.apache.pig.piggybank.storage.XMLLoader' |
+							'org.apache.pig.piggybank.storage.apachelog.CombinedLogLoader' |
+							'org.apache.pig.piggybank.storage.apachelog.CommonLogLoader' | FuncName) '(' STRING? (',' STRING)* ')')?
+                   AsClause?
 ;
 
 ForeachStatement :
@@ -71,7 +84,7 @@ terminal COGROUP_TYPE :
 ;
 
 OrderStatement : 
-    name=Alias '=' 'ORDER' type=AliasType  'BY' order_by_clause ( 'USING' FuncClause )?
+    name=Alias '=' 'ORDER' type=AliasType  'BY' order_by_clause
 ;
 
 CrossStatement : 
@@ -103,7 +116,7 @@ StreamStatement :
 ;
 
 MrStatement : 
-    name=Alias '=' 'MAPREDUCE' STRING StoreStatement load=LoadStatement EXECCOMMAND?
+    name=Alias '=' 'MAPREDUCE' STRING store=StoreStatement load=LoadStatement EXECCOMMAND?
 ;
 
 SplitStatement : 
@@ -142,7 +155,7 @@ AndCondition returns Condition:
 
 UnaryCondition returns Condition: 
     // - / % + 0.0
-    '(' Condition ('?' leftExp=Condition ':' rightExp=Condition)? ')' ({UnaryCondition.left=current} '+' right=Condition)? |    
+    '(' condition=Condition ('?' leftExp=Condition ':' rightExp=Condition)? ')' ({UnaryCondition.left=current} '+' right=Condition)? |    
     //null_check_cond | // to LL refactor
     TE ({UnaryCondition.left=current} rel_op right=TE)? 
 ;
@@ -152,111 +165,84 @@ TE returns Condition:
 ;
 
 func_eval: 
-    ('ABS' |
+   ('ABS' |
 	'ACOS' |
 	'ARITY' |
 	'ASIN' |
 	'ATAN' |
 	'AVG' |
-	'BagSize' |
-	'Base' |
-	'BinStorage' |
 	'Bloom' |
-	'BuildBloomBase' |
-	'BuildBloom' |
 	'CBRT' |
 	'CEIL' |
 	'CONCAT' |
-	'ConstantSize' |
 	'COR' |
-	'COSH' |
 	'COS' |
+	'COSH' |
 	'COUNT' |
 	'COUNT_STAR' |
 	'COV' |
-	'CubeDimensions' |
 	'DIFF' |
-	'Distinct' |
-	'DoubleAbs' |
-	'DoubleAvg' |
-	'DoubleBase' |
-	'DoubleMax' |
-	'DoubleMin' |
-	'DoubleRound' |
-	'DoubleSum' |
 	'EXP' |
-	'FloatAbs' |
-	'FloatAvg' |
-	'FloatMax' |
-	'FloatMin' |
-	'FloatRound' |
-	'FloatSum' |
 	'FLOOR' |
-	'GenericInvoker' |
 	'INDEXOF' |
-	'IntAbs' |
-	'IntAvg' |
-	'IntMax' |
-	'IntMin' |
-	'IntSum' |
 	'InvokeForDouble' |
 	'InvokeForFloat' |
 	'InvokeForInt' |
 	'InvokeForLong' |
 	'InvokeForString' |
-	'Invoker' |
 	'IsEmpty' |
-	'JsonLoader' |
-	'JsonMetadata' |
-	'JsonStorage' |
 	'LAST_INDEX_OF' |
 	'LCFIRST' |
-	'LOG10' |
 	'LOG' |
-	'LongAbs' |
-	'LongAvg' |
-	'LongMax' |
-	'LongMin' |
-	'LongSum' |
+	'LOG10' |
 	'LOWER' |
-	'MapSize' |
 	'MAX' |
 	'MIN' |
-	'MonitoredUDF' |
-	'Nondeterministic' |
-	'OutputSchema' |
-	'package.html' |
-	'PigStorage' |
-	'PigStreaming' |
 	'RANDOM' |
-	'REGEX_EXTRACT_ALL' |
 	'REGEX_EXTRACT' |
+	'REGEX_EXTRACT_ALL' |
 	'REPLACE' |
 	'ROUND' |
-	'SINH' |
 	'SIN' |
+	'SINH' |
 	'SIZE' |
 	'SQRT' |
-	'StringConcat' |
-	'StringMax' |
-	'StringMin' |
-	'StringSize' |
 	'STRSPLIT' |
 	'SUBSTRING' |
 	'SUM' |
-	'TANH' |
 	'TAN' |
-	'TextLoader' |
+	'TANH' |
 	'TOBAG' |
 	'TOKENIZE' |
 	'TOMAP' |
 	'TOP' |
 	'TOTUPLE' |
 	'TRIM' |
-	'TupleSize' |
 	'UCFIRST' |
 	'UPPER' |
-	'Utf8StorageConverter' | FuncName) {func_eval} '(' arg_list=real_arg_list? ')'
+	'org.apache.pig.piggybank.evaluation.ExtremalTupleByNthField' |
+	'org.apache.pig.piggybank.evaluation.MaxTupleBy1stField' |
+	'org.apache.pig.piggybank.evaluation.datetime.DiffDate' |
+	'org.apache.pig.piggybank.evaluation.datetime.convert.CustomFormatToISO' |
+	'org.apache.pig.piggybank.evaluation.datetime.convert.ISOToUnix' |
+	'org.apache.pig.piggybank.evaluation.datetime.convert.UnixToISO' |
+	'org.apache.pig.piggybank.evaluation.datetime.diff.ISODaysBetween' |
+	'org.apache.pig.piggybank.evaluation.datetime.diff.ISOHoursBetween' |
+	'org.apache.pig.piggybank.evaluation.datetime.diff.ISOMinutesBetween' |
+	'org.apache.pig.piggybank.evaluation.datetime.diff.ISOMonthsBetween' |
+	'org.apache.pig.piggybank.evaluation.datetime.diff.ISOSecondsBetween' |
+	'org.apache.pig.piggybank.evaluation.datetime.diff.ISOYearsBetween' |
+	'org.apache.pig.piggybank.evaluation.datetime.truncate.ISOToDay' |
+	'org.apache.pig.piggybank.evaluation.datetime.truncate.ISOToHour' |
+	'org.apache.pig.piggybank.evaluation.datetime.truncate.ISOToMinute' |
+	'org.apache.pig.piggybank.evaluation.datetime.truncate.ISOToMonth' |
+	'org.apache.pig.piggybank.evaluation.datetime.truncate.ISOToSecond' |
+	'org.apache.pig.piggybank.evaluation.datetime.truncate.ISOToWeek' |
+	'org.apache.pig.piggybank.evaluation.datetime.truncate.ISOToYear' |
+	'org.apache.pig.piggybank.evaluation.util.apachelogparser.DateExtractor' |
+	'org.apache.pig.piggybank.evaluation.util.apachelogparser.HostExtractor' |
+	'org.apache.pig.piggybank.evaluation.util.apachelogparser.SearchEngineExtractor' |
+	'org.apache.pig.piggybank.evaluation.util.apachelogparser.SearchTermExtractor' | FuncName) {func_name} '(' arg_list=real_arg_list? ')'
 ;
 
 real_arg_list : 
@@ -264,7 +250,7 @@ real_arg_list :
 ;
 
 real_arg : 
-    Condition | STAR
+    condition=Condition | condition_star=STAR
 ;
 
 Expression returns Expression: 
@@ -272,11 +258,11 @@ Expression returns Expression:
 ;
 
 AddExpression returns Expression: 
-    multi_expr ( ( PLUS | MINUS ) mul_exp=multi_expr )*
+    multi_expr ( ( PLUS | MINUS ) mul_exp+=multi_expr )*
 ;
 
 multi_expr returns Expression: 
-    cast_expr ( ( STAR | DIV | PERCENT ) mul_cast=cast_expr )*
+    cast_expr ( ( STAR | DIV | PERCENT ) mul_cast+=cast_expr )*
 ;
 
 cast_expr returns Expression:
@@ -288,7 +274,7 @@ unary_expr returns Expression:
 ;
 
 expr_eval returns Expression: 
-    const_expr | var_expr
+    const_expr {const_expr} | var_expr
 ;
 
 var_expr : 
@@ -296,8 +282,7 @@ var_expr :
 ;
 
 projectable_expr : 
-   func_eval | 
-    col_ref
+   func_eval | col_ref {projectable_expr}
 ;
 
 dot_proj : 
@@ -319,7 +304,7 @@ pound_proj : POUND ( STRING | 'NULL' )
 ;
 
 bin_expr: 
-    '(' Condition '?' leftExp=Expression ':' rightExp=Expression ')'
+    '(' condition=Condition '?' leftExp=Expression ':' rightExp=Expression ')'
 ;
 
 neg_expr returns Expression : 
@@ -390,16 +375,12 @@ DefineClause :
     'DEFINE' name=Alias FuncClause
 ;
 
-LoadUsing : 
-    'USING' FuncClause
-;
-
 FuncClause : 
-    FuncName '(' STRING? (',' STRING)* ')'
+   FuncName '(' STRING? (',' STRING)* ')'
 ;
 
 FuncName :
-    (ID | '.' | '$')+ 
+     (ID | '.' | '$')+ 
 ;
 
 PathClause :
@@ -587,7 +568,7 @@ group_type :
 ;
 
 group_item_list : 
-    group_item ( COMMA items=group_item )*
+    group_item ( COMMA items+=group_item )*
 ;
 
 order_by_clause : 
@@ -609,7 +590,7 @@ partition_clause :
 ;
 
 rel_list : 
-    type=AliasType ( ',' type=AliasType )*
+    type+=AliasType ( ',' type+=AliasType )*
 ;
 
 join_type :
@@ -617,7 +598,7 @@ join_type :
 ;
 
 join_sub_clause : 
-    join_item ( 'LEFT' | 'RIGHT' | 'FULL' )? 'OUTER'? ( ',' others=join_item )+
+    join_item ( 'LEFT' | 'RIGHT' | 'FULL' )? 'OUTER'? ( ',' others+=join_item )+
 ;
 
 join_item : 
@@ -625,19 +606,20 @@ join_item :
 ;
 
 group_item : 
-    ('BY' join_group_by_expr_list | 'ALL' | 'ANY' ) ( 'INNER' | 'OUTER' )?
+    ('BY' join_group_by_expr_list | 'ALL' | 'ANY' ) ( 'INNER' | 'OUTER' )? 
 ;
 
-join_group_by_clause : 'BY' join_group_by_expr_list
+join_group_by_clause : 
+    'BY' join_group_by_expr_list
 ;
 
 join_group_by_expr_list : 
        join_group_by_expr |
-      '(' left=join_group_by_expr ( ',' expressions=join_group_by_expr )* ')'
+      '(' left=join_group_by_expr ( ',' expressions+=join_group_by_expr )* ')'
 ;
 
 join_group_by_expr : 
-    Expression | STAR
+    Expression | STAR {join_group_by_expr}
 ;
 
 nested_blk : 

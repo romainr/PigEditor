@@ -79,10 +79,6 @@ CoGroupByStatement :
     name=Alias '=' 'COGROUP' aliases=join_sub_clause ( 'USING' COGROUP_TYPE )? partition_clause? 
 ;
 
-terminal COGROUP_TYPE :
-    "'" ( ('merge') ) "'"
-;
-
 OrderStatement : 
     name=Alias '=' 'ORDER' type=AliasType  'BY' order_by_clause
 ;
@@ -157,14 +153,14 @@ UnaryCondition returns Condition:
     // - / % + 0.0
     '(' condition=Condition ('?' leftExp=Condition ':' rightExp=Condition)? ')' ({UnaryCondition.left=current} '+' right=Condition)? |    
     //null_check_cond | // to LL refactor
-    TE ({UnaryCondition.left=current} rel_op right=TE)? 
+    NullableExpression ({UnaryCondition.left=current} RelationalOperation right=NullableExpression)? 
 ;
 
-TE returns Condition:
+NullableExpression returns Condition:
     Expression ('IS' 'NOT'? 'NULL')?
 ;
 
-func_eval: 
+EvalFunction: 
    ('ABS' |
 	'ACOS' |
 	'ARITY' |
@@ -243,14 +239,14 @@ func_eval:
 	'org.apache.pig.piggybank.evaluation.util.apachelogparser.DateExtractor' |
 	'org.apache.pig.piggybank.evaluation.util.apachelogparser.HostExtractor' |
 	'org.apache.pig.piggybank.evaluation.util.apachelogparser.SearchEngineExtractor' |
-	'org.apache.pig.piggybank.evaluation.util.apachelogparser.SearchTermExtractor' | FuncName) {func_name} '(' arg_list=real_arg_list? ')'
+	'org.apache.pig.piggybank.evaluation.util.apachelogparser.SearchTermExtractor' | FuncName) {func_name} '(' arg_list=RealArgList? ')'
 ;
 
-real_arg_list : 
-    args+=real_arg ( ',' args+=real_arg )* 
+RealArgList : 
+    args+=RealArg ( ',' args+=RealArg )* 
 ;
 
-real_arg : 
+RealArg : 
     condition=Condition | condition_star=STAR
 ;
 
@@ -259,89 +255,88 @@ Expression returns Expression:
 ;
 
 AddExpression returns Expression: 
-    multi_expr ( ( PLUS | MINUS ) mul_exp+=multi_expr )*
+    MultiplyExpression ( ( Plus | Minus ) mul_exp+=MultiplyExpression )*
 ;
 
-multi_expr returns Expression: 
-    cast_expr ( ( STAR | DIV | PERCENT ) mul_cast+=cast_expr )*
+MultiplyExpression returns Expression: 
+    CastExpression ( ( STAR | Division | Percent ) mul_cast+=CastExpression )*
 ;
 
-cast_expr returns Expression:
-    unary_expr    
+CastExpression returns Expression:
+    UnaryExpression    
 ;
 
-unary_expr returns Expression:  
-     expr_eval | neg_expr
+UnaryExpression returns Expression:  
+     EvalExpression | NegExpression
 ;
 
-expr_eval returns Expression: 
-    const_expr {const_expr} | var_expr
+EvalExpression returns Expression: 
+    const_expr {const_expr} | VarExpression
 ;
 
-var_expr : 
-    projectable_expr ( dot_proj | pound_proj )*
+VarExpression : 
+    ProjectableExpression ( DotProjection | PoundProjection )*
 ;
 
-projectable_expr : 
-   func_eval | col_ref {projectable_expr}
+ProjectableExpression : 
+   EvalFunction | col_ref {ProjectableExpression}
 ;
 
-dot_proj : 
-    ('.' | '::') (  col_alias_or_index )
+DotProjection : 
+    ('.' | '::') (  ColAliasOrIndex )
 ;
 
-col_alias_or_index : 
-    col_alias | col_index
+ColAliasOrIndex : 
+    ColAlias | ColIndex
 ;
 
-col_alias : 
+ColAlias : 
     IDENTIFIER
 ;
 
-col_index : DOLLAR (DIGIT | INT)
+ColIndex : 
+	DOLLAR (DIGIT | INT)
 ;
 
-pound_proj : POUND ( STRING | 'NULL' )
+PoundProjection : 
+	Pound ( STRING | 'NULL' )
 ;
 
-bin_expr: 
+BinExpression: 
     '(' condition=Condition '?' leftExp=Expression ':' rightExp=Expression ')'
 ;
 
-neg_expr returns Expression : 
-    '-' cast_expr
+NegExpression returns Expression : 
+    '-' CastExpression
 ;
 
-rel_op :   
-rel_op_eq
-       | rel_op_ne
-       | rel_op_gt
-       | rel_op_gte
-       | rel_op_lt
-       | rel_op_lte
-       | 'MATCHES'
+RelationalOperation :   
+    RelationalOperationEq
+    | RelationalOperationNe
+    | RelationalOperationGt
+    | RelationalOperationGte
+    | RelationalOperationLt
+    | RelationalOperationLte
+    | 'MATCHES'
 ;
 
-rel_op_eq : STR_OP_EQ | NUM_OP_EQ
+RelationalOperationEq : 
+	StringOperationEq | NumericOperationEq
 ;
 
-rel_op_ne : STR_OP_NE | NUM_OP_NE
+RelationalOperationNe : StringOperationNe | NumericOperationNe
 ;
 
-rel_op_gt : STR_OP_GT | NUM_OP_GT
+RelationalOperationGt : StringOperationGt | NumericOperationGt
 ;
 
-rel_op_gte : STR_OP_GTE | NUM_OP_GTE
+RelationalOperationGte : StringOperationGte | NumericOperationGte
 ;
 
-rel_op_lt : STR_OP_LT | NUM_OP_LT
+RelationalOperationLt : StringOperationLt | NumericOperationLt
 ;
 
-rel_op_lte : STR_OP_LTE | NUM_OP_LTE
-;
-
-AliasType :
-    referenced=[Statement]
+RelationalOperationLte : StringOperationLte | NumericOperationLte
 ;
 
 FlattenGeneratedItem : 
@@ -377,7 +372,7 @@ DefineClause :
 ;
 
 FuncClause : 
-   FuncName '(' STRING? (',' STRING)* ')'
+    FuncName '(' STRING? (',' STRING)* ')'
 ;
 
 FuncName :
@@ -413,7 +408,11 @@ FieldFefList :
 ;    
 
 Type : 
-    SimpleType | TupleType | MapType | bag_type 
+    SimpleType | TupleType | MapType | BagType 
+;
+
+AliasType :
+    referenced=[Statement]
 ;
 
 SimpleType : 
@@ -429,7 +428,7 @@ TupleType :
     'TUPLE'? AliasDefList
 ;
 
-bag_type : 
+BagType : 
     'BAG'? '{' ( ( IDENTIFIER ':' )? TupleType | MapType )? '}'
 ;
 
@@ -437,95 +436,92 @@ MapType :
     'MAP[]'
 ;
 
-Cmd : 
+Command : 
     EXECCOMMAND //( ship_clause | cache_caluse | input_clause | output_clause | error_clause )*
 ;
 
-terminal SL_COMMENT  : '--' ! ('\n' | '\r')* ('\r'? '\n')?;
-
-
-STR_OP_EQ : 'EQ'
+StringOperationEq : 
+    'EQ'
 ;
 
-STR_OP_GT : 'GT'
+StringOperationGt : 
+    'GT'
 ;
 
-STR_OP_LT : 'LT'
+StringOperationLt : 
+    'LT'
 ;
 
-STR_OP_GTE : 'GTE'
+StringOperationGte : 
+    'GTE'
 ;
 
-STR_OP_LTE : 'LTE'
+StringOperationLte : 
+    'LTE'
 ;
 
-STR_OP_NE : 'NEQ'
+StringOperationNe : 
+    'NEQ'
 ;
 
-STR_OP_MATCHES : 'MATCHES'
-;
-    
-NUM_OP_EQ : '=='
-;
-
-NUM_OP_LT : '<'
-;
-
-NUM_OP_LTE : '<='
-;
-
-NUM_OP_GT : '>'
-;
-
-NUM_OP_GTE : '>=' 
-;
-
-NUM_OP_NE : '!='
-;
-
-
-SEMI_COLON : ';'
+StringOperationMatches : 
+    'MATCHES'
 ;
     
-LEFT_PAREN : '('
-;
-    
-RIGHT_PAREN : ')'
+NumericOperationEq : 
+    '=='
 ;
 
-LEFT_CURLY : '{'
+NumericOperationLt : 
+    '<'
 ;
 
-RIGHT_CURLY : '}'
+NumericOperationLte : 
+    '<='
 ;
 
-LEFT_BRACKET : '['
-;
-    
-RIGHT_BRACKET : ']'
+NumericOperationGt : 
+    '>'
 ;
 
-POUND : '#'
+NumericOperationGte : 
+    '>=' 
 ;
 
-EQUAL : '=';
-
-COMMA : ','
+NumericOperationNe : 
+    '!='
 ;
 
-PERIOD : '.'
+SemiColon : 
+    ';'
 ;
 
-DIV : '/'
+Pound : 
+    '#'
 ;
 
-PERCENT : '%'
+Comma : 
+    ','
 ;
 
-PLUS : '+'
+Division : 
+    '/'
 ;
 
-MINUS : '-'
+Percent : 
+    '%'
+;
+
+Plus : 
+    '+'
+;
+
+Minus : 
+    '-'
+;
+
+terminal SL_COMMENT  : 
+    '--' ! ('\n' | '\r')* ('\r'? '\n')?
 ;
     
 terminal DIGIT : '0'..'9'
@@ -549,8 +545,13 @@ terminal DOUBLENUMBER :
     FLOATINGPOINT ( 'E' ( '-' | '+' )? INT )?
 ;
 
-terminal EXECCOMMAND : '`' ( !( '`' ) )* '`';
+terminal EXECCOMMAND : '`' ( !( '`' ) )* '`'
+;
 
+
+terminal COGROUP_TYPE :
+    "'" ( ('merge') ) "'"
+;
     
 STAR : 
     '*'
@@ -569,7 +570,7 @@ group_type :
 ;
 
 group_item_list : 
-    group_item ( COMMA items+=group_item )*
+    group_item ( Comma items+=group_item )*
 ;
 
 order_by_clause : 
@@ -632,7 +633,7 @@ generate_clause :
 ;
 
 nested_command_list : 
-    {nested_command_list} (cmds+=nested_command SEMI_COLON)* 
+    {nested_command_list} (cmds+=nested_command SemiColon)* 
 ;
 
 nested_command : 
@@ -640,7 +641,7 @@ nested_command :
 ;
 
 nested_op : // TODO some warning comes from here          
-          NestedFilter | 
+          nested_filter | 
           nested_sort | 
           nested_distinct | 
           nested_limit | 
@@ -648,24 +649,24 @@ nested_op : // TODO some warning comes from here
           ( '(' Type ')' )? AddExpression
 ;
 
-NestedFilter : 
-    'FILTER' exp=var_expr 'BY' cond=Condition
+nested_filter : 
+    'FILTER' exp=VarExpression 'BY' cond=Condition
 ;
 
 nested_sort : 
-    'ORDER' var_expr 'BY' order_by_clause
+    'ORDER' VarExpression 'BY' order_by_clause
 ;
 
 nested_distinct : 
-    'DISTINCT' var_expr
+    'DISTINCT' VarExpression
 ;
 
 nested_limit : 
-    'LIMIT' var_expr (INT | LONGINTEGER)
+    'LIMIT' VarExpression (INT | LONGINTEGER)
 ;
 
 nested_foreach : 
-    'FOREACH' exp=var_expr gen=generate_clause
+    'FOREACH' exp=VarExpression gen=generate_clause
 ;
 
 split_branch : 

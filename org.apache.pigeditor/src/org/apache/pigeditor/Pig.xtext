@@ -644,6 +644,7 @@ nested_op : // TODO some warning comes from here
           nested_sort | 
           nested_distinct | 
           nested_limit | 
+          nested_foreach |
           ( '(' Type ')' )? AddExpression
 ;
 
@@ -661,6 +662,10 @@ nested_distinct :
 
 nested_limit : 
     'LIMIT' var_expr (INT | LONGINTEGER)
+;
+
+nested_foreach : 
+    'FOREACH' exp=var_expr gen=generate_clause
 ;
 
 split_branch : 

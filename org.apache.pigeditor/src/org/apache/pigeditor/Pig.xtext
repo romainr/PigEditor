@@ -12,57 +12,58 @@ Query :
     (elements+=Statement)*;
 
 Statement :
-    (DefineStatement |
-      LoadStatement |
-	  (ForeachStatement |
-	    FilterStatement |
-	    GroupByStatement |
-	    OrderStatement |
-	    LimitStatement |
-	    DistinctStatement |
-	    CrossStatement |
-	    JoinStatement |
-	    CoGroupByStatement |
-	    StreamStatement ) ParallelClause? |
-       MrStatement |
-       SplitStatement |
-       UnionStatement |
-       SampleStatement |
-       StoreStatement |
-       DumpStatement |
-       DescribeStatement |
-       ExplainStatement) ';' |
-     DeclareClause ';'? |
-     CommentStatement 
+    (DefineStatement
+    | LoadStatement
+    | (ForeachStatement
+      | FilterStatement
+      | GroupByStatement
+      | OrderStatement
+      | LimitStatement
+      | DistinctStatement
+      | CrossStatement
+      | JoinStatement
+      | CoGroupByStatement
+      | StreamStatement ) ParallelClause?
+    | MrStatement
+    | SplitStatement
+    | UnionStatement
+    | SampleStatement
+    | StoreStatement
+    | DumpStatement
+    | DescribeStatement
+    | ExplainStatement) ';'
+    | DeclareClause ';'?
+    | CommentStatement 
 ;
 
 
 DefineStatement :
-    RegisterClause | 
-    DefineClause |
-    DefaultClause
+    RegisterClause
+    | DefineClause
+    | DefaultClause
 ;
 
 LoadStatement :
     name=Alias '=' 'LOAD' STRING 
-                  ('USING' ('JsonLoader' |
-							'PigStorage' |
-							'TextLoader'  | 
-							'org.apache.pig.piggybank.storage.CSVLoader' |
-							'org.apache.pig.piggybank.storage.HadoopJobHistoryLoader' |
-							'org.apache.pig.piggybank.storage.MyRegExLoader' |
-							'org.apache.pig.piggybank.storage.PigStorageSchema' |
-							'org.apache.pig.piggybank.storage.RegExLoader' |
-							'org.apache.pig.piggybank.storage.SequenceFileLoader' |
-							'org.apache.pig.piggybank.storage.XMLLoader' |
-							'org.apache.pig.piggybank.storage.apachelog.CombinedLogLoader' |
-							'org.apache.pig.piggybank.storage.apachelog.CommonLogLoader' | FuncName) '(' STRING? (',' STRING)* ')')?
+                  ('USING' ('JsonLoader'
+                          | 'PigStorage'
+                          | 'TextLoader'
+                          | 'org.apache.pig.piggybank.storage.CSVLoader'
+                          | 'org.apache.pig.piggybank.storage.HadoopJobHistoryLoader'
+                          | 'org.apache.pig.piggybank.storage.MyRegExLoader'
+                          | 'org.apache.pig.piggybank.storage.PigStorageSchema'
+                          | 'org.apache.pig.piggybank.storage.RegExLoader'
+                          | 'org.apache.pig.piggybank.storage.SequenceFileLoader'
+                          | 'org.apache.pig.piggybank.storage.XMLLoader'
+                          | 'org.apache.pig.piggybank.storage.apachelog.CombinedLogLoader'
+                          | 'org.apache.pig.piggybank.storage.apachelog.CommonLogLoader'
+                          | FuncName) '(' STRING? (',' STRING)* ')')?
                    AsClause?
 ;
 
 ForeachStatement :
     name=Alias '=' 'FOREACH' type=AliasType 
-                    (items+=nested_blk ';'? | items+=generate_clause) 
+                    (items+=NestedBlock ';'? | items+=GenerateClause) 
 ;
 
 FilterStatement :
@@ -72,31 +73,31 @@ FilterStatement :
 
 GroupByStatement :
     name=Alias '=' 'GROUP' type=AliasType 
-                   items=group_item_list ( 'USING' group_type )? partition_clause? 
+                   items=GroupItemList ( 'USING' GroupType )? PartitionClause? 
 ;
 
 CoGroupByStatement :
-    name=Alias '=' 'COGROUP' aliases=join_sub_clause ( 'USING' COGROUP_TYPE )? partition_clause? 
+    name=Alias '=' 'COGROUP' aliases=JoinSubClause ( 'USING' COGROUP_TYPE )? PartitionClause? 
 ;
 
 OrderStatement : 
-    name=Alias '=' 'ORDER' type=AliasType  'BY' order_by_clause
+    name=Alias '=' 'ORDER' type=AliasType  'BY' OrderByClause
 ;
 
 CrossStatement : 
-    name=Alias '=' 'CROSS' aliases=rel_list partition_clause?
+    name=Alias '=' 'CROSS' aliases=RelationList PartitionClause?
 ;
 
 UnionStatement : 
-    name=Alias '=' 'UNION' 'ON' aliases=rel_list
+    name=Alias '=' 'UNION' 'ON' aliases=RelationList
 ;
 
 JoinStatement : 
-     name=Alias '=' 'JOIN' aliases=join_sub_clause ( 'USING' join_type )? partition_clause?
+     name=Alias '=' 'JOIN' aliases=JoinSubClause ( 'USING' JoinType )? PartitionClause?
 ;
 
 LimitStatement : 
-    name=Alias '=' 'LIMIT' type=AliasType scalarInt
+    name=Alias '=' 'LIMIT' type=AliasType ScalarInteger
 ;
 
 SampleStatement : 
@@ -104,11 +105,11 @@ SampleStatement :
 ;
 
 DistinctStatement : 
-    name=Alias '=' 'DISTINCT' type=AliasType partition_clause?
+    name=Alias '=' 'DISTINCT' type=AliasType PartitionClause?
 ;
 
 StreamStatement : 
-    name=Alias '=' 'STREAM' type=AliasType 'THROUGH' ( EXECCOMMAND | IDENTIFIER ) AsClause?
+    name=Alias '=' 'STREAM' type=AliasType 'THROUGH' ( EXECCOMMAND | Identifier ) AsClause?
 ;
 
 MrStatement : 
@@ -116,7 +117,7 @@ MrStatement :
 ;
 
 SplitStatement : 
-    name=Alias '=' 'SPLIT' type=AliasType  'INTO' branches+=split_branch ( ',' branches+=split_branch )+
+    name=Alias '=' 'SPLIT' type=AliasType  'INTO' branches+=SplitBranch ( ',' branches+=SplitBranch )+
 ;
 
 StoreStatement :
@@ -135,7 +136,9 @@ DumpStatement :
     'DUMP' type=AliasType
 ;
 
-
+Identifier: 
+    ID //LETTER ( DIGIT | LETTER | SPECIALCHAR )*
+;
 
 Condition returns Condition: 
     ( '(' Type ')' )? OrCondition
@@ -161,85 +164,86 @@ NullableExpression returns Condition:
 ;
 
 EvalFunction: 
-   ('ABS' |
-	'ACOS' |
-	'ARITY' |
-	'ASIN' |
-	'ATAN' |
-	'AVG' |
-	'Bloom' |
-	'CBRT' |
-	'CEIL' |
-	'CONCAT' |
-	'COR' |
-	'COS' |
-	'COSH' |
-	'COUNT' |
-	'COUNT_STAR' |
-	'COV' |
-	'DIFF' |
-	'EXP' |
-	'FLATTEN' |
-	'FLOOR' |
-	'INDEXOF' |
-	'InvokeForDouble' |
-	'InvokeForFloat' |
-	'InvokeForInt' |
-	'InvokeForLong' |
-	'InvokeForString' |
-	'IsEmpty' |
-	'LAST_INDEX_OF' |
-	'LCFIRST' |
-	'LOG' |
-	'LOG10' |
-	'LOWER' |
-	'MAX' |
-	'MIN' |
-	'RANDOM' |
-	'REGEX_EXTRACT' |
-	'REGEX_EXTRACT_ALL' |
-	'REPLACE' |
-	'ROUND' |
-	'SIN' |
-	'SINH' |
-	'SIZE' |
-	'SQRT' |
-	'STRSPLIT' |
-	'SUBSTRING' |
-	'SUM' |
-	'TAN' |
-	'TANH' |
-	'TOBAG' |
-	'TOKENIZE' |
-	'TOMAP' |
-	'TOP' |
-	'TOTUPLE' |
-	'TRIM' |
-	'UCFIRST' |
-	'UPPER' |
-	'org.apache.pig.piggybank.evaluation.ExtremalTupleByNthField' |
-	'org.apache.pig.piggybank.evaluation.MaxTupleBy1stField' |
-	'org.apache.pig.piggybank.evaluation.datetime.DiffDate' |
-	'org.apache.pig.piggybank.evaluation.datetime.convert.CustomFormatToISO' |
-	'org.apache.pig.piggybank.evaluation.datetime.convert.ISOToUnix' |
-	'org.apache.pig.piggybank.evaluation.datetime.convert.UnixToISO' |
-	'org.apache.pig.piggybank.evaluation.datetime.diff.ISODaysBetween' |
-	'org.apache.pig.piggybank.evaluation.datetime.diff.ISOHoursBetween' |
-	'org.apache.pig.piggybank.evaluation.datetime.diff.ISOMinutesBetween' |
-	'org.apache.pig.piggybank.evaluation.datetime.diff.ISOMonthsBetween' |
-	'org.apache.pig.piggybank.evaluation.datetime.diff.ISOSecondsBetween' |
-	'org.apache.pig.piggybank.evaluation.datetime.diff.ISOYearsBetween' |
-	'org.apache.pig.piggybank.evaluation.datetime.truncate.ISOToDay' |
-	'org.apache.pig.piggybank.evaluation.datetime.truncate.ISOToHour' |
-	'org.apache.pig.piggybank.evaluation.datetime.truncate.ISOToMinute' |
-	'org.apache.pig.piggybank.evaluation.datetime.truncate.ISOToMonth' |
-	'org.apache.pig.piggybank.evaluation.datetime.truncate.ISOToSecond' |
-	'org.apache.pig.piggybank.evaluation.datetime.truncate.ISOToWeek' |
-	'org.apache.pig.piggybank.evaluation.datetime.truncate.ISOToYear' |
-	'org.apache.pig.piggybank.evaluation.util.apachelogparser.DateExtractor' |
-	'org.apache.pig.piggybank.evaluation.util.apachelogparser.HostExtractor' |
-	'org.apache.pig.piggybank.evaluation.util.apachelogparser.SearchEngineExtractor' |
-	'org.apache.pig.piggybank.evaluation.util.apachelogparser.SearchTermExtractor' | FuncName) {func_name} '(' arg_list=RealArgList? ')'
+   ('ABS'
+   | 'ACOS'
+   | 'ARITY'
+   | 'ASIN'
+   | 'ATAN'
+   | 'AVG'
+   | 'Bloom'
+   | 'CBRT'
+   | 'CEIL'
+   | 'CONCAT'
+   | 'COR'
+   | 'COS'
+   | 'COSH'
+   | 'COUNT'
+   | 'COUNT_STAR'
+   | 'COV'
+   | 'DIFF'
+   | 'EXP'
+   | 'FLATTEN'
+   | 'FLOOR'
+   | 'INDEXOF'
+   | 'InvokeForDouble'
+   | 'InvokeForFloat'
+   | 'InvokeForInt'
+   | 'InvokeForLong'
+   | 'InvokeForString'
+   | 'IsEmpty'
+   | 'LAST_INDEX_OF'
+   | 'LCFIRST'
+   | 'LOG'
+   | 'LOG10'
+   | 'LOWER'
+   | 'MAX'
+   | 'MIN'
+   | 'RANDOM'
+   | 'REGEX_EXTRACT'
+   | 'REGEX_EXTRACT_ALL'
+   | 'REPLACE'
+   | 'ROUND'
+   | 'SIN'
+   | 'SINH'
+   | 'SIZE'
+   | 'SQRT'
+   | 'STRSPLIT'
+   | 'SUBSTRING'
+   | 'SUM'
+   | 'TAN'
+   | 'TANH'
+   | 'TOBAG'
+   | 'TOKENIZE'
+   | 'TOMAP'
+   | 'TOP'
+   | 'TOTUPLE'
+   | 'TRIM'
+   | 'UCFIRST'
+   | 'UPPER'
+   | 'org.apache.pig.piggybank.evaluation.ExtremalTupleByNthField'
+   | 'org.apache.pig.piggybank.evaluation.MaxTupleBy1stField'
+   | 'org.apache.pig.piggybank.evaluation.datetime.DiffDate'
+   | 'org.apache.pig.piggybank.evaluation.datetime.convert.CustomFormatToISO'
+   | 'org.apache.pig.piggybank.evaluation.datetime.convert.ISOToUnix'
+   | 'org.apache.pig.piggybank.evaluation.datetime.convert.UnixToISO'
+   | 'org.apache.pig.piggybank.evaluation.datetime.diff.ISODaysBetween'
+   | 'org.apache.pig.piggybank.evaluation.datetime.diff.ISOHoursBetween'
+   | 'org.apache.pig.piggybank.evaluation.datetime.diff.ISOMinutesBetween'
+   | 'org.apache.pig.piggybank.evaluation.datetime.diff.ISOMonthsBetween'
+   | 'org.apache.pig.piggybank.evaluation.datetime.diff.ISOSecondsBetween'
+   | 'org.apache.pig.piggybank.evaluation.datetime.diff.ISOYearsBetween'
+   | 'org.apache.pig.piggybank.evaluation.datetime.truncate.ISOToDay'
+   | 'org.apache.pig.piggybank.evaluation.datetime.truncate.ISOToHour'
+   | 'org.apache.pig.piggybank.evaluation.datetime.truncate.ISOToMinute'
+   | 'org.apache.pig.piggybank.evaluation.datetime.truncate.ISOToMonth'
+   | 'org.apache.pig.piggybank.evaluation.datetime.truncate.ISOToSecond'
+   | 'org.apache.pig.piggybank.evaluation.datetime.truncate.ISOToWeek'
+   | 'org.apache.pig.piggybank.evaluation.datetime.truncate.ISOToYear'
+   | 'org.apache.pig.piggybank.evaluation.util.apachelogparser.DateExtractor'
+   | 'org.apache.pig.piggybank.evaluation.util.apachelogparser.HostExtractor'
+   | 'org.apache.pig.piggybank.evaluation.util.apachelogparser.SearchEngineExtractor'
+   | 'org.apache.pig.piggybank.evaluation.util.apachelogparser.SearchTermExtractor'
+   | FuncName) {func_name} '(' arg_list=RealArgList? ')'
 ;
 
 RealArgList : 
@@ -271,7 +275,7 @@ UnaryExpression returns Expression:
 ;
 
 EvalExpression returns Expression: 
-    const_expr {const_expr} | VarExpression
+    ConstantExpression {ConstantExpression} | VarExpression
 ;
 
 VarExpression : 
@@ -279,7 +283,7 @@ VarExpression :
 ;
 
 ProjectableExpression : 
-   EvalFunction | col_ref {ProjectableExpression}
+    EvalFunction | ColumnReference {ProjectableExpression}
 ;
 
 DotProjection : 
@@ -291,15 +295,15 @@ ColAliasOrIndex :
 ;
 
 ColAlias : 
-    IDENTIFIER
+    Identifier
 ;
 
 ColIndex : 
-	DOLLAR (DIGIT | INT)
+    DOLLAR (DIGIT | INT)
 ;
 
 PoundProjection : 
-	Pound ( STRING | 'NULL' )
+    Pound ( STRING | 'NULL' )
 ;
 
 BinExpression: 
@@ -321,22 +325,27 @@ RelationalOperation :
 ;
 
 RelationalOperationEq : 
-	StringOperationEq | NumericOperationEq
+    StringOperationEq | NumericOperationEq
 ;
 
-RelationalOperationNe : StringOperationNe | NumericOperationNe
+RelationalOperationNe : 
+    StringOperationNe | NumericOperationNe
 ;
 
-RelationalOperationGt : StringOperationGt | NumericOperationGt
+RelationalOperationGt : 
+    StringOperationGt | NumericOperationGt
 ;
 
-RelationalOperationGte : StringOperationGte | NumericOperationGte
+RelationalOperationGte :
+    StringOperationGte | NumericOperationGte
 ;
 
-RelationalOperationLt : StringOperationLt | NumericOperationLt
+RelationalOperationLt : 
+    StringOperationLt | NumericOperationLt
 ;
 
-RelationalOperationLte : StringOperationLte | NumericOperationLte
+RelationalOperationLte :
+    StringOperationLte | NumericOperationLte
 ;
 
 FlattenGeneratedItem : 
@@ -352,7 +361,8 @@ Alias :
 ;
 
 ParallelClause : 
-     'PARALLEL' scalarInt;
+    'PARALLEL' ScalarInteger
+;
 
 
 RegisterClause : 
@@ -380,7 +390,7 @@ FuncName :
 ;
 
 PathClause :
-    ('ALL' | scalar | ID | '.' | '$' | '/' | '\\' | '-')+
+    ('ALL' | Scalar | ID | '.' | '$' | '/' | '\\' | '-')+
 ;
 
 AsClause:
@@ -395,12 +405,8 @@ AliasDefList:
     '(' AliasDef ( ',' AliasDef )* ')'
 ;     
 
-IDENTIFIER: 
-    ID //LETTER ( DIGIT | LETTER | SPECIALCHAR )*
-;
-
 FieldDef :
-    IDENTIFIER ( ':' Type )?
+    Identifier ( ':' Type )?
 ;
 
 FieldFefList : 
@@ -416,12 +422,12 @@ AliasType :
 ;
 
 SimpleType : 
-    'INT' |
-    'LONG' | 
-    'FLOAT' | 
-    'DOUBLE' | 
-    'CHARARRAY' | 
-    'BYTEARRAY'
+    'INT'
+    | 'LONG'
+    | 'FLOAT'
+    | 'DOUBLE'
+    | 'CHARARRAY'
+    | 'BYTEARRAY'
 ;
 
 TupleType : 
@@ -429,7 +435,7 @@ TupleType :
 ;
 
 BagType : 
-    'BAG'? '{' ( ( IDENTIFIER ':' )? TupleType | MapType )? '}'
+    'BAG'? '{' ( ( Identifier ':' )? TupleType | MapType )? '}'
 ;
 
 MapType : 
@@ -524,13 +530,16 @@ terminal SL_COMMENT  :
     '--' ! ('\n' | '\r')* ('\r'? '\n')?
 ;
     
-terminal DIGIT : '0'..'9'
+terminal DIGIT :
+    '0'..'9'
 ;
 
-terminal  LETTER : 'A'..'Z'
+terminal  LETTER :
+    'A'..'Z'
 ;
     
-terminal  SPECIALCHAR : '_'
+terminal  SPECIALCHAR :
+    '_'
 ;
 
 terminal FLOATINGPOINT : 
@@ -545,9 +554,9 @@ terminal DOUBLENUMBER :
     FLOATINGPOINT ( 'E' ( '-' | '+' )? INT )?
 ;
 
-terminal EXECCOMMAND : '`' ( !( '`' ) )* '`'
+terminal EXECCOMMAND :
+    '`' ( !( '`' ) )* '`'
 ;
-
 
 terminal COGROUP_TYPE :
     "'" ( ('merge') ) "'"
@@ -565,138 +574,142 @@ DOLLAR :
     '$'
 ;
 
-group_type :
+GroupType :
     STRING
 ;
 
-group_item_list : 
-    group_item ( Comma items+=group_item )*
+GroupItemList : 
+    GroupItem ( Comma items+=GroupItem )*
 ;
 
-order_by_clause : 
+OrderByClause : 
     STAR ( 'ASC' | 'DESC' )? |
-    order_col_list
+    OrderColList
 ;
 
-order_col_list : 
-    order_col ( ',' order_col )*
+OrderColList : 
+    OrderCol ( ',' OrderCol )*
 ;
 
-order_col : 
-     col_ref ( 'ASC' | 'DESC' )? | 
-     '(' col_ref ( 'ASC' | 'DESC' )? ')'
+OrderCol : 
+    ColumnReference ( 'ASC' | 'DESC' )?
+    | '(' ColumnReference ( 'ASC' | 'DESC' )? ')'
 ;
 
-partition_clause : 
+PartitionClause : 
     'PARTITION' 'BY' FuncName
 ;
 
-rel_list : 
+RelationList : 
     type+=AliasType ( ',' type+=AliasType )*
 ;
 
-join_type :
+JoinType :
     STRING
 ;
 
-join_sub_clause : 
-    join_item ( 'LEFT' | 'RIGHT' | 'FULL' )? 'OUTER'? ( ',' others+=join_item )+
+JoinSubClause : 
+    JoinItem ( 'LEFT' | 'RIGHT' | 'FULL' )? 'OUTER'? ( ',' others+=JoinItem )+
 ;
 
-join_item : 
-    type=AliasType expressions=join_group_by_clause    
+JoinItem : 
+    type=AliasType expressions=JoinGroupByClause    
 ;
 
-group_item : 
-    ('BY' join_group_by_expr_list | 'ALL' | 'ANY' ) ( 'INNER' | 'OUTER' )? 
+GroupItem : 
+    ('BY' JoinGroupByExprList | 'ALL' | 'ANY' ) ( 'INNER' | 'OUTER' )? 
 ;
 
-join_group_by_clause : 
-    'BY' join_group_by_expr_list
+JoinGroupByClause : 
+    'BY' JoinGroupByExprList
 ;
 
-join_group_by_expr_list : 
-       join_group_by_expr |
-      '(' left=join_group_by_expr ( ',' expressions+=join_group_by_expr )* ')'
+JoinGroupByExprList : 
+    JoinGroupByExpression
+    | '(' left=JoinGroupByExpression ( ',' expressions+=JoinGroupByExpression )* ')'
 ;
 
-join_group_by_expr : 
-    Expression | STAR {join_group_by_expr}
+JoinGroupByExpression : 
+    Expression | STAR {JoinGroupByExpression}
 ;
 
-nested_blk : 
-    '{' nested_command_list clauses=generate_clause ';' '}'
+NestedBlock : 
+    '{' NestedCommandList clauses=GenerateClause ';' '}'
 ;
 
-generate_clause : 
+GenerateClause : 
     'GENERATE' items+=FlattenGeneratedItem ( ',' items+=FlattenGeneratedItem )* 
 ;
 
-nested_command_list : 
-    {nested_command_list} (cmds+=nested_command SemiColon)* 
+NestedCommandList : 
+    {NestedCommandList} (cmds+=NestedCommand SemiColon)* 
 ;
 
-nested_command : 
-    Alias '=' nested_op
+NestedAliasType :
+    referenced=[NestedCommand]
 ;
 
-nested_op : // TODO some warning comes from here          
-          nested_filter | 
-          nested_sort | 
-          nested_distinct | 
-          nested_limit | 
-          nested_foreach |
-          ( '(' Type ')' )? AddExpression
+NestedCommand : 
+    name=Alias '=' operations=NestedOperation
 ;
 
-nested_filter : 
+NestedOperation : // TODO some warning comes from here          
+    NestedFilter | 
+    NestedSort | 
+    NestedDistinct | 
+    NestedLimit | 
+    NestedForeach |
+    ( '(' Type ')' )? AddExpression
+;
+
+NestedFilter : 
     'FILTER' exp=VarExpression 'BY' cond=Condition
 ;
 
-nested_sort : 
-    'ORDER' VarExpression 'BY' order_by_clause
+NestedSort : 
+    'ORDER' VarExpression 'BY' OrderByClause
 ;
 
-nested_distinct : 
+NestedDistinct : 
     'DISTINCT' VarExpression
 ;
 
-nested_limit : 
+NestedLimit : 
     'LIMIT' VarExpression (INT | LONGINTEGER)
 ;
 
-nested_foreach : 
-    'FOREACH' exp=VarExpression gen=generate_clause
+NestedForeach : 
+    'FOREACH' type=NestedAliasType gen=GenerateClause 
 ;
 
-split_branch : 
-    IDENTIFIER 'IF' Condition
+SplitBranch : 
+    Identifier 'IF' Condition
 ;
 
-col_ref : 
-    alias_col_ref | dollar_col_ref
+ColumnReference : 
+    AliasColumnReference | DollarColumnReference
 ;
 
-alias_col_ref : 
-    'GROUP' | IDENTIFIER
+AliasColumnReference : 
+    'GROUP' | Identifier
 ;
 
-dollar_col_ref : 
+DollarColumnReference : 
     DOLLAR INT
 ;
 
-const_expr : 
-    literal
+ConstantExpression : 
+    Literal
 ;
 
-literal : 
-    scalar | STRING | '\\u' | 'NULL' //| map | bag | tuple // const type?
+Literal : 
+    Scalar | STRING | '\\u' | 'NULL' //| map | bag | tuple // const type?
 ;
 
-scalar : 
-    FLOATINGPOINT | scalarInt //INTEGER | LONGINTEGER | FLOATNUMBER | DOUBLENUMBER | MYQUOTEDSTRING | NULL
+Scalar : 
+    FLOATINGPOINT | ScalarInteger //INTEGER | LONGINTEGER | FLOATNUMBER | DOUBLENUMBER | MYQUOTEDSTRING | NULL
 ;
 
-scalarInt : 
+ScalarInteger : 
     DIGIT | INT | LONGINTEGER | ('$' ID) // TODO warning
 ;

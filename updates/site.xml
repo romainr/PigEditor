@@ -3,5 +3,8 @@
    <feature url="features/PigEditor_1.0.0.7.jar" id="PigEditor" version="1.0.0.7">
       <category name="Editor"/>
    </feature>
+   <feature url="features/PigEditor_1.0.0.9.jar" id="PigEditor" version="1.0.0.9">
+      <category name="Editor"/>
+   </feature>
    <category-def name="Editor" label="Editor"/>
 </site>

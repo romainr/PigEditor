@@ -24,5 +24,6 @@ Eclipse Helios 3.7
 Xtext 2.0+ http://www.eclipse.org/Xtext/
 
 Most important file is the Xtext grammar in org.apache.pigeditor/src: org.apache.pigeditor.Pig.xtext
+https://github.com/romainr/PigEditor/blob/master/org.apache.pigeditor/src/org/apache/pigeditor/Pig.xtext
 
 

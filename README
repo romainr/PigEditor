@@ -2,7 +2,9 @@ PigEditor
 
 Webpage: http://romainr.github.com/PigEditor/
 
-Have been using the nice lightweight Pig Eclipse plugin on http://wiki.apache.org/pig/PigTools 
+Eclipse update site: http://romainr.github.com/PigEditor/updates/
+
+Goal: I have been using the nice lightweight Pig Eclipse plugin on http://wiki.apache.org/pig/PigTools 
 (and not so much the "heavy weight" PigPen) but was wondering if it was possible to do something 
 more similar to what Eclipse is doing with Java:
 
@@ -12,12 +14,13 @@ more similar to what Eclipse is doing with Java:
    * outline 
    * ...
  
-So I did a first version that works with Eclipse 3.6+
-http://www.eclipse.org/downloads/
-
-There is still a lot to improve and there are some false positive errors highlighted
+There is still a lot to improve and there might be some false positive errors highlighted
 (trying to be in sync with Pig 0.10 without Macros and Python UDF for now), but feel free to send me your 
 feedback/scripts/pull requests.
+
+For using:
+Eclipse 3.6 Helios with Xtext 2.2.1 (bottom line to check)
+Eclipse 3.7 Indigo
 
 For building:
 Eclipse Helios 3.7 

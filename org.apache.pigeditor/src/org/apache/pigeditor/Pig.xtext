@@ -390,7 +390,7 @@ FuncName :
 ;
 
 PathClause :
-    (".")? ('ALL' | Scalar | ID | '.' | '$' | '/' | '\\' | '-')+ ("'")?
+    ("'")? ('ALL' | Scalar | ID | '.' | '$' | '/' | '\\' | '-')+ ("'")?
 ;
 
 AsClause:

@@ -349,7 +349,7 @@ RelationalOperationLte :
 ;
 
 FlattenGeneratedItem : 
-   (Condition | '*') ( 'AS' ( FieldDef | FieldFefList ) )?
+   (Condition | '*' | FIELD_BY_INDEX) ( 'AS' ( FieldDef | FieldFefList ) )?
 ;
 
 CommentStatement :
@@ -390,7 +390,7 @@ FuncName :
 ;
 
 PathClause :
-    ('ALL' | Scalar | ID | '.' | '$' | '/' | '\\' | '-')+
+    ("'")? ('ALL' | Scalar | ID | '.' | '$' | '/' | '\\' | '-')+ ("'")?
 ;
 
 AsClause:
@@ -524,6 +524,10 @@ Plus :
 
 Minus : 
     '-'
+;
+
+terminal FIELD_BY_INDEX:
+	('$')('0'..'9')+	
 ;
 
 terminal SL_COMMENT  : 

@@ -2,7 +2,7 @@ PigEditor
 
 Webpage: http://romainr.github.com/PigEditor/
 
-Eclipse update site: http://romainr.github.com/PigEditor/updates/
+Eclipse update site: http://youbills.com/site_media/updates/
 
 Goal: I have been using the nice lightweight Pig Eclipse plugin on http://wiki.apache.org/pig/PigTools 
 (and not so much the "heavy weight" PigPen) but was wondering if it was possible to do something 
@@ -18,6 +18,8 @@ There is still a lot to improve and there might be some false positive errors hi
 (trying to be in sync with Pig 0.10 without Macros and Python UDF for now), but feel free to send me your 
 feedback/scripts/pull requests.
 
+I am currently working on a Web PigEditor in https://github.com/cloudera/hue (target date: end of Q2 2013).
+
 For using:
 Eclipse 3.6 Helios with Xtext 2.2.1 (bottom line to check)
 Eclipse 3.7 Indigo
@@ -28,5 +30,4 @@ Xtext 2.0+ http://www.eclipse.org/Xtext/
 
 Most important file is the Xtext grammar in org.apache.pigeditor/src: org.apache.pigeditor.Pig.xtext
 https://github.com/romainr/PigEditor/blob/master/org.apache.pigeditor/src/org/apache/pigeditor/Pig.xtext
-
 

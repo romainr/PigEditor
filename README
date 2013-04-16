@@ -4,6 +4,14 @@ Webpage: http://romainr.github.com/PigEditor/
 
 Eclipse update site: http://romainr.github.com/PigEditor/updates/ (shows 404 but works when adding it as a repository in Eclipse)
 
+
+
+Note: I am working on a Web application for editing and submitting Pig scripts: https://github.com/cloudera/hue
+
+
+
+
+
 Goal: I have been using the nice lightweight Pig Eclipse plugin on http://wiki.apache.org/pig/PigTools 
 (and not so much the "heavy weight" PigPen) but was wondering if it was possible to do something 
 more similar to what Eclipse is doing with Java:
@@ -17,8 +25,6 @@ more similar to what Eclipse is doing with Java:
 There is still a lot to improve and there might be some false positive errors highlighted
 (trying to be in sync with Pig 0.10 without Macros and Python UDF for now), but feel free to send me your 
 feedback/scripts/pull requests.
-
-I am currently working on a Web PigEditor in https://github.com/cloudera/hue (target date: end of Q2 2013).
 
 For using:
 Eclipse 3.6 Helios with Xtext 2.2.1 (bottom line to check)

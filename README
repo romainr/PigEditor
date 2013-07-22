@@ -1,16 +1,17 @@
 PigEditor
 
+
+Note
+The project has been moved to Hue, which now offers a Web editor for editing and submitting Pig scripts: http://gethue.com
+The new editor has more functionalities and I recommend it instead of th plugin.
+
+Hue is open source and also offers many more other editors and makes Hadoop easier to use. Feel free to email https://groups.google.com/a/cloudera.org/group/hue-user/ for any questions.
+
+
+
 Webpage: http://romainr.github.com/PigEditor/
 
 Eclipse update site: http://romainr.github.com/PigEditor/updates/ (shows 404 but works when adding it as a repository in Eclipse)
-
-
-
-Note: I am working on a Web application for editing and submitting Pig scripts: https://github.com/cloudera/hue
-
-
-
-
 
 Goal: I have been using the nice lightweight Pig Eclipse plugin on http://wiki.apache.org/pig/PigTools 
 (and not so much the "heavy weight" PigPen) but was wondering if it was possible to do something 

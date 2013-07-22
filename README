@@ -2,6 +2,7 @@ PigEditor
 
 
 Note
+====
 The project has been moved to Hue, which now offers a Web editor for editing and submitting Pig scripts: http://gethue.com
 The new editor has more functionalities and I recommend it instead of th plugin.
 
